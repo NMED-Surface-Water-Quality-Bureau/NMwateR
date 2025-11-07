@@ -9,7 +9,7 @@ R package for water quality data management, analysis, and assessment. Used to s
 [![GitHub
 license](https://img.shields.io/github/license/NMED-Surface-Water-Quality-Bureau/NMwateR)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/blob/main/LICENSE)
 [![GitHub
-issues](https://img.shields.io/github/issues-raw/NMED-Surface-Water-Quality-Bureau/NMwateR)]((https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/issues))
+issues](https://img.shields.io/github/issues-raw/NMED-Surface-Water-Quality-Bureau/NMwateR)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/issues)
 [![Github all
 releases](https://img.shields.io/github/downloads/NMED-Surface-Water-Quality-Bureau/NMwateR/total)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/releases)
 <!-- badges: end -->
