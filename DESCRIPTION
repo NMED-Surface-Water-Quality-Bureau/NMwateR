@@ -1,0 +1,19 @@
+Package: NMwateR
+Title: NMED Water Quality Analysis and Assessment Functions.
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Benjamin", "Block", , "Ben.Block@tetratech.com", role = c("aut", "cre")),
+    person("Hannah", "Ferriby", , "Hannah.Ferriby@tetratech.com", role = "aut"),
+    person("Kateri", "Salk", , "Kateri.SalkGundersen@tetratech.com", role = "aut"),
+    person("Meredith", "Zeigler", , "Meredith.Zeigler@env.nm.gov", role = c("aut", "fnd"))
+  )
+Description: NMwateR is an R package for water quality data management,
+    analysis , and assessment. Functions herein are used to support work
+    conducted by the New Mexico Environment Department (NMED). Initial
+    development was to support the analyses for Integrated Reporting (IR)
+    to EPA.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
