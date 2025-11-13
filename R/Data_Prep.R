@@ -39,28 +39,30 @@ Data_Prep <- function(criteria_table
   # QC ####
 
   # QC messages for required files
-  if (missing(criteria_table)) stop("Error: 'criteria_table' is required but was
-                                    not provided. This is a SQUID output.")
-  if (missing(parameter_table)) stop("Error: 'parameter_table' is required but
-                                     was not provided. This is a SQUID output.")
-  if (missing(SQUID_RStudio_table)) stop("Error: 'SQUID_RStudio_table' is
-                                         required but was not provided. This is
-                                         a project-specific RStudio output from
-                                         SQUID.")
-  if (missing(SQUID_DU_table)) stop("Error: 'SQUID_DU_table' is required but was
-                                    not provided. This is a project-specific
-                                    designated use output from SQUID.")
+  if (missing(criteria_table)) {
+    stop(paste0("Error: 'criteria_table' is required but was not provided. ",
+      "This is a SQUID output."))}
+
+  if (missing(parameter_table)) {
+    stop(paste0("Error: 'parameter_table' is required but was not provided. ",
+      "This is a SQUID output."))}
+
+  if (missing(SQUID_RStudio_table)) {
+    stop(paste0("Error: 'SQUID_RStudio_table' is required but was not provided. ",
+      "This is a project-specific RStudio output from SQUID."))}
+
+  if (missing(SQUID_DU_table)) {
+    stop(paste0("Error: 'SQUID_DU_table' is required but was not provided. ",
+      "This is a project-specific designated use output from SQUID."))}
 
   # Check optional arguments separately for custom messages
   if (missing(SQUID_LTD_table)) {
-    message("Note: 'SQUID_LTD_table' was not provided.
-            LTD-related processing will be skipped.")
-  } # End ~ if statement
+    message(paste0("Note: 'SQUID_LTD_table' was not provided. ",
+      "LTD-related processing will be skipped."))}
 
   if (missing(SQUID_LakeProfile_table)) {
-    message("Note: 'SQUID_LakeProfile_table' was not provided.
-            Lake profile data will not be included.")
-  } # End ~ if statement
+    message(paste0("Note: 'SQUID_LakeProfile_table' was not provided. ",
+      "Lake profile data will not be included."))}
 
   # Format Data ####
   ## Parameters ####

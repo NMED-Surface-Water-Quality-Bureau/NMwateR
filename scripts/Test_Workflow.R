@@ -44,9 +44,17 @@ rm(example_criteria_table, example_parameter_table, example_SQUID_RStudio_table
    , example_SQUID_DU_table, example_SQUID_LTD_table
    , example_SQUID_LakeProfile_table, my_data_list)
 
-# Conventionals ALU ####
+# Water quality analyses ####
+## Conventionals ALU ####
 df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
                                  , DU_table = df_DU_processed)
+
+## Toxics ALU (nonHDM) ####
+# Hardness-dependent metals excluded
+df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
+                                     , DU_table = df_DU_processed
+                                     , Criteria_table = df_Criteria)
+
 
 
 

@@ -2,14 +2,21 @@ Conventionals_ALU <- function(Chem_table
                               , DU_table){
 
   # QC ####
-
   # QC messages for required files
-  if (missing(Chem_table)) stop("Error: 'Chem_table' is required but was
-                                    not provided. This is an output from the
-                                Data_Prep function.")
-  if (missing(DU_table)) stop("Error: 'DU_table' is required but
-                                     was not provided. This is an output from the
-                                Data_Prep function.")
+  if (missing(Chem_table)) {
+    stop(paste0("Error: 'Chem_table' is required but was not provided. ",
+                "This is an output from the Data_Prep function."
+    ))}
+
+  if (missing(DU_table)) {
+    stop(paste0("Error: 'DU_table' is required but was not provided. ",
+                "This is an output from the Data_Prep function."
+    ))}
+
+  if (missing(Criteria_table)) {
+    stop(paste0("Error: 'Criteria_table' is required but was not provided. ",
+                "This is an output from the Data_Prep function."
+    ))}
 
   # Conventionals ALU ####
   RFunctionName <- "Conventionals_ALU"
