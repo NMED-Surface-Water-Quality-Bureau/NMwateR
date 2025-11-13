@@ -67,3 +67,14 @@ df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res
 
 # cleanup
 rm(Toxics_ALU_HDM_list)
+
+## Conventionals LW ####
+df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
+                                        , DU_table = df_DU_processed
+                                        , Criteria_table = df_Criteria)
+
+
+
+
+
+
