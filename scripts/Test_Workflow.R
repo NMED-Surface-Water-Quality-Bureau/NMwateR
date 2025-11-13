@@ -89,3 +89,14 @@ SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sit
 ## Toxics DWS ####
 df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
                             , Criteria_table = df_Criteria)
+
+## Toxics IRR ####
+df_Toxics_IRR <- Toxics_IRR(Chem_table = df_Chem_combined
+                            , Criteria_table = df_Criteria)
+
+
+
+
+
+
+
