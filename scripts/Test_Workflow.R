@@ -102,7 +102,9 @@ df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
 df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
                           , Criteria_table = df_Criteria)
 
-
+## Bacteria PCR/SCR ###
+df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
+                                        , DU_table = df_DU_processed)
 
 
 
