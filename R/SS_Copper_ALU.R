@@ -1,6 +1,18 @@
 SS_Copper_ALU <- function(DU_LANL_Stations_table
                        , LANL_WQ_data){
 
+  # QC ####
+  # QC messages for required files
+  if (missing(DU_LANL_Stations_table)) {
+    stop(paste0("Error: 'DU_LANL_Stations_table' is required but was not provided. ",
+                "This is a stations DU table for LANL sites specifically."
+    ))}
+
+  if (missing(LANL_WQ_data)) {
+    stop(paste0("Error: 'LANL_WQ_data' is required but was not provided. ",
+                "This is a table of water quality data from LANL."
+    ))}
+
   # Format data ####
   RFunctionName <- "SS_Copper_ALU"
 
