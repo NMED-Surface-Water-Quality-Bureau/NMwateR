@@ -94,7 +94,13 @@ df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
 df_Toxics_IRR <- Toxics_IRR(Chem_table = df_Chem_combined
                             , Criteria_table = df_Criteria)
 
+## Toxics WH ####
+df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
+                          , Criteria_table = df_Criteria)
 
+## Toxics LW ####
+df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
+                          , Criteria_table = df_Criteria)
 
 
 
