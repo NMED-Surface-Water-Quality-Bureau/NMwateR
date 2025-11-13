@@ -73,8 +73,12 @@ df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
                                         , DU_table = df_DU_processed
                                         , Criteria_table = df_Criteria)
 
+## Salinity IRR ####
+df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
+                                , DU_table = df_DU_processed)
 
-
-
+## Toxics HH ####
+df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
+                          , Criteria_table = df_Criteria)
 
 
