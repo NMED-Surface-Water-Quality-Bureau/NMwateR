@@ -85,3 +85,7 @@ df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 # Only used for LANL data
 SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
                                   , LANL_WQ_data = example_LANL_WQ_data)
+
+## Toxics DWS ####
+df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
+                            , Criteria_table = df_Criteria)
