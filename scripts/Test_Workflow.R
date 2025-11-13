@@ -55,7 +55,15 @@ df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
                                      , DU_table = df_DU_processed
                                      , Criteria_table = df_Criteria)
 
+## Toxics ALU (HDM) ####
+# Hardness-dependent metals only
+Toxics_ALU_HDM_list <- Toxics_ALU_HDM(Chem_table = df_Chem_combined
+                                    , DU_table = df_DU_processed
+                                    , Criteria_table = df_Criteria)
 
 
+df_Toxics_ALU_HDM <- Toxics_ALU_HDM_list$Toxics_ALU_HDM
+df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res
 
-
+# cleanup
+rm(Toxics_ALU_HDM_list)
