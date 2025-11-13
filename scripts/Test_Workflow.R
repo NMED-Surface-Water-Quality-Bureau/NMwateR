@@ -81,4 +81,7 @@ df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
 df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
                           , Criteria_table = df_Criteria)
 
-
+## Site-specific copper ####
+# Only used for LANL data
+SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
+                                  , LANL_WQ_data = example_LANL_WQ_data)
