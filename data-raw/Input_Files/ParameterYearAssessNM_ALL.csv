@@ -1,0 +1,134 @@
+CHR_UID,CHR_NAME,WQS_NAME,SortOrder,ShortName,ShortNameOLD,Units,USE,ATTAINS_NAME,ATTAINs_GROUP_ID,ATTAINS_GROUP_NAME,ATTAINS_ID,ADB_NO,ADB_NAME,CAS,STORET,SHORT_CAUSE_NAME
+2005,Zinc,"zinc, dissolved",22,Zn_D_HD,Zn_D,mg/l,,ZINC,706,METALS (OTHER THAN MERCURY),1169,423,Zinc,7440-66-6,545,Zinc
+1992,Vinyl chloride,Vinyl chloride,105,Vinyl chl,Org_58,ug/l,,VINYL CHLORIDE,1080,TOXIC ORGANICS,1129,418,Vinyl chloride,75-01-4,523,
+1987,Vanadium,"Vanadium, dissolved",34,V_D,V_D,mg/l,,VANADIUM (FUME OR DUST),706,METALS (OTHER THAN MERCURY),1122,415,Vanadium,7440-62-2,519,Vanadium
+1981001,Uranium-234/235/238,"Uranium, dissolved",46,U_D,U_D,mg/l,,URANIUM,946,RADIATION,1118,414,Uranium,7440-61-1 ,516,
+1977,Turbidity,turbidity,5,TURB,TURB,NTU,,TURBIDITY,1110,TURBIDITY,1110,413,Turbidity,,514,Turbidity
+1974,Tritium,Tritium,45,Tritium,TRIT,pCi/L,,TRITIUM,946,RADIATION,1280,,,10028-17-8,513,RADIATION
+1950,Trichloroethylene,Trichloroethylene,104,Trichloro,Org_57,ug/l,,TRICHLOROETHYLENE (TCE),1080,TOXIC ORGANICS,1101,408,Trichloroethylene,79-01-6,504,
+988,Total dissolved solids,Total dissolved solids,7,TDS,TDS,mg/l,,TOTAL DISSOLVED SOLIDS (TDS),966,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,Total Dissolved Solids,,,
+1935,Tribromomethane,Bromoform,103,Bromoform,Org_56,ug/l,,BROMOFORM,1080,TOXIC ORGANICS,235,124,Bromoform,75-25-2,63,
+1883,Thallium,"thallium, dissolved",33,Tl_D,Tl_D,mg/l,,THALLIUM,706,METALS (OTHER THAN MERCURY),1045,393,Thallium,7440-28-0,487,
+1926,"trans-1,2-Dichloroethylene","1,2-Transdichloroethylene",102,"1,2-Trans",Org_55,ug/l,,"TRANS-1,2-DICHLOROETHYLENE",1080,TOXIC ORGANICS,1090,444,"trans-1,2-Dichloroethylene",156-60-5,178,
+2849,"Temperature, water",temperature,2,TEMP,TEMP,deg C,,"TEMPERATURE, WATER",1035,TEMPERATURE,1036,388,"Temperature, water",,481,Temperature
+1827,Sulfate,Sulfate,8,SO4,SO4,mg/l,,SULFATE,966,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,,,14808-79-8,,
+1820,Strontium,Strontium 90,41,Sr_90,Sr_90,pCi/L,,STRONTIUM,706,METALS (OTHER THAN MERCURY),1013,382,Strontium,,467,
+1815,specific conductance,specific conductance,6,SC,SC,uS/cm,,SPECIFIC CONDUCTIVITY,966,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,specific conductance,,139,Specific Conductance
+1793,Silver,"silver, dissolved",21,Ag_D_HD,Ag_D,mg/l,,SILVER,706,METALS (OTHER THAN MERCURY),996,375,Silver,7440-22-4,446,Silver
+1783002,Selenium,"selenium, total recoverable",32,Se_TR,Se_TR,mg/l,,"SELENIUM, TOTAL RECOVERABLE",706,METALS (OTHER THAN MERCURY),1284,372,Selenium,7782-49-2,438,Selenium
+1783001,Selenium,"selenium, dissolved",31,Se_D,Se_D,mg/l,,"SELENIUM, DISSOLVED",706,METALS (OTHER THAN MERCURY),1283,372,Selenium,7782-49-2,438,Selenium
+1759,Radium-228,Radium 228,44,Ra_228,Ra_228_,pCi/L,,RADIUM 228,946,RADIATION,950,364,Radium 228,15262-20-1,426,Radium 228
+1757,Radium-226,Radium 226,43,Ra_226,Ra_226_,pCi/L,,RADIUM 226,946,RADIATION,949,363,Radium 226,13982-63-3,424,Radium 226
+1902,Toluene,Toluene,101,Toluene,Org_54,ug/l,,TOLUENE,1080,TOXIC ORGANICS,1052,396,Toluene,108-88-3,495,
+1706,Polychlorinated biphenyls,Polychlorinated Byphenyls (PCBs),47,PCBs_T,PCBs_T,ug/l,,PCB IN WATER COLUMN,918,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,PCBs,1336-36-3,421,PCBs in Water Column
+1674,Phosphorus as P,"Phosphorus, total",10,TP,TP,mg/l,,"PHOSPHORUS, TOTAL",792,NUTRIENTS,903,462,Phosphorus (Total),,,"Phosphorus, Total"
+1869,Tetrachloroethylene,Tetrachloroethylene,100,Tetrachlo,Org_53,ug/l,,TETRACHLOROETHYLENE,1080,TOXIC ORGANICS,1042,391,Tetrachloroethylene,127-18-4,486,
+1648,pH,"pH, grab",4,pH,pH,None,,PH,1188,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,pH,,1,pH
+1744,Pyrene,Pyrene,99,Pyrene,Org_52,ug/l,,PYRENE,1080,TOXIC ORGANICS,940,356,Pyrene,129-00-0,411,
+1654,Phenol,Phenol,98,Phenol,Org_51,ug/l,,PHENOL,1080,TOXIC ORGANICS,896,338,Phenol,108-95-2,367,
+1633,Pentachlorophenol,Pentachlorophenol,97,Pentachlo,Org_50,ug/l,,PENTACHLOROPHENOL (PCP),1080,TOXIC ORGANICS,879,334,Pentachlorophenol (PCP),87-86-5,423,
+1623,p-Dichlorobenzene,"1,4-Dichlorobenzene",96,"1,4-Dichl",Org_49,ug/l,,P-DICHLOROBENZENE,1080,TOXIC ORGANICS,850,438,p-Dichlorobenzene,106-46-7,172,
+1479,o-Dichlorobenzene,"1,2-Dichlorobenzene",95,"1,2-Dichl",Org_48,ug/l,,O-DICHLOROBENZENE,1080,TOXIC ORGANICS,801,434,o-Dichlorobenzene,95-50-1,170,
+1467,o-Chlorophenol,2-Chlorophenol,94,2-Chlorop,Org_47,ug/l,,2-CHLOROPHENOL,1080,TOXIC ORGANICS,44,45,2-Chlorophenol,95-57-8,117,
+2416,"Nitrogen, Nitrate (NO3) as N",Nitrate as N,12,NO3,NO3,mg/l,,"NITROGEN, NITRATE",792,NUTRIENTS,770,452,"Nitrogen, Nitrate",,17116,"Nitrogen, Nitrate"
+1395,Nickel,"nickel, dissolved",20,Ni_D_HD,Ni_D,mg/l,,NICKEL,706,METALS (OTHER THAN MERCURY),754,301,Nickel,7440-02-0,322,
+1354002,Molybdenum,"Molybdenum, total recoverable",30,Mo_TR,Mo_TR,mg/l,,MOLYBDENUM,706,METALS (OTHER THAN MERCURY),732,291,Molybdenum,7439-98-7,317,
+1354001,Molybdenum,"Molybdenum, dissolved",29,Mo_D,Mo_D,mg/l,,MOLYBDENUM,706,METALS (OTHER THAN MERCURY),732,291,Molybdenum,7439-98-7,317,
+1448,Nonylphenol,Nonylphenol,93,Nonylphen,Org_46,ug/l,,NONYLPHENOL,1080,TOXIC ORGANICS,1287,,,84852-15-3,,
+1283,Methyl bromide,Methyl bromide,132,Methyl_br,PEST_27,ug/l,,METHYL BROMIDE,885,PESTICIDES,712,280,Methyl bromide,74-83-9,306,
+1266002,Mercury,"Mercury, total",39,Hg_T,Hg_T,mg/l,,"MERCURY, TOTAL",693,MERCURY,1286,274,Mercury,7439-97-6,301,Mercury
+1266001,Mercury,"mercury, dissolved",40,Hg_D,Hg_D,mg/l,,"MERCURY, DISSOLVED",693,MERCURY,1285,274,Mercury,7439-97-6,301,Mercury
+1249,Manganese,"manganese, dissolved",19,Mn_D_HD,Mn_D,mg/l,,MANGANESE,706,METALS (OTHER THAN MERCURY),692,273,Manganese,7439-96-5,300,Manganese
+1215,Lead,"lead, dissolved",18,Pb_D_HD,Pb_D,mg/l,,LEAD,706,METALS (OTHER THAN MERCURY),663,267,Lead,7439-92-1,285,Lead
+1430,N-Nitrosodiphenylamine,N-Nitrosodiphenylamine,92,N-Nitroso_p,Org_45,ug/l,,N-NITROSODIPHENYLAMINE,1080,TOXIC ORGANICS,739,295,N-Nitrosodiphenylamine,86-30-6,341,
+1173,"Indeno[1,2,3-cd]pyrene",INDENO,130,INDENO,PEST_25,ug/l,,"INDENO[1,2,3-CD]PYRENE",885,PESTICIDES,641,259,"Indeno[1,2,3-cd]pyrene",193-39-5,412,
+1429,N-Nitrosodi-n-propylamine,N-Nitrosodi-n-propylamine,91,N-Nitroso_n,Org_44,ug/l,,N-NITROSODIPROPYLAMINE,1080,TOXIC ORGANICS,740,296,N-Nitrosodipropylamine,621-64-7,406,
+1427,N-Nitrosodimethylamine,N-Nitrosodimethylamine,90,N-Nitroso_m,Org_43,ug/l,,N-NITROSODIMETHYLAMINE,1080,TOXIC ORGANICS,738,294,N-Nitrosodimethylamine,62-75-9,340,
+1403,Nitrobenzene,Nitrobenzene,89,Nitrobenz,Org_42,ug/l,,NITROBENZENE,1080,TOXIC ORGANICS,765,304,Nitrobenzene,98-95-3,326,
+1115,Hexachlorobenzene,Hexachlorobenzene,129,Hexachlor,PEST_24,ug/l,,HEXACHLOROBENZENE,885,PESTICIDES,607,246,Hexachlorobenzene,118-74-1,264,
+1105,Heptachlor epoxide,Heptachlor epoxide,128,Heptachlo_epo,PEST_23,ug/l,,HEPTACHLOR EPOXIDE,885,PESTICIDES,603,245,Heptachlor epoxide,1024-57-3,263,
+1104,Heptachlor,Heptachlor,127,Heptachlo,PEST_22,ug/l,,HEPTACHLOR,885,PESTICIDES,602,244,Heptachlor,76-44-8,262,
+1235,Lindane,Gamma-BHC (Lindane),131,Gamma-BHC,PEST_26,ug/l,,LINDANE,885,PESTICIDES,667,268,Lindane,58-89-9,294,
+1328,Methylene chloride,Methylene chloride,88,Methylene,Org_41,ug/l,,DICHLOROMETHANE,1080,TOXIC ORGANICS,413,194,Dichloromethane,75-09-2,311,
+1263,m-Dichlorobenzene,"1,3-Dichlorobenzene",87,"1,3-Dichl",Org_40,ug/l,,M-DICHLOROBENZENE,1080,TOXIC ORGANICS,683,429,m-Dichlorobenzene,541-73-1,171,
+1199,Isophorone,Isophorone,86,Isophoron,Org_39,ug/l,,ISOPHORONE,1080,TOXIC ORGANICS,653,262,Isophorone,78-59-1,280,
+1004,Endrin aldehyde,Endrin aldehyde,126,Endrin_al,PEST_21,ug/l,,ENDRIN ALDEHYDE,885,PESTICIDES,463,214,Endrin aldehyde,7421-93-4,226,
+1003,Endrin,Endrin,125,Endrin,PEST_20,ug/l,,ENDRIN,885,PESTICIDES,462,213,Endrin,72-20-8,225,
+1001,Endosulfan sulfate,Endosulfan sulfate,124,Endosulfa,PEST_19,ug/l,,ENDOSULFAN SULFATE,885,PESTICIDES,460,211,Endosulfan sulfate,1031-07-8,222,
+2287,Escherichia coli,E. coli,1,ECOLI,ECOLI,MPN/100mL,,ESCHERICHIA COLI (E. COLI),861,PATHOGENS,471,217,E. coli,68583-22-2,9780,E. coli
+985,Dissolved oxygen (DO),"DO conc, grab",3,DO,DO,mg/l,AL,DISSOLVED OXYGEN,1189,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,"Oxygen, Dissolved",,201,Dissolved Oxygen
+973,"Dioxin + furan mix, unspecified",Dioxin,48,Dioxin,Org_58,ug/l,,"DIOXIN (INCLUDING 2,3,7,8-TCDD)",435,DIOXINS,430,203,"Dioxin (including 2,3,7,8-TCDD)",1746-01-6,198,
+957,Dimethyl phthalate,Dimethyl phthalate,123,Dimethyl ,PEST_18,ug/l,,DIMETHYL PHTHALATE,885,PESTICIDES,424,200,Dimethyl phthalate,131-11-3,385,
+1123,Hexachloroethane,Hexachloroethane,85,Hexachl_eth,Org_38,ug/l,,HEXACHLOROETHANE,1080,TOXIC ORGANICS,614,252,Hexachloroethane,67-72-1,267,
+934,Dieldrin,Dieldrin,122,Dieldrin,PEST_17,ug/l,,DIELDRIN,885,PESTICIDES,417,198,Dieldrin,60-57-1,192,
+1121,Hexachlorocyclopentadiene,Hexachlorocyclopentadiene,84,Hexachl_cyc,Org_36,ug/l,,HEXACHLOROCYCLOPENTADIENE,1080,TOXIC ORGANICS,613,251,Hexachlorocyclopentadiene,77-47-4,266,
+899,Dibutyl phthalate,Dibutyl phthalate,121,Dibutyl p,PEST_16,ug/l,,DIBUTYL PHTHALATE,885,PESTICIDES,403,190,Dibutyl phthalate,84-74-2,381,
+1118,Hexachlorobutadiene,Hexachlorobutadiene,83,Hexachl_but,Org_35,ug/l,,HEXACHLOROBUTADIENE,1080,TOXIC ORGANICS,609,247,Hexachlorobutadiene,87-68-3,265,
+885,Diazinon,Diazinon,120,Diazinon,PEST_15,ug/l,,DIAZINON,885,PESTICIDES,400,187,Diazinon,,161,
+881,Di(2-ethylhexyl) phthalate,Di(2-ethylhexyl) phthalate,119,Di(2-eth,PEST_14,ug/l,,DEHP (DI-SEC-OCTYL PHTHALATE),885,PESTICIDES,385,178,DEHP (Di-sec-octyl phthalate),117-81-7,386,
+842,Cyanide,"Cyanide, total recoverable",36,Cyan_TR,Cyan_TR,mg/l,,CYANIDE,1079,TOXIC INORGANICS,354,168,Cyanide (weak acid dissociable),57-12-5,146,
+832,Copper,"Copper, dissolved",17,Cu_D_HD,Cu_D,mg/l,,COPPER,706,METALS (OTHER THAN MERCURY),345,163,Copper,7440-50-8,140,Copper
+827,Cobalt,"Cobalt, dissolved",28,Co_D,Co_D,mg/l,,COBALT,706,METALS (OTHER THAN MERCURY),318,159,Cobalt,7440-48-4,135,
+1066,Fluorene,Fluorene,82,Fluorene,Org_34,ug/l,,FLUORENE,1080,TOXIC ORGANICS,554,233,Fluorene,86-73-7,248,
+809,Chromium,"Chromium, dissolved",25,Cr_D,Cr_D,mg/l,,CHROMIUM,706,METALS (OTHER THAN MERCURY),296,154,Chromium (total),7440-47-3,127,
+810,Chromium(III),Chromium(III),26,Cr_III_HD,Cr_III,mg/l,,"CHROMIUM, TRIVALENT",706,METALS (OTHER THAN MERCURY),303,156,"Chromium, trivalent",,129,
+811,Chromium(VI),"Chromium VI, dissolved",27,Cr_IV_D,Cr(IV)_D,mg/l,,CHROMIUM VI,706,METALS (OTHER THAN MERCURY),300,155,"Chromium, hexavalent",18540-29-9,128,
+1064,Fluoranthene,Fluoranthene,81,Fluoranth,Org_33,ug/l,,FLUORANTHENE,1080,TOXIC ORGANICS,553,232,Fluoranthene,206-44-0,245,
+1030,Ethylbenzene,Ethylbenzene,80,Ethylbenz,Org_32,ug/l,,ETHYLBENZENE,1080,TOXIC ORGANICS,476,221,Ethylbenzene,100-41-4,232,
+938,Diethyl phthalate,Diethyl phthalate,79,Diethyl_p,Org_31,ug/l,,DIETHYL PHTHALATE,1080,TOXIC ORGANICS,423,199,Diethyl phthalate,84-66-2,382,
+774,Chlorine,chlorine residual,11,Cl_Res,Cl_Res,mg/l,,CHLORINE,277,CHLORINE,277,139,Chlorine,7782-50-5,108,Chlorine
+773,Chloride,Chloride,9,CHL,CHL,mg/l,,CHLORIDE,966,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,,,16887-00-6,,
+767,Chlordane,Chlordane,118,Chlordane,PEST_13,ug/l,,CHLORDANE,885,PESTICIDES,267,137,Chlordane,,99,Chlordane
+917,Dichlorobromomethane,Dichlorobromomethane,78,Dichlorob,Org_30,ug/l,,DICHLOROBROMOMETHANE,1080,TOXIC ORGANICS,406,192,Dichlorobromomethane,75-27-4,174,
+725,Cadmium,"cadmium, dissolved",16,Cd_D_HD,Cd_D,mg/l,,CADMIUM,706,METALS (OTHER THAN MERCURY),239,127,Cadmium,7440-43-9,74,Cadmium
+886,"Dibenz[a,h]anthracene","Dibenzo(a,h)anthracene",77,Dibenzo(a,Org_29,ug/l,,"DIBENZ[A,H]ANTHRACENE",1080,TOXIC ORGANICS,402,188,"Dibenz[a,h]anthracene",53-70-3,162,
+813,Chrysene,Chrysene,76,Chrysene,Org_28,ug/l,,CHRYSENE,1080,TOXIC ORGANICS,309,157,Chrysene (C1-C4),218-01-9,130,
+695,Boron,"Boron, dissolved",35,B_D,B_D,mg/l,,BORON,1079,TOXIC INORGANICS,230,123,Boron,7440-42-8,59,Boron
+784,Chloroform,Chloroform,75,Chlorofor,Org_27,ug/l,,CHLOROFORM,1080,TOXIC ORGANICS,286,147,Chloroform,67-66-3,115,
+781,Chlorodibromomethane,Chlorodibromomethane,74,Chlorodib,Org_26,ug/l,,CHLORODIBROMOMETHANE,1080,TOXIC ORGANICS,283,144,Chlorodibromomethane,124-48-1,164,
+13,.beta.-Endosulfan,beta-Endosulfan,108,beta-Endo,PEST_3,ug/l,,BETA-ENDOSULFAN (ENDOSULFAN 2),885,PESTICIDES,192,4,.beta.-Endosulfan (Endosulfan 2),33213-65-9,9799,
+14,.beta.-Hexachlorocyclohexane,beta-BHC,109,beta-BHC,PEST_4,ug/l,,BETA-BHC,885,PESTICIDES,191,3,.beta.-BHC,319-85-7,71,
+657,Beryllium,"Beryllium, dissolved",24,Be_D,Be_D,mg/l,,BERYLLIUM,706,METALS (OTHER THAN MERCURY),189,117,Beryllium,7440-41-7,51,
+779,Chlorobenzene,Chlorobenzene,73,Chloroben,Org_25,ug/l,,CHLOROBENZENE (MONO),1080,TOXIC ORGANICS,281,142,Chlorobenzene (mono),108-90-7,111,
+741,Carbon tetrachloride,Carbon tetrachloride,72,Carbon_te,Org_24,ug/l,,CARBON TETRACHLORIDE,1080,TOXIC ORGANICS,245,132,Carbon tetrachloride,56-23-5,82,
+714,Butyl benzyl phthalate,Butylbenzyl phthalate,71,Butylbenz,Org_23,ug/l,,BUTYL BENZYL PHTHALATE,1080,TOXIC ORGANICS,236,125,Butyl benzyl phthalate,85-68-7,383,
+675,Bis(2-chloroisopropyl) ether,Bis(2-chloroisopropyl) ether,70,Bis(2-chl_iso,Org_22,ug/l,,"2,2'-DICHLORODIISOPROPYL ETHER",1080,TOXIC ORGANICS,26,27,"2,2'-Dichlorodiisopropyl ether",,228,
+674,Bis(2-chloroethyl) ether,Bis(2-chloroethyl) ether,69,Bis(2-chl_eth,Org_21,ug/l,,"2,2'-DICHLORODIETHYL ETHER",1080,TOXIC ORGANICS,25,26,"2,2'-Dichlorodiethyl ether",111-44-4,229,
+644,Benzo[k]fluoranthene,Benzo(k)fluoranthene,68,Benzo(k)f,Org_20,ug/l,,BENZO[K]FLUORANTHENE,1080,TOXIC ORGANICS,184,113,Benzo[k]fluoranthene,207-08-9,246,
+611,Barium,"Barium, dissolved",38,Ba_D,Ba_D,mg/l,,BARIUM,946,RADIATION,161,104,Barium,7440-39-3,40,
+591,Arsenic,"arsenic, dissolved",23,As_D,As_D,mg/l,,ARSENIC,706,METALS (OTHER THAN MERCURY),145,96,Arsenic,7440-38-2,29,Arsenic
+570,Antimony,"antimony, dissolved",37,Sb_D,Sb_D,mg/l,,ANTIMONY,1079,TOXIC INORGANICS,130,95,Antimony,7440-36-0,26,
+638,Benzo[a]pyrene,Benzoapyrene,67,Benzoapyr,Org_19,ug/l,,BENZO[A]PYRENE,1080,TOXIC ORGANICS,178,109,Benzo(a)pyrene (PAHs),50-32-8,48,
+2414,"Nitrogen, ammonia as N","Ammonia, total",13,HN3_N,HN3_N,mg/l,,"AMMONIA, TOTAL",122,AMMONIA,124,308,Amonnia (Total),,,"Ammonia, Total"
+549002,Aluminum,"aluminum, total recoverable",14,Al_TR_HD,Al_TR,mg/l,,"ALUMINUM, TOTAL RECOVERABLE",706,METALS (OTHER THAN MERCURY),1282,87,Aluminum,7429-90-5,21,Aluminum
+549001,Aluminum,"aluminum, dissolved",15,Al_D,Al_D,mg/l,,"ALUMINUM, DISSOLVED",706,METALS (OTHER THAN MERCURY),1281,87,Aluminum,7429-90-5,21,Aluminum
+7,.alpha.-Endosulfan,alpha-Endosulfan,106,alpha-End,PEST_1,ug/l,,ALPHA-ENDOSULFAN (ENDOSULFAN 1),885,PESTICIDES,109,2,.alpha.-Endosulfan(Endosulfan 1),959-98-8,9798,
+8,.alpha.-Hexachlorocyclohexane,alpha-BHC,107,alpha-BHC,PEST_2,ug/l,,ALPHA-BHC,885,PESTICIDES,107,1,.alpha.-BHC,319-84-6,70,ALPHA-BHC
+529,Aldrin,Aldrin,117,Aldrin,PEST_12,ug/l,,ALDRIN,885,PESTICIDES,96,79,Aldrin,309-00-2,13,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",Adjusted gross alpha,42,GA_Adj,GA_Adj,pCi/L,,GROSS ALPHA,946,RADIATION,575,470,Gross Alpha - Adjusted,,17123,Gross Alpha
+520,Acrylonitrile,Acrylonitrile,116,Acrylonit,PEST_11,ug/l,,ACRYLONITRILE,885,PESTICIDES,88,76,Acrylonitrile,107-13-1,8,
+518,Acrolein,Acrolein,115,Acrolein,PEST_10,ug/l,,ACROLEIN,885,PESTICIDES,86,74,Acrolein,107-02-8,7,
+636,Benzo(b)fluoranthene,Benzo(b)fluoranthene,66,Benzo(b)f,Org_18,ug/l,,BENZO[B]FLUORANTHENE,1080,TOXIC ORGANICS,181,111,Benzo[b]fluoranthene,205-99-2,247,
+635,Benzidine,Benzidine,65,Benzidine,Org_17,ug/l,,BENZIDINE,1080,TOXIC ORGANICS,173,108,Benzidine,92-87-5,47,
+454,"4,6-Dinitro-o-cresol","2-Methyl-4,6-dinitrophenol",114,2-Methyl-,PEST_9,ug/l,,DINITRO-O-CRESOL,885,PESTICIDES,426,201,Dinitro-o-cresol,534-52-1,143,
+624,Benzene,Benzene,64,Benzene,Org_16,ug/l,,BENZENE,1080,TOXIC ORGANICS,172,107,Benzene,,46,
+621,Benz[a]anthracene,Benzoaanthracene,63,Benzoaant,Org_15,ug/l,,BENZ[A]ANTHRACENE,1080,TOXIC ORGANICS,188,110,Benzo[a]anthracene,56-55-3,45,
+568,Anthracene,Anthracene,62,Anthracen,Org_14,ug/l,,ANTHRACENE,1080,TOXIC ORGANICS,129,94,Anthracene,120-12-7,25,
+332,"2,4-Dinitrophenol","2,4-Dinitrophenol",113,"2,4-Dinit",PEST_8,ug/l,,"2,4-DINITROPHENOL",885,PESTICIDES,37,38,"2,4-Dinitrophenol",51-28-5,195,
+500,Acenaphthene,Acenaphthene,61,Acenaphth,Org_13,ug/l,,ACENAPHTHENE,1080,TOXIC ORGANICS,75,68,Acenaphthene,83-32-9,2,
+410,"3,3'-Dichlorobenzidine","3,3'-Dichlorobenzidine",60,"3,3'-Dich",Org_12,ug/l,,"3,3'-DICHLOROBENZIDINE",1080,TOXIC ORGANICS,52,51,"3,3'-Dichlorobenzidine",91-94-1,173,
+358,2-Chloronaphthalene,2-Chloronaphthalene,59,2-Chloron,Org_11,ug/l,,2-CHLORONAPHTHALENE,1080,TOXIC ORGANICS,43,44,2-Chloronaphthalene,91-58-7,116,
+333,"2,4-Dinitrotoluene","2,4-Dinitrotoluene",58,"2,4-Dinit",Org_10,ug/l,,"2,4-DINITROTOLUENE",1080,TOXIC ORGANICS,38,39,"2,4-Dinitrotoluene",121-14-2,196,
+80,"1,3-Dichloropropene","1,3-Dichloropropene",112,"1,3-Dichl_pro",PEST_7,ug/l,,"1,3-DICHLOROPROPENE",885,PESTICIDES,22,24,"1,3-Dichloropropene",,187,
+331,"2,4-Dimethylphenol","2,4-Dimethylphenol",57,"2,4-Dimet",Org_9,ug/l,,"2,4-DIMETHYLPHENOL",1080,TOXIC ORGANICS,36,37,"2,4-Dimethylphenol",105-67-9,194,
+330,"2,4-Dichlorophenol","2,4-Dichlorophenol",56,"2,4-Dichl",Org_8,ug/l,,"2,4-DICHLOROPHENOL",1080,TOXIC ORGANICS,35,36,"2,4-Dichlorophenol",120-83-2,182,
+316,"2,4,6-Trichlorophenol","2,4,6-Trichlorophenol",55,"2,4,6-Tri",Org_7,ug/l,,"2,4,6-TRICHLOROPHENOL",1080,TOXIC ORGANICS,32,33,"2,4,6-Trichlorophenol",88-06-2,507,
+67,"1,2-Dichloropropane","1,2-Dichloropropane",111,"1,2-Dichl_pro",PEST_6,ug/l,,"1,2-DICHLOROPROPANE",885,PESTICIDES,17,21,"1,2-Dichloropropane",78-87-5,183,
+65,"1,2-Dichloroethane","1,2-Dichloroethane",110,"1,2-Dichl_eth",PEST_5,ug/l,,"1,2-DICHLOROETHANE",885,PESTICIDES,15,19,"1,2-Dichloroethane",107-06-2,177,
+72,"1,2-Diphenylhydrazine","1,2-Diphenylhydrazine",54,"1,2-Diphe",Org_6,ug/l,,"1,2-DIPHENYLHYDRAZINE",1080,TOXIC ORGANICS,19,22,"1,2-Diphenylhydrazine",,200,
+58,"1,2,4-Trichlorobenzene","1,2,4-Trichlorobenzene",53,"1,2,4-Tri",Org_5,ug/l,,"1,2,4-TRICHLOROBENZENE",1080,TOXIC ORGANICS,10,14,"1,2,4-Trichlorobenzene",120-82-1,500,
+28,"1,1-Dichloroethylene","1,1-Dichloroethylene",52,"1,1-Dichl",Org_4,ug/l,,VINYLIDENE CHLORIDE,1080,TOXIC ORGANICS,1130,419,Vinylidene chloride,75-35-4,179,
+25,"1,1,2-Trichloroethane","1,1,2-Trichloroethane",51,"1,1,2-Tri",Org_3,ug/l,,"1,1,2-TRICHLOROETHANE",1080,TOXIC ORGANICS,4,9,"1,1,2-Trichloroethane",79-00-5,503,
+24,"1,1,2,2-Tetrachloroethane","1,1,2,2-Tetrachloroethane",50,"1,1,2,2-T",Org_2,ug/l,,"1,1,2,2-TETRACHLOROETHANE",1080,TOXIC ORGANICS,3,8,"1,1,2,2-Tetrachloroethane",79-34-5,485,
+21,"1,1,1-Trichloroethane","1,1,1-Trichloroethane",49,"1,1,1-Tri",Org_1,ug/l,,"1,1,1-TRICHLOROETHANE",1080,TOXIC ORGANICS,2,7,"1,1,1-Trichloroethane",71-55-6,502,
+312,"2,4,5-Trichlorophenol","2,4,5-Trichlorophenol",48,"2,4,5-Tri",Org_59,ug/l,,"2,4,5-TRICHLOROPHENOL",1080,TOXIC ORGANICS,,,"2,4,5-Trichlorophenol",95-95-4,506,

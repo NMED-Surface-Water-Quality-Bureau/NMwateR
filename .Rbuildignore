@@ -1,2 +1,4 @@
 ^NMwateR\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
+^scripts$

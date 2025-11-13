@@ -1,0 +1,1043 @@
+CHR_UID,CHR_NAME,CAS,FRACTION,DU,WBODY,WGROUP,ECOLI_SINGLE,SC_WQC,TEMP_WQC,LT,GT,HD_METAL,TOXIC,TURBAP,DWS,IRR,LW,WH,ACUTE,CHRONIC,HH,PERSISTENT,UNITS,ATTAINS CAUSE_GROUP_NAME,ATTAINS CAUSE_ID,ADB_CAUSE_NO,Comments (SCB)
+7,.alpha.-Endosulfan,959-98-8,,ColdWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,CoolWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,HQColdWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,LAL,,,,,,,,N,Y,N,62,,,,0.22,,,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,MCWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,MWWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+7,.alpha.-Endosulfan,959-98-8,,WWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,30,,ug/l,PESTICIDES,109,2,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,ColdWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,CoolWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,HQColdWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,MCWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,MWWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+8,.alpha.-Hexachlorocyclohexane,319-84-6,,WWAL,,,,,,,,N,Y,N,0.056,,,,,,0.0039,,ug/l,PESTICIDES,107,1,
+13,.beta.-Endosulfan,33213-65-9,,ColdWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,CoolWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,HQColdWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,LAL,,,,,,,,N,Y,N,62,,,,0.22,,,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,MCWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,MWWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+13,.beta.-Endosulfan,33213-65-9,,WWAL,,,,,,,,N,Y,N,62,,,,0.22,0.056,40,,ug/l,PESTICIDES,192,4,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,ColdWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,CoolWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,HQColdWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,MCWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,MWWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+14,.beta.-Hexachlorocyclohexane,319-85-7,,WWAL,,,,,,,,N,Y,N,0.091,,,,,,0.14,,ug/l,PESTICIDES,191,3,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,ColdWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,CoolWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,HQColdWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,MCWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,MWWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+24,"1,1,2,2-Tetrachloroethane",79-34-5,,WWAL,,,,,,,,N,Y,N,1.8,,,,,,30,,ug/l,TOXIC ORGANICS,3,8,
+25,"1,1,2-Trichloroethane",79-00-5,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+25,"1,1,2-Trichloroethane",79-00-5,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+25,"1,1,2-Trichloroethane",79-00-5,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+25,"1,1,2-Trichloroethane",79-00-5,,MCWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+25,"1,1,2-Trichloroethane",79-00-5,,MWWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+25,"1,1,2-Trichloroethane",79-00-5,,WWAL,,,,,,,,N,Y,N,5,,,,,,89,,ug/l,TOXIC ORGANICS,4,9,
+28,"1,1-Dichloroethylene",75-35-4,,ColdWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+28,"1,1-Dichloroethylene",75-35-4,,CoolWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+28,"1,1-Dichloroethylene",75-35-4,,HQColdWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+28,"1,1-Dichloroethylene",75-35-4,,MCWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+28,"1,1-Dichloroethylene",75-35-4,,MWWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+28,"1,1-Dichloroethylene",75-35-4,,WWAL,,,,,,,,N,Y,N,7,,,,,,20000,,ug/l,TOXIC ORGANICS,1130,419,
+58,"1,2,4-Trichlorobenzene",120-82-1,,ColdWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+58,"1,2,4-Trichlorobenzene",120-82-1,,CoolWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+58,"1,2,4-Trichlorobenzene",120-82-1,,HQColdWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+58,"1,2,4-Trichlorobenzene",120-82-1,,MCWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+58,"1,2,4-Trichlorobenzene",120-82-1,,MWWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+58,"1,2,4-Trichlorobenzene",120-82-1,,WWAL,,,,,,,,N,Y,N,70,,,,,,0.76,,ug/l,TOXIC ORGANICS,10,14,
+65,"1,2-Dichloroethane",107-06-2,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+65,"1,2-Dichloroethane",107-06-2,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+65,"1,2-Dichloroethane",107-06-2,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+65,"1,2-Dichloroethane",107-06-2,,MCWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+65,"1,2-Dichloroethane",107-06-2,,MWWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+65,"1,2-Dichloroethane",107-06-2,,WWAL,,,,,,,,N,Y,N,5,,,,,,6500,,ug/l,PESTICIDES,15,19,
+67,"1,2-Dichloropropane",78-87-5,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+67,"1,2-Dichloropropane",78-87-5,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+67,"1,2-Dichloropropane",78-87-5,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+67,"1,2-Dichloropropane",78-87-5,,MCWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+67,"1,2-Dichloropropane",78-87-5,,MWWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+67,"1,2-Dichloropropane",78-87-5,,WWAL,,,,,,,,N,Y,N,5,,,,,,310,,ug/l,PESTICIDES,17,21,
+72,"1,2-Diphenylhydrazine",122-66-7,,ColdWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+72,"1,2-Diphenylhydrazine",122-66-7,,CoolWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+72,"1,2-Diphenylhydrazine",122-66-7,,HQColdWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+72,"1,2-Diphenylhydrazine",122-66-7,,MCWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+72,"1,2-Diphenylhydrazine",122-66-7,,MWWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+72,"1,2-Diphenylhydrazine",122-66-7,,WWAL,,,,,,,,N,Y,N,0.44,,,,,,2,,ug/l,TOXIC ORGANICS,19,22,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+80,"1,3-Dichloropropene",542-75-6,,ColdWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+80,"1,3-Dichloropropene",542-75-6,,CoolWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+80,"1,3-Dichloropropene",542-75-6,,HQColdWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+80,"1,3-Dichloropropene",542-75-6,,MCWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+80,"1,3-Dichloropropene",542-75-6,,MWWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+80,"1,3-Dichloropropene",542-75-6,,WWAL,,,,,,,,N,Y,N,3.5,,,,,,120,,ug/l,PESTICIDES,22,24,
+316,"2,4,6-Trichlorophenol",88-06-2,,ColdWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+316,"2,4,6-Trichlorophenol",88-06-2,,CoolWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+316,"2,4,6-Trichlorophenol",88-06-2,,HQColdWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+316,"2,4,6-Trichlorophenol",88-06-2,,MCWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+316,"2,4,6-Trichlorophenol",88-06-2,,MWWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+316,"2,4,6-Trichlorophenol",88-06-2,,WWAL,,,,,,,,N,Y,N,32,,,,,,28,,ug/l,TOXIC ORGANICS,32,33,
+330,"2,4-Dichlorophenol",120-83-2,,ColdWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+330,"2,4-Dichlorophenol",120-83-2,,CoolWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+330,"2,4-Dichlorophenol",120-83-2,,HQColdWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+330,"2,4-Dichlorophenol",120-83-2,,MCWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+330,"2,4-Dichlorophenol",120-83-2,,MWWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+330,"2,4-Dichlorophenol",120-83-2,,WWAL,,,,,,,,N,Y,N,105,,,,,,60,,ug/l,TOXIC ORGANICS,35,36,
+331,"2,4-Dimethylphenol",105-67-9,,ColdWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+331,"2,4-Dimethylphenol",105-67-9,,CoolWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+331,"2,4-Dimethylphenol",105-67-9,,HQColdWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+331,"2,4-Dimethylphenol",105-67-9,,MCWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+331,"2,4-Dimethylphenol",105-67-9,,MWWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+331,"2,4-Dimethylphenol",105-67-9,,WWAL,,,,,,,,N,Y,N,700,,,,,,3000,,ug/l,TOXIC ORGANICS,36,37,
+3029,Dinitrophenols,25550-58-7,,ColdWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+3029,Dinitrophenols,25550-58-7,,CoolWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+3029,Dinitrophenols,25550-58-7,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+3029,Dinitrophenols,25550-58-7,,MCWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+3029,Dinitrophenols,25550-58-7,,MWWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+3029,Dinitrophenols,25550-58-7,,WWAL,,,,,,,,N,Y,N,,,,,,,1000,,ug/l,TOXIC ORGANICS,,,Dinitrophenols not previously included in this spreadsheet. Added based on WQC in NMAC
+332,"2,4-Dinitrophenol",51-28-5,,ColdWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+332,"2,4-Dinitrophenol",51-28-5,,CoolWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+332,"2,4-Dinitrophenol",51-28-5,,HQColdWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+332,"2,4-Dinitrophenol",51-28-5,,MCWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+332,"2,4-Dinitrophenol",51-28-5,,MWWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+332,"2,4-Dinitrophenol",51-28-5,,WWAL,,,,,,,,N,Y,N,70,,,,,,300,,ug/l,PESTICIDES,37,38,
+333,"2,4-Dinitrotoluene",121-14-2,,ColdWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+333,"2,4-Dinitrotoluene",121-14-2,,CoolWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+333,"2,4-Dinitrotoluene",121-14-2,,HQColdWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+333,"2,4-Dinitrotoluene",121-14-2,,MCWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+333,"2,4-Dinitrotoluene",121-14-2,,MWWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+333,"2,4-Dinitrotoluene",121-14-2,,WWAL,,,,,,,,N,Y,N,1.1,,,,,,17,,ug/l,TOXIC ORGANICS,38,39,
+358,2-Chloronaphthalene,91-58-7,,ColdWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+358,2-Chloronaphthalene,91-58-7,,CoolWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+358,2-Chloronaphthalene,91-58-7,,HQColdWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+358,2-Chloronaphthalene,91-58-7,,MCWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+358,2-Chloronaphthalene,91-58-7,,MWWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+358,2-Chloronaphthalene,91-58-7,,WWAL,,,,,,,,N,Y,N,2800,,,,,,1000,,ug/l,TOXIC ORGANICS,43,44,
+410,"3,3'-Dichlorobenzidine",91-94-1,,ColdWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+410,"3,3'-Dichlorobenzidine",91-94-1,,CoolWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+410,"3,3'-Dichlorobenzidine",91-94-1,,HQColdWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+410,"3,3'-Dichlorobenzidine",91-94-1,,MCWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+410,"3,3'-Dichlorobenzidine",91-94-1,,MWWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+410,"3,3'-Dichlorobenzidine",91-94-1,,WWAL,,,,,,,,N,Y,N,0.78,,,,,,1.5,,ug/l,TOXIC ORGANICS,52,51,
+454,"4,6-Dinitro-o-cresol",534-52-1,,ColdWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+454,"4,6-Dinitro-o-cresol",534-52-1,,CoolWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+454,"4,6-Dinitro-o-cresol",534-52-1,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+454,"4,6-Dinitro-o-cresol",534-52-1,,MCWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+454,"4,6-Dinitro-o-cresol",534-52-1,,MWWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+454,"4,6-Dinitro-o-cresol",534-52-1,,WWAL,,,,,,,,N,Y,N,,,,,,,30,,ug/l,PESTICIDES,426,201,
+500,Acenaphthene,83-32-9,,ColdWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,CoolWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,HQColdWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,LAL,,,,,,,,N,Y,N,2100,,,,,,,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,MCWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,MWWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+500,Acenaphthene,83-32-9,,WWAL,,,,,,,,N,Y,N,2100,,,,,,90,,ug/l,TOXIC ORGANICS,75,68,
+518,Acrolein,107-02-8,,ColdWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+518,Acrolein,107-02-8,,CoolWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+518,Acrolein,107-02-8,,HQColdWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+518,Acrolein,107-02-8,,LAL,,,,,,,,N,Y,N,18,,,,3,,,,ug/l,PESTICIDES,86,74,Added LAL due to acute aquatic life criteria
+518,Acrolein,107-02-8,,MCWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+518,Acrolein,107-02-8,,MWWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+518,Acrolein,107-02-8,,WWAL,,,,,,,,N,Y,N,18,,,,3,3,400,,ug/l,PESTICIDES,86,74,
+520,Acrylonitrile,107-13-1,,ColdWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+520,Acrylonitrile,107-13-1,,CoolWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+520,Acrylonitrile,107-13-1,,HQColdWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+520,Acrylonitrile,107-13-1,,MCWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+520,Acrylonitrile,107-13-1,,MWWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+520,Acrylonitrile,107-13-1,,WWAL,,,,,,,,N,Y,N,0.65,,,,,,70,,ug/l,PESTICIDES,88,76,
+529,Aldrin,309-00-2,,ColdWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,CoolWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,HQColdWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,LAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,MCWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,MWWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+529,Aldrin,309-00-2,,WWAL,,,,,,,,N,Y,N,0.021,,,,3,,0.0000077,Y,ug/l,PESTICIDES,96,79,
+568,Anthracene,120-12-7,,ColdWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+568,Anthracene,120-12-7,,CoolWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+568,Anthracene,120-12-7,,HQColdWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+568,Anthracene,120-12-7,,MCWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+568,Anthracene,120-12-7,,MWWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+568,Anthracene,120-12-7,,WWAL,,,,,,,,N,Y,N,10500,,,,,,400,,ug/l,TOXIC ORGANICS,129,94,Added criterion for DWS based on WQS table 
+570,Antimony,7440-36-0,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,LAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,MCWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,MWWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+570,Antimony,7440-36-0,Dissolved,WWAL,,,,,,,,N,Y,N,0.006,,,,,,0.64,Y,mg/l,TOXIC INORGANICS,130,95,"Corrected conversion from ug to mg for drinking water, 6ug/L = 0.006mg/L. Added fraction = Dissolved"
+591,Arsenic,7440-38-2,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,LAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,MCWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,MWWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+591,Arsenic,7440-38-2,Dissolved,WWAL,,,,,,,,N,Y,N,0.01,0.1,0.2,,0.34,0.15,0.009,Y,mg/l,METALS (OTHER THAN MERCURY),145,96,Added fraction=Dissolved
+596,Asbestos,1332-21-4,,ColdWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+596,Asbestos,1332-21-4,,CoolWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+596,Asbestos,1332-21-4,,HQColdWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+596,Asbestos,1332-21-4,,MCWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+596,Asbestos,1332-21-4,,MWWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+596,Asbestos,1332-21-4,,WWAL,,,,,,,,N,Y,N,7000000,,,,,,,,fibers/L,,,,Added Asbestos DWS criteria based on most recent EPA approved WQC. 
+621,Benz[a]anthracene,56-55-3,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+621,Benz[a]anthracene,56-55-3,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+621,Benz[a]anthracene,56-55-3,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+621,Benz[a]anthracene,56-55-3,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+621,Benz[a]anthracene,56-55-3,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+621,Benz[a]anthracene,56-55-3,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,188,110,"Updated HH criterion from 0.18 to 0.013 to coincide with approved WQS, add DWS criterion."
+624,Benzene,71-43-2,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+624,Benzene,71-43-2,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+624,Benzene,71-43-2,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+624,Benzene,71-43-2,,MCWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+624,Benzene,71-43-2,,MWWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+624,Benzene,71-43-2,,WWAL,,,,,,,,N,Y,N,5,,,,,,160,,ug/l,TOXIC ORGANICS,172,107,
+635,Benzidine,92-87-5,,ColdWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+635,Benzidine,92-87-5,,CoolWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+635,Benzidine,92-87-5,,HQColdWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+635,Benzidine,92-87-5,,MCWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+635,Benzidine,92-87-5,,MWWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+635,Benzidine,92-87-5,,WWAL,,,,,,,,N,Y,N,0.0015,,,,,,0.11,,ug/l,TOXIC ORGANICS,173,108,
+636,Benzo(b)fluoranthene,205-99-2,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+636,Benzo(b)fluoranthene,205-99-2,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+636,Benzo(b)fluoranthene,205-99-2,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+636,Benzo(b)fluoranthene,205-99-2,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+636,Benzo(b)fluoranthene,205-99-2,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+636,Benzo(b)fluoranthene,205-99-2,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,TOXIC ORGANICS,181,111,"Updated HH criterion from 0.0013 to 0.013 to coincide with approved WQS, add DWS criterion."
+638,Benzo[a]pyrene,50-32-8,,ColdWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,CoolWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,HQColdWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,LAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,MCWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,MWWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+638,Benzo[a]pyrene,50-32-8,,WWAL,,,,,,,,N,Y,N,0.2,,,,,,0.0013,Y,ug/l,TOXIC ORGANICS,178,109,
+644,Benzo[k]fluoranthene,207-08-9,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+644,Benzo[k]fluoranthene,207-08-9,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+644,Benzo[k]fluoranthene,207-08-9,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+644,Benzo[k]fluoranthene,207-08-9,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+644,Benzo[k]fluoranthene,207-08-9,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+644,Benzo[k]fluoranthene,207-08-9,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,0.13,,ug/l,TOXIC ORGANICS,184,113,
+657,Beryllium,7440-41-7,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,LAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,MCWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,MWWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+657,Beryllium,7440-41-7,Dissolved,WWAL,,,,,,,,N,Y,N,0.004,,,,,,,,mg/l,METALS (OTHER THAN MERCURY),189,117,"Corrected conversion from ug to mg for drinking water, 4ug/L= 0.004mg/L"
+661,Barium,7440-39-3,Dissolved,ColdWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,CoolWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,HQColdWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,LAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,MCWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,MWWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+661,Barium,7440-39-3,Dissolved,WWAL,,,,,,,,N,Y,N,2,,,,,,,,mg/l,RADIATION,946,104,
+674,Bis(2-chloroethyl) ether,111-44-4,,ColdWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+674,Bis(2-chloroethyl) ether,111-44-4,,CoolWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+674,Bis(2-chloroethyl) ether,111-44-4,,HQColdWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+674,Bis(2-chloroethyl) ether,111-44-4,,MCWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+674,Bis(2-chloroethyl) ether,111-44-4,,MWWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+674,Bis(2-chloroethyl) ether,111-44-4,,WWAL,,,,,,,,N,Y,N,0.3,,,,,,22,,ug/l,TOXIC ORGANICS,25,26,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,ColdWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,CoolWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,HQColdWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,MCWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,MWWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+675,Bis(2-chloroisopropyl) ether,108-60-1,,WWAL,,,,,,,,N,Y,N,1400,,,,,,4000,,ug/l,TOXIC ORGANICS,26,27,
+714,Butyl benzyl phthalate,85-68-7,,ColdWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+714,Butyl benzyl phthalate,85-68-7,,CoolWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+714,Butyl benzyl phthalate,85-68-7,,HQColdWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+714,Butyl benzyl phthalate,85-68-7,,MCWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+714,Butyl benzyl phthalate,85-68-7,,MWWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+714,Butyl benzyl phthalate,85-68-7,,WWAL,,,,,,,,N,Y,N,7000,,,,,,1,,ug/l,TOXIC ORGANICS,236,125,
+734,Carbaryl,63-25-2,,ColdWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,CoolWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,HQColdWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,LAL,,,,,,,,N,Y,N,,,,,2.1,,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,MCWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,MWWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+734,Carbaryl,63-25-2,,WWAL,,,,,,,,N,Y,N,,,,,2.1,2.1,,,ug/l,,,,Carbaryl was not previously included in this spreadsheet. Added Carbaryl acute and chronic ALU criteria based on NMAC WQC. 
+725,Cadmium,7440-43-9,Dissolved,ColdWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,CoolWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,LAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,MCWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,MWWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+725,Cadmium,7440-43-9,Dissolved,WWAL,,,,,,,,Y,Y,N,0.005,0.01,0.05,,0.00049,0.000253,,,mg/l,METALS (OTHER THAN MERCURY),239,127,Added fraction=Dissolved
+741,Carbon tetrachloride,56-23-5,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+741,Carbon tetrachloride,56-23-5,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+741,Carbon tetrachloride,56-23-5,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+741,Carbon tetrachloride,56-23-5,,MCWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+741,Carbon tetrachloride,56-23-5,,MWWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+741,Carbon tetrachloride,56-23-5,,WWAL,,,,,,,,N,Y,N,5,,,,,,50,,ug/l,TOXIC ORGANICS,245,132,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+767,Chlordane,57-74-9,,ColdWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,CoolWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,HQColdWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,LAL,,,,,,,,N,Y,N,2,,,,2.4,,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,MCWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,MWWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+767,Chlordane,57-74-9,,WWAL,,,,,,,,N,Y,N,2,,,,2.4,0.0043,0.0032,Y,ug/l,PESTICIDES,267,137,Updated chronic aquatic life and HH criteria with values from WQS table. 
+773,Chloride,1688-70-06,,ColdWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,CoolWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,HQColdWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,LAL,,,,,,,,N,N,N,,,,,860,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,MCWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,MWWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+773,Chloride,1688-70-06,,WWAL,,,,,,,,N,N,N,,,,,860,230,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,272,138,"Added acute and chronic aquatic life criteria from table, previously blank in spreadsheet "
+774,Chlorine,7782-50-5,,ColdWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,CoolWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,HQColdWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,LAL,,,,,,,,N,Y,N,,,,0.011,0.019,,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,MCWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,MWWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+774,Chlorine,7782-50-5,,WWAL,,,,,,,,N,Y,N,,,,0.011,0.019,0.011,,,mg/l,CHLORINE,277,139,Moved values from LW to WH to coincide with table in most recent NMAC
+779,Chlorobenzene,108-90-7,,ColdWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+779,Chlorobenzene,108-90-7,,CoolWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+779,Chlorobenzene,108-90-7,,HQColdWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+779,Chlorobenzene,108-90-7,,MCWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+779,Chlorobenzene,108-90-7,,MWWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+779,Chlorobenzene,108-90-7,,WWAL,,,,,,,,N,Y,N,100,,,,,,800,,ug/l,TOXIC ORGANICS,281,142,
+781,Chlorodibromomethane,124-48-1,,ColdWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+781,Chlorodibromomethane,124-48-1,,CoolWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+781,Chlorodibromomethane,124-48-1,,HQColdWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+781,Chlorodibromomethane,124-48-1,,MCWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+781,Chlorodibromomethane,124-48-1,,MWWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+781,Chlorodibromomethane,124-48-1,,WWAL,,,,,,,,N,Y,N,4.2,,,,,,210,,ug/l,TOXIC ORGANICS,283,144,
+784,Chloroform,67-66-3,,ColdWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+784,Chloroform,67-66-3,,CoolWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+784,Chloroform,67-66-3,,HQColdWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+784,Chloroform,67-66-3,,MCWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+784,Chloroform,67-66-3,,MWWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+784,Chloroform,67-66-3,,WWAL,,,,,,,,N,Y,N,57,,,,,,2000,,ug/l,TOXIC ORGANICS,286,147,
+803,Chlorpyrifos,2921-88-2,,ColdWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,CoolWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,LAL,,,,,,,,N,Y,N,,,,,0.083,,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,MCWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,MWWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+803,Chlorpyrifos,2921-88-2,,WWAL,,,,,,,,N,Y,N,,,,,0.083,0.041,,,ug/l,,,,Chlorpyrifos was not previously included in this spreadsheet. Added this pollutant based on most recent WQS NMAC. EPA noted that this pollutant is not effective for CWA purposes pending results of ESA consultation.
+809,Chromium,7440-47-3,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,LAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,MCWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,MWWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+809,Chromium,7440-47-3,Dissolved,WWAL,,,,,,,,N,Y,N,0.1,0.1,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),239,154,Corrected conversion from ug to mg for LW. 1000ug=1mg
+810,Chromium(III),16065-83-1,Dissolved,ColdWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,CoolWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,LAL,,,,,,,,Y,Y,N,,,,,0.183,,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,MCWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,MWWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+810,Chromium(III),16065-83-1,Dissolved,WWAL,,,,,,,,Y,Y,N,,,,,0.183,0.0238,,,mg/l,METALS (OTHER THAN MERCURY),303,156,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,ColdWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,CoolWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,LAL,,,,,,,,N,Y,N,,,,,0.016,,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,MCWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,MWWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+811,Chromium(VI),18540-29-9,Dissolved,WWAL,,,,,,,,N,Y,N,,,,,0.016,0.011,,,mg/l,METALS (OTHER THAN MERCURY),300,155,Added fraction=Dissolved
+813,Chrysene,218-01-9,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+813,Chrysene,218-01-9,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+813,Chrysene,218-01-9,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+813,Chrysene,218-01-9,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+813,Chrysene,218-01-9,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+813,Chrysene,218-01-9,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,1.3,,ug/l,TOXIC ORGANICS,309,157,
+873,Demeton,8065-48-3,,ColdWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+873,Demeton,8065-48-3,,CoolWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+873,Demeton,8065-48-3,,HQColdWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+873,Demeton,8065-48-3,,MCWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+873,Demeton,8065-48-3,,MWWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+873,Demeton,8065-48-3,,WWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,,,,Demeton not previously included in this spreadsheet. Added WQC based on criteria for Demeton in most recent NMAC standards. 
+827,Cobalt,7440-48-4,Dissolved,ColdWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,CoolWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,LAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,MCWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,MWWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+827,Cobalt,7440-48-4,Dissolved,WWAL,,,,,,,,N,Y,N,,0.05,1,,,,,,mg/l,METALS (OTHER THAN MERCURY),318,159,Corrected conversion from ug to mg for LW. 1000ug=1mg
+832,Copper,7440-50-8,Dissolved,ColdWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,CoolWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,LAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,MCWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,MWWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+832,Copper,7440-50-8,Dissolved,WWAL,,,,,,,,Y,Y,N,1.3,0.2,0.5,,0.00364,0.00274,,,mg/l,METALS (OTHER THAN MERCURY),345,163,Added fraction=Dissolved
+842,Cyanide,57-12-5,Total Recoverable,ColdWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,CoolWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,HQColdWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,LAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,,,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,MCWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,MWWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+842,Cyanide,57-12-5,Total Recoverable,WWAL,,,,,,,,N,Y,N,0.2,,,0.0052,0.022,0.0052,0.4,,mg/l,TOXIC INORGANICS,354,168,"Updated HH criterion to 0.4 mg/L, added fraction= Total recoverable"
+881,Di(2-ethylhexyl) phthalate,117-81-7,,ColdWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+881,Di(2-ethylhexyl) phthalate,117-81-7,,CoolWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+881,Di(2-ethylhexyl) phthalate,117-81-7,,HQColdWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+881,Di(2-ethylhexyl) phthalate,117-81-7,,MCWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+881,Di(2-ethylhexyl) phthalate,117-81-7,,MWWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+881,Di(2-ethylhexyl) phthalate,117-81-7,,WWAL,,,,,,,,N,Y,N,6,,,,,,3.7,,ug/l,PESTICIDES,385,178,DWS and HH criteria updated based on most recent NMAC WQC
+676,Bis(chloromethyl) ether,542-88-1,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+676,Bis(chloromethyl) ether,542-88-1,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+676,Bis(chloromethyl) ether,542-88-1,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+676,Bis(chloromethyl) ether,542-88-1,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+676,Bis(chloromethyl) ether,542-88-1,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+676,Bis(chloromethyl) ether,542-88-1,,WWAL,,,,,,,,N,Y,N,,,,,,,0.17,,ug/l,,,,Bis(chloromethyl) ether was absent from this spreadsheet. Added to correspond with WQC in NMAC. 
+885,Diazinon,333-41-5,,ColdWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,CoolWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,LAL,,,,,,,,N,Y,N,,,,,0.17,,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,MCWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,MWWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+885,Diazinon,333-41-5,,WWAL,,,,,,,,N,Y,N,,,,,0.17,0.17,,,ug/l,PESTICIDES,400,187,
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,ColdWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,CoolWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,MCWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,MWWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+320,"2,4-Dichlorophenoxyacetic acid",94-75-7,,WWAL,,,,,,,,N,Y,N,,,,,,,12000,,ug/l,,,,"2,4- Dichlorophenoxyacetic acid was absent from this spreadsheet. Added based on most recent NMAC WQC. "
+886,"Dibenz[a,h]anthracene",53-70-3,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+886,"Dibenz[a,h]anthracene",53-70-3,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+886,"Dibenz[a,h]anthracene",53-70-3,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+886,"Dibenz[a,h]anthracene",53-70-3,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+886,"Dibenz[a,h]anthracene",53-70-3,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+886,"Dibenz[a,h]anthracene",53-70-3,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,0.0013,,ug/l,TOXIC ORGANICS,402,188,
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1516,Dichlorodiphenyldichloroethane (DDD),72-54-8,,WWAL,,,,,,,,N,Y,N,,,,,,,0.0012,,ug/l,,,,DDD was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+1517,Dichlorodiphenyldichloroethylene (DDE),72-55-9,,WWAL,,,,,,,,N,Y,N,,,,,,,0.00018,,ug/l,,,,DDE was absent from this spreadsheet. Added based on most recent NMAC WQC. 
+899,Dibutyl phthalate,84-74-2,,ColdWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+899,Dibutyl phthalate,84-74-2,,CoolWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+899,Dibutyl phthalate,84-74-2,,HQColdWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+899,Dibutyl phthalate,84-74-2,,MCWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+899,Dibutyl phthalate,84-74-2,,MWWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+899,Dibutyl phthalate,84-74-2,,WWAL,,,,,,,,N,Y,N,3500,,,,,,30,,ug/l,PESTICIDES,403,190,
+917,Dichlorobromomethane,75-27-4,,ColdWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+917,Dichlorobromomethane,75-27-4,,CoolWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+917,Dichlorobromomethane,75-27-4,,HQColdWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+917,Dichlorobromomethane,75-27-4,,MCWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+917,Dichlorobromomethane,75-27-4,,MWWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+917,Dichlorobromomethane,75-27-4,,WWAL,,,,,,,,N,Y,N,5.6,,,,,,270,,ug/l,TOXIC ORGANICS,406,192,
+934,Dieldrin,60-57-1,,ColdWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,CoolWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,HQColdWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,LAL,,,,,,,,N,Y,N,0.022,,,,0.24,,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,MCWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,MWWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+934,Dieldrin,60-57-1,,WWAL,,,,,,,,N,Y,N,0.022,,,,0.24,0.056,0.000012,Y,ug/l,PESTICIDES,417,198,
+938,Diethyl phthalate,84-66-2,,ColdWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+938,Diethyl phthalate,84-66-2,,CoolWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+938,Diethyl phthalate,84-66-2,,HQColdWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+938,Diethyl phthalate,84-66-2,,MCWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+938,Diethyl phthalate,84-66-2,,MWWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+938,Diethyl phthalate,84-66-2,,WWAL,,,,,,,,N,Y,N,28000,,,,,,600,,ug/l,TOXIC ORGANICS,423,199,
+957,Dimethyl phthalate,131-11-3,,ColdWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+957,Dimethyl phthalate,131-11-3,,CoolWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+957,Dimethyl phthalate,131-11-3,,HQColdWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+957,Dimethyl phthalate,131-11-3,,MCWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+957,Dimethyl phthalate,131-11-3,,MWWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+957,Dimethyl phthalate,131-11-3,,WWAL,,,,,,,,N,Y,N,350000,,,,,,2000,,ug/l,PESTICIDES,424,200,
+973,"Dioxin + furan mix, unspecified",1746-01-6,,ColdWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,CoolWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,HQColdWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,LAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,MCWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,MWWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+973,"Dioxin + furan mix, unspecified",1746-01-6,,WWAL,,,,,,,,N,Y,N,3.00E-05,,,,,,0.000000051,Y,ug/l,DIOXINS,430,203,"Added DWS criteria from WQS table, previously blank in spreadsheet. "
+985,Dissolved oxygen (DO),,,ColdWAL,,,,,,6,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,CoolWAL,,,,,,5,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,HQColdWAL,,,,,,6,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,MCWAL,,,,,,6,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,MWWAL,,,,,,5,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,WWAL,,,,,,5,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,
+985,Dissolved oxygen (DO),,,LAL,,,,,,,,N,N,N,,,,,,,,,mg/l,ORGANIC ENRICHMENT/OXYGEN DEPLETION,449,322,Deleted. There is no DO standard for this DU
+988,Total dissolved solids,,,ColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,CoolWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,HQColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,LAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,MCWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,MWWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+988,Total dissolved solids,,,WWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1059,399,
+1001,Endosulfan sulfate,1031-07-8,,ColdWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1001,Endosulfan sulfate,1031-07-8,,CoolWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1001,Endosulfan sulfate,1031-07-8,,HQColdWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1001,Endosulfan sulfate,1031-07-8,,MCWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1001,Endosulfan sulfate,1031-07-8,,MWWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1001,Endosulfan sulfate,1031-07-8,,WWAL,,,,,,,,N,Y,N,62,,,,,,40,,ug/l,PESTICIDES,460,211,
+1003,Endrin,72-20-8,,ColdWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,CoolWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,HQColdWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,LAL,,,,,,,,N,Y,N,2,,,,0.086,,,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,MCWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,MWWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1003,Endrin,72-20-8,,WWAL,,,,,,,,N,Y,N,2,,,,0.086,0.036,0.03,,ug/l,PESTICIDES,462,213,
+1004,Endrin aldehyde,7421-93-4,,ColdWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1004,Endrin aldehyde,7421-93-4,,CoolWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1004,Endrin aldehyde,7421-93-4,,HQColdWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1004,Endrin aldehyde,7421-93-4,,MCWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1004,Endrin aldehyde,7421-93-4,,MWWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1004,Endrin aldehyde,7421-93-4,,WWAL,,,,,,,,N,Y,N,10.5,,,,,,1,,ug/l,PESTICIDES,463,214,
+1030,Ethylbenzene,100-41-4,,ColdWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1030,Ethylbenzene,100-41-4,,CoolWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1030,Ethylbenzene,100-41-4,,HQColdWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1030,Ethylbenzene,100-41-4,,MCWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1030,Ethylbenzene,100-41-4,,MWWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1030,Ethylbenzene,100-41-4,,WWAL,,,,,,,,N,Y,N,700,,,,,,130,,ug/l,TOXIC ORGANICS,476,221,
+1064,Fluoranthene,206-44-0,,ColdWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1064,Fluoranthene,206-44-0,,CoolWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1064,Fluoranthene,206-44-0,,HQColdWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1064,Fluoranthene,206-44-0,,MCWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1064,Fluoranthene,206-44-0,,MWWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1064,Fluoranthene,206-44-0,,WWAL,,,,,,,,N,Y,N,1400,,,,,,20,,ug/l,TOXIC ORGANICS,553,232,
+1066,Fluorene,86-73-7,,ColdWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1066,Fluorene,86-73-7,,CoolWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1066,Fluorene,86-73-7,,HQColdWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1066,Fluorene,86-73-7,,MCWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1066,Fluorene,86-73-7,,MWWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1066,Fluorene,86-73-7,,WWAL,,,,,,,,N,Y,N,1400,,,,,,70,,ug/l,TOXIC ORGANICS,554,233,
+1104,Heptachlor,76-44-8,,ColdWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,CoolWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,HQColdWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,LAL,,,,,,,,N,Y,N,0.4,,,,0.52,,,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,MCWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,MWWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1104,Heptachlor,76-44-8,,WWAL,,,,,,,,N,Y,N,0.4,,,,0.52,0.0038,0.000059,,ug/l,PESTICIDES,602,244,
+1105,Heptachlor epoxide,1024-57-3,,ColdWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1105,Heptachlor epoxide,1024-57-3,,CoolWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1105,Heptachlor epoxide,1024-57-3,,HQColdWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1105,Heptachlor epoxide,1024-57-3,,LAL,,,,,,,,N,Y,N,0.2,,,,0.52,,,,ug/l,PESTICIDES,603,245,"Deleted HH criteria for LAL. This pollutant is not persistent, thus it is not applicable. "
+1105,Heptachlor epoxide,1024-57-3,,MCWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1105,Heptachlor epoxide,1024-57-3,,MWWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1105,Heptachlor epoxide,1024-57-3,,WWAL,,,,,,,,N,Y,N,0.2,,,,0.52,0.0038,0.00032,,ug/l,PESTICIDES,603,245,
+1115,Hexachlorobenzene,118-74-1,,ColdWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,CoolWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,HQColdWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,LAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,MCWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,MWWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1115,Hexachlorobenzene,118-74-1,,WWAL,,,,,,,,N,Y,N,1,,,,,,0.00079,Y,ug/l,PESTICIDES,607,246,
+1118,Hexachlorobutadiene,87-68-3,,ColdWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+1118,Hexachlorobutadiene,87-68-3,,CoolWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+1118,Hexachlorobutadiene,87-68-3,,HQColdWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+1118,Hexachlorobutadiene,87-68-3,,MCWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+1118,Hexachlorobutadiene,87-68-3,,MWWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+1118,Hexachlorobutadiene,87-68-3,,WWAL,,,,,,,,N,Y,N,4.5,,,,,,0.1,,ug/l,TOXIC ORGANICS,609,247,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+34,Hexachlorocyclohexane (HCH)-Technical,608-73-1,,WWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,,,,
+1121,Hexachlorocyclopentadiene,77-47-4,,ColdWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1121,Hexachlorocyclopentadiene,77-47-4,,CoolWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1121,Hexachlorocyclopentadiene,77-47-4,,HQColdWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1121,Hexachlorocyclopentadiene,77-47-4,,MCWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1121,Hexachlorocyclopentadiene,77-47-4,,MWWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1121,Hexachlorocyclopentadiene,77-47-4,,WWAL,,,,,,,,N,Y,N,50,,,,,,4,,ug/l,TOXIC ORGANICS,613,251,
+1123,Hexachloroethane,67-72-1,,ColdWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1123,Hexachloroethane,67-72-1,,CoolWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1123,Hexachloroethane,67-72-1,,HQColdWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1123,Hexachloroethane,67-72-1,,MCWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1123,Hexachloroethane,67-72-1,,MWWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1123,Hexachloroethane,67-72-1,,WWAL,,,,,,,,N,Y,N,25,,,,,,1,,ug/l,TOXIC ORGANICS,614,252,
+1185,Iron,,,ColdWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1185,Iron,,,CoolWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1185,Iron,,,HQColdWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1185,Iron,,,MCWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1185,Iron,,,MWWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1185,Iron,,,WWAL,,,,,,,,N,Y,N,,,,,,1000,,,ug/l,,,,Added Iron  chronic criteria based on most recent EPA approved WQC
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,ColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,CoolWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,HQColdWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,MCWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,MWWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1173,"Indeno[1,2,3-cd]pyrene",193-39-5,,WWAL,,,,,,,,N,Y,N,0.048,,,,,,0.013,,ug/l,PESTICIDES,641,259,
+1199,Isophorone,78-59-1,,ColdWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1199,Isophorone,78-59-1,,CoolWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1199,Isophorone,78-59-1,,HQColdWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1199,Isophorone,78-59-1,,MCWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1199,Isophorone,78-59-1,,MWWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1199,Isophorone,78-59-1,,WWAL,,,,,,,,N,Y,N,368,,,,,,18000,,ug/l,TOXIC ORGANICS,653,262,
+1215,Lead,7439-92-1,Dissolved,ColdWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,CoolWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,LAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,MCWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,MWWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1215,Lead,7439-92-1,Dissolved,WWAL,,,,,,,,Y,Y,N,0.015,5,0.1,,0.0139,0.000541,,,mg/l,METALS (OTHER THAN MERCURY),663,267,"Update IRR value based on most recent approved WQS, added fraction= Dissolved"
+1235,Lindane,58-89-9,,ColdWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,CoolWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,HQColdWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,LAL,,,,,,,,N,Y,N,0.2,,,,0.95,,,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,MCWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,MWWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1235,Lindane,58-89-9,,WWAL,,,,,,,,N,Y,N,0.2,,,,0.95,,4.4,,ug/l,PESTICIDES,667,268,
+1249,Manganese,7439-96-5,Dissolved,ColdWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,CoolWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,LAL,,,,,,,,Y,Y,N,,,,,1.881,,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,MCWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,MWWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1249,Manganese,7439-96-5,Dissolved,WWAL,,,,,,,,Y,Y,N,,,,,1.881,1.04,,,mg/l,METALS (OTHER THAN MERCURY),692,273,Added fraction=Dissolved
+1263,m-Dichlorobenzene,541-73-1,,ColdWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1263,m-Dichlorobenzene,541-73-1,,CoolWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1263,m-Dichlorobenzene,541-73-1,,HQColdWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1263,m-Dichlorobenzene,541-73-1,,MCWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1263,m-Dichlorobenzene,541-73-1,,MWWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1263,m-Dichlorobenzene,541-73-1,,WWAL,,,,,,,,N,Y,N,469,,,,,,10,,ug/l,TOXIC ORGANICS,683,429,
+1623,"1,4-Dichlorobenzene",106-46-7,,ColdWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1623,"1,4-Dichlorobenzene",106-46-7,,CoolWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1623,"1,4-Dichlorobenzene",106-46-7,,HQColdWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1623,"1,4-Dichlorobenzene",106-46-7,,MCWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1623,"1,4-Dichlorobenzene",106-46-7,,MWWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1623,"1,4-Dichlorobenzene",106-46-7,,WWAL,,,,,,,,N,Y,N,75,,,,,,900,,ug/l,,,,"1,4-Dichlorobenze not previously included in spreadsheet. WQC added based on most recent NMAC WQC. "
+1283,Methyl bromide,74-83-9,,ColdWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1283,Methyl bromide,74-83-9,,CoolWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1283,Methyl bromide,74-83-9,,HQColdWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1283,Methyl bromide,74-83-9,,MCWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1283,Methyl bromide,74-83-9,,MWWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1283,Methyl bromide,74-83-9,,WWAL,,,,,,,,N,Y,N,49,,,,,,10000,,ug/l,PESTICIDES,712,280,
+1619,3-Methyl-4-chlorophenol,59-50-7,,ColdWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1619,3-Methyl-4-chlorophenol,59-50-7,,CoolWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1619,3-Methyl-4-chlorophenol,59-50-7,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1619,3-Methyl-4-chlorophenol,59-50-7,,MCWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1619,3-Methyl-4-chlorophenol,59-50-7,,MWWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1619,3-Methyl-4-chlorophenol,59-50-7,,WWAL,,,,,,,,N,Y,N,,,,,,,2000,,ug/l,,,,3-Methyl-4-chlorophenols not previously included in this spreadsheet. HH criteria updated based on most recent WQC in NMAC
+1328,Methylene chloride,75-09-2,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1328,Methylene chloride,75-09-2,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1328,Methylene chloride,75-09-2,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1328,Methylene chloride,75-09-2,,MCWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1328,Methylene chloride,75-09-2,,MWWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1328,Methylene chloride,75-09-2,,WWAL,,,,,,,,N,Y,N,5,,,,,,10000,,ug/l,TOXIC ORGANICS,413,194,
+1395,Nickel,7440-02-0,Dissolved,ColdWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1395,Nickel,7440-02-0,Dissolved,CoolWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1395,Nickel,7440-02-0,Dissolved,HQColdWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1395,Nickel,7440-02-0,Dissolved,LAL,,,,,,,,Y,Y,N,0.7,,,,0.145,,,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,"Added fraction=Dissolved, Removed HH-OO WQC because this pollutant is not persistent"
+1395,Nickel,7440-02-0,Dissolved,MCWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1395,Nickel,7440-02-0,Dissolved,MWWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1395,Nickel,7440-02-0,Dissolved,WWAL,,,,,,,,Y,Y,N,0.7,,,,0.145,0.0161,4.6,Y,mg/l,METALS (OTHER THAN MERCURY),754,301,Added fraction=Dissolved
+1403,Nitrobenzene,98-95-3,,ColdWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1403,Nitrobenzene,98-95-3,,CoolWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1403,Nitrobenzene,98-95-3,,HQColdWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1403,Nitrobenzene,98-95-3,,MCWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1403,Nitrobenzene,98-95-3,,MWWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1403,Nitrobenzene,98-95-3,,WWAL,,,,,,,,N,Y,N,18,,,,,,600,,ug/l,TOXIC ORGANICS,765,304,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,ColdWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,CoolWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,HQColdWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,LAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,MCWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,MWWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1418,"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,,WWAL,,,,,,,,N,N,N,,,132,,,,,,mg/l,AMMONIA,122,308,
+1427,N-Nitrosodimethylamine,62-75-9,,ColdWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1427,N-Nitrosodimethylamine,62-75-9,,CoolWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1427,N-Nitrosodimethylamine,62-75-9,,HQColdWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1427,N-Nitrosodimethylamine,62-75-9,,MCWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1427,N-Nitrosodimethylamine,62-75-9,,MWWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1427,N-Nitrosodimethylamine,62-75-9,,WWAL,,,,,,,,N,Y,N,0.0069,,,,,,30,,ug/l,TOXIC ORGANICS,738,294,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,ColdWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,CoolWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,HQColdWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,MCWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,MWWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1429,N-Nitrosodi-n-propylamine,621-64-7,,WWAL,,,,,,,,N,Y,N,0.05,,,,,,5.1,,ug/l,TOXIC ORGANICS,740,296,
+1430,N-Nitrosodiphenylamine,86-30-6,,ColdWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1430,N-Nitrosodiphenylamine,86-30-6,,CoolWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1430,N-Nitrosodiphenylamine,86-30-6,,HQColdWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1430,N-Nitrosodiphenylamine,86-30-6,,MCWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1430,N-Nitrosodiphenylamine,86-30-6,,MWWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1430,N-Nitrosodiphenylamine,86-30-6,,WWAL,,,,,,,,N,Y,N,71,,,,,,60,,ug/l,TOXIC ORGANICS,739,295,
+1448,Nonylphenol,84852-15-3,,ColdWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,CoolWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,HQColdWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,LAL,,,,,,,,N,Y,N,,,,,28,,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,MCWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,MWWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1448,Nonylphenol,84852-15-3,,WWAL,,,,,,,,N,Y,N,,,,,28,6.6,,,ug/l,TOXIC ORGANICS,1287,0,
+1467,o-Chlorophenol,95-57-8,,ColdWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1467,o-Chlorophenol,95-57-8,,CoolWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1467,o-Chlorophenol,95-57-8,,HQColdWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1467,o-Chlorophenol,95-57-8,,MCWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1467,o-Chlorophenol,95-57-8,,MWWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1467,o-Chlorophenol,95-57-8,,WWAL,,,,,,,,N,Y,N,175,,,,,,800,,ug/l,TOXIC ORGANICS,44,45,
+1479,o-Dichlorobenzene,95-50-1,,ColdWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1479,o-Dichlorobenzene,95-50-1,,CoolWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1479,o-Dichlorobenzene,95-50-1,,HQColdWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1479,o-Dichlorobenzene,95-50-1,,MCWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1479,o-Dichlorobenzene,95-50-1,,MWWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1479,o-Dichlorobenzene,95-50-1,,WWAL,,,,,,,,N,Y,N,600,,,,,,3000,,ug/l,TOXIC ORGANICS,801,434,
+1518,"p,p'-DDT",50-29-3,,ColdWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1518,"p,p'-DDT",50-29-3,,CoolWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1518,"p,p'-DDT",50-29-3,,HQColdWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1518,"p,p'-DDT",50-29-3,,LAL,,,,,,,,N,Y,N,1,,,0.001,1.1,,0.0003,Y,ug/l,PESTICIDES,372,177,Added HH-OO criteria for LAL because DDT is persistent
+1518,"p,p'-DDT",50-29-3,,MCWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1518,"p,p'-DDT",50-29-3,,MWWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1518,"p,p'-DDT",50-29-3,,WWAL,,,,,,,,N,Y,N,1,,,0.001,1.1,0.001,0.0003,Y,ug/l,PESTICIDES,372,177,
+1633,Pentachlorophenol,87-86-5,,ColdWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,CoolWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,HQColdWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,LAL,,,,,,,,N,Y,N,1,,,,19,,,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,MCWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,MWWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1633,Pentachlorophenol,87-86-5,,WWAL,,,,,,,,N,Y,N,1,,,,19,15,0.4,,ug/l,TOXIC ORGANICS,879,334,Modified HH criterion to match WQS Table 
+1648,pH,,,ColdWAL,,,,,,6.6,8.8,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1648,pH,,,CoolWAL,,,,,,6.6,9,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1648,pH,,,HQColdWAL,,,,,,6.6,8.8,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1648,pH,,,MCWAL,,,,,,6.6,9,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1648,pH,,,MWWAL,,,,,,6.6,9,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1648,pH,,,WWAL,,,,,,6.6,9,N,N,N,,,,,,,,,none,PH/ACIDITY/CAUSTIC CONDITIONS,891,441,
+1654,Phenol,108-95-2,,ColdWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1654,Phenol,108-95-2,,CoolWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1654,Phenol,108-95-2,,HQColdWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1654,Phenol,108-95-2,,MCWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1654,Phenol,108-95-2,,MWWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1654,Phenol,108-95-2,,WWAL,,,,,,,,N,Y,N,10500,,,,,,300000,,ug/l,TOXIC ORGANICS,896,338,
+1674,Phosphorus as P,,Total,ColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,CoolWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,HQColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,LAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,MCWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,MWWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1674,Phosphorus as P,,Total,WWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,NUTRIENTS,903,462,
+1706,Polychlorinated biphenyls,1336-36-3,,ColdWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,CoolWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,HQColdWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,LAL,,,,,,,,N,Y,N,0.5,,,0.014,2,,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,MCWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,MWWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1706,Polychlorinated biphenyls,1336-36-3,,WWAL,,,,,,,,N,Y,N,0.5,,,0.014,2,0.014,0.00064,Y,ug/l,POLYCHLORINATED BIPHENYLS (PCBS),1190,473,
+1744,Pyrene,129-00-0,,ColdWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1744,Pyrene,129-00-0,,CoolWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1744,Pyrene,129-00-0,,HQColdWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1744,Pyrene,129-00-0,,MCWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1744,Pyrene,129-00-0,,MWWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1744,Pyrene,129-00-0,,WWAL,,,,,,,,N,Y,N,1050,,,,,,30,,ug/l,TOXIC ORGANICS,940,356,
+1757,Radium-226,,,ColdWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,CoolWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,HQColdWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,LAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,MCWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,MWWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1757,Radium-226,,,WWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,949,363,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,ColdWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,CoolWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,HQColdWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,LAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,MCWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,MWWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1759,Radium-228,,,WWAL,,,,,,,,N,Y,N,2.5,,15,,,,,,pCi/L,RADIATION,950,364,"The pollutant in the NMAC is for ""Radium 226+ Radium 228"". This excel spreadsheet divides the values from the table in half (e.g. The DWS WQS for Radium 226+228= 5pCi/L) and assigns half to Radium 226 and half to Radium 228. Is this correct?"
+1793,Silver,7440-22-4,,ColdWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,LAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,CoolWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,MCWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,MWWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1793,Silver,7440-22-4,,WWAL,,,,,,,,N,Y,N,,,,,0.0003,,,,mg/l,METALS (OTHER THAN MERCURY),996,375,
+1815,specific conductance,,,HQColdWAL,,,,300,,,300,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1815,specific conductance,,,HQColdWAL,,,,400,,,400,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1815,specific conductance,,,HQColdWAL,,,,500,,,500,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1815,specific conductance,,,HQColdWAL,,,,600,,,600,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1815,specific conductance,,,HQColdWAL,,,,1100,,,1100,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1815,specific conductance,,,HQColdWAL,,,,1500,,,1500,N,N,N,,,,,,,,,uS/cm,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1009,379,
+1820,Strontium,,,ColdWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,CoolWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,HQColdWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,LAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,MCWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,MWWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1820,Strontium,,,WWAL,,,,,,,,N,Y,N,8,,,,,,,,pCi/L,METALS (OTHER THAN MERCURY),1013,382,
+1827,Sulfate,,,ColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,CoolWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,HQColdWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,LAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,MCWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,MWWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1827,Sulfate,,,WWAL,,,,,,,,N,N,N,,,,,,,,,mg/l,SALINITY/TOTAL DISSOLVED SOLIDS/CHLORIDES/SULFATES,1016,385,
+1869,Tetrachloroethylene,127-18-4,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,LAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,MCWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,MWWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1869,Tetrachloroethylene,127-18-4,,WWAL,,,,,,,,N,Y,N,5,,,,,,290,Y,ug/l,TOXIC ORGANICS,1042,391,
+1883,Thallium,7440-28-0,,ColdWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,CoolWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,HQColdWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,LAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,MCWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,MWWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1883,Thallium,7440-28-0,,WWAL,,,,,,,,N,Y,N,0.002,,,,,,0.00047,Y,mg/l,METALS (OTHER THAN MERCURY),1045,393,
+1902,Toluene,108-88-3,,ColdWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1902,Toluene,108-88-3,,CoolWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1902,Toluene,108-88-3,,HQColdWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1902,Toluene,108-88-3,,MCWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1902,Toluene,108-88-3,,MWWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1902,Toluene,108-88-3,,WWAL,,,,,,,,N,Y,N,1000,,,,,,520,,ug/l,TOXIC ORGANICS,1052,396,
+1912,Toxaphene,8001-35-2,,ColdWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,CoolWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,HQColdWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,LAL,,,,,,,,N,Y,N,3,,,,0.73,,,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,MCWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,MWWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1912,Toxaphene,8001-35-2,,WWAL,,,,,,,,N,Y,N,3,,,,0.73,0.0002,0.0071,,ug/l,PESTICIDES,1074,405,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,ColdWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,CoolWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,HQColdWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,MCWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,MWWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1926,"trans-1,2-Dichloroethylene",156-60-5,,WWAL,,,,,,,,N,Y,N,100,,,,,,4000,,ug/l,TOXIC ORGANICS,1090,444,
+1935,Tribromomethane,75-25-2,,ColdWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1935,Tribromomethane,75-25-2,,CoolWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1935,Tribromomethane,75-25-2,,HQColdWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1935,Tribromomethane,75-25-2,,MCWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1935,Tribromomethane,75-25-2,,MWWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1935,Tribromomethane,75-25-2,,WWAL,,,,,,,,N,Y,N,44,,,,,,1200,,ug/l,TOXIC ORGANICS,235,124,Changed HH from 1400 to 1200 to coincide with WQS in table. Added DWS = 44. 
+1950,Trichloroethylene,79-01-6,,ColdWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1950,Trichloroethylene,79-01-6,,CoolWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1950,Trichloroethylene,79-01-6,,HQColdWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1950,Trichloroethylene,79-01-6,,MCWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1950,Trichloroethylene,79-01-6,,MWWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1950,Trichloroethylene,79-01-6,,WWAL,,,,,,,,N,Y,N,5,,,,,,70,,ug/l,TOXIC ORGANICS,1101,408,
+1974,Tritium,,,ColdWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,CoolWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,HQColdWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,LAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,MCWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,MWWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1974,Tritium,,,WWAL,,,,,,,,N,Y,N,20000,,20000,,,,,,pCi/L,RADIATION,1280,0,
+1977,Turbidity,,,ColdWAL,PERENNIAL STREAM,,,,,,,N,N,Y,,,,,,,,,NTU,TURBIDITY,1110,413,
+1977,Turbidity,,,CoolWAL,,,,,,,,N,N,N,,,,,,,,,NTU,TURBIDITY,1110,413,
+1977,Turbidity,,,HQColdWAL,PERENNIAL STREAM,,,,,,,N,N,Y,,,,,,,,,NTU,TURBIDITY,1110,413,
+1977,Turbidity,,,MCWAL,PERENNIAL STREAM,,,,,,,N,N,Y,,,,,,,,,NTU,TURBIDITY,1110,413,
+1977,Turbidity,,,MWWAL,,,,,,,,N,N,N,,,,,,,,,NTU,TURBIDITY,1110,413,
+1977,Turbidity,,,WWAL,,,,,,,,N,N,N,,,,,,,,,NTU,TURBIDITY,1110,413,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,LAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,MCWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,MWWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1981001,Uranium-234/235/238,7440-61-1,Dissolved,WWAL,,,,,,,,N,Y,N,0.03,,,,,,,,mg/l,RADIATION,1118,414,
+1987,Vanadium,7440-62-2,Dissolved,ColdWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,CoolWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,LAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,MCWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,MWWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1987,Vanadium,7440-62-2,Dissolved,WWAL,,,,,,,,N,Y,N,,0.1,0.1,,,,,,mg/l,METALS (OTHER THAN MERCURY),1122,415,Added fraction= Dissolved
+1992,Vinyl chloride,75-01-4,,ColdWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+1992,Vinyl chloride,75-01-4,,CoolWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+1992,Vinyl chloride,75-01-4,,HQColdWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+1992,Vinyl chloride,75-01-4,,MCWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+1992,Vinyl chloride,75-01-4,,MWWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+1992,Vinyl chloride,75-01-4,,WWAL,,,,,,,,N,Y,N,2,,,,,,16,,ug/l,TOXIC ORGANICS,1129,418,
+2005,Zinc,7440-66-6,,ColdWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,CoolWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,HQColdWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,LAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,MCWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,MWWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2005,Zinc,7440-66-6,,WWAL,,,,,,,,Y,Y,N,10.5,2,25,,0.0454,0.0344,26,Y,mg/l,METALS (OTHER THAN MERCURY),1169,423,
+2287,Escherichia coli,,,,,,235,,,,235,N,N,N,,,,,,,,,MPN/100ml,PATHOGENS,471,217,
+2287,Escherichia coli,,,,,,410,,,,410,N,N,N,,,,,,,,,MPN/100ml,PATHOGENS,471,217,
+2287,Escherichia coli,,,,,,940,,,,940,N,N,N,,,,,,,,,MPN/100ml,PATHOGENS,471,217,
+2287,Escherichia coli,,,,,,2507,,,,2507,N,N,N,,,,,,,,,MPN/100ml,PATHOGENS,471,217,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,ColdWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,CoolWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,HQColdWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,LAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,MCWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,MWWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2337,"Gross alpha radioactivity, (Americium-241 ref std)",,,WWAL,,,,,,,,N,Y,N,15,,15,,,,,,pCi/L,RADIATION,575,470,
+2414,"Nitrogen, ammonia as N",,,ColdWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,CoolWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,LAL,,,,,,,,N,Y,N,,,,,0.885,,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,MCWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,MWWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2414,"Nitrogen, ammonia as N",,,WWAL,,,,,,,,N,Y,N,,,,,0.885,0.179,,,mg/l,AMMONIA,124,91,
+2416,"Nitrogen, Nitrate (NO3) as N",,,ColdWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,CoolWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,HQColdWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,LAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,MCWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,MWWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2416,"Nitrogen, Nitrate (NO3) as N",,,WWAL,,,,,,,,N,Y,N,10,,,,,,,,mg/l,NUTRIENTS,770,452,
+2849,"Temperature, water",,,ColdWAL,,LAKE,,,,,20,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria for lakes in the NMAC. This value is equivalent the the 6T3 for ColdWAL.
+2849,"Temperature, water",,,ColdWAL,,RIVER,,,,,24,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,CoolWAL,,LAKE,,,,,29,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria specific to lakes in the NMAC. This value is equivalent to the CoolWAL temp. 
+2849,"Temperature, water",,,CoolWAL,,RIVER,,,,,29,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,HQColdWAL,,LAKE,,,,,20,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria for lakes in the NMAC. This value is equivalent the the 4T3 for HQCWAL.
+2849,"Temperature, water",,,HQColdWAL,,RIVER,,,,,23,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,MCWAL,,LAKE,,,,,25,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria for lakes in the NMAC. This value is equivalent the the 6T3 for MCWAL. 
+2849,"Temperature, water",,,MCWAL,,RIVER,,,,,29,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,MWWAL,,LAKE,,,,,32.2,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria specific to lakes in the NMAC. This value is equivalent to the MWWAL temp. 
+2849,"Temperature, water",,,MWWAL,,RIVER,,,,,32.2,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,WWAL,,LAKE,,,,,32.2,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Highlighted to draw attention. There are no temperature criteria specific to lakes in the NMAC. This value is equivalent to the WWAL temp. 
+2849,"Temperature, water",,,WWAL,,RIVER,,,,,32.2,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,LAL,,LAKE,,,,,,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Deleted because there is no thermal WQC for LAL
+2849,"Temperature, water",,,LAL,,RIVER,,,,,,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,Deleted because there is no thermal WQC for LAL
+2849,"Temperature, water",,,,,,,,25,,25,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,,,,,,28,,28,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+2849,"Temperature, water",,,,,,,,32.2,,32.2,N,N,N,,,,,,,,,deg C,TEMPERATURE,1036,388,
+549001,Aluminum,7429-90-5,Dissolved,ColdWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,CoolWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,LAL,,,,,,,,N,Y,N,,5,,,0.75,,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,MCWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,MWWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549001,Aluminum,7429-90-5,Dissolved,WWAL,,,,,,,,N,Y,N,,5,,,0.75,0.087,,,mg/l,METALS (OTHER THAN MERCURY),1281,87,
+549002,Aluminum,7429-90-5,Total Recoverable,ColdWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,CoolWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,HQColdWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,LAL,,,,,,,,Y,Y,N,,,,,0.512,,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,MCWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,MWWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+549002,Aluminum,7429-90-5,Total Recoverable,WWAL,,,,,,,,Y,Y,N,,,,,0.512,0.205,,,mg/l,METALS (OTHER THAN MERCURY),1282,87,
+1266001,Mercury,7439-97-6,Dissolved,ColdWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,CoolWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,LAL,,,,,,,,N,Y,N,,,,,0.0014,,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,MCWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,MWWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266001,Mercury,7439-97-6,Dissolved,WWAL,,,,,,,,N,Y,N,,,,,0.0014,0.00077,,,mg/l,MERCURY,1285,274,
+1266002,Mercury,7439-97-6,Total,ColdWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,CoolWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,HQColdWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,LAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,MCWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,MWWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1266002,Mercury,7439-97-6,Total,WWAL,,,,,,,,N,Y,N,0.002,,0.01,0.00077,,,,,mg/l,MERCURY,1286,274,
+1334,Methylmercury,22967-92-6,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,LAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1334,Methylmercury,22967-92-6,,WWAL,,,,,,,,N,Y,N,,,,,,,0.3,,mg/kg fish tissue,MERCURY,,,Added methylmercury HH-OO criteria based on most recent EPA approved WQC
+1354001,Molybdenum,7439-98-7,Dissolved,ColdWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354001,Molybdenum,7439-98-7,Dissolved,CoolWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354001,Molybdenum,7439-98-7,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354001,Molybdenum,7439-98-7,Dissolved,MCWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354001,Molybdenum,7439-98-7,Dissolved,MWWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354001,Molybdenum,7439-98-7,Dissolved,WWAL,,,,,,,,N,Y,N,,1,,,,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Moved numeric criterion from DWS to IRR to align with approved WQS. Added fraction=Dissolved. 
+1354002,Molybdenum,7439-98-7,Total Recoverable,ColdWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,CoolWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,HQColdWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,LAL,,,,,,,,N,Y,N,,,,,7.92,,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,MCWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,MWWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1354002,Molybdenum,7439-98-7,Total Recoverable,WWAL,,,,,,,,N,Y,N,,,,,7.92,1.895,,,mg/l,METALS (OTHER THAN MERCURY),732,291,Added fraction= Total Recoverable 
+1783001,Selenium,7782-49-2,Dissolved,ColdWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,CoolWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,HQColdWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,LAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,MCWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,MWWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783001,Selenium,7782-49-2,Dissolved,WWAL,,,,,,,,N,Y,N,0.05,0.13,0.05,,,,4.2,Y,mg/l,METALS (OTHER THAN MERCURY),1283,372,Update IRR value based on most recent approved WQS. 
+1783002,Selenium,7782-49-2,Total Recoverable,ColdWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,CoolWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,HQColdWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,LAL,,,,,,,,N,Y,N,,,,0.005,0.02,,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,MCWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,MWWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+1783002,Selenium,7782-49-2,Total Recoverable,WWAL,,,,,,,,N,Y,N,,,,0.005,0.02,0.005,,,mg/l,METALS (OTHER THAN MERCURY),1284,372,Added WH value based on most recept approved WQC table. 
+695,Boron,7440-42-8,Dissolved,ColdWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,CoolWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,HQColdWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,LAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,MCWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,MWWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+695,Boron,7440-42-8,Dissolved,WWAL,,,,,,,,N,Y,N,,0.75,5,,,,,,mg/l,TOXIC INORGANICS,230,123,
+4577,Guthion,86-50-0,,ColdWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+4577,Guthion,86-50-0,,CoolWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+4577,Guthion,86-50-0,,HQColdWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+4577,Guthion,86-50-0,,MCWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+4577,Guthion,86-50-0,,MWWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+4577,Guthion,86-50-0,,WWAL,,,,,,,,N,Y,N,,,,,,0.01,,,ug/l,PESTICIDES,,,"Modified record by removing ""Y"" from persistent column. "
+1245,Malathion,121-75-5,,ColdWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1245,Malathion,121-75-5,,CoolWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1245,Malathion,121-75-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1245,Malathion,121-75-5,,MCWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1245,Malathion,121-75-5,,MWWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1245,Malathion,121-75-5,,WWAL,,,,,,,,N,Y,N,,,,,,0.1,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column as this was not included in the most recent WQC table. NOTE: According to the note from EPA, this criteria is not effective for CWA purposed pending ESA consultation. "
+1280,Methoxychlor,72-43-5,,ColdWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1280,Methoxychlor,72-43-5,,CoolWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1280,Methoxychlor,72-43-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1280,Methoxychlor,72-43-5,,MCWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1280,Methoxychlor,72-43-5,,MWWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1280,Methoxychlor,72-43-5,,WWAL,,,,,,,,N,Y,N,,,,,,0.03,0.02,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,ColdWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,CoolWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,MCWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,MWWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1349,Mirex,2385-85-5,,WWAL,,,,,,,,N,Y,N,,,,,,0.001,,,ug/l,PESTICIDES,,,"Removed ""Y"" from persistent column to reflect criterion in the most recent WQC table. "
+1428,N-Nitrosodi-n-butylamine,924-16-3,,ColdWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1428,N-Nitrosodi-n-butylamine,924-16-3,,CoolWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1428,N-Nitrosodi-n-butylamine,924-16-3,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1428,N-Nitrosodi-n-butylamine,924-16-3,,MCWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1428,N-Nitrosodi-n-butylamine,924-16-3,,MWWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1428,N-Nitrosodi-n-butylamine,924-16-3,,WWAL,,,,,,,,N,Y,N,,,,,,,2.2,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,ColdWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,CoolWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,MCWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,MWWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1426,N-Nitrosodiethylamine,55-18-5,,WWAL,,,,,,,,N,Y,N,,,,,,,12.4,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,ColdWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,CoolWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,MCWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,MWWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1437,N-Nitrosopyrrolidine,930-55-2,,WWAL,,,,,,,,N,Y,N,,,,,,,340,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,ColdWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,CoolWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,LAL,,,,,,,,N,Y,N,,,,,0.065,,,,ug/l,TOXIC ORGANICS,,,Added LAL subcategory with acute aquaticl ife criterion
+1525,Parathion,56-38-2,,MCWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,MWWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1525,Parathion,56-38-2,,WWAL,,,,,,,,N,Y,N,,,,,0.065,0.013,,,ug/l,TOXIC ORGANICS,,,
+1627,Pentachlorobenzene,608-93-5,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+1627,Pentachlorobenzene,608-93-5,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+1627,Pentachlorobenzene,608-93-5,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+1627,Pentachlorobenzene,608-93-5,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+1627,Pentachlorobenzene,608-93-5,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+1627,Pentachlorobenzene,608-93-5,,WWAL,,,,,,,,N,Y,N,,,,,,,0.1,,ug/l,TOXIC ORGANICS,,,Added HH to correspond with WQS table 
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,ColdWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,CoolWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,MCWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,MWWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+56,"1,2,4,5-Tetrachlorobenzene",95-94-3,,WWAL,,,,,,,,N,Y,N,,,,,,,0.03,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,ColdWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,CoolWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,HQColdWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,LAL,,,,,,,,N,Y,N,,,,,0.46,,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,MCWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,MWWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+7506,Tributyltin,Various,,WWAL,,,,,,,,N,Y,N,,,,,0.46,0.072,,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,ColdWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,CoolWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,HQColdWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,MCWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,MWWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+21,"1,1,1-Trichloroethane",71-55-6,,WWAL,,,,,,,,N,Y,N,200,,,,,,200000,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,ColdWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,CoolWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,MCWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,MWWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+312,"2,4,5-Trichlorophenol",95-95-4,,WWAL,,,,,,,,N,Y,N,,,,,,,600,,ug/l,TOXIC ORGANICS,,,
+1795,Silvex,93-72-1,,ColdWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,
+1795,Silvex,93-72-1,,CoolWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,
+1795,Silvex,93-72-1,,HQColdWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,
+1795,Silvex,93-72-1,,MCWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,
+1795,Silvex,93-72-1,,MWWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,
+1795,Silvex,93-72-1,,WWAL,,,,,,,,N,Y,N,,,,,,,400,Y,ug/l,PESTICIDES,,,

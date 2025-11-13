@@ -1,3 +1,34 @@
+#' Compile data from SQUID for water quality analyses
+#'
+#' This function compiles multiple tables from SQUID into a single output used for
+#' subsequent water quality analysis functions. The LTD and lake profile datasets
+#' are optional, whereas the RStudio, stations DU, parameter, and criteria tables
+#' are required for the function to run.
+#'
+#' @param criteria_table Criteria table is output from SQUID. Filters water quality
+#' data to those in the criteria table. Has criteria to compare data against.
+#' @param parameter_table Parameter table is output from SQUID. Filters water quality
+#' data to those in the parameter table.
+#' @param SQUID_RStudio_table RStudio query from SQUID. Entirely grab data from SQUID
+#' projects.
+#' @param SQUID_DU_table Stations DU table from SQUID. Has DU and AU specific water
+#' quality criteria which are used in some cases.
+#' @param SQUID_LTD_table Optional long-term deployment summary table from SQUID.
+#' Not raw data.
+#' @param SQUID_LakeProfile_table Optional lake profile table from SQUID.
+#'
+#' @returns A dataframe containing compiled and quality controlled water quality
+#' necessary for subsequent analyses.
+#'
+#' @examples
+#' \dontrun{
+#' #' Data_Prep <- function(criteria_table = my_Criteria
+#' , parameter_table = my_Parameter
+#' , SQUID_RStudio_table = my_RStudio
+#' , SQUID_DU_table = my_DU
+#' , SQUID_LTD_table = my_LTD
+#' , SQUID_LakeProfile_table = my_Profile)}
+#'
 Data_Prep <- function(criteria_table
                       , parameter_table
                       , SQUID_RStudio_table
@@ -37,7 +68,7 @@ Data_Prep <- function(criteria_table
   # QC Warning
   required_cols <- c("CHR_UID", "CHR_NAME", "Units")
 
-  missing_cols <- setdiff(required_cols, colnames(df_Parameters))
+  missing_cols <- setdiff(required_cols, colnames(parameter_table))
 
   if (length(missing_cols) > 0) {
     stop(paste("The following required columns are missing from the
@@ -46,7 +77,7 @@ Data_Prep <- function(criteria_table
   } # End ~ if statement
 
   # trim
-  df_Params_Assess <- df_Parameters %>%
+  df_Params_Assess <- parameter_table %>%
     dplyr::select(dplyr::one_of(required_cols)) %>%
     dplyr::arrange(CHR_NAME) %>%
     dplyr::mutate(CHR_UID = as.character(CHR_UID)
@@ -67,7 +98,7 @@ Data_Prep <- function(criteria_table
     dplyr::select(-c(Units))
 
   # cleanup
-  rm(df_Parameters, required_cols, missing_cols)
+  rm(parameter_table, required_cols, missing_cols)
 
   ## Criteria ####
   # QC Warning
@@ -77,7 +108,7 @@ Data_Prep <- function(criteria_table
                      , "CHRONIC", "HH", "DWS", "IRR", "LW", "WH")
 
 
-  missing_cols <- setdiff(required_cols, colnames(df_Criteria))
+  missing_cols <- setdiff(required_cols, colnames(criteria_table))
 
   if (length(missing_cols) > 0) {
     stop(paste("The following required columns are missing from the
@@ -89,13 +120,13 @@ Data_Prep <- function(criteria_table
   rm(required_cols, missing_cols)
 
   # Aqualtic life uses
-  df_Criteria_v2 <- df_Criteria %>%
+  df_Criteria_v2 <- criteria_table %>%
     # Filter below removes all criteria found in df_DU. Redundant. Use df_DU values.
     dplyr::filter(!(CHR_UID == "2287" | CHR_UID == "2849" | CHR_UID == "1648"
                     | CHR_UID == "985" | CHR_UID == "1815" | CHR_UID == "1674"
                     | CHR_UID == "988" | CHR_UID == "1827" | CHR_UID == "1648"
                     | CHR_UID == "773")) %>%
-    mutate(CHR_UID = as.character(CHR_UID)
+    dplyr::mutate(CHR_UID = as.character(CHR_UID)
            , UNITS = dplyr::case_when((UNITS == "ug/l") ~ "ugL"
                                       , (UNITS == "MPN/100ml") ~ "MPN100mL"
                                       , (UNITS == "MPN/100mL") ~ "MPN100mL"
@@ -123,11 +154,11 @@ Data_Prep <- function(criteria_table
     dplyr::filter(!(DU == "LAL" & Criteria_Type == "CHRONIC"
                     & CHR_UID %in% c(1245, 1280, 7506))) %>% # remove, erroneous
     dplyr::filter(!(DU == "LAL" & Criteria_Type == "HH" & is.na(PERSISTENT))) %>% # remove, erroneous
-    mutate(HD_METAL = dplyr::case_when((CHR_UID == "1793") ~ "Y" # Silver should by HDM
+    dplyr::mutate(HD_METAL = dplyr::case_when((CHR_UID == "1793") ~ "Y" # Silver should by HDM
                                        , TRUE ~ HD_METAL))
 
   # Other uses
-  df_Criteria_OtherUses <- df_Criteria %>%
+  df_Criteria_OtherUses <- criteria_table %>%
     dplyr::mutate(CHR_UID = as.character(CHR_UID)
                   , UNITS = dplyr::case_when((UNITS == "ug/l") ~ "ugL"
                                              , (UNITS == "MPN/100ml") ~ "MPN100mL"
@@ -161,7 +192,7 @@ Data_Prep <- function(criteria_table
   df_Criteria_v3 <- rbind(df_Criteria_v2, df_Criteria_OtherUses)
 
   # cleanup
-  rm(df_Criteria, df_Criteria_v2, df_Criteria_OtherUses)
+  rm(criteria_table, df_Criteria_v2, df_Criteria_OtherUses)
 
   ## Chem data ####
   # QC Warning
@@ -171,7 +202,7 @@ Data_Prep <- function(criteria_table
                      , "CHR_UID", "CHARACTERISTIC_NAME", "MEASUREMENT", "UNITS"
                      , "LESS_THAN_YN", "SWQB_QUALIFIER_CODE", "SDL")
 
-  missing_cols <- setdiff(required_cols, colnames(df_Chem))
+  missing_cols <- setdiff(required_cols, colnames(SQUID_RStudio_table))
 
   if (length(missing_cols) > 0) {
     stop(paste("The following required columns are missing from the
@@ -183,7 +214,7 @@ Data_Prep <- function(criteria_table
   rm(required_cols, missing_cols)
 
   # trim
-  df_Chem_v2 <- df_Chem %>%
+  df_Chem_v2 <- SQUID_RStudio_table %>%
     dplyr::filter(!(SWQB_QUALIFIER_CODE %in% c("R1", "R2", "R3", "Er", "ER"
                                                , "ER3"))) %>% # remove rejected data
     dplyr::filter(!(MEASUREMENT == "mdp" | MEASUREMENT == "MDP")) %>% # missing data point
@@ -236,7 +267,7 @@ Data_Prep <- function(criteria_table
 
   # trim
   df_Chem_v5 <- df_Chem_v4 %>%
-    dplyr::select(one_of(required_cols))
+    dplyr::select(dplyr::one_of(required_cols))
 
   # cleanup
   rm(df_Chem_v4, required_cols)
@@ -290,7 +321,7 @@ Data_Prep <- function(criteria_table
                      , "DO_WQC", "SC_WQC", "TP_WQC", "TDS_WQC", "SO4_WQC", "CHL_WQC"
                      , "TN_SITE_CLASS", "TP_SITE_CLASS", "ECOREGION", "ELEVATION")
 
-  missing_cols <- setdiff(required_cols, colnames(df_DU))
+  missing_cols <- setdiff(required_cols, colnames(SQUID_DU_table))
 
   if (length(missing_cols) > 0) {
     stop(paste("The following required columns are missing from the
@@ -298,8 +329,8 @@ Data_Prep <- function(criteria_table
                paste(missing_cols, collapse = ", ")))
   } # End ~ if statement
 
-  df_DU_v2 <- df_DU %>%
-    dplyr::select(one_of(required_cols)) %>%
+  df_DU_v2 <- SQUID_DU_table %>%
+    dplyr::select(dplyr::one_of(required_cols)) %>%
     dplyr::group_by(WATER_ID) %>%
     dplyr::slice_min(ELEVATION) %>% # takes minimum of all station elevations per AU
     dplyr::rename(Waterbody = WBODY) %>%
@@ -307,7 +338,7 @@ Data_Prep <- function(criteria_table
                   & DU != "WH")# should not include these uses
 
   # cleanup
-  rm(df_DU, required_cols, missing_cols)
+  rm(SQUID_DU_table, required_cols, missing_cols)
 
   ### QC Multi-ALU ####
   # add QC check to ensure that each station only has one ALU (can have other uses)
@@ -381,7 +412,7 @@ Data_Prep <- function(criteria_table
   rm(df_DU_v3)
 
   ## LTD Data ####
-  if(exists("df_LTD")){
+  if(exists("SQUID_LTD_table")){
     # QC Warning
     required_cols <- c("ASSESSMENT_UNIT_ID", "ASSESSMENT_UNIT_NAME", "PROJECT_NAME"
                        , "STATION_ID", "STATION_NAME", "SAMPLING_EVENT_TYPE"
@@ -389,7 +420,7 @@ Data_Prep <- function(criteria_table
                        , "CHARACTERISTIC_NAME", "MEASUREMENT", "UNITS"
                        , "ASSESSABILITY_QUALIFIER_CODE")
 
-    missing_cols <- setdiff(required_cols, colnames(df_LTD))
+    missing_cols <- setdiff(required_cols, colnames(SQUID_LTD_table))
 
     if (length(missing_cols) > 0) {
       stop(paste("The following required columns are missing from the
@@ -401,7 +432,7 @@ Data_Prep <- function(criteria_table
     rm(required_cols, missing_cols)
 
     # Format
-    df_LTD_v2 <- df_LTD %>%
+    df_LTD_v2 <- SQUID_LTD_table %>%
       dplyr::select(ASSESSMENT_UNIT_ID, ASSESSMENT_UNIT_NAME, PROJECT_NAME
                     , STATION_ID, STATION_NAME, SAMPLING_EVENT_TYPE, ACT_START_DATE
                     , ACT_END_DATE, ACTIVITY_TYPE, CHR_UID, CHARACTERISTIC_NAME
@@ -451,23 +482,23 @@ Data_Prep <- function(criteria_table
     unique(df_LTD_v2$CHARACTERISTIC_NAME)
 
     # cleanup
-    rm(df_LTD)
+    rm(SQUID_LTD_table)
   } # END ~ if LTD exists
 
   ## Depth profile ####
-  if(exists("df_Profile")){
+  if(exists("SQUID_LakeProfile_table")){
     ### Initial cleanup ####
     # summary(df_Profile)
-    df_Profile$SE_START_DATE_TIME <- as.POSIXct(df_Profile$SE_START_DATE_TIME)
-    df_Profile$RES_DEPTH_HEIGHT <- as.numeric(df_Profile$RES_DEPTH_HEIGHT)
-    df_Profile$MEASUREMENT <- as.numeric(df_Profile$MEASUREMENT)
+    SQUID_LakeProfile_table$SE_START_DATE_TIME <- as.POSIXct(SQUID_LakeProfile_table$SE_START_DATE_TIME)
+    SQUID_LakeProfile_table$RES_DEPTH_HEIGHT <- as.numeric(SQUID_LakeProfile_table$RES_DEPTH_HEIGHT)
+    SQUID_LakeProfile_table$MEASUREMENT <- as.numeric(SQUID_LakeProfile_table$MEASUREMENT)
 
     # QC Warning
     required_cols <- c("WATER_ID", "PROJECT_NAME", "MLOC_NAME", "MLOC_ID", "ACT_ID"
                        , "RES_DEPTH_HEIGHT", "CHARACTERISTIC", "MEASUREMENT"
                        , "SE_START_DATE_TIME", "PRJ_UID", "MLOC_UID")
 
-    missing_cols <- setdiff(required_cols, colnames(df_Profile))
+    missing_cols <- setdiff(required_cols, colnames(SQUID_LakeProfile_table))
 
     if (length(missing_cols) > 0) {
       stop(paste("The following required columns are missing from the
@@ -479,7 +510,7 @@ Data_Prep <- function(criteria_table
     rm(required_cols, missing_cols)
 
     # Create wide dataset
-    df_Profile_wide <- df_Profile %>%
+    df_Profile_wide <- SQUID_LakeProfile_table %>%
       dplyr::filter(!(SWQB_QUALIFIER_CODE %in% c("R1", "R2", "R3", "Er", "ER"
                                                  , "ER3"))) %>% # remove rejected data
       dplyr::select(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID, ACT_ID
@@ -491,7 +522,7 @@ Data_Prep <- function(criteria_table
     df_thermoclines <- df_Profile_wide %>%
       dplyr::group_by(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID,
                       SE_START_DATE_TIME, PRJ_UID, MLOC_UID) %>%
-      dplyr::summarise(thermocline = thermo.depth(wtr = `Temperature, water`,
+      dplyr::summarise(thermocline = rLakeAnalyzer::thermo.depth(wtr = `Temperature, water`,
                                                   depths = RES_DEPTH_HEIGHT,
                                                   mixed.cutoff = 1),
                        depth_max = max(RES_DEPTH_HEIGHT)) %>%
@@ -577,7 +608,7 @@ Data_Prep <- function(criteria_table
 
     # cleanup
     rm(df_Profile_summ_v2, df_Profile_summ, df_Profile_epi
-       , df_Profile_mix, df_thermoclines, df_Profile_wide, df_Profile)
+       , df_Profile_mix, df_thermoclines, df_Profile_wide, SQUID_LakeProfile_table)
   } #END ~ if df_Profile exists
 
   # Combine data ####
@@ -710,11 +741,17 @@ Data_Prep <- function(criteria_table
 
   # Non-Assess Data ####
   # remove not assessable data
-  df_non_assessable <- df_Chem %>%
+  df_non_assessable <- SQUID_RStudio_table %>%
     dplyr::filter(SWQB_QUALIFIER_CODE %in% c("R1", "R2", "R3", "Er", "ER", "ER3"))
 
   # cleanup
-  rm(df_Chem)
+  rm(SQUID_RStudio_table)
+
+  # Ensure consistent CHR_UID types
+  df_Chem_Combined$CHR_UID <- as.character(df_Chem_Combined$CHR_UID)
+  df_DU_v4$CHR_UID <- as.character(df_DU_v4$CHR_UID)
+  df_Criteria_v3$CHR_UID <- as.character(df_Criteria_v3$CHR_UID)
+  df_DU_v4$CHR_UID_Unique <- as.character(df_DU_v4$CHR_UID_Unique)
 
   # Export Data ####
   return(list(
