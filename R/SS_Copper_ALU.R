@@ -36,11 +36,11 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
     ))}
 
   # Fix "u" field (throws R Package error)
-  names(df) <- gsub("\u00B5", "u", names(df), fixed = TRUE)
-  names(df) <- gsub("<c2><b5>", "u", names(df), fixed = TRUE)
-  names(df) <- gsub("Reported Value[[:space:]]*\\(if \"<\", leave blank\\)",
+  names(LANL_WQ_data) <- gsub("\u00B5", "u", names(LANL_WQ_data), fixed = TRUE)
+  names(LANL_WQ_data) <- gsub("<c2><b5>", "u", names(LANL_WQ_data), fixed = TRUE)
+  names(LANL_WQ_data) <- gsub("Reported Value[[:space:]]*\\(if \"<\", leave blank\\)",
                     "reported_value",
-                    names(df))
+                    names(LANL_WQ_data))
 
   # Format data ####
   RFunctionName <- "SS_Copper_ALU"

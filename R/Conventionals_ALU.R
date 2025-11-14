@@ -30,12 +30,6 @@ Conventionals_ALU <- function(Chem_table
     stop(paste0("Error: 'DU_table' is required but was not provided. ",
                 "This is an output from the Data_Prep function."
     ))}
-
-  if (missing(Criteria_table)) {
-    stop(paste0("Error: 'Criteria_table' is required but was not provided. ",
-                "This is an output from the Data_Prep function."
-    ))}
-
   # Conventionals ALU ####
   RFunctionName <- "Conventionals_ALU"
 

@@ -25,6 +25,7 @@ Imports:
     magrittr,
     psych,
     purrr,
+    readr,
     rLakeAnalyzer,
     tibble,
     tidyr,

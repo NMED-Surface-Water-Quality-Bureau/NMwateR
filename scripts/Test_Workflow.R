@@ -3,7 +3,7 @@
 ## Hannah Ferriby, Tetra Tech; Hannah.Ferriby@tetratech.com
 ### and Kateri Salk, Tetra Tech; Kateri.SalkGundersen@tetratech.com
 # Date created: 11/07/2025
-# Date last updated: 11/13/2025
+# Date last updated: 11/14/2025
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # R version 4.5.2 (2025-10-31 ucrt) -- "[Not] Part in a Rumble"
 
@@ -83,8 +83,8 @@ df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 
 ## Site-specific copper ####
 # Only used for LANL data
-SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
-                                  , LANL_WQ_data = example_LANL_WQ_data)
+# SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
+#                                   , LANL_WQ_data = example_LANL_WQ_data)
 
 ## Toxics DWS ####
 df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -135,3 +135,30 @@ Nutrients_Streams_list <- Nutrients_Streams(Chem_table = df_Chem_combined
 
 df_Nutrients_Streams <- Nutrients_Streams_list$Nutrients_Streams
 df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv_Res
+
+# Assessment ####
+assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
+                       , Bacteria_PCR_SCR_table = df_Bacteria_PCR_SCR
+                       , Conventionals_LW_table = df_Conventionals_LW
+                       , LTD_ALU_table = df_LTD_ALU
+                       , Nutrients_Lakes_table = df_Nutrients_Lakes
+                       , Nutrients_Streams_table = df_Nutrients_Streams
+                       , pH_PCR_table = df_pH_PCR
+                       , Salinity_IRR_table = df_Salinity_IRR
+                       , SS_Copper_ALU_table = NULL
+                       , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
+                       , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
+                       , Toxics_DWS_table = df_Toxics_DWS
+                       , Toxics_HH_table = df_Toxics_HH
+                       , Toxics_IRR_table = df_Toxics_IRR
+                       , Toxics_LW_table = df_Toxics_LW
+                       , Toxics_WH_table = df_Toxics_WH
+                       , Turbidity_ALU_table = df_Turbidity_ALU)
+
+df_Assess_Indiv_Res <- assessment_list$Assess_Indiv_Res
+df_Assess_DU_Res <- assessment_list$Assess_DU_Res
+df_Assess_AU_Res <- assessment_list$Assess_AU_Res
+df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
+
+
+
