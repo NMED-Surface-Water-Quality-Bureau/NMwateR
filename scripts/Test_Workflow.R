@@ -106,5 +106,25 @@ df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
 df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
                                         , DU_table = df_DU_processed)
 
+## pH PCR ####
+df_pH_PCR <- pH_PCR(Chem_table = df_Chem_combined
+                    , DU_table = df_DU_processed)
+
+## Turbidity ALU ####
+Turbidity_ALU_list <- Turbidity_ALU(Chem_table = df_Chem_combined
+                                    , DU_table = df_DU_processed
+                                    , Criteria_table = df_Criteria)
+
+df_Turbidity_ALU <- Turbidity_ALU_list$Turbidity_ALU
+df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res
+
+## LTD ALU ####
+df_LTD_ALU <- LTD_ALU(Chem_table = df_Chem_combined
+                      , DU_table = df_DU_processed)
+
+## Nutrients (Lakes) ####
+Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
+                                        , DU_table = df_DU_processed)
+
 
 
