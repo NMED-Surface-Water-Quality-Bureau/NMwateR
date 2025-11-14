@@ -126,5 +126,6 @@ df_LTD_ALU <- LTD_ALU(Chem_table = df_Chem_combined
 Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
                                         , DU_table = df_DU_processed)
 
-
+df_Nutrients_Lakes <- Nutrients_Lakes_list$Nutrients_Lakes
+df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res
 
