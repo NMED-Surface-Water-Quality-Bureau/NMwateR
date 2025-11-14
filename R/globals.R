@@ -1,4 +1,5 @@
 utils::globalVariables(c(
+  # Original variables
   "CHR_NAME", "CHR_UID", "Units", "FRACTION", "DU", "Waterbody", "PERSISTENT",
   "HD_METAL", "TOXIC", "TURBAP", "UNITS", "ECOLI_SINGLE", "SC_WQC", "TEMP_WQC",
   "LT", "GT", "ACUTE", "CHRONIC", "HH", "Magnitude_Numeric", "Criteria_Type",
@@ -11,5 +12,20 @@ utils::globalVariables(c(
   "DATE_END", "MLOC_NAME", "MLOC_ID", "ACT_ID", "RES_DEPTH_HEIGHT", "CHARACTERISTIC",
   "SE_START_DATE_TIME", "PRJ_UID", "MLOC_UID", "Temperature, water", "depth_assess",
   "depth_max", "InOtherData", "DO_Site_Class", "Date_Begin", "Date_End", "Flag_DO_GrowSeas",
-  "samp_md", "begin_md", "end_md", "df_Chem", "thermocline"
-))
+  "samp_md", "begin_md", "end_md", "df_Chem", "thermocline",
+  "CHR_UID_Unique", "WATER_NAME", "SAMPLE_FRACTION", "TIME", "geo_mean_30d",
+  "sample_count_30d", "Exceed", "Criteria_table", ".", "ECOREGION_L3", "1418",
+  "1416", "1648", "985", "1674", "791", "986", "1415", "lag", "gap", "new_group",
+  "cluster_id", "cluster_end", "cluster_start", "has_all_required", "concurrence_met",
+  "n_concurrentdates", "Exceed_sample", "Enrichment_causal", "Enrichment_response",
+  "Enrichment_chlorophyll", "Delist_eligible", "R_Script_Name", "n_Samples", "n_Exceed",
+  "DOsat_flag", "Char_Exceeding", "MEASUREMENT_outlier", "Enrichment_DODELTA",
+  "outlier_flag", "Parameter Name", "n", "AU ID", "AU / Waterbody Name", "Station ID",
+  "Station Name", "Submitter / Data Source", "reported_value",
+  "Unit", "Sample Media", "Sample Fraction", "Less than detection limit?",
+  "Sample Date and Time", "LESS_THAN_YN", "Sample Detection Limit (SDL)", "SDL Units",
+  "Analysis Date and Time", "Analytical Method",
+  "Dilution Factor", "Lab Name", "SSWQC Copper Chronic (ug/L)",
+  "Submitter Qualifier Code", "Lab Qualifier Code", "SSWQC Copper Acute (ug/L)",
+  "any_of", "Year", "Hardness_mgL", "Applicability", "DOC_mgL", "pH", "YEAR",
+  "Rationale", "999919", "year"))

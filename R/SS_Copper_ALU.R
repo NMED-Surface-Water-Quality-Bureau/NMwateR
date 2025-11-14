@@ -13,6 +13,13 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
                 "This is a table of water quality data from LANL."
     ))}
 
+  # Fix "u" field (throws R Package error)
+  names(df) <- gsub("\u00B5", "u", names(df), fixed = TRUE)
+  names(df) <- gsub("<c2><b5>", "u", names(df), fixed = TRUE)
+  names(df) <- gsub("Reported Value[[:space:]]*\\(if \"<\", leave blank\\)",
+                    "reported_value",
+                    names(df))
+
   # Format data ####
   RFunctionName <- "SS_Copper_ALU"
 
@@ -30,7 +37,7 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
                   STATION_NAME = `Station Name`,
                   PROJECT_NAME = `Submitter / Data Source`,
                   CHARACTERISTIC_NAME = `Parameter Name`,
-                  MEASUREMENT_num = `Reported Value\r\n(if \"<\", leave blank)`,
+                  MEASUREMENT_num = reported_value,
                   UNITS = Unit,
                   SAMPLING_EVENT_TYPE = `Sample Media`,
                   SAMPLE_FRACTION = `Sample Fraction`,
@@ -64,9 +71,9 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
                   ACT_END_DATE = NA) %>%
     dplyr::select(!c(`Sample Date and Time`, `Sample Detection Limit (SDL)`,
                      `SDL Units`, `Analysis Date and Time`, `Analytical Method`,
-                     `Dilution Factor`, `Lab Name`, `SSWQC Copper Chronic (µg/L)`,
+                     `Dilution Factor`, `Lab Name`, `SSWQC Copper Chronic (ug/L)`,
                      `Submitter Qualifier Code`, `Lab Qualifier Code`,
-                     `SSWQC Copper Acute (µg/L)`)) %>%
+                     `SSWQC Copper Acute (ug/L)`)) %>%
     #filter out unnecessary characteristics
     dplyr::filter(!is.na(CHR_UID))
 

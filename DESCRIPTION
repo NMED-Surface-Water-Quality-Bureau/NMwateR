@@ -23,5 +23,9 @@ Imports:
     dplyr,
     lubridate,
     magrittr,
+    psych,
+    purrr,
     rLakeAnalyzer,
-    tidyr
+    tibble,
+    tidyr,
+    zoo
