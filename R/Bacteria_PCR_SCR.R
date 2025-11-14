@@ -1,3 +1,22 @@
+#' Analysis of bacteria data against PCR and SCR standards
+#'
+#' This function compares bacteria data against water quality
+#' standards for primary contact recreation (PCR) and secondary contact recreation
+#' (SCR) uses. For more information, see the NMED Consolidated Assessment and
+#' Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#'
+#' @returns A dataframe containing analyzed bacteria data compared to PCR and SCR
+#' water quality criteria.
+#'
+#' @examples
+#' \dontrun{
+#' df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed)}
+#'
 Bacteria_PCR_SCR <- function(Chem_table
                              , DU_table){
 

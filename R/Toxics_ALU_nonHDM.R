@@ -1,3 +1,23 @@
+#' Analysis of non hardness dependent toxics data against ALU standards
+#'
+#' This function compares non hardness dependent toxics data against water quality
+#' standards for aquatic life use (ALU). For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#' @param Criteria_table Quality controlled criteria table from Data_Prep function.
+#'
+#' @returns A dataframe containing analyzed non hardness dependent toxics data
+#' compared to ALU water quality criteria.
+#'
+#' @examples
+#' \dontrun{
+#' df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed
+#' , Criteria_table = df_Criteria)}
+#'
 Toxics_ALU_nonHDM <- function(Chem_table
                        , DU_table
                        , Criteria_table){

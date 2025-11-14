@@ -1,3 +1,21 @@
+#' Analysis of conventionals data against ALU standards
+#'
+#' This function compares conventional water chemistry data against water quality
+#' standards for aquatic life use (ALU). For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#'
+#' @returns A dataframe containing analyzed conventionals data compared to ALU
+#' water quality criteria.
+#'
+#' @examples
+#' \dontrun{
+#' df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed)}
+#'
 Conventionals_ALU <- function(Chem_table
                               , DU_table){
 

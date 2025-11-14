@@ -1,3 +1,21 @@
+#' Analysis of salinity data against IRR standards
+#'
+#' This function compares salinity data against water quality
+#' standards for irrigation (IRR) use. For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#'
+#' @returns A dataframe containing analyzed salinity data compared to IRR
+#' water quality criteria.
+#'
+#' @examples
+#' \dontrun{
+#' df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed)}
+#'
 Salinity_IRR <- function(Chem_table
                        , DU_table){
 

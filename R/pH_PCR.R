@@ -1,3 +1,21 @@
+#' Analysis of pH data against PCR standards
+#'
+#' This function compares pH data against water quality standards for
+#' primary contact recreation (PCR) use. For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#'
+#' @returns A dataframe containing analyzed pH data compared to PCR
+#' water quality criteria.
+#'
+#' @examples
+#' \dontrun{
+#' df_pH_PCR <- pH_PCR(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed)}
+#'
 pH_PCR <- function(Chem_table
                        , DU_table){
 

@@ -1,3 +1,24 @@
+#' Analysis of lake nutrient data against ALU standards
+#'
+#' This function compares lake nutrient data against water quality
+#' standards for aquatic life use (ALU). For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#'
+#' @returns A list of two dataframes. The first contains analyzed lake nutrient
+#' data compared to ALU water quality criteria. The second, labeled "Indiv_Res"
+#' is an intermediate file used for QA/QC purposes.
+#'
+#' @examples
+#' \dontrun{
+#' Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed)
+#' df_Nutrients_Lakes <- Nutrients_Lakes_list$Nutrients_Lakes
+#' df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res)}
+#'
 Nutrients_Lakes <- function(Chem_table
                             , DU_table){
 

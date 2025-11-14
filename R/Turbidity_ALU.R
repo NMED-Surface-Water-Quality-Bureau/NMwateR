@@ -1,3 +1,26 @@
+#' Analysis of turbidity data against ALU standards
+#'
+#' This function compares turbidity data against water quality
+#' standards for aquatic life use (ALU). For more information, see the NMED
+#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#'
+#' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
+#' contains a combination of grab, LTD, and lake profile data.
+#' @param DU_table Quality controlled Stations DU table from Data_Prep function.
+#' @param Criteria_table Quality controlled criteria table from Data_Prep function.
+#'
+#' @returns A list of two dataframes. The first contains analyzed turbidity data
+#' compared to ALU water quality criteria. The second, labeled "Indiv_Res"
+#' is an intermediate file used for QA/QC purposes.
+#'
+#' @examples
+#' \dontrun{
+#' Turbidity_ALU_list <- Turbidity_ALU(Chem_table = df_Chem_combined
+#' , DU_table = df_DU_processed
+#' , Criteria_table = df_Criteria)
+#' df_Turbidity_ALU <- Turbidity_ALU_list$Turbidity_ALU
+#' df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res}
+#'
 Turbidity_ALU <- function(Chem_table
                           , DU_table
                           , Criteria_table){
