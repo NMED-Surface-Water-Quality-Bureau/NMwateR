@@ -21,6 +21,7 @@ Depends:
 LazyData: true
 Imports: 
     dplyr,
+    lubridate,
     magrittr,
     rLakeAnalyzer,
     tidyr

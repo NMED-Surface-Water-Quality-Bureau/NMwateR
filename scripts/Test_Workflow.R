@@ -129,3 +129,11 @@ Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
 df_Nutrients_Lakes <- Nutrients_Lakes_list$Nutrients_Lakes
 df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res
 
+Nutrients_Streams
+
+## Nutrients (Streams) ####
+Nutrients_Streams_list <- Nutrients_Streams(Chem_table = df_Chem_combined
+                                        , DU_table = df_DU_processed)
+
+df_Nutrients_Streams <- Nutrients_Streams_list$Nutrients_Streams
+df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv_Res
