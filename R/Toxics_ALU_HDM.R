@@ -79,7 +79,7 @@ Toxics_ALU_HDM <- function(Chem_table
     df_predictors <- df_subset %>%
       dplyr::filter(CHR_UID == "4528") %>%
       dplyr::group_by(WATER_ID, STATION, DATE) %>%
-      dplyr::summarize(Hardness_mgL = mean(MEASUREMENT_num)) %>%
+      dplyr::reframe(Hardness_mgL = mean(MEASUREMENT_num)) %>%
       dplyr::mutate(Hardness_mgL = dplyr::case_when((Hardness_mgL > 400) ~ as.numeric(400) # from CALM
                                                     # Aluminum max hardness addressed below
                                                     , TRUE ~ Hardness_mgL)) %>%

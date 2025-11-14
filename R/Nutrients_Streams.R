@@ -180,7 +180,7 @@ Nutrients_Streams <- function(Chem_table
     dplyr::group_by(WATER_ID, WATER_NAME, PROJECT_NAME, #STATION, STATION_NAME, # Note: group by AU rather than station?
                     SAMPLING_EVENT_TYPE, Waterbody,  DU, CHR_UID, CHARACTERISTIC_NAME,
                     UNITS, Criteria_Name, Criteria_Value, ASSESSABILITY_QUALIFIER_CODE) %>%
-    dplyr::summarise(n_Samples = dplyr::n(),
+    dplyr::reframe(n_Samples = dplyr::n(),
                      n_Exceed = dplyr::case_when(Criteria_Name %in% c("DODELTA_WQC") ~ sum(Exceed == "Yes"),
                                                  Criteria_Name %in% c("TN_WQC", "TP_WQC") ~ sum(Exceed == "Yes")/n_Samples),
 

@@ -524,7 +524,7 @@ Data_Prep <- function(criteria_table
     df_thermoclines <- df_Profile_wide %>%
       dplyr::group_by(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID,
                       SE_START_DATE_TIME, PRJ_UID, MLOC_UID) %>%
-      dplyr::summarise(thermocline = rLakeAnalyzer::thermo.depth(wtr = `Temperature, water`,
+      dplyr::reframe(thermocline = rLakeAnalyzer::thermo.depth(wtr = `Temperature, water`,
                                                   depths = RES_DEPTH_HEIGHT,
                                                   mixed.cutoff = 1),
                        depth_max = max(RES_DEPTH_HEIGHT)) %>%
@@ -536,6 +536,7 @@ Data_Prep <- function(criteria_table
                                                       ~ "epilimnion",
                                                     is.na(thermocline)
                                                       ~ "onethird"))
+
     ### Calculate grab values ####
     # relevant for temp, pH, DO, and DO saturation
     df_Profile_summ <- df_Profile_wide %>%
@@ -553,7 +554,7 @@ Data_Prep <- function(criteria_table
       dplyr::group_by(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID, ACT_ID
                       , SE_START_DATE_TIME,PRJ_UID, MLOC_UID, thermocline
                       , depth_max, depth_assess,CHARACTERISTIC) %>%
-      dplyr::summarise(MEASUREMENT = round(mean(MEASUREMENT, na.rm = TRUE), 2))
+      dplyr::reframe(MEASUREMENT = round(mean(MEASUREMENT, na.rm = TRUE), 2))
 
     # if thermocline is not present, summarize for the average upper 1/3 of water column.
     df_Profile_mix <- df_Profile_summ %>%
@@ -567,7 +568,7 @@ Data_Prep <- function(criteria_table
       dplyr::group_by(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID, ACT_ID
                       , SE_START_DATE_TIME, PRJ_UID, MLOC_UID, thermocline
                       , depth_max, depth_assess, CHARACTERISTIC) %>%
-      dplyr::summarise(MEASUREMENT = round(mean(MEASUREMENT, na.rm = TRUE), 2))
+      dplyr::reframe(MEASUREMENT = round(mean(MEASUREMENT, na.rm = TRUE), 2))
 
     df_Profile_summ_v2 <- rbind(df_Profile_epi, df_Profile_mix)
 

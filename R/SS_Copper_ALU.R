@@ -165,7 +165,7 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
     df_predictors <- df_subset %>%
       dplyr::filter(CHR_UID %in% c(4528, 1648, 2174)) %>%
       dplyr::group_by(WATER_ID, STATION, CHR_UID, DATE) %>%
-      dplyr::summarize(MEASUREMENT = mean(MEASUREMENT_num)) %>%
+      dplyr::reframe(MEASUREMENT = mean(MEASUREMENT_num)) %>%
       tidyr::pivot_wider(id_cols = c('WATER_ID', 'STATION', 'DATE'),
                          names_from = 'CHR_UID',
                          values_from = 'MEASUREMENT') %>%

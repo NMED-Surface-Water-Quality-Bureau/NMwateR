@@ -164,7 +164,7 @@ Nutrients_Lakes <- function(Chem_table
     dplyr::ungroup() %>%
     # summarize cluster completeness
     dplyr::group_by(WATER_ID, cluster_id) %>%
-    dplyr::summarise(
+    dplyr::reframe(
       cluster_start = min(DATE),
       cluster_end   = max(DATE),
       n_days_span   = as.integer(cluster_end - cluster_start),
@@ -174,7 +174,7 @@ Nutrients_Lakes <- function(Chem_table
 
   df_concurrence_summ <- df_concurrence %>%
     dplyr::group_by(WATER_ID) %>%
-    dplyr::summarise(n_concurrentdates = length(has_all_required[has_all_required == TRUE]),
+    dplyr::reframe(n_concurrentdates = length(has_all_required[has_all_required == TRUE]),
                      concurrence_met = dplyr::case_when(n_concurrentdates >= 2 ~ "Yes",
                                                         n_concurrentdates < 2 ~ "No"))
 
@@ -184,7 +184,7 @@ Nutrients_Lakes <- function(Chem_table
     dplyr::group_by(WATER_ID, WATER_NAME, PROJECT_NAME, STATION, STATION_NAME,
                     concurrence_met, n_concurrentdates, DU, CHR_UID
                     , CHARACTERISTIC_NAME, UNITS, Criteria_Name, Criteria_Value) %>%
-    dplyr::summarise(n_Samples = dplyr::n(),
+    dplyr::reframe(n_Samples = dplyr::n(),
                      n_Exceed = sum(Exceed_sample == "Yes")) %>%
     dplyr::mutate(Exceed = dplyr::case_when(Criteria_Name %in% c("TN_WQC"
                                                                  , "TP_WQC"
