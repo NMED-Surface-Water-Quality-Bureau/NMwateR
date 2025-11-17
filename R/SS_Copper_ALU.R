@@ -38,9 +38,9 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
   # Fix "u" field (throws R Package error)
   names(LANL_WQ_data) <- gsub("\u00B5", "u", names(LANL_WQ_data), fixed = TRUE)
   names(LANL_WQ_data) <- gsub("<c2><b5>", "u", names(LANL_WQ_data), fixed = TRUE)
-  names(LANL_WQ_data) <- gsub("Reported Value[[:space:]]*\\(if \"<\", leave blank\\)",
-                    "reported_value",
-                    names(LANL_WQ_data))
+  # names(LANL_WQ_data) <- gsub("Reported Value[[:space:]]*\\(if \"<\", leave blank\\)",
+  #                   "reported_value",
+  #                   names(LANL_WQ_data))
 
   # Format data ####
   RFunctionName <- "SS_Copper_ALU"
@@ -52,14 +52,14 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
 
   df_LANL_v2 <- LANL_WQ_data %>%
     #remove last row, table info
-    dplyr::filter(dplyr::row_number() <= n() - 1) %>%
+    dplyr::filter(dplyr::row_number() <= dplyr::n() - 1) %>%
     dplyr::rename(WATER_ID = `AU ID`,
                   WATER_NAME = `AU / Waterbody Name`,
                   STATION = `Station ID`,
                   STATION_NAME = `Station Name`,
                   PROJECT_NAME = `Submitter / Data Source`,
                   CHARACTERISTIC_NAME = `Parameter Name`,
-                  MEASUREMENT_num = reported_value,
+                  MEASUREMENT_num = `Reported Value` ,
                   UNITS = Unit,
                   SAMPLING_EVENT_TYPE = `Sample Media`,
                   SAMPLE_FRACTION = `Sample Fraction`,

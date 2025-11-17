@@ -28,4 +28,6 @@ utils::globalVariables(c(
   "Dilution Factor", "Lab Name", "SSWQC Copper Chronic (ug/L)",
   "Submitter Qualifier Code", "Lab Qualifier Code", "SSWQC Copper Acute (ug/L)",
   "any_of", "Year", "Hardness_mgL", "Applicability", "DOC_mgL", "pH", "YEAR",
-  "Rationale", "999919", "year"))
+  "Rationale", "999919", "year", "Category", "Individual_Category"
+  , "new_Individual_Category", "is_2", "is_3", "is_5", "cat_5_present"
+  , "cat_2_present", "Use_Category", "Overall_Category", "Reported Value"))
