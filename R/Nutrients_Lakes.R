@@ -156,8 +156,14 @@ Nutrients_Lakes <- function(Chem_table
                                        CHR_UID == 986 ~ "DOSAT_WQC",
                                        TRUE ~ Criteria_Name),
       Exceed_sample = ifelse(Criteria_Name %in% c("DO_WQC","PH_LOW"),
-                             ifelse(MEASUREMENT_num < Criteria_Value, 'Yes', 'No'),
-                             ifelse(MEASUREMENT_num >= Criteria_Value, 'Yes', 'No')))
+                             ifelse(MEASUREMENT_num < Criteria_Value
+                                    , 'Yes', 'No'),
+                             ifelse(MEASUREMENT_num >= Criteria_Value
+                                    , 'Yes', 'No'))) %>%
+    # Remove DO and pH samples in the chemistry file.
+    # These parameters should only come from profile data.
+    dplyr::filter(!(ACTIVITY_TYPE == "Field Msr/Obs"
+                    & CHR_UID %in% c(1648, 985, 986)))
 
   # Determine whether samples on a given date were sampled concurrently
   # Required parameters

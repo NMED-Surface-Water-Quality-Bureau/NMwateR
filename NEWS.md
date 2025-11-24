@@ -1,11 +1,11 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2025-11-17 16:53:48.305454
+2025-11-20 11:11:26.626185
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-11-17 16:53:48.320608
+    #> Last Update: 2025-11-20 11:11:26.660643
 
 # AKDECtools 0.0.0.9053 (2025-11-07)
 
