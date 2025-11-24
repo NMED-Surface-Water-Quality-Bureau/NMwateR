@@ -21,7 +21,16 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
-# AKDECtools 0.0.0.9053 (2025-11-07)
+# AKDECtools 0.0.0.9056 (2025-11-24)
+
+-   Added vignette
+-   Updated nutrients (lakes) logic per instructions from NMED
+-   To do:
+    -   Have NMED review functionality
+    -   Use testthat to make internal tests
+    -   Set up GitHub tests
+
+# AKDECtools 0.0.0.9053 (2025-11-17)
 
 -   Added all functions from NMED R project as of 11/07/2025
 -   To do:
