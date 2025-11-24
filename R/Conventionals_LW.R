@@ -17,6 +17,7 @@
 #' df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed
 #' , Criteria_table = df_Criteria)}
+#' @export
 #'
 Conventionals_LW <- function(Chem_table
                        , DU_table

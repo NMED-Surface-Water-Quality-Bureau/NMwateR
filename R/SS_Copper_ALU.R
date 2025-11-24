@@ -18,7 +18,7 @@
 #' \dontrun{
 #' SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
 #' , LANL_WQ_data = example_LANL_WQ_data)}
-#'
+#' @export
 #'
 SS_Copper_ALU <- function(DU_LANL_Stations_table
                        , LANL_WQ_data){

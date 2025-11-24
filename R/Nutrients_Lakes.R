@@ -19,6 +19,7 @@
 #' df_Nutrients_Lakes <- Nutrients_Lakes_list$Nutrients_Lakes
 #' df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res)}
 #'
+#' @export
 Nutrients_Lakes <- function(Chem_table
                             , DU_table){
 

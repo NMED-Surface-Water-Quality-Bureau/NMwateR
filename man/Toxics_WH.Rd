@@ -25,5 +25,4 @@ Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 \dontrun{
 df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
 , Criteria_table = df_Criteria)}
-
 }

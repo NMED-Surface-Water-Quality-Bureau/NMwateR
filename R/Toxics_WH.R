@@ -15,7 +15,7 @@
 #' \dontrun{
 #' df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
 #' , Criteria_table = df_Criteria)}
-#'
+#' @export
 Toxics_WH <- function(Chem_table
                        , Criteria_table){
 

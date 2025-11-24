@@ -26,5 +26,4 @@ guidance manual.
 \dontrun{
 df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 , Criteria_table = df_Criteria)}
-
 }

@@ -31,5 +31,4 @@ Turbidity_ALU_list <- Turbidity_ALU(Chem_table = df_Chem_combined
 , Criteria_table = df_Criteria)
 df_Turbidity_ALU <- Turbidity_ALU_list$Turbidity_ALU
 df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res}
-
 }

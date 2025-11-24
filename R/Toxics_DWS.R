@@ -16,6 +16,7 @@
 #' df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
 #' , Criteria_table = df_Criteria)}
 #'
+#' @export
 Toxics_DWS <- function(Chem_table
                        , Criteria_table){
   # QC ####

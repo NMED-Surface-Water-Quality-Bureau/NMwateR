@@ -28,5 +28,4 @@ Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
 , DU_table = df_DU_processed
 , Criteria_table = df_Criteria)}
-
 }

@@ -16,6 +16,7 @@
 #' df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed)}
 #'
+#' @export
 Salinity_IRR <- function(Chem_table
                        , DU_table){
 

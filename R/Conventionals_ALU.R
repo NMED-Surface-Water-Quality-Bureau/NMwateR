@@ -16,6 +16,7 @@
 #' df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed)}
 #'
+#' @export
 Conventionals_ALU <- function(Chem_table
                               , DU_table){
 

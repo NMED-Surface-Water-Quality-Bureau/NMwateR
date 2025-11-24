@@ -29,6 +29,7 @@
 #' , SQUID_LTD_table = my_LTD
 #' , SQUID_LakeProfile_table = my_Profile)}
 #'
+#' @export
 Data_Prep <- function(criteria_table
                       , parameter_table
                       , SQUID_RStudio_table

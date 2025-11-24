@@ -28,5 +28,4 @@ Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
 , DU_table = df_DU_processed
 , Criteria_table = df_Criteria)}
-
 }

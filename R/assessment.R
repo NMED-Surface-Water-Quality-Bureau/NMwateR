@@ -1,3 +1,59 @@
+#' Assessment of water quality data using NMED SWQS and CALM logic
+#'
+#' This function uses the exports from the various water quality analyses and
+#' assesses the results using logic from the New Mexico Surface Water Quality
+#' Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
+#' (CALM) guidance manual.
+#'
+#' @param Conventionals_ALU_table WQ analysis export from Conventionals_ALU() function.
+#' @param Bacteria_PCR_SCR_table WQ analysis export from Bacteria_PCR_SCR() function.
+#' @param Conventionals_LW_table WQ analysis export from Conventionals_LW() function.
+#' @param LTD_ALU_table WQ analysis export from LTD_ALU() function.
+#' @param Nutrients_Lakes_table WQ analysis export from Nutrients_Lakes() function.
+#' @param Nutrients_Streams_table WQ analysis export from Nutrients_Streams() function.
+#' @param pH_PCR_table WQ analysis export from pH_PCR() function.
+#' @param Salinity_IRR_table WQ analysis export from Salinity_IRR() function.
+#' @param SS_Copper_ALU_table WQ analysis export from SS_Copper_ALU() function.
+#' @param Toxics_ALU_nonHDM_table WQ analysis export from Toxics_ALU_nonHDM() function.
+#' @param Toxics_ALU_HDM_table WQ analysis export from Toxics_ALU_HDM() function.
+#' @param Toxics_DWS_table WQ analysis export from Toxics_DWS() function.
+#' @param Toxics_HH_table WQ analysis export from Toxics_HH() function.
+#' @param Toxics_IRR_table WQ analysis export from Toxics_IRR() function.
+#' @param Toxics_LW_table WQ analysis export from Toxics_LW() function.
+#' @param Toxics_WH_table WQ analysis export from Toxics_WH() function.
+#' @param Turbidity_ALU_table WQ analysis export from Turbidity_ALU() function.
+#'
+#' @returns A list of four dataframes. Indiviual results are IR categories assigned
+#' to each AU/DU/parameter combination. DU results are IR categories assigned to
+#' each AU/DU combination. AU results are IR categories assigned to each AU. Lastly,
+#' the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
+#' @examples
+#' \dontrun{
+#' assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
+#' , Bacteria_PCR_SCR_table = df_Bacteria_PCR_SCR
+#' , Conventionals_LW_table = df_Conventionals_LW
+#' , LTD_ALU_table = df_LTD_ALU
+#' , Nutrients_Lakes_table = df_Nutrients_Lakes
+#' , Nutrients_Streams_table = df_Nutrients_Streams
+#' , pH_PCR_table = df_pH_PCR
+#' , Salinity_IRR_table = df_Salinity_IRR
+#' , SS_Copper_ALU_table = df_SS_Copper_ALU
+#' , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
+#' , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
+#' , Toxics_DWS_table = df_Toxics_DWS
+#' , Toxics_HH_table = df_Toxics_HH
+#' , Toxics_IRR_table = df_Toxics_IRR
+#' , Toxics_LW_table = df_Toxics_LW
+#' , Toxics_WH_table = df_Toxics_WH
+#' , Turbidity_ALU_table = df_Turbidity_ALU)
+#' df_Assess_Indiv_Res <- assessment_list$Assess_Indiv_Res
+#' df_Assess_DU_Res <- assessment_list$Assess_DU_Res
+#' df_Assess_AU_Res <- assessment_list$Assess_AU_Res
+#' df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
+#' }
+#'
+#' @export
+#'
 assessment <- function(Conventionals_ALU_table
                        , Bacteria_PCR_SCR_table = NULL
                        , Conventionals_LW_table = NULL

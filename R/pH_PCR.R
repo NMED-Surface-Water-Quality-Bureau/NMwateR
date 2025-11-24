@@ -16,6 +16,7 @@
 #' df_pH_PCR <- pH_PCR(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed)}
 #'
+#' @export
 pH_PCR <- function(Chem_table
                        , DU_table){
 

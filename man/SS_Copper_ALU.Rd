@@ -28,6 +28,4 @@ Listing Methodology (CALM) guidance manual and New Mexico SQWS.
 \dontrun{
 SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
 , LANL_WQ_data = example_LANL_WQ_data)}
-
-
 }

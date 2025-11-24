@@ -17,6 +17,7 @@
 #' df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed)}
 #'
+#' @export
 Bacteria_PCR_SCR <- function(Chem_table
                              , DU_table){
 

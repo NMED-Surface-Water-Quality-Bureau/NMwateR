@@ -15,6 +15,7 @@
 #' \dontrun{
 #' df_Toxics_IRR <- Toxics_IRR(Chem_table = df_Chem_combined
 #' , Criteria_table = df_Criteria)}
+#' @export
 #'
 Toxics_IRR <- function(Chem_table
                        , Criteria_table){

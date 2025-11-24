@@ -19,6 +19,7 @@
 #' df_Nutrients_Streams <- Nutrients_Streams_list$Nutrients_Streams
 #' df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv_Res}
 #'
+#' @export
 Nutrients_Streams <- function(Chem_table
                               , DU_table){
 

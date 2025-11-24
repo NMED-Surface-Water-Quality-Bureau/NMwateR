@@ -20,6 +20,7 @@
 #' , Criteria_table = df_Criteria)
 #' df_Toxics_ALU_HDM <- Toxics_ALU_HDM_list$Toxics_ALU_HDM
 #' df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res}
+#' @export
 #'
 Toxics_ALU_HDM <- function(Chem_table
                        , DU_table
