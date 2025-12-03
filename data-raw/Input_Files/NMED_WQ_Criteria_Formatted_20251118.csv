@@ -1,0 +1,1322 @@
+"CHR_UID","CHR_NAME","FRACTION","DU","Waterbody","PERSISTENT","HD_METAL","TOXIC","TURBAP","UNITS","Criteria_Type","Magnitude_Numeric"
+"7",".alpha.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"7",".alpha.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"7",".alpha.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"7",".alpha.-Endosulfan",,"LAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"7",".alpha.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"7",".alpha.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"7",".alpha.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"7",".alpha.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","HH",30
+"8",".alpha.-Hexachlorocyclohexane",,"ColdWAL",,,"N","Y","N","ugL","HH",0.0039
+"8",".alpha.-Hexachlorocyclohexane",,"CoolWAL",,,"N","Y","N","ugL","HH",0.0039
+"8",".alpha.-Hexachlorocyclohexane",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.0039
+"8",".alpha.-Hexachlorocyclohexane",,"MCWAL",,,"N","Y","N","ugL","HH",0.0039
+"8",".alpha.-Hexachlorocyclohexane",,"MWWAL",,,"N","Y","N","ugL","HH",0.0039
+"8",".alpha.-Hexachlorocyclohexane",,"WWAL",,,"N","Y","N","ugL","HH",0.0039
+"13",".beta.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"ColdWAL",,,"N","Y","N","ugL","HH",40
+"13",".beta.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"CoolWAL",,,"N","Y","N","ugL","HH",40
+"13",".beta.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"HQColdWAL",,,"N","Y","N","ugL","HH",40
+"13",".beta.-Endosulfan",,"LAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"MCWAL",,,"N","Y","N","ugL","HH",40
+"13",".beta.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"MWWAL",,,"N","Y","N","ugL","HH",40
+"13",".beta.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.22
+"13",".beta.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.056
+"13",".beta.-Endosulfan",,"WWAL",,,"N","Y","N","ugL","HH",40
+"14",".beta.-Hexachlorocyclohexane",,"ColdWAL",,,"N","Y","N","ugL","HH",0.14
+"14",".beta.-Hexachlorocyclohexane",,"CoolWAL",,,"N","Y","N","ugL","HH",0.14
+"14",".beta.-Hexachlorocyclohexane",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.14
+"14",".beta.-Hexachlorocyclohexane",,"MCWAL",,,"N","Y","N","ugL","HH",0.14
+"14",".beta.-Hexachlorocyclohexane",,"MWWAL",,,"N","Y","N","ugL","HH",0.14
+"14",".beta.-Hexachlorocyclohexane",,"WWAL",,,"N","Y","N","ugL","HH",0.14
+"24","1,1,2,2-Tetrachloroethane",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"24","1,1,2,2-Tetrachloroethane",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"24","1,1,2,2-Tetrachloroethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"24","1,1,2,2-Tetrachloroethane",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"24","1,1,2,2-Tetrachloroethane",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"24","1,1,2,2-Tetrachloroethane",,"WWAL",,,"N","Y","N","ugL","HH",30
+"25","1,1,2-Trichloroethane",,"ColdWAL",,,"N","Y","N","ugL","HH",89
+"25","1,1,2-Trichloroethane",,"CoolWAL",,,"N","Y","N","ugL","HH",89
+"25","1,1,2-Trichloroethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",89
+"25","1,1,2-Trichloroethane",,"MCWAL",,,"N","Y","N","ugL","HH",89
+"25","1,1,2-Trichloroethane",,"MWWAL",,,"N","Y","N","ugL","HH",89
+"25","1,1,2-Trichloroethane",,"WWAL",,,"N","Y","N","ugL","HH",89
+"28","1,1-Dichloroethylene",,"ColdWAL",,,"N","Y","N","ugL","HH",20000
+"28","1,1-Dichloroethylene",,"CoolWAL",,,"N","Y","N","ugL","HH",20000
+"28","1,1-Dichloroethylene",,"HQColdWAL",,,"N","Y","N","ugL","HH",20000
+"28","1,1-Dichloroethylene",,"MCWAL",,,"N","Y","N","ugL","HH",20000
+"28","1,1-Dichloroethylene",,"MWWAL",,,"N","Y","N","ugL","HH",20000
+"28","1,1-Dichloroethylene",,"WWAL",,,"N","Y","N","ugL","HH",20000
+"58","1,2,4-Trichlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.76
+"58","1,2,4-Trichlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.76
+"58","1,2,4-Trichlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.76
+"58","1,2,4-Trichlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",0.76
+"58","1,2,4-Trichlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",0.76
+"58","1,2,4-Trichlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",0.76
+"65","1,2-Dichloroethane",,"ColdWAL",,,"N","Y","N","ugL","HH",6500
+"65","1,2-Dichloroethane",,"CoolWAL",,,"N","Y","N","ugL","HH",6500
+"65","1,2-Dichloroethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",6500
+"65","1,2-Dichloroethane",,"MCWAL",,,"N","Y","N","ugL","HH",6500
+"65","1,2-Dichloroethane",,"MWWAL",,,"N","Y","N","ugL","HH",6500
+"65","1,2-Dichloroethane",,"WWAL",,,"N","Y","N","ugL","HH",6500
+"67","1,2-Dichloropropane",,"ColdWAL",,,"N","Y","N","ugL","HH",310
+"67","1,2-Dichloropropane",,"CoolWAL",,,"N","Y","N","ugL","HH",310
+"67","1,2-Dichloropropane",,"HQColdWAL",,,"N","Y","N","ugL","HH",310
+"67","1,2-Dichloropropane",,"MCWAL",,,"N","Y","N","ugL","HH",310
+"67","1,2-Dichloropropane",,"MWWAL",,,"N","Y","N","ugL","HH",310
+"67","1,2-Dichloropropane",,"WWAL",,,"N","Y","N","ugL","HH",310
+"72","1,2-Diphenylhydrazine",,"ColdWAL",,,"N","Y","N","ugL","HH",2
+"72","1,2-Diphenylhydrazine",,"CoolWAL",,,"N","Y","N","ugL","HH",2
+"72","1,2-Diphenylhydrazine",,"HQColdWAL",,,"N","Y","N","ugL","HH",2
+"72","1,2-Diphenylhydrazine",,"MCWAL",,,"N","Y","N","ugL","HH",2
+"72","1,2-Diphenylhydrazine",,"MWWAL",,,"N","Y","N","ugL","HH",2
+"72","1,2-Diphenylhydrazine",,"WWAL",,,"N","Y","N","ugL","HH",2
+"80","1,3-Dichloropropene",,"ColdWAL",,,"N","Y","N","ugL","HH",120
+"80","1,3-Dichloropropene",,"CoolWAL",,,"N","Y","N","ugL","HH",120
+"80","1,3-Dichloropropene",,"HQColdWAL",,,"N","Y","N","ugL","HH",120
+"80","1,3-Dichloropropene",,"MCWAL",,,"N","Y","N","ugL","HH",120
+"80","1,3-Dichloropropene",,"MWWAL",,,"N","Y","N","ugL","HH",120
+"80","1,3-Dichloropropene",,"WWAL",,,"N","Y","N","ugL","HH",120
+"316","2,4,6-Trichlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",28
+"316","2,4,6-Trichlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",28
+"316","2,4,6-Trichlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",28
+"316","2,4,6-Trichlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",28
+"316","2,4,6-Trichlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",28
+"316","2,4,6-Trichlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",28
+"330","2,4-Dichlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",60
+"330","2,4-Dichlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",60
+"330","2,4-Dichlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",60
+"330","2,4-Dichlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",60
+"330","2,4-Dichlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",60
+"330","2,4-Dichlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",60
+"331","2,4-Dimethylphenol",,"ColdWAL",,,"N","Y","N","ugL","HH",3000
+"331","2,4-Dimethylphenol",,"CoolWAL",,,"N","Y","N","ugL","HH",3000
+"331","2,4-Dimethylphenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",3000
+"331","2,4-Dimethylphenol",,"MCWAL",,,"N","Y","N","ugL","HH",3000
+"331","2,4-Dimethylphenol",,"MWWAL",,,"N","Y","N","ugL","HH",3000
+"331","2,4-Dimethylphenol",,"WWAL",,,"N","Y","N","ugL","HH",3000
+"3029","Dinitrophenols",,"ColdWAL",,,"N","Y","N","ugL","HH",1000
+"3029","Dinitrophenols",,"CoolWAL",,,"N","Y","N","ugL","HH",1000
+"3029","Dinitrophenols",,"HQColdWAL",,,"N","Y","N","ugL","HH",1000
+"3029","Dinitrophenols",,"MCWAL",,,"N","Y","N","ugL","HH",1000
+"3029","Dinitrophenols",,"MWWAL",,,"N","Y","N","ugL","HH",1000
+"3029","Dinitrophenols",,"WWAL",,,"N","Y","N","ugL","HH",1000
+"332","2,4-Dinitrophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",300
+"332","2,4-Dinitrophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",300
+"332","2,4-Dinitrophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",300
+"332","2,4-Dinitrophenol",,"MCWAL",,,"N","Y","N","ugL","HH",300
+"332","2,4-Dinitrophenol",,"MWWAL",,,"N","Y","N","ugL","HH",300
+"332","2,4-Dinitrophenol",,"WWAL",,,"N","Y","N","ugL","HH",300
+"333","2,4-Dinitrotoluene",,"ColdWAL",,,"N","Y","N","ugL","HH",17
+"333","2,4-Dinitrotoluene",,"CoolWAL",,,"N","Y","N","ugL","HH",17
+"333","2,4-Dinitrotoluene",,"HQColdWAL",,,"N","Y","N","ugL","HH",17
+"333","2,4-Dinitrotoluene",,"MCWAL",,,"N","Y","N","ugL","HH",17
+"333","2,4-Dinitrotoluene",,"MWWAL",,,"N","Y","N","ugL","HH",17
+"333","2,4-Dinitrotoluene",,"WWAL",,,"N","Y","N","ugL","HH",17
+"358","2-Chloronaphthalene",,"ColdWAL",,,"N","Y","N","ugL","HH",1000
+"358","2-Chloronaphthalene",,"CoolWAL",,,"N","Y","N","ugL","HH",1000
+"358","2-Chloronaphthalene",,"HQColdWAL",,,"N","Y","N","ugL","HH",1000
+"358","2-Chloronaphthalene",,"MCWAL",,,"N","Y","N","ugL","HH",1000
+"358","2-Chloronaphthalene",,"MWWAL",,,"N","Y","N","ugL","HH",1000
+"358","2-Chloronaphthalene",,"WWAL",,,"N","Y","N","ugL","HH",1000
+"410","3,3'-Dichlorobenzidine",,"ColdWAL",,,"N","Y","N","ugL","HH",1.5
+"410","3,3'-Dichlorobenzidine",,"CoolWAL",,,"N","Y","N","ugL","HH",1.5
+"410","3,3'-Dichlorobenzidine",,"HQColdWAL",,,"N","Y","N","ugL","HH",1.5
+"410","3,3'-Dichlorobenzidine",,"MCWAL",,,"N","Y","N","ugL","HH",1.5
+"410","3,3'-Dichlorobenzidine",,"MWWAL",,,"N","Y","N","ugL","HH",1.5
+"410","3,3'-Dichlorobenzidine",,"WWAL",,,"N","Y","N","ugL","HH",1.5
+"454","4,6-Dinitro-o-cresol",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"454","4,6-Dinitro-o-cresol",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"454","4,6-Dinitro-o-cresol",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"454","4,6-Dinitro-o-cresol",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"454","4,6-Dinitro-o-cresol",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"454","4,6-Dinitro-o-cresol",,"WWAL",,,"N","Y","N","ugL","HH",30
+"500","Acenaphthene",,"ColdWAL",,,"N","Y","N","ugL","HH",90
+"500","Acenaphthene",,"CoolWAL",,,"N","Y","N","ugL","HH",90
+"500","Acenaphthene",,"HQColdWAL",,,"N","Y","N","ugL","HH",90
+"500","Acenaphthene",,"MCWAL",,,"N","Y","N","ugL","HH",90
+"500","Acenaphthene",,"MWWAL",,,"N","Y","N","ugL","HH",90
+"500","Acenaphthene",,"WWAL",,,"N","Y","N","ugL","HH",90
+"518","Acrolein",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"ColdWAL",,,"N","Y","N","ugL","HH",400
+"518","Acrolein",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"CoolWAL",,,"N","Y","N","ugL","HH",400
+"518","Acrolein",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"HQColdWAL",,,"N","Y","N","ugL","HH",400
+"518","Acrolein",,"LAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"MCWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"MCWAL",,,"N","Y","N","ugL","HH",400
+"518","Acrolein",,"MWWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"MWWAL",,,"N","Y","N","ugL","HH",400
+"518","Acrolein",,"WWAL",,,"N","Y","N","ugL","ACUTE",3
+"518","Acrolein",,"WWAL",,,"N","Y","N","ugL","CHRONIC",3
+"518","Acrolein",,"WWAL",,,"N","Y","N","ugL","HH",400
+"520","Acrylonitrile",,"ColdWAL",,,"N","Y","N","ugL","HH",70
+"520","Acrylonitrile",,"CoolWAL",,,"N","Y","N","ugL","HH",70
+"520","Acrylonitrile",,"HQColdWAL",,,"N","Y","N","ugL","HH",70
+"520","Acrylonitrile",,"MCWAL",,,"N","Y","N","ugL","HH",70
+"520","Acrylonitrile",,"MWWAL",,,"N","Y","N","ugL","HH",70
+"520","Acrylonitrile",,"WWAL",,,"N","Y","N","ugL","HH",70
+"529","Aldrin",,"ColdWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"CoolWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"HQColdWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"LAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"LAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"MCWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"MWWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"529","Aldrin",,"WWAL",,"Y","N","Y","N","ugL","ACUTE",3
+"529","Aldrin",,"WWAL",,"Y","N","Y","N","ugL","HH",0.0000077
+"568","Anthracene",,"ColdWAL",,,"N","Y","N","ugL","HH",400
+"568","Anthracene",,"CoolWAL",,,"N","Y","N","ugL","HH",400
+"568","Anthracene",,"HQColdWAL",,,"N","Y","N","ugL","HH",400
+"568","Anthracene",,"MCWAL",,,"N","Y","N","ugL","HH",400
+"568","Anthracene",,"MWWAL",,,"N","Y","N","ugL","HH",400
+"568","Anthracene",,"WWAL",,,"N","Y","N","ugL","HH",400
+"570","Antimony","Dissolved","ColdWAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","CoolWAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","HQColdWAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","LAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","MCWAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","MWWAL",,"Y","N","Y","N","mgL","HH",0.64
+"570","Antimony","Dissolved","WWAL",,"Y","N","Y","N","mgL","HH",0.64
+"591","Arsenic","Dissolved","ColdWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","ColdWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","ColdWAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","CoolWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","CoolWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","CoolWAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","HQColdWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","HQColdWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","HQColdWAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","LAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","LAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","MCWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","MCWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","MCWAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","MWWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","MWWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","MWWAL",,"Y","N","Y","N","mgL","HH",0.009
+"591","Arsenic","Dissolved","WWAL",,"Y","N","Y","N","mgL","ACUTE",0.34
+"591","Arsenic","Dissolved","WWAL",,"Y","N","Y","N","mgL","CHRONIC",0.15
+"591","Arsenic","Dissolved","WWAL",,"Y","N","Y","N","mgL","HH",0.009
+"621","Benz[a]anthracene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.013
+"621","Benz[a]anthracene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.013
+"621","Benz[a]anthracene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.013
+"621","Benz[a]anthracene",,"MCWAL",,,"N","Y","N","ugL","HH",0.013
+"621","Benz[a]anthracene",,"MWWAL",,,"N","Y","N","ugL","HH",0.013
+"621","Benz[a]anthracene",,"WWAL",,,"N","Y","N","ugL","HH",0.013
+"624","Benzene",,"ColdWAL",,,"N","Y","N","ugL","HH",160
+"624","Benzene",,"CoolWAL",,,"N","Y","N","ugL","HH",160
+"624","Benzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",160
+"624","Benzene",,"MCWAL",,,"N","Y","N","ugL","HH",160
+"624","Benzene",,"MWWAL",,,"N","Y","N","ugL","HH",160
+"624","Benzene",,"WWAL",,,"N","Y","N","ugL","HH",160
+"635","Benzidine",,"ColdWAL",,,"N","Y","N","ugL","HH",0.11
+"635","Benzidine",,"CoolWAL",,,"N","Y","N","ugL","HH",0.11
+"635","Benzidine",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.11
+"635","Benzidine",,"MCWAL",,,"N","Y","N","ugL","HH",0.11
+"635","Benzidine",,"MWWAL",,,"N","Y","N","ugL","HH",0.11
+"635","Benzidine",,"WWAL",,,"N","Y","N","ugL","HH",0.11
+"636","Benzo(b)fluoranthene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.013
+"636","Benzo(b)fluoranthene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.013
+"636","Benzo(b)fluoranthene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.013
+"636","Benzo(b)fluoranthene",,"MCWAL",,,"N","Y","N","ugL","HH",0.013
+"636","Benzo(b)fluoranthene",,"MWWAL",,,"N","Y","N","ugL","HH",0.013
+"636","Benzo(b)fluoranthene",,"WWAL",,,"N","Y","N","ugL","HH",0.013
+"638","Benzo[a]pyrene",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"LAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"638","Benzo[a]pyrene",,"WWAL",,"Y","N","Y","N","ugL","HH",0.0013
+"644","Benzo[k]fluoranthene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.13
+"644","Benzo[k]fluoranthene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.13
+"644","Benzo[k]fluoranthene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.13
+"644","Benzo[k]fluoranthene",,"MCWAL",,,"N","Y","N","ugL","HH",0.13
+"644","Benzo[k]fluoranthene",,"MWWAL",,,"N","Y","N","ugL","HH",0.13
+"644","Benzo[k]fluoranthene",,"WWAL",,,"N","Y","N","ugL","HH",0.13
+"674","Bis(2-chloroethyl) ether",,"ColdWAL",,,"N","Y","N","ugL","HH",22
+"674","Bis(2-chloroethyl) ether",,"CoolWAL",,,"N","Y","N","ugL","HH",22
+"674","Bis(2-chloroethyl) ether",,"HQColdWAL",,,"N","Y","N","ugL","HH",22
+"674","Bis(2-chloroethyl) ether",,"MCWAL",,,"N","Y","N","ugL","HH",22
+"674","Bis(2-chloroethyl) ether",,"MWWAL",,,"N","Y","N","ugL","HH",22
+"674","Bis(2-chloroethyl) ether",,"WWAL",,,"N","Y","N","ugL","HH",22
+"675","Bis(2-chloroisopropyl) ether",,"ColdWAL",,,"N","Y","N","ugL","HH",4000
+"675","Bis(2-chloroisopropyl) ether",,"CoolWAL",,,"N","Y","N","ugL","HH",4000
+"675","Bis(2-chloroisopropyl) ether",,"HQColdWAL",,,"N","Y","N","ugL","HH",4000
+"675","Bis(2-chloroisopropyl) ether",,"MCWAL",,,"N","Y","N","ugL","HH",4000
+"675","Bis(2-chloroisopropyl) ether",,"MWWAL",,,"N","Y","N","ugL","HH",4000
+"675","Bis(2-chloroisopropyl) ether",,"WWAL",,,"N","Y","N","ugL","HH",4000
+"714","Butyl benzyl phthalate",,"ColdWAL",,,"N","Y","N","ugL","HH",1
+"714","Butyl benzyl phthalate",,"CoolWAL",,,"N","Y","N","ugL","HH",1
+"714","Butyl benzyl phthalate",,"HQColdWAL",,,"N","Y","N","ugL","HH",1
+"714","Butyl benzyl phthalate",,"MCWAL",,,"N","Y","N","ugL","HH",1
+"714","Butyl benzyl phthalate",,"MWWAL",,,"N","Y","N","ugL","HH",1
+"714","Butyl benzyl phthalate",,"WWAL",,,"N","Y","N","ugL","HH",1
+"734","Carbaryl",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"734","Carbaryl",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"734","Carbaryl",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"734","Carbaryl",,"LAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"MCWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"734","Carbaryl",,"MWWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"734","Carbaryl",,"WWAL",,,"N","Y","N","ugL","ACUTE",2.1
+"734","Carbaryl",,"WWAL",,,"N","Y","N","ugL","CHRONIC",2.1
+"725","Cadmium","Dissolved","ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"725","Cadmium","Dissolved","CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"725","Cadmium","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"725","Cadmium","Dissolved","LAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","MCWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","MCWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"725","Cadmium","Dissolved","MWWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","MWWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"725","Cadmium","Dissolved","WWAL",,,"Y","Y","N","mgL","ACUTE",0.00049
+"725","Cadmium","Dissolved","WWAL",,,"Y","Y","N","mgL","CHRONIC",0.000253
+"741","Carbon tetrachloride",,"ColdWAL",,,"N","Y","N","ugL","HH",50
+"741","Carbon tetrachloride",,"CoolWAL",,,"N","Y","N","ugL","HH",50
+"741","Carbon tetrachloride",,"HQColdWAL",,,"N","Y","N","ugL","HH",50
+"741","Carbon tetrachloride",,"MCWAL",,,"N","Y","N","ugL","HH",50
+"741","Carbon tetrachloride",,"MWWAL",,,"N","Y","N","ugL","HH",50
+"741","Carbon tetrachloride",,"WWAL",,,"N","Y","N","ugL","HH",50
+"767","Chlordane",,"ColdWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"ColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"CoolWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"CoolWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"HQColdWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"HQColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"LAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"LAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"MCWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"MCWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"MWWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"MWWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"767","Chlordane",,"WWAL",,"Y","N","Y","N","ugL","ACUTE",2.4
+"767","Chlordane",,"WWAL",,"Y","N","Y","N","ugL","CHRONIC",0.0043
+"767","Chlordane",,"WWAL",,"Y","N","Y","N","ugL","HH",0.0032
+"774","Chlorine",,"ColdWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"774","Chlorine",,"CoolWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"774","Chlorine",,"HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"774","Chlorine",,"LAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"MCWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"MCWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"774","Chlorine",,"MWWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"MWWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"774","Chlorine",,"WWAL",,,"N","Y","N","mgL","ACUTE",0.019
+"774","Chlorine",,"WWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"779","Chlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",800
+"779","Chlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",800
+"779","Chlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",800
+"779","Chlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",800
+"779","Chlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",800
+"779","Chlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",800
+"781","Chlorodibromomethane",,"ColdWAL",,,"N","Y","N","ugL","HH",210
+"781","Chlorodibromomethane",,"CoolWAL",,,"N","Y","N","ugL","HH",210
+"781","Chlorodibromomethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",210
+"781","Chlorodibromomethane",,"MCWAL",,,"N","Y","N","ugL","HH",210
+"781","Chlorodibromomethane",,"MWWAL",,,"N","Y","N","ugL","HH",210
+"781","Chlorodibromomethane",,"WWAL",,,"N","Y","N","ugL","HH",210
+"784","Chloroform",,"ColdWAL",,,"N","Y","N","ugL","HH",2000
+"784","Chloroform",,"CoolWAL",,,"N","Y","N","ugL","HH",2000
+"784","Chloroform",,"HQColdWAL",,,"N","Y","N","ugL","HH",2000
+"784","Chloroform",,"MCWAL",,,"N","Y","N","ugL","HH",2000
+"784","Chloroform",,"MWWAL",,,"N","Y","N","ugL","HH",2000
+"784","Chloroform",,"WWAL",,,"N","Y","N","ugL","HH",2000
+"803","Chlorpyrifos",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"803","Chlorpyrifos",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"803","Chlorpyrifos",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"803","Chlorpyrifos",,"LAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"803","Chlorpyrifos",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"803","Chlorpyrifos",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.083
+"803","Chlorpyrifos",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.041
+"810","Chromium(III)","Dissolved","ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"810","Chromium(III)","Dissolved","CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"810","Chromium(III)","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"810","Chromium(III)","Dissolved","LAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","MCWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","MCWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"810","Chromium(III)","Dissolved","MWWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","MWWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"810","Chromium(III)","Dissolved","WWAL",,,"Y","Y","N","mgL","ACUTE",0.183
+"810","Chromium(III)","Dissolved","WWAL",,,"Y","Y","N","mgL","CHRONIC",0.0238
+"811","Chromium(VI)","Dissolved","ColdWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"811","Chromium(VI)","Dissolved","CoolWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"811","Chromium(VI)","Dissolved","HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"811","Chromium(VI)","Dissolved","LAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","MCWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","MCWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"811","Chromium(VI)","Dissolved","MWWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","MWWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"811","Chromium(VI)","Dissolved","WWAL",,,"N","Y","N","mgL","ACUTE",0.016
+"811","Chromium(VI)","Dissolved","WWAL",,,"N","Y","N","mgL","CHRONIC",0.011
+"813","Chrysene",,"ColdWAL",,,"N","Y","N","ugL","HH",1.3
+"813","Chrysene",,"CoolWAL",,,"N","Y","N","ugL","HH",1.3
+"813","Chrysene",,"HQColdWAL",,,"N","Y","N","ugL","HH",1.3
+"813","Chrysene",,"MCWAL",,,"N","Y","N","ugL","HH",1.3
+"813","Chrysene",,"MWWAL",,,"N","Y","N","ugL","HH",1.3
+"813","Chrysene",,"WWAL",,,"N","Y","N","ugL","HH",1.3
+"873","Demeton",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"873","Demeton",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"873","Demeton",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"873","Demeton",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"873","Demeton",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"873","Demeton",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"832","Copper","Dissolved","ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"832","Copper","Dissolved","CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"832","Copper","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"832","Copper","Dissolved","LAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","MCWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","MCWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"832","Copper","Dissolved","MWWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","MWWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"832","Copper","Dissolved","WWAL",,,"Y","Y","N","mgL","ACUTE",0.00364
+"832","Copper","Dissolved","WWAL",,,"Y","Y","N","mgL","CHRONIC",0.00274
+"842","Cyanide","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","HH",0.4
+"842","Cyanide","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","HH",0.4
+"842","Cyanide","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","HH",0.4
+"842","Cyanide","Total Recoverable","LAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","MCWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","MCWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","MCWAL",,,"N","Y","N","mgL","HH",0.4
+"842","Cyanide","Total Recoverable","MWWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","MWWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","MWWAL",,,"N","Y","N","mgL","HH",0.4
+"842","Cyanide","Total Recoverable","WWAL",,,"N","Y","N","mgL","ACUTE",0.022
+"842","Cyanide","Total Recoverable","WWAL",,,"N","Y","N","mgL","CHRONIC",0.0052
+"842","Cyanide","Total Recoverable","WWAL",,,"N","Y","N","mgL","HH",0.4
+"881","Di(2-ethylhexyl) phthalate",,"ColdWAL",,,"N","Y","N","ugL","HH",3.7
+"881","Di(2-ethylhexyl) phthalate",,"CoolWAL",,,"N","Y","N","ugL","HH",3.7
+"881","Di(2-ethylhexyl) phthalate",,"HQColdWAL",,,"N","Y","N","ugL","HH",3.7
+"881","Di(2-ethylhexyl) phthalate",,"MCWAL",,,"N","Y","N","ugL","HH",3.7
+"881","Di(2-ethylhexyl) phthalate",,"MWWAL",,,"N","Y","N","ugL","HH",3.7
+"881","Di(2-ethylhexyl) phthalate",,"WWAL",,,"N","Y","N","ugL","HH",3.7
+"676","Bis(chloromethyl) ether",,"ColdWAL",,,"N","Y","N","ugL","HH",0.17
+"676","Bis(chloromethyl) ether",,"CoolWAL",,,"N","Y","N","ugL","HH",0.17
+"676","Bis(chloromethyl) ether",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.17
+"676","Bis(chloromethyl) ether",,"MCWAL",,,"N","Y","N","ugL","HH",0.17
+"676","Bis(chloromethyl) ether",,"MWWAL",,,"N","Y","N","ugL","HH",0.17
+"676","Bis(chloromethyl) ether",,"WWAL",,,"N","Y","N","ugL","HH",0.17
+"885","Diazinon",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"885","Diazinon",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"885","Diazinon",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"885","Diazinon",,"LAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"885","Diazinon",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"885","Diazinon",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.17
+"885","Diazinon",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.17
+"320","2,4-Dichlorophenoxyacetic acid",,"ColdWAL",,,"N","Y","N","ugL","HH",12000
+"320","2,4-Dichlorophenoxyacetic acid",,"CoolWAL",,,"N","Y","N","ugL","HH",12000
+"320","2,4-Dichlorophenoxyacetic acid",,"HQColdWAL",,,"N","Y","N","ugL","HH",12000
+"320","2,4-Dichlorophenoxyacetic acid",,"MCWAL",,,"N","Y","N","ugL","HH",12000
+"320","2,4-Dichlorophenoxyacetic acid",,"MWWAL",,,"N","Y","N","ugL","HH",12000
+"320","2,4-Dichlorophenoxyacetic acid",,"WWAL",,,"N","Y","N","ugL","HH",12000
+"886","Dibenz[a,h]anthracene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.0013
+"886","Dibenz[a,h]anthracene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.0013
+"886","Dibenz[a,h]anthracene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.0013
+"886","Dibenz[a,h]anthracene",,"MCWAL",,,"N","Y","N","ugL","HH",0.0013
+"886","Dibenz[a,h]anthracene",,"MWWAL",,,"N","Y","N","ugL","HH",0.0013
+"886","Dibenz[a,h]anthracene",,"WWAL",,,"N","Y","N","ugL","HH",0.0013
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"ColdWAL",,,"N","Y","N","ugL","HH",0.0012
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"CoolWAL",,,"N","Y","N","ugL","HH",0.0012
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.0012
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"MCWAL",,,"N","Y","N","ugL","HH",0.0012
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"MWWAL",,,"N","Y","N","ugL","HH",0.0012
+"1516","Dichlorodiphenyldichloroethane (DDD)",,"WWAL",,,"N","Y","N","ugL","HH",0.0012
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"ColdWAL",,,"N","Y","N","ugL","HH",0.00018
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"CoolWAL",,,"N","Y","N","ugL","HH",0.00018
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.00018
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"MCWAL",,,"N","Y","N","ugL","HH",0.00018
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"MWWAL",,,"N","Y","N","ugL","HH",0.00018
+"1517","Dichlorodiphenyldichloroethylene (DDE)",,"WWAL",,,"N","Y","N","ugL","HH",0.00018
+"899","Dibutyl phthalate",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"899","Dibutyl phthalate",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"899","Dibutyl phthalate",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"899","Dibutyl phthalate",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"899","Dibutyl phthalate",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"899","Dibutyl phthalate",,"WWAL",,,"N","Y","N","ugL","HH",30
+"917","Dichlorobromomethane",,"ColdWAL",,,"N","Y","N","ugL","HH",270
+"917","Dichlorobromomethane",,"CoolWAL",,,"N","Y","N","ugL","HH",270
+"917","Dichlorobromomethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",270
+"917","Dichlorobromomethane",,"MCWAL",,,"N","Y","N","ugL","HH",270
+"917","Dichlorobromomethane",,"MWWAL",,,"N","Y","N","ugL","HH",270
+"917","Dichlorobromomethane",,"WWAL",,,"N","Y","N","ugL","HH",270
+"934","Dieldrin",,"ColdWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"ColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"CoolWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"CoolWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"HQColdWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"HQColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"LAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"LAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"MCWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"MCWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"MWWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"MWWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"934","Dieldrin",,"WWAL",,"Y","N","Y","N","ugL","ACUTE",0.24
+"934","Dieldrin",,"WWAL",,"Y","N","Y","N","ugL","CHRONIC",0.056
+"934","Dieldrin",,"WWAL",,"Y","N","Y","N","ugL","HH",0.000012
+"938","Diethyl phthalate",,"ColdWAL",,,"N","Y","N","ugL","HH",600
+"938","Diethyl phthalate",,"CoolWAL",,,"N","Y","N","ugL","HH",600
+"938","Diethyl phthalate",,"HQColdWAL",,,"N","Y","N","ugL","HH",600
+"938","Diethyl phthalate",,"MCWAL",,,"N","Y","N","ugL","HH",600
+"938","Diethyl phthalate",,"MWWAL",,,"N","Y","N","ugL","HH",600
+"938","Diethyl phthalate",,"WWAL",,,"N","Y","N","ugL","HH",600
+"957","Dimethyl phthalate",,"ColdWAL",,,"N","Y","N","ugL","HH",2000
+"957","Dimethyl phthalate",,"CoolWAL",,,"N","Y","N","ugL","HH",2000
+"957","Dimethyl phthalate",,"HQColdWAL",,,"N","Y","N","ugL","HH",2000
+"957","Dimethyl phthalate",,"MCWAL",,,"N","Y","N","ugL","HH",2000
+"957","Dimethyl phthalate",,"MWWAL",,,"N","Y","N","ugL","HH",2000
+"957","Dimethyl phthalate",,"WWAL",,,"N","Y","N","ugL","HH",2000
+"973","Dioxin + furan mix, unspecified",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"LAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"973","Dioxin + furan mix, unspecified",,"WWAL",,"Y","N","Y","N","ugL","HH",0.000000051
+"1001","Endosulfan sulfate",,"ColdWAL",,,"N","Y","N","ugL","HH",40
+"1001","Endosulfan sulfate",,"CoolWAL",,,"N","Y","N","ugL","HH",40
+"1001","Endosulfan sulfate",,"HQColdWAL",,,"N","Y","N","ugL","HH",40
+"1001","Endosulfan sulfate",,"MCWAL",,,"N","Y","N","ugL","HH",40
+"1001","Endosulfan sulfate",,"MWWAL",,,"N","Y","N","ugL","HH",40
+"1001","Endosulfan sulfate",,"WWAL",,,"N","Y","N","ugL","HH",40
+"1003","Endrin",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"ColdWAL",,,"N","Y","N","ugL","HH",0.03
+"1003","Endrin",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"CoolWAL",,,"N","Y","N","ugL","HH",0.03
+"1003","Endrin",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.03
+"1003","Endrin",,"LAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"MCWAL",,,"N","Y","N","ugL","HH",0.03
+"1003","Endrin",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"MWWAL",,,"N","Y","N","ugL","HH",0.03
+"1003","Endrin",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.086
+"1003","Endrin",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.036
+"1003","Endrin",,"WWAL",,,"N","Y","N","ugL","HH",0.03
+"1004","Endrin aldehyde",,"ColdWAL",,,"N","Y","N","ugL","HH",1
+"1004","Endrin aldehyde",,"CoolWAL",,,"N","Y","N","ugL","HH",1
+"1004","Endrin aldehyde",,"HQColdWAL",,,"N","Y","N","ugL","HH",1
+"1004","Endrin aldehyde",,"MCWAL",,,"N","Y","N","ugL","HH",1
+"1004","Endrin aldehyde",,"MWWAL",,,"N","Y","N","ugL","HH",1
+"1004","Endrin aldehyde",,"WWAL",,,"N","Y","N","ugL","HH",1
+"1030","Ethylbenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",130
+"1030","Ethylbenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",130
+"1030","Ethylbenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",130
+"1030","Ethylbenzene",,"MCWAL",,,"N","Y","N","ugL","HH",130
+"1030","Ethylbenzene",,"MWWAL",,,"N","Y","N","ugL","HH",130
+"1030","Ethylbenzene",,"WWAL",,,"N","Y","N","ugL","HH",130
+"1064","Fluoranthene",,"ColdWAL",,,"N","Y","N","ugL","HH",20
+"1064","Fluoranthene",,"CoolWAL",,,"N","Y","N","ugL","HH",20
+"1064","Fluoranthene",,"HQColdWAL",,,"N","Y","N","ugL","HH",20
+"1064","Fluoranthene",,"MCWAL",,,"N","Y","N","ugL","HH",20
+"1064","Fluoranthene",,"MWWAL",,,"N","Y","N","ugL","HH",20
+"1064","Fluoranthene",,"WWAL",,,"N","Y","N","ugL","HH",20
+"1066","Fluorene",,"ColdWAL",,,"N","Y","N","ugL","HH",70
+"1066","Fluorene",,"CoolWAL",,,"N","Y","N","ugL","HH",70
+"1066","Fluorene",,"HQColdWAL",,,"N","Y","N","ugL","HH",70
+"1066","Fluorene",,"MCWAL",,,"N","Y","N","ugL","HH",70
+"1066","Fluorene",,"MWWAL",,,"N","Y","N","ugL","HH",70
+"1066","Fluorene",,"WWAL",,,"N","Y","N","ugL","HH",70
+"1104","Heptachlor",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"ColdWAL",,,"N","Y","N","ugL","HH",0.000059
+"1104","Heptachlor",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"CoolWAL",,,"N","Y","N","ugL","HH",0.000059
+"1104","Heptachlor",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.000059
+"1104","Heptachlor",,"LAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"MCWAL",,,"N","Y","N","ugL","HH",0.000059
+"1104","Heptachlor",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"MWWAL",,,"N","Y","N","ugL","HH",0.000059
+"1104","Heptachlor",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1104","Heptachlor",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1104","Heptachlor",,"WWAL",,,"N","Y","N","ugL","HH",0.000059
+"1105","Heptachlor epoxide",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"ColdWAL",,,"N","Y","N","ugL","HH",0.00032
+"1105","Heptachlor epoxide",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"CoolWAL",,,"N","Y","N","ugL","HH",0.00032
+"1105","Heptachlor epoxide",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.00032
+"1105","Heptachlor epoxide",,"LAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"MCWAL",,,"N","Y","N","ugL","HH",0.00032
+"1105","Heptachlor epoxide",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"MWWAL",,,"N","Y","N","ugL","HH",0.00032
+"1105","Heptachlor epoxide",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.52
+"1105","Heptachlor epoxide",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.0038
+"1105","Heptachlor epoxide",,"WWAL",,,"N","Y","N","ugL","HH",0.00032
+"1115","Hexachlorobenzene",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"LAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1115","Hexachlorobenzene",,"WWAL",,"Y","N","Y","N","ugL","HH",0.00079
+"1118","Hexachlorobutadiene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.1
+"1118","Hexachlorobutadiene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.1
+"1118","Hexachlorobutadiene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.1
+"1118","Hexachlorobutadiene",,"MCWAL",,,"N","Y","N","ugL","HH",0.1
+"1118","Hexachlorobutadiene",,"MWWAL",,,"N","Y","N","ugL","HH",0.1
+"1118","Hexachlorobutadiene",,"WWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"ColdWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"CoolWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"MCWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"MWWAL",,,"N","Y","N","ugL","HH",0.1
+"34","Hexachlorocyclohexane (HCH)-Technical",,"WWAL",,,"N","Y","N","ugL","HH",0.1
+"1121","Hexachlorocyclopentadiene",,"ColdWAL",,,"N","Y","N","ugL","HH",4
+"1121","Hexachlorocyclopentadiene",,"CoolWAL",,,"N","Y","N","ugL","HH",4
+"1121","Hexachlorocyclopentadiene",,"HQColdWAL",,,"N","Y","N","ugL","HH",4
+"1121","Hexachlorocyclopentadiene",,"MCWAL",,,"N","Y","N","ugL","HH",4
+"1121","Hexachlorocyclopentadiene",,"MWWAL",,,"N","Y","N","ugL","HH",4
+"1121","Hexachlorocyclopentadiene",,"WWAL",,,"N","Y","N","ugL","HH",4
+"1123","Hexachloroethane",,"ColdWAL",,,"N","Y","N","ugL","HH",1
+"1123","Hexachloroethane",,"CoolWAL",,,"N","Y","N","ugL","HH",1
+"1123","Hexachloroethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",1
+"1123","Hexachloroethane",,"MCWAL",,,"N","Y","N","ugL","HH",1
+"1123","Hexachloroethane",,"MWWAL",,,"N","Y","N","ugL","HH",1
+"1123","Hexachloroethane",,"WWAL",,,"N","Y","N","ugL","HH",1
+"1185","Iron",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1185","Iron",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1185","Iron",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1185","Iron",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1185","Iron",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1185","Iron",,"WWAL",,,"N","Y","N","ugL","CHRONIC",1000
+"1173","Indeno[1,2,3-cd]pyrene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.013
+"1173","Indeno[1,2,3-cd]pyrene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.013
+"1173","Indeno[1,2,3-cd]pyrene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.013
+"1173","Indeno[1,2,3-cd]pyrene",,"MCWAL",,,"N","Y","N","ugL","HH",0.013
+"1173","Indeno[1,2,3-cd]pyrene",,"MWWAL",,,"N","Y","N","ugL","HH",0.013
+"1173","Indeno[1,2,3-cd]pyrene",,"WWAL",,,"N","Y","N","ugL","HH",0.013
+"1199","Isophorone",,"ColdWAL",,,"N","Y","N","ugL","HH",18000
+"1199","Isophorone",,"CoolWAL",,,"N","Y","N","ugL","HH",18000
+"1199","Isophorone",,"HQColdWAL",,,"N","Y","N","ugL","HH",18000
+"1199","Isophorone",,"MCWAL",,,"N","Y","N","ugL","HH",18000
+"1199","Isophorone",,"MWWAL",,,"N","Y","N","ugL","HH",18000
+"1199","Isophorone",,"WWAL",,,"N","Y","N","ugL","HH",18000
+"1215","Lead","Dissolved","ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1215","Lead","Dissolved","CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1215","Lead","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1215","Lead","Dissolved","LAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","MCWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","MCWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1215","Lead","Dissolved","MWWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","MWWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1215","Lead","Dissolved","WWAL",,,"Y","Y","N","mgL","ACUTE",0.0139
+"1215","Lead","Dissolved","WWAL",,,"Y","Y","N","mgL","CHRONIC",0.000541
+"1235","Lindane",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"ColdWAL",,,"N","Y","N","ugL","HH",4.4
+"1235","Lindane",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"CoolWAL",,,"N","Y","N","ugL","HH",4.4
+"1235","Lindane",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"HQColdWAL",,,"N","Y","N","ugL","HH",4.4
+"1235","Lindane",,"LAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"MCWAL",,,"N","Y","N","ugL","HH",4.4
+"1235","Lindane",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"MWWAL",,,"N","Y","N","ugL","HH",4.4
+"1235","Lindane",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.95
+"1235","Lindane",,"WWAL",,,"N","Y","N","ugL","HH",4.4
+"1249","Manganese","Dissolved","ColdWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1249","Manganese","Dissolved","CoolWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1249","Manganese","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1249","Manganese","Dissolved","LAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","MCWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","MCWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1249","Manganese","Dissolved","MWWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","MWWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1249","Manganese","Dissolved","WWAL",,,"Y","Y","N","mgL","ACUTE",1.881
+"1249","Manganese","Dissolved","WWAL",,,"Y","Y","N","mgL","CHRONIC",1.04
+"1263","m-Dichlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",10
+"1263","m-Dichlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",10
+"1263","m-Dichlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",10
+"1263","m-Dichlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",10
+"1263","m-Dichlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",10
+"1263","m-Dichlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",10
+"1623","1,4-Dichlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",900
+"1623","1,4-Dichlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",900
+"1623","1,4-Dichlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",900
+"1623","1,4-Dichlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",900
+"1623","1,4-Dichlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",900
+"1623","1,4-Dichlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",900
+"1283","Methyl bromide",,"ColdWAL",,,"N","Y","N","ugL","HH",10000
+"1283","Methyl bromide",,"CoolWAL",,,"N","Y","N","ugL","HH",10000
+"1283","Methyl bromide",,"HQColdWAL",,,"N","Y","N","ugL","HH",10000
+"1283","Methyl bromide",,"MCWAL",,,"N","Y","N","ugL","HH",10000
+"1283","Methyl bromide",,"MWWAL",,,"N","Y","N","ugL","HH",10000
+"1283","Methyl bromide",,"WWAL",,,"N","Y","N","ugL","HH",10000
+"1619","3-Methyl-4-chlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",2000
+"1619","3-Methyl-4-chlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",2000
+"1619","3-Methyl-4-chlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",2000
+"1619","3-Methyl-4-chlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",2000
+"1619","3-Methyl-4-chlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",2000
+"1619","3-Methyl-4-chlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",2000
+"1328","Methylene chloride",,"ColdWAL",,,"N","Y","N","ugL","HH",10000
+"1328","Methylene chloride",,"CoolWAL",,,"N","Y","N","ugL","HH",10000
+"1328","Methylene chloride",,"HQColdWAL",,,"N","Y","N","ugL","HH",10000
+"1328","Methylene chloride",,"MCWAL",,,"N","Y","N","ugL","HH",10000
+"1328","Methylene chloride",,"MWWAL",,,"N","Y","N","ugL","HH",10000
+"1328","Methylene chloride",,"WWAL",,,"N","Y","N","ugL","HH",10000
+"1395","Nickel","Dissolved","ColdWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","ColdWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","ColdWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1395","Nickel","Dissolved","CoolWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","CoolWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","CoolWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1395","Nickel","Dissolved","HQColdWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","HQColdWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","HQColdWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1395","Nickel","Dissolved","LAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","MCWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","MCWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","MCWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1395","Nickel","Dissolved","MWWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","MWWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","MWWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1395","Nickel","Dissolved","WWAL",,"Y","Y","Y","N","mgL","ACUTE",0.145
+"1395","Nickel","Dissolved","WWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0161
+"1395","Nickel","Dissolved","WWAL",,"Y","Y","Y","N","mgL","HH",4.6
+"1403","Nitrobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",600
+"1403","Nitrobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",600
+"1403","Nitrobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",600
+"1403","Nitrobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",600
+"1403","Nitrobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",600
+"1403","Nitrobenzene",,"WWAL",,,"N","Y","N","ugL","HH",600
+"1427","N-Nitrosodimethylamine",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"1427","N-Nitrosodimethylamine",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"1427","N-Nitrosodimethylamine",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"1427","N-Nitrosodimethylamine",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"1427","N-Nitrosodimethylamine",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"1427","N-Nitrosodimethylamine",,"WWAL",,,"N","Y","N","ugL","HH",30
+"1429","N-Nitrosodi-n-propylamine",,"ColdWAL",,,"N","Y","N","ugL","HH",5.1
+"1429","N-Nitrosodi-n-propylamine",,"CoolWAL",,,"N","Y","N","ugL","HH",5.1
+"1429","N-Nitrosodi-n-propylamine",,"HQColdWAL",,,"N","Y","N","ugL","HH",5.1
+"1429","N-Nitrosodi-n-propylamine",,"MCWAL",,,"N","Y","N","ugL","HH",5.1
+"1429","N-Nitrosodi-n-propylamine",,"MWWAL",,,"N","Y","N","ugL","HH",5.1
+"1429","N-Nitrosodi-n-propylamine",,"WWAL",,,"N","Y","N","ugL","HH",5.1
+"1430","N-Nitrosodiphenylamine",,"ColdWAL",,,"N","Y","N","ugL","HH",60
+"1430","N-Nitrosodiphenylamine",,"CoolWAL",,,"N","Y","N","ugL","HH",60
+"1430","N-Nitrosodiphenylamine",,"HQColdWAL",,,"N","Y","N","ugL","HH",60
+"1430","N-Nitrosodiphenylamine",,"MCWAL",,,"N","Y","N","ugL","HH",60
+"1430","N-Nitrosodiphenylamine",,"MWWAL",,,"N","Y","N","ugL","HH",60
+"1430","N-Nitrosodiphenylamine",,"WWAL",,,"N","Y","N","ugL","HH",60
+"1448","Nonylphenol",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1448","Nonylphenol",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1448","Nonylphenol",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1448","Nonylphenol",,"LAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"MCWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1448","Nonylphenol",,"MWWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1448","Nonylphenol",,"WWAL",,,"N","Y","N","ugL","ACUTE",28
+"1448","Nonylphenol",,"WWAL",,,"N","Y","N","ugL","CHRONIC",6.6
+"1467","o-Chlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",800
+"1467","o-Chlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",800
+"1467","o-Chlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",800
+"1467","o-Chlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",800
+"1467","o-Chlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",800
+"1467","o-Chlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",800
+"1479","o-Dichlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",3000
+"1479","o-Dichlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",3000
+"1479","o-Dichlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",3000
+"1479","o-Dichlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",3000
+"1479","o-Dichlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",3000
+"1479","o-Dichlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",3000
+"1518","p,p'-DDT",,"ColdWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"ColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"CoolWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"CoolWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"HQColdWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"HQColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"LAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"LAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"MCWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"MCWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"MWWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"MWWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1518","p,p'-DDT",,"WWAL",,"Y","N","Y","N","ugL","ACUTE",1.1
+"1518","p,p'-DDT",,"WWAL",,"Y","N","Y","N","ugL","CHRONIC",0.001
+"1518","p,p'-DDT",,"WWAL",,"Y","N","Y","N","ugL","HH",0.0003
+"1633","Pentachlorophenol",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",0.4
+"1633","Pentachlorophenol",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",0.4
+"1633","Pentachlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.4
+"1633","Pentachlorophenol",,"LAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"MCWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",0.4
+"1633","Pentachlorophenol",,"MWWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",0.4
+"1633","Pentachlorophenol",,"WWAL",,,"N","Y","N","ugL","ACUTE",19
+"1633","Pentachlorophenol",,"WWAL",,,"N","Y","N","ugL","CHRONIC",15
+"1633","Pentachlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",0.4
+"1654","Phenol",,"ColdWAL",,,"N","Y","N","ugL","HH",300000
+"1654","Phenol",,"CoolWAL",,,"N","Y","N","ugL","HH",300000
+"1654","Phenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",300000
+"1654","Phenol",,"MCWAL",,,"N","Y","N","ugL","HH",300000
+"1654","Phenol",,"MWWAL",,,"N","Y","N","ugL","HH",300000
+"1654","Phenol",,"WWAL",,,"N","Y","N","ugL","HH",300000
+"1706","Polychlorinated biphenyls",,"ColdWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"ColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"ColdWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"CoolWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"CoolWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"CoolWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"HQColdWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"HQColdWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"LAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"LAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"MCWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"MCWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"MCWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"MWWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"MWWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"MWWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1706","Polychlorinated biphenyls",,"WWAL",,"Y","N","Y","N","ugL","ACUTE",2
+"1706","Polychlorinated biphenyls",,"WWAL",,"Y","N","Y","N","ugL","CHRONIC",0.014
+"1706","Polychlorinated biphenyls",,"WWAL",,"Y","N","Y","N","ugL","HH",0.00064
+"1744","Pyrene",,"ColdWAL",,,"N","Y","N","ugL","HH",30
+"1744","Pyrene",,"CoolWAL",,,"N","Y","N","ugL","HH",30
+"1744","Pyrene",,"HQColdWAL",,,"N","Y","N","ugL","HH",30
+"1744","Pyrene",,"MCWAL",,,"N","Y","N","ugL","HH",30
+"1744","Pyrene",,"MWWAL",,,"N","Y","N","ugL","HH",30
+"1744","Pyrene",,"WWAL",,,"N","Y","N","ugL","HH",30
+"1793","Silver",,"ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"LAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"MCWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"MWWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1793","Silver",,"WWAL",,,"Y","Y","N","mgL","ACUTE",0.0003
+"1869","Tetrachloroethylene",,"ColdWAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"CoolWAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"LAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"MCWAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"MWWAL",,"Y","N","Y","N","ugL","HH",290
+"1869","Tetrachloroethylene",,"WWAL",,"Y","N","Y","N","ugL","HH",290
+"1883","Thallium",,"ColdWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"CoolWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"HQColdWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"LAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"MCWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"MWWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1883","Thallium",,"WWAL",,"Y","N","Y","N","mgL","HH",0.00047
+"1902","Toluene",,"ColdWAL",,,"N","Y","N","ugL","HH",520
+"1902","Toluene",,"CoolWAL",,,"N","Y","N","ugL","HH",520
+"1902","Toluene",,"HQColdWAL",,,"N","Y","N","ugL","HH",520
+"1902","Toluene",,"MCWAL",,,"N","Y","N","ugL","HH",520
+"1902","Toluene",,"MWWAL",,,"N","Y","N","ugL","HH",520
+"1902","Toluene",,"WWAL",,,"N","Y","N","ugL","HH",520
+"1912","Toxaphene",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.0071
+"1912","Toxaphene",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.0071
+"1912","Toxaphene",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.0071
+"1912","Toxaphene",,"LAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"MCWAL",,,"N","Y","N","ugL","HH",0.0071
+"1912","Toxaphene",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"MWWAL",,,"N","Y","N","ugL","HH",0.0071
+"1912","Toxaphene",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.73
+"1912","Toxaphene",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.0002
+"1912","Toxaphene",,"WWAL",,,"N","Y","N","ugL","HH",0.0071
+"1926","trans-1,2-Dichloroethylene",,"ColdWAL",,,"N","Y","N","ugL","HH",4000
+"1926","trans-1,2-Dichloroethylene",,"CoolWAL",,,"N","Y","N","ugL","HH",4000
+"1926","trans-1,2-Dichloroethylene",,"HQColdWAL",,,"N","Y","N","ugL","HH",4000
+"1926","trans-1,2-Dichloroethylene",,"MCWAL",,,"N","Y","N","ugL","HH",4000
+"1926","trans-1,2-Dichloroethylene",,"MWWAL",,,"N","Y","N","ugL","HH",4000
+"1926","trans-1,2-Dichloroethylene",,"WWAL",,,"N","Y","N","ugL","HH",4000
+"1935","Tribromomethane",,"ColdWAL",,,"N","Y","N","ugL","HH",1200
+"1935","Tribromomethane",,"CoolWAL",,,"N","Y","N","ugL","HH",1200
+"1935","Tribromomethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",1200
+"1935","Tribromomethane",,"MCWAL",,,"N","Y","N","ugL","HH",1200
+"1935","Tribromomethane",,"MWWAL",,,"N","Y","N","ugL","HH",1200
+"1935","Tribromomethane",,"WWAL",,,"N","Y","N","ugL","HH",1200
+"1950","Trichloroethylene",,"ColdWAL",,,"N","Y","N","ugL","HH",70
+"1950","Trichloroethylene",,"CoolWAL",,,"N","Y","N","ugL","HH",70
+"1950","Trichloroethylene",,"HQColdWAL",,,"N","Y","N","ugL","HH",70
+"1950","Trichloroethylene",,"MCWAL",,,"N","Y","N","ugL","HH",70
+"1950","Trichloroethylene",,"MWWAL",,,"N","Y","N","ugL","HH",70
+"1950","Trichloroethylene",,"WWAL",,,"N","Y","N","ugL","HH",70
+"1992","Vinyl chloride",,"ColdWAL",,,"N","Y","N","ugL","HH",16
+"1992","Vinyl chloride",,"CoolWAL",,,"N","Y","N","ugL","HH",16
+"1992","Vinyl chloride",,"HQColdWAL",,,"N","Y","N","ugL","HH",16
+"1992","Vinyl chloride",,"MCWAL",,,"N","Y","N","ugL","HH",16
+"1992","Vinyl chloride",,"MWWAL",,,"N","Y","N","ugL","HH",16
+"1992","Vinyl chloride",,"WWAL",,,"N","Y","N","ugL","HH",16
+"2005","Zinc",,"ColdWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"ColdWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"ColdWAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"CoolWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"CoolWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"CoolWAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"HQColdWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"HQColdWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"HQColdWAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"LAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"LAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"MCWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"MCWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"MCWAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"MWWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"MWWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"MWWAL",,"Y","Y","Y","N","mgL","HH",26
+"2005","Zinc",,"WWAL",,"Y","Y","Y","N","mgL","ACUTE",0.0454
+"2005","Zinc",,"WWAL",,"Y","Y","Y","N","mgL","CHRONIC",0.0344
+"2005","Zinc",,"WWAL",,"Y","Y","Y","N","mgL","HH",26
+"2414","Nitrogen, ammonia as N",,"ColdWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"2414","Nitrogen, ammonia as N",,"CoolWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"2414","Nitrogen, ammonia as N",,"HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"2414","Nitrogen, ammonia as N",,"LAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"MCWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"MCWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"2414","Nitrogen, ammonia as N",,"MWWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"MWWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"2414","Nitrogen, ammonia as N",,"WWAL",,,"N","Y","N","mgL","ACUTE",0.885
+"2414","Nitrogen, ammonia as N",,"WWAL",,,"N","Y","N","mgL","CHRONIC",0.179
+"549001","Aluminum","Dissolved","ColdWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549001","Aluminum","Dissolved","CoolWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549001","Aluminum","Dissolved","HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549001","Aluminum","Dissolved","LAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","MCWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","MCWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549001","Aluminum","Dissolved","MWWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","MWWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549001","Aluminum","Dissolved","WWAL",,,"N","Y","N","mgL","ACUTE",0.75
+"549001","Aluminum","Dissolved","WWAL",,,"N","Y","N","mgL","CHRONIC",0.087
+"549002","Aluminum","Total Recoverable","ColdWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","ColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"549002","Aluminum","Total Recoverable","CoolWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","CoolWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"549002","Aluminum","Total Recoverable","HQColdWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","HQColdWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"549002","Aluminum","Total Recoverable","LAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","MCWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","MCWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"549002","Aluminum","Total Recoverable","MWWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","MWWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"549002","Aluminum","Total Recoverable","WWAL",,,"Y","Y","N","mgL","ACUTE",0.512
+"549002","Aluminum","Total Recoverable","WWAL",,,"Y","Y","N","mgL","CHRONIC",0.205
+"1266001","Mercury","Dissolved","ColdWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1266001","Mercury","Dissolved","CoolWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1266001","Mercury","Dissolved","HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1266001","Mercury","Dissolved","LAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","MCWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","MCWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1266001","Mercury","Dissolved","MWWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","MWWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1266001","Mercury","Dissolved","WWAL",,,"N","Y","N","mgL","ACUTE",0.0014
+"1266001","Mercury","Dissolved","WWAL",,,"N","Y","N","mgL","CHRONIC",0.00077
+"1334","Methylmercury",,"ColdWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1334","Methylmercury",,"CoolWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1334","Methylmercury",,"HQColdWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1334","Methylmercury",,"MCWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1334","Methylmercury",,"MWWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1334","Methylmercury",,"WWAL",,,"N","Y","N","mgKg_Fish_Tissue","HH",0.3
+"1354002","Molybdenum","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1354002","Molybdenum","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1354002","Molybdenum","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1354002","Molybdenum","Total Recoverable","LAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","MCWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","MCWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1354002","Molybdenum","Total Recoverable","MWWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","MWWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1354002","Molybdenum","Total Recoverable","WWAL",,,"N","Y","N","mgL","ACUTE",7.92
+"1354002","Molybdenum","Total Recoverable","WWAL",,,"N","Y","N","mgL","CHRONIC",1.895
+"1783001","Selenium","Dissolved","ColdWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","CoolWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","HQColdWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","LAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","MCWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","MWWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783001","Selenium","Dissolved","WWAL",,"Y","N","Y","N","mgL","HH",4.2
+"1783002","Selenium","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","ColdWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"1783002","Selenium","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","CoolWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"1783002","Selenium","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","HQColdWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"1783002","Selenium","Total Recoverable","LAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","MCWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","MCWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"1783002","Selenium","Total Recoverable","MWWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","MWWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"1783002","Selenium","Total Recoverable","WWAL",,,"N","Y","N","mgL","ACUTE",0.02
+"1783002","Selenium","Total Recoverable","WWAL",,,"N","Y","N","mgL","CHRONIC",0.005
+"4577","Guthion",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"4577","Guthion",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"4577","Guthion",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"4577","Guthion",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"4577","Guthion",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"4577","Guthion",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.01
+"1245","Malathion",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1245","Malathion",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1245","Malathion",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1245","Malathion",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1245","Malathion",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1245","Malathion",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.1
+"1280","Methoxychlor",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"ColdWAL",,,"N","Y","N","ugL","HH",0.02
+"1280","Methoxychlor",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"CoolWAL",,,"N","Y","N","ugL","HH",0.02
+"1280","Methoxychlor",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.02
+"1280","Methoxychlor",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"MCWAL",,,"N","Y","N","ugL","HH",0.02
+"1280","Methoxychlor",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"MWWAL",,,"N","Y","N","ugL","HH",0.02
+"1280","Methoxychlor",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.03
+"1280","Methoxychlor",,"WWAL",,,"N","Y","N","ugL","HH",0.02
+"1349","Mirex",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1349","Mirex",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1349","Mirex",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1349","Mirex",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1349","Mirex",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1349","Mirex",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.001
+"1428","N-Nitrosodi-n-butylamine",,"ColdWAL",,,"N","Y","N","ugL","HH",2.2
+"1428","N-Nitrosodi-n-butylamine",,"CoolWAL",,,"N","Y","N","ugL","HH",2.2
+"1428","N-Nitrosodi-n-butylamine",,"HQColdWAL",,,"N","Y","N","ugL","HH",2.2
+"1428","N-Nitrosodi-n-butylamine",,"MCWAL",,,"N","Y","N","ugL","HH",2.2
+"1428","N-Nitrosodi-n-butylamine",,"MWWAL",,,"N","Y","N","ugL","HH",2.2
+"1428","N-Nitrosodi-n-butylamine",,"WWAL",,,"N","Y","N","ugL","HH",2.2
+"1426","N-Nitrosodiethylamine",,"ColdWAL",,,"N","Y","N","ugL","HH",12.4
+"1426","N-Nitrosodiethylamine",,"CoolWAL",,,"N","Y","N","ugL","HH",12.4
+"1426","N-Nitrosodiethylamine",,"HQColdWAL",,,"N","Y","N","ugL","HH",12.4
+"1426","N-Nitrosodiethylamine",,"MCWAL",,,"N","Y","N","ugL","HH",12.4
+"1426","N-Nitrosodiethylamine",,"MWWAL",,,"N","Y","N","ugL","HH",12.4
+"1426","N-Nitrosodiethylamine",,"WWAL",,,"N","Y","N","ugL","HH",12.4
+"1437","N-Nitrosopyrrolidine",,"ColdWAL",,,"N","Y","N","ugL","HH",340
+"1437","N-Nitrosopyrrolidine",,"CoolWAL",,,"N","Y","N","ugL","HH",340
+"1437","N-Nitrosopyrrolidine",,"HQColdWAL",,,"N","Y","N","ugL","HH",340
+"1437","N-Nitrosopyrrolidine",,"MCWAL",,,"N","Y","N","ugL","HH",340
+"1437","N-Nitrosopyrrolidine",,"MWWAL",,,"N","Y","N","ugL","HH",340
+"1437","N-Nitrosopyrrolidine",,"WWAL",,,"N","Y","N","ugL","HH",340
+"1525","Parathion",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1525","Parathion",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1525","Parathion",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1525","Parathion",,"LAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1525","Parathion",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1525","Parathion",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.065
+"1525","Parathion",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.013
+"1627","Pentachlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.1
+"1627","Pentachlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.1
+"1627","Pentachlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.1
+"1627","Pentachlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",0.1
+"1627","Pentachlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",0.1
+"1627","Pentachlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",0.1
+"56","1,2,4,5-Tetrachlorobenzene",,"ColdWAL",,,"N","Y","N","ugL","HH",0.03
+"56","1,2,4,5-Tetrachlorobenzene",,"CoolWAL",,,"N","Y","N","ugL","HH",0.03
+"56","1,2,4,5-Tetrachlorobenzene",,"HQColdWAL",,,"N","Y","N","ugL","HH",0.03
+"56","1,2,4,5-Tetrachlorobenzene",,"MCWAL",,,"N","Y","N","ugL","HH",0.03
+"56","1,2,4,5-Tetrachlorobenzene",,"MWWAL",,,"N","Y","N","ugL","HH",0.03
+"56","1,2,4,5-Tetrachlorobenzene",,"WWAL",,,"N","Y","N","ugL","HH",0.03
+"7506","Tributyltin",,"ColdWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"ColdWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"7506","Tributyltin",,"CoolWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"CoolWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"7506","Tributyltin",,"HQColdWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"HQColdWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"7506","Tributyltin",,"LAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"MCWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"MCWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"7506","Tributyltin",,"MWWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"MWWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"7506","Tributyltin",,"WWAL",,,"N","Y","N","ugL","ACUTE",0.46
+"7506","Tributyltin",,"WWAL",,,"N","Y","N","ugL","CHRONIC",0.072
+"21","1,1,1-Trichloroethane",,"ColdWAL",,,"N","Y","N","ugL","HH",200000
+"21","1,1,1-Trichloroethane",,"CoolWAL",,,"N","Y","N","ugL","HH",200000
+"21","1,1,1-Trichloroethane",,"HQColdWAL",,,"N","Y","N","ugL","HH",200000
+"21","1,1,1-Trichloroethane",,"MCWAL",,,"N","Y","N","ugL","HH",200000
+"21","1,1,1-Trichloroethane",,"MWWAL",,,"N","Y","N","ugL","HH",200000
+"21","1,1,1-Trichloroethane",,"WWAL",,,"N","Y","N","ugL","HH",200000
+"312","2,4,5-Trichlorophenol",,"ColdWAL",,,"N","Y","N","ugL","HH",600
+"312","2,4,5-Trichlorophenol",,"CoolWAL",,,"N","Y","N","ugL","HH",600
+"312","2,4,5-Trichlorophenol",,"HQColdWAL",,,"N","Y","N","ugL","HH",600
+"312","2,4,5-Trichlorophenol",,"MCWAL",,,"N","Y","N","ugL","HH",600
+"312","2,4,5-Trichlorophenol",,"MWWAL",,,"N","Y","N","ugL","HH",600
+"312","2,4,5-Trichlorophenol",,"WWAL",,,"N","Y","N","ugL","HH",600
+"1795","Silvex",,"ColdWAL",,"Y","N","Y","N","ugL","HH",400
+"1795","Silvex",,"CoolWAL",,"Y","N","Y","N","ugL","HH",400
+"1795","Silvex",,"HQColdWAL",,"Y","N","Y","N","ugL","HH",400
+"1795","Silvex",,"MCWAL",,"Y","N","Y","N","ugL","HH",400
+"1795","Silvex",,"MWWAL",,"Y","N","Y","N","ugL","HH",400
+"1795","Silvex",,"WWAL",,"Y","N","Y","N","ugL","HH",400
+"7",".alpha.-Endosulfan",,"DWS",,,"N","Y","N","ugL","DWS",62
+"8",".alpha.-Hexachlorocyclohexane",,"DWS",,,"N","Y","N","ugL","DWS",0.056
+"13",".beta.-Endosulfan",,"DWS",,,"N","Y","N","ugL","DWS",62
+"14",".beta.-Hexachlorocyclohexane",,"DWS",,,"N","Y","N","ugL","DWS",0.091
+"24","1,1,2,2-Tetrachloroethane",,"DWS",,,"N","Y","N","ugL","DWS",1.8
+"25","1,1,2-Trichloroethane",,"DWS",,,"N","Y","N","ugL","DWS",5
+"28","1,1-Dichloroethylene",,"DWS",,,"N","Y","N","ugL","DWS",7
+"58","1,2,4-Trichlorobenzene",,"DWS",,,"N","Y","N","ugL","DWS",70
+"65","1,2-Dichloroethane",,"DWS",,,"N","Y","N","ugL","DWS",5
+"67","1,2-Dichloropropane",,"DWS",,,"N","Y","N","ugL","DWS",5
+"72","1,2-Diphenylhydrazine",,"DWS",,,"N","Y","N","ugL","DWS",0.44
+"80","1,3-Dichloropropene",,"DWS",,,"N","Y","N","ugL","DWS",3.5
+"316","2,4,6-Trichlorophenol",,"DWS",,,"N","Y","N","ugL","DWS",32
+"330","2,4-Dichlorophenol",,"DWS",,,"N","Y","N","ugL","DWS",105
+"331","2,4-Dimethylphenol",,"DWS",,,"N","Y","N","ugL","DWS",700
+"332","2,4-Dinitrophenol",,"DWS",,,"N","Y","N","ugL","DWS",70
+"333","2,4-Dinitrotoluene",,"DWS",,,"N","Y","N","ugL","DWS",1.1
+"358","2-Chloronaphthalene",,"DWS",,,"N","Y","N","ugL","DWS",2800
+"410","3,3'-Dichlorobenzidine",,"DWS",,,"N","Y","N","ugL","DWS",0.78
+"500","Acenaphthene",,"DWS",,,"N","Y","N","ugL","DWS",2100
+"518","Acrolein",,"DWS",,,"N","Y","N","ugL","DWS",18
+"520","Acrylonitrile",,"DWS",,,"N","Y","N","ugL","DWS",0.65
+"529","Aldrin",,"DWS",,"Y","N","Y","N","ugL","DWS",0.021
+"568","Anthracene",,"DWS",,,"N","Y","N","ugL","DWS",10500
+"570","Antimony","Dissolved","DWS",,"Y","N","Y","N","mgL","DWS",0.006
+"591","Arsenic","Dissolved","DWS",,"Y","N","Y","N","mgL","DWS",0.01
+"591","Arsenic","Dissolved","IRR",,"Y","N","Y","N","mgL","IRR",0.1
+"591","Arsenic","Dissolved","LW",,"Y","N","Y","N","mgL","LW",0.2
+"596","Asbestos",,"DWS",,,"N","Y","N","fibers_L","DWS",7000000
+"621","Benz[a]anthracene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"624","Benzene",,"DWS",,,"N","Y","N","ugL","DWS",5
+"635","Benzidine",,"DWS",,,"N","Y","N","ugL","DWS",0.0015
+"636","Benzo(b)fluoranthene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"638","Benzo[a]pyrene",,"DWS",,"Y","N","Y","N","ugL","DWS",0.2
+"644","Benzo[k]fluoranthene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"657","Beryllium","Dissolved","DWS",,,"N","Y","N","mgL","DWS",0.004
+"611","Barium","Dissolved","DWS",,,"N","Y","N","mgL","DWS",2
+"674","Bis(2-chloroethyl) ether",,"DWS",,,"N","Y","N","ugL","DWS",0.3
+"675","Bis(2-chloroisopropyl) ether",,"DWS",,,"N","Y","N","ugL","DWS",1400
+"714","Butyl benzyl phthalate",,"DWS",,,"N","Y","N","ugL","DWS",7000
+"725","Cadmium","Dissolved","DWS",,,"Y","Y","N","mgL","DWS",0.005
+"725","Cadmium","Dissolved","IRR",,,"Y","Y","N","mgL","IRR",0.01
+"725","Cadmium","Dissolved","LW",,,"Y","Y","N","mgL","LW",0.05
+"741","Carbon tetrachloride",,"DWS",,,"N","Y","N","ugL","DWS",5
+"767","Chlordane",,"DWS",,"Y","N","Y","N","ugL","DWS",2
+"774","Chlorine",,"WH",,,"N","Y","N","mgL","WH",0.011
+"779","Chlorobenzene",,"DWS",,,"N","Y","N","ugL","DWS",100
+"781","Chlorodibromomethane",,"DWS",,,"N","Y","N","ugL","DWS",4.2
+"784","Chloroform",,"DWS",,,"N","Y","N","ugL","DWS",57
+"809","Chromium","Dissolved","DWS",,,"N","Y","N","mgL","DWS",0.1
+"809","Chromium","Dissolved","IRR",,,"N","Y","N","mgL","IRR",0.1
+"809","Chromium","Dissolved","LW",,,"N","Y","N","mgL","LW",1
+"813","Chrysene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"827","Cobalt","Dissolved","IRR",,,"N","Y","N","mgL","IRR",0.05
+"827","Cobalt","Dissolved","LW",,,"N","Y","N","mgL","LW",1
+"832","Copper","Dissolved","DWS",,,"Y","Y","N","mgL","DWS",1.3
+"832","Copper","Dissolved","IRR",,,"Y","Y","N","mgL","IRR",0.2
+"832","Copper","Dissolved","LW",,,"Y","Y","N","mgL","LW",0.5
+"842","Cyanide","Total Recoverable","DWS",,,"N","Y","N","mgL","DWS",0.2
+"842","Cyanide","Total Recoverable","WH",,,"N","Y","N","mgL","WH",0.0052
+"881","Di(2-ethylhexyl) phthalate",,"DWS",,,"N","Y","N","ugL","DWS",6
+"886","Dibenz[a,h]anthracene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"899","Dibutyl phthalate",,"DWS",,,"N","Y","N","ugL","DWS",3500
+"917","Dichlorobromomethane",,"DWS",,,"N","Y","N","ugL","DWS",5.6
+"934","Dieldrin",,"DWS",,"Y","N","Y","N","ugL","DWS",0.022
+"938","Diethyl phthalate",,"DWS",,,"N","Y","N","ugL","DWS",28000
+"957","Dimethyl phthalate",,"DWS",,,"N","Y","N","ugL","DWS",350000
+"973","Dioxin + furan mix, unspecified",,"DWS",,"Y","N","Y","N","ugL","DWS",0.00003
+"1001","Endosulfan sulfate",,"DWS",,,"N","Y","N","ugL","DWS",62
+"1003","Endrin",,"DWS",,,"N","Y","N","ugL","DWS",2
+"1004","Endrin aldehyde",,"DWS",,,"N","Y","N","ugL","DWS",10.5
+"1030","Ethylbenzene",,"DWS",,,"N","Y","N","ugL","DWS",700
+"1064","Fluoranthene",,"DWS",,,"N","Y","N","ugL","DWS",1400
+"1066","Fluorene",,"DWS",,,"N","Y","N","ugL","DWS",1400
+"1104","Heptachlor",,"DWS",,,"N","Y","N","ugL","DWS",0.4
+"1105","Heptachlor epoxide",,"DWS",,,"N","Y","N","ugL","DWS",0.2
+"1115","Hexachlorobenzene",,"DWS",,"Y","N","Y","N","ugL","DWS",1
+"1118","Hexachlorobutadiene",,"DWS",,,"N","Y","N","ugL","DWS",4.5
+"1121","Hexachlorocyclopentadiene",,"DWS",,,"N","Y","N","ugL","DWS",50
+"1123","Hexachloroethane",,"DWS",,,"N","Y","N","ugL","DWS",25
+"1173","Indeno[1,2,3-cd]pyrene",,"DWS",,,"N","Y","N","ugL","DWS",0.048
+"1199","Isophorone",,"DWS",,,"N","Y","N","ugL","DWS",368
+"1215","Lead","Dissolved","DWS",,,"Y","Y","N","mgL","DWS",0.015
+"1215","Lead","Dissolved","IRR",,,"Y","Y","N","mgL","IRR",5
+"1215","Lead","Dissolved","LW",,,"Y","Y","N","mgL","LW",0.1
+"1235","Lindane",,"DWS",,,"N","Y","N","ugL","DWS",0.2
+"1263","m-Dichlorobenzene",,"DWS",,,"N","Y","N","ugL","DWS",469
+"1623","1,4-Dichlorobenzene",,"DWS",,,"N","Y","N","ugL","DWS",75
+"1283","Methyl bromide",,"DWS",,,"N","Y","N","ugL","DWS",49
+"1328","Methylene chloride",,"DWS",,,"N","Y","N","ugL","DWS",5
+"1395","Nickel","Dissolved","DWS",,"Y","Y","Y","N","mgL","DWS",0.7
+"1403","Nitrobenzene",,"DWS",,,"N","Y","N","ugL","DWS",18
+"1418","Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",,"LW",,,"N","N","N","mgL","LW",132
+"1427","N-Nitrosodimethylamine",,"DWS",,,"N","Y","N","ugL","DWS",0.0069
+"1429","N-Nitrosodi-n-propylamine",,"DWS",,,"N","Y","N","ugL","DWS",0.05
+"1430","N-Nitrosodiphenylamine",,"DWS",,,"N","Y","N","ugL","DWS",71
+"1467","o-Chlorophenol",,"DWS",,,"N","Y","N","ugL","DWS",175
+"1479","o-Dichlorobenzene",,"DWS",,,"N","Y","N","ugL","DWS",600
+"1518","p,p'-DDT",,"DWS",,"Y","N","Y","N","ugL","DWS",1
+"1518","p,p'-DDT",,"WH",,"Y","N","Y","N","ugL","WH",0.001
+"1633","Pentachlorophenol",,"DWS",,,"N","Y","N","ugL","DWS",1
+"1654","Phenol",,"DWS",,,"N","Y","N","ugL","DWS",10500
+"1706","Polychlorinated biphenyls",,"DWS",,"Y","N","Y","N","ugL","DWS",0.5
+"1706","Polychlorinated biphenyls",,"WH",,"Y","N","Y","N","ugL","WH",0.014
+"1744","Pyrene",,"DWS",,,"N","Y","N","ugL","DWS",1050
+"1757","Radium-226",,"DWS",,,"N","Y","N","pCiL","DWS",2.5
+"1757","Radium-226",,"LW",,,"N","Y","N","pCiL","LW",15
+"1759","Radium-228",,"DWS",,,"N","Y","N","pCiL","DWS",2.5
+"1759","Radium-228",,"LW",,,"N","Y","N","pCiL","LW",15
+"1820","Strontium",,"DWS",,,"N","Y","N","pCiL","DWS",8
+"1869","Tetrachloroethylene",,"DWS",,"Y","N","Y","N","ugL","DWS",5
+"1883","Thallium",,"DWS",,"Y","N","Y","N","mgL","DWS",0.002
+"1902","Toluene",,"DWS",,,"N","Y","N","ugL","DWS",1000
+"1912","Toxaphene",,"DWS",,,"N","Y","N","ugL","DWS",3
+"1926","trans-1,2-Dichloroethylene",,"DWS",,,"N","Y","N","ugL","DWS",100
+"1935","Tribromomethane",,"DWS",,,"N","Y","N","ugL","DWS",44
+"1950","Trichloroethylene",,"DWS",,,"N","Y","N","ugL","DWS",5
+"1974","Tritium",,"DWS",,,"N","Y","N","pCiL","DWS",20000
+"1974","Tritium",,"LW",,,"N","Y","N","pCiL","LW",20000
+"1981001","Uranium-234/235/238","Dissolved","DWS",,,"N","Y","N","mgL","DWS",0.03
+"1987","Vanadium","Dissolved","IRR",,,"N","Y","N","mgL","IRR",0.1
+"1987","Vanadium","Dissolved","LW",,,"N","Y","N","mgL","LW",0.1
+"1992","Vinyl chloride",,"DWS",,,"N","Y","N","ugL","DWS",2
+"2005","Zinc",,"DWS",,"Y","Y","Y","N","mgL","DWS",10.5
+"2005","Zinc",,"IRR",,"Y","Y","Y","N","mgL","IRR",2
+"2005","Zinc",,"LW",,"Y","Y","Y","N","mgL","LW",25
+"2337","Gross alpha radioactivity, (Americium-241 ref std)",,"DWS",,,"N","Y","N","pCiL","DWS",15
+"2337","Gross alpha radioactivity, (Americium-241 ref std)",,"LW",,,"N","Y","N","pCiL","LW",15
+"2416","Nitrogen, Nitrate (NO3) as N",,"DWS",,,"N","Y","N","mgL","DWS",10
+"549001","Aluminum","Dissolved","IRR",,,"N","Y","N","mgL","IRR",5
+"1266002","Mercury","Total","DWS",,,"N","Y","N","mgL","DWS",0.002
+"1266002","Mercury","Total","LW",,,"N","Y","N","mgL","LW",0.01
+"1266002","Mercury","Total","WH",,,"N","Y","N","mgL","WH",0.00077
+"1354001","Molybdenum","Dissolved","IRR",,,"N","Y","N","mgL","IRR",1
+"1783001","Selenium","Dissolved","DWS",,"Y","N","Y","N","mgL","DWS",0.05
+"1783001","Selenium","Dissolved","IRR",,"Y","N","Y","N","mgL","IRR",0.13
+"1783001","Selenium","Dissolved","LW",,"Y","N","Y","N","mgL","LW",0.05
+"1783002","Selenium","Total Recoverable","WH",,,"N","Y","N","mgL","WH",0.005
+"695","Boron","Dissolved","IRR",,,"N","Y","N","mgL","IRR",0.75
+"695","Boron","Dissolved","LW",,,"N","Y","N","mgL","LW",5
+"21","1,1,1-Trichloroethane",,"DWS",,,"N","Y","N","ugL","DWS",200

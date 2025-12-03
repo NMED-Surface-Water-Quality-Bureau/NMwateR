@@ -32,6 +32,8 @@ Imports:
     zoo
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 URL: https://nmed-surface-water-quality-bureau.github.io/NMwateR/
+Config/testthat/edition: 3
