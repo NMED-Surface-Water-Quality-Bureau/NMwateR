@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
-# AKDECtools 0.0.0.9056 (2025-11-24)
+# NMwateR 0.0.0.9056 (2025-11-24)
 
 -   Added vignette
 -   Updated nutrients (lakes) logic per instructions from NMED
@@ -30,7 +30,7 @@ cat(paste0("Last Update: ",Sys.time()))
     -   Use testthat to make internal tests
     -   Set up GitHub tests
 
-# AKDECtools 0.0.0.9053 (2025-11-17)
+# NMwateR 0.0.0.9053 (2025-11-17)
 
 -   Added all functions from NMED R project as of 11/07/2025
 -   To do:
@@ -39,6 +39,6 @@ cat(paste0("Last Update: ",Sys.time()))
     -   Set up GitHub tests
     -   Add vignette
 
-# AKDECtools 0.0.0.9000 (2025-11-07)
+# NMwateR 0.0.0.9000 (2025-11-07)
 
 -   Initial development
