@@ -10,7 +10,7 @@ The package is intended to make assessment analyses faster and more consistent. 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/graphs/commit-activity)
 [![GitHub
 license](https://img.shields.io/github/license/NMED-Surface-Water-Quality-Bureau/NMwateR)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/blob/main/LICENSE.md)
-issues](https://img.shields.io/github/issues-raw/NMED-Surface-Water-Quality-Bureau/NMwateR)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/issues)
+[![issues](https://img.shields.io/github/issues-raw/NMED-Surface-Water-Quality-Bureau/NMwateR)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/issues)
 [![Github all
 releases](https://img.shields.io/github/downloads/NMED-Surface-Water-Quality-Bureau/NMwateR/total)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/releases)
 [![R-CMD-check](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/actions/workflows/R-CMD-check.yaml)
