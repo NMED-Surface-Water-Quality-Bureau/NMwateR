@@ -1,0 +1,123 @@
+# NMwateR
+
+NMwaterR is an R package for water quality data management, analysis,
+and assessment. These functions support Integrated Reporting conducted
+by the New Mexico Environment Department (NMED) [Surface Water Quality
+Bureau Program](https://www.env.nm.gov/surface-water-quality/).
+
+The package is intended to make assessment analyses faster and more
+consistent. The work starts with loading the necessary files from SQUID
+(NMED’s in-house databse) into
+[`Data_Prep()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Data_Prep.md).
+Next comes \>10 water quality analysis functions depending on the
+parameters and designated uses being assessed. Outputs from these
+analyses are input into the
+[`assessment()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/assessment.md)
+function to make initial Integrated Reporting conclusions.
+
+## Badges
+
+## Installation
+
+To install the current version use the code below to install from
+GitHub. The use of “force = TRUE” ensures the package is installed even
+if already present. If the package `remotes` is missing the code below
+will install it.
+
+``` r
+if(!require(remotes)){install.packages("remotes")}  #install if needed
+install_github("NMED-Surface-Water-Quality-Bureau/NMwateR", force=TRUE)
+```
+
+A vignette is included in the package that is an example assessment
+workflow using real NMED data. To build the vingette, the
+`build_vignettes = TRUE` argument needs to be included. Copy and paste
+the code below to install the package with the vignette. Once installed,
+the vignette can be accessed either by running `?NMwateR` in the RStudio
+console and navigating via the Help menu or by running
+`browseVignettes("NMwateR")`.
+
+``` r
+if(!require(remotes)){install.packages("remotes")}  #install if needed
+install_github("NMED-Surface-Water-Quality-Bureau/NMwateR", force=TRUE, build_vignettes=TRUE)
+```
+
+## Getting help
+
+If you encounter a clear bug, please file an issue with a minimal
+reproducible example on the
+[Issues](https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/issues)
+page. For questions and other discussion, please reach out to Meredith
+Zeigler (NMED; <Meredith.Zeigler@env.nm.gov>) or Benjamin Block (Tetra
+Tech; <Ben.Block@tetratech.com>).
+
+## Status
+
+In development.
+
+# Package index
+
+## All functions
+
+- [`Bacteria_PCR_SCR()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Bacteria_PCR_SCR.md)
+  : Analysis of bacteria data against PCR and SCR standards
+- [`Conventionals_ALU()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Conventionals_ALU.md)
+  : Analysis of conventionals data against ALU standards
+- [`Conventionals_LW()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Conventionals_LW.md)
+  : Analysis of conventionals data against LW standards
+- [`Data_Prep()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Data_Prep.md)
+  : Compile data from SQUID for water quality analyses
+- [`LTD_ALU()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/LTD_ALU.md)
+  : Analysis of long-term deployment data against ALU standards
+- [`Nutrients_Lakes()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Nutrients_Lakes.md)
+  : Analysis of lake nutrient data against ALU standards
+- [`Nutrients_Streams()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Nutrients_Streams.md)
+  : Analysis of stream nutrient data against ALU standards
+- [`SS_Copper_ALU()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/SS_Copper_ALU.md)
+  : Analysis of copper data from LANL against site-specific ALU
+  standards
+- [`Salinity_IRR()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Salinity_IRR.md)
+  : Analysis of salinity data against IRR standards
+- [`Toxics_ALU_HDM()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_ALU_HDM.md)
+  : Analysis of hardness dependent toxics data against ALU standards
+- [`Toxics_ALU_nonHDM()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_ALU_nonHDM.md)
+  : Analysis of non hardness dependent toxics data against ALU standards
+- [`Toxics_DWS()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_DWS.md)
+  : Analysis of toxics data against DWS standards
+- [`Toxics_HH()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_HH.md)
+  : Analysis of toxics data against HH standards for ALU
+- [`Toxics_IRR()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_IRR.md)
+  : Analysis of toxics data against IRR standards
+- [`Toxics_LW()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_LW.md)
+  : Analysis of toxics data against LW standards
+- [`Toxics_WH()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_WH.md)
+  : Analysis of toxics data against WH standards
+- [`Turbidity_ALU()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Turbidity_ALU.md)
+  : Analysis of turbidity data against ALU standards
+- [`assessment()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/assessment.md)
+  : Assessment of water quality data using NMED SWQS and CALM logic
+- [`example_LANL_DU_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_DU_table.md)
+  : Example LANL DU Table
+- [`example_LANL_WQ_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_WQ_table.md)
+  : Example LANL WQ Table
+- [`example_SQUID_DU_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_DU_table.md)
+  : Example SQUID DU Table
+- [`example_SQUID_LTD_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_LTD_table.md)
+  : Example SQUID LTD Table
+- [`example_SQUID_LakeProfile_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_LakeProfile_table.md)
+  : Example SQUID Lake Profile Table
+- [`example_SQUID_RStudio_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_RStudio_table.md)
+  : Example SQUID RStudio Table
+- [`example_criteria_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_criteria_table.md)
+  : Example Criteria Table
+- [`example_parameter_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_parameter_table.md)
+  : Example Parameter Table
+- [`pH_PCR()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/pH_PCR.md)
+  : Analysis of pH data against PCR standards
+
+# Articles
+
+### All vignettes
+
+- [Example WQ Assessment
+  Workflow](https://nmed-surface-water-quality-bureau.github.io/NMwateR/articles/Example_Assessment_Workflow.md):
