@@ -1,11 +1,18 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2025-12-03 08:37:30.803538
+2025-12-03 09:25:37.525116
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-12-03 08:37:30.848161
+    #> Last Update: 2025-12-03 09:25:37.544374
+
+# NMwateR 0.0.0.9062 (2025-12-03)
+
+- Added pkgdown and R-CMD-Check
+- To do:
+  - Have NMED review functionality
+  - Use testthat to make internal tests
 
 # NMwateR 0.0.0.9056 (2025-11-24)
 
