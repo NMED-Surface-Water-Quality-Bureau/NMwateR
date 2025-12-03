@@ -39,6 +39,8 @@
   : Analysis of turbidity data against ALU standards
 - [`assessment()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/assessment.md)
   : Assessment of water quality data using NMED SWQS and CALM logic
+- [`example_DU_processed`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_DU_processed.md)
+  : Example Designated Use (DU) Processed Table
 - [`example_LANL_DU_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_DU_table.md)
   : Example LANL DU Table
 - [`example_LANL_WQ_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_WQ_table.md)
@@ -51,6 +53,10 @@
   : Example SQUID Lake Profile Table
 - [`example_SQUID_RStudio_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_RStudio_table.md)
   : Example SQUID RStudio Table
+- [`example_chemistry_processed`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_chemistry_processed.md)
+  : Example Chemistry Processed Table
+- [`example_criteria_processed`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_criteria_processed.md)
+  : Example Criteria Processed Table
 - [`example_criteria_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_criteria_table.md)
   : Example Criteria Table
 - [`example_parameter_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_parameter_table.md)
