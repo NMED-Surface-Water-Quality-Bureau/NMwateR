@@ -10,7 +10,7 @@ example_DU_processed
 
 ## Format
 
-A data frame with 340 rows and 11 columns:
+A data frame with 422 rows and 11 columns:
 
 - WATER_ID:
 

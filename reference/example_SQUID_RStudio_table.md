@@ -10,7 +10,7 @@ example_SQUID_RStudio_table
 
 ## Format
 
-A data frame with 9265 rows and 46 columns:
+A data frame with 6443 rows and 47 columns:
 
 - WATER_ID:
 

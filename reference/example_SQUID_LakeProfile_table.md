@@ -10,7 +10,7 @@ example_SQUID_LakeProfile_table
 
 ## Format
 
-A data frame with 644 rows and 14 columns:
+A data frame with 1925 rows and 14 columns:
 
 - PROJECT_NAME:
 

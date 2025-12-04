@@ -10,7 +10,7 @@ example_SQUID_DU_table
 
 ## Format
 
-A data frame with 278 rows and 28 columns:
+A data frame with 387 rows and 28 columns:
 
 - PRJ_NAME:
 

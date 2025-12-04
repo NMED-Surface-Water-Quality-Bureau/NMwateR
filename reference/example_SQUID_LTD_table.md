@@ -10,7 +10,7 @@ example_SQUID_LTD_table
 
 ## Format
 
-A data frame with 374 rows and 51 columns:
+A data frame with 559 rows and 51 columns:
 
 - ASSESSMENT_UNIT_ID:
 

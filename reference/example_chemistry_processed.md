@@ -11,7 +11,7 @@ example_chemistry_processed
 
 ## Format
 
-A data frame with 5,144 rows and 21 columns:
+A data frame with 5,137 rows and 21 columns:
 
 - WATER_ID:
 
