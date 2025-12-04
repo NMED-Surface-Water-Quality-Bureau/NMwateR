@@ -5,7 +5,7 @@
 \alias{example_SQUID_LakeProfile_table}
 \title{Example SQUID Lake Profile Table}
 \format{
-A data frame with 644 rows and 14 columns:
+A data frame with 1925 rows and 14 columns:
 \describe{
 \item{PROJECT_NAME}{Project name}
 \item{WATER_ID}{Waterbody identifier}

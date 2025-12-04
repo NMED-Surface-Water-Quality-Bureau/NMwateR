@@ -16,15 +16,15 @@ input.dir <- "data-raw/Input_Files"
 # specify input files
 fn.data1 <- "CriteriaNM_FINAL_2025 SCB LG_MZ.csv"
 fn.data2 <- "ParameterYearAssessNM_ALL.csv"
-fn.data3 <- "RStudio_Data_File_Sacramentos_rawSQUID.xlsx"
-fn.data4 <- "Stations DU Analysis_07-29-25_09_14_24.xlsx"
-fn.data5 <- "LTD_Assessment_Report_Sacramentos_rawSQUID.xlsx"
-fn.data6 <- "LakeDepthProfile_07-29-25_09_16_39.xlsx"
+fn.data3 <- "Rstudio_CHAMA_WATERSHED_SEPARATE_FINAL.xlsx"
+fn.data4 <- "Stations DU Analysis_09-04-25_CHAMA.xlsx"
+fn.data5 <- "LTD_Assessment_Report_09-04-25_CHAMA.xlsx"
+fn.data6 <- "LakeDepthProfile_CHAMA_SEPARATE.xlsx"
 fn.data7 <- "DU_LANL_Stations_2025.csv"
 fn.data8 <- "N3B Data received.xlsx"
-fn.data9 <- "NMED_Chem_Processed_20251118.csv"
-fn.data10 <- "NMED_DU_Processed_20251118.csv"
-fn.data11 <- "NMED_WQ_Criteria_Formatted_20251118.csv"
+fn.data9 <- "NMED_Chem_Processed_20251204.csv"
+fn.data10 <- "NMED_DU_Processed_20251204.csv"
+fn.data11 <- "NMED_WQ_Criteria_Formatted_20251204.csv"
 
 # Read data files ####
 example_criteria_table <- readr::read_csv(file.path(wd, input.dir, fn.data1)

@@ -2,7 +2,7 @@
 #'
 #' Example dataset for SQUID DU analysis.
 #'
-#' @format A data frame with 278 rows and 28 columns:
+#' @format A data frame with 387 rows and 28 columns:
 #' \describe{
 #'   \item{PRJ_NAME}{Project name}
 #'   \item{WATER_NAME}{Waterbody name}
@@ -40,7 +40,7 @@
 #'
 #' Example dataset for SQUID long-term deployment analysis.
 #'
-#' @format A data frame with 374 rows and 51 columns:
+#' @format A data frame with 559 rows and 51 columns:
 #' \describe{
 #'   \item{ASSESSMENT_UNIT_ID}{Assessment unit identifier}
 #'   \item{ASSESSMENT_UNIT_NAME}{Assessment unit name}
@@ -101,7 +101,7 @@
 #'
 #' Example dataset for SQUID lake profile analysis.
 #'
-#' @format A data frame with 644 rows and 14 columns:
+#' @format A data frame with 1925 rows and 14 columns:
 #' \describe{
 #'   \item{PROJECT_NAME}{Project name}
 #'   \item{WATER_ID}{Waterbody identifier}
@@ -125,7 +125,7 @@
 #'
 #' Example dataset for SQUID RStudio integration.
 #'
-#' @format A data frame with 9265 rows and 46 columns:
+#' @format A data frame with 6443 rows and 47 columns:
 #' \describe{
 #'   \item{WATER_ID}{Waterbody identifier}
 #'   \item{WATER_NAME}{Waterbody name}
@@ -315,7 +315,7 @@
 #'
 #' Example dataset of processed chemistry results for water quality analysis.
 #'
-#' @format A data frame with 5,144 rows and 21 columns:
+#' @format A data frame with 5,137 rows and 21 columns:
 #' \describe{
 #'   \item{WATER_ID}{Assessment Unit identifier}
 #'   \item{WATER_NAME}{Assessment Unit name}
@@ -347,7 +347,7 @@
 #'
 #' Example dataset of processed designated use criteria for waterbodies.
 #'
-#' @format A data frame with 340 rows and 11 columns:
+#' @format A data frame with 422 rows and 11 columns:
 #' \describe{
 #'   \item{WATER_ID}{Assessment Unit identifier}
 #'   \item{DU}{Designated use category}

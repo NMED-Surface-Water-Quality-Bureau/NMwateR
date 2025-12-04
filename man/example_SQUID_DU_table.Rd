@@ -5,7 +5,7 @@
 \alias{example_SQUID_DU_table}
 \title{Example SQUID DU Table}
 \format{
-A data frame with 278 rows and 28 columns:
+A data frame with 387 rows and 28 columns:
 \describe{
 \item{PRJ_NAME}{Project name}
 \item{WATER_NAME}{Waterbody name}

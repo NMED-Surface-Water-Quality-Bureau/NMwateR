@@ -5,7 +5,7 @@
 \alias{example_SQUID_RStudio_table}
 \title{Example SQUID RStudio Table}
 \format{
-A data frame with 9265 rows and 46 columns:
+A data frame with 6443 rows and 47 columns:
 \describe{
 \item{WATER_ID}{Waterbody identifier}
 \item{WATER_NAME}{Waterbody name}

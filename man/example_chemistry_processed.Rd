@@ -5,7 +5,7 @@
 \alias{example_chemistry_processed}
 \title{Example Chemistry Processed Table}
 \format{
-A data frame with 5,144 rows and 21 columns:
+A data frame with 5,137 rows and 21 columns:
 \describe{
 \item{WATER_ID}{Assessment Unit identifier}
 \item{WATER_NAME}{Assessment Unit name}

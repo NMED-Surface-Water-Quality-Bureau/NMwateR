@@ -5,7 +5,7 @@
 \alias{example_SQUID_LTD_table}
 \title{Example SQUID LTD Table}
 \format{
-A data frame with 374 rows and 51 columns:
+A data frame with 559 rows and 51 columns:
 \describe{
 \item{ASSESSMENT_UNIT_ID}{Assessment unit identifier}
 \item{ASSESSMENT_UNIT_NAME}{Assessment unit name}

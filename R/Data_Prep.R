@@ -415,7 +415,7 @@ Data_Prep <- function(criteria_table
   rm(df_DU_v3)
 
   ## LTD Data ####
-  if(exists("SQUID_LTD_table")){
+  if(!is.null(SQUID_LTD_table)){
     # QC Warning
     required_cols <- c("ASSESSMENT_UNIT_ID", "ASSESSMENT_UNIT_NAME", "PROJECT_NAME"
                        , "STATION_ID", "STATION_NAME", "SAMPLING_EVENT_TYPE"
@@ -489,7 +489,7 @@ Data_Prep <- function(criteria_table
   } # END ~ if LTD exists
 
   ## Depth profile ####
-  if(exists("SQUID_LakeProfile_table")){
+  if(!is.null(SQUID_LakeProfile_table)){
     ### Initial cleanup ####
     # summary(df_Profile)
     SQUID_LakeProfile_table$SE_START_DATE_TIME <- as.POSIXct(SQUID_LakeProfile_table$SE_START_DATE_TIME)

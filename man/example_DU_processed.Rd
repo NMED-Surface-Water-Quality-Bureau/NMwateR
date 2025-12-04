@@ -5,7 +5,7 @@
 \alias{example_DU_processed}
 \title{Example Designated Use (DU) Processed Table}
 \format{
-A data frame with 340 rows and 11 columns:
+A data frame with 422 rows and 11 columns:
 \describe{
 \item{WATER_ID}{Assessment Unit identifier}
 \item{DU}{Designated use category}
