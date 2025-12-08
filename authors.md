@@ -14,13 +14,13 @@
 
 Block B, Ferriby H, Salk K, Zeigler M (2025). *NMwateR: NMED Water
 Quality Analysis and Assessment Functions*. R package version
-0.0.0.9062,
+0.0.0.9066,
 <https://nmed-surface-water-quality-bureau.github.io/NMwateR/>.
 
     @Manual{,
       title = {NMwateR: NMED Water Quality Analysis and Assessment Functions},
       author = {Benjamin Block and Hannah Ferriby and Kateri Salk and Meredith Zeigler},
       year = {2025},
-      note = {R package version 0.0.0.9062},
+      note = {R package version 0.0.0.9066},
       url = {https://nmed-surface-water-quality-bureau.github.io/NMwateR/},
     }
