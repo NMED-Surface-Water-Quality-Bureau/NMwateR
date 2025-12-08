@@ -53,3 +53,28 @@ A dataframe containing compiled and quality controlled water quality
 necessary for subsequent analyses.
 
 ## Examples
+
+``` r
+example_criteria_table <- NMwateR::example_criteria_table
+example_parameter_table <- NMwateR::example_parameter_table
+example_SQUID_RStudio_table <- NMwateR::example_SQUID_RStudio_table
+example_SQUID_DU_table <- NMwateR::example_SQUID_DU_table
+example_SQUID_LTD_table <- NMwateR::example_SQUID_LTD_table
+example_SQUID_LakeProfile_table <- NMwateR::example_SQUID_LakeProfile_table
+
+my_data_list <- Data_Prep(criteria_table = example_criteria_table
+                          , parameter_table = example_parameter_table
+                          , SQUID_RStudio_table = example_SQUID_RStudio_table
+                          , SQUID_DU_table = example_SQUID_DU_table
+                          , SQUID_LTD_table = example_SQUID_LTD_table
+                          , SQUID_LakeProfile_table = example_SQUID_LakeProfile_table)
+#> Joining with `by = join_by(WATER_ID, PROJECT_NAME, MLOC_NAME, MLOC_ID,
+#> SE_START_DATE_TIME, PRJ_UID, MLOC_UID)`
+# cleanup
+rm(example_criteria_table, example_parameter_table, example_SQUID_RStudio_table
+ , example_SQUID_DU_table, example_SQUID_LTD_table, example_SQUID_LakeProfile_table)
+
+df_Chem_combined <- my_data_list$Chem_Combined
+df_DU_processed <- my_data_list$DU_Processed
+df_Criteria <- my_data_list$Criteria_Formatted
+```

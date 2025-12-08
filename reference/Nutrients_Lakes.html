@@ -11,7 +11,7 @@ Consolidated Assessment and Listing Methodology (CALM) guidance manual."></head>
 
     <a class="navbar-brand me-2" href="../index.html">NMwateR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9066</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9067</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,7 +73,24 @@ is an intermediate file used for QA/QC purposes.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">df_Chem_combined</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_chemistry_processed.html">example_chemistry_processed</a></span></span></span>
+<span class="r-in"><span><span class="va">df_DU_processed</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_DU_processed.html">example_DU_processed</a></span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">Nutrients_Lakes_list</span> <span class="op">&lt;-</span> <span class="fu">Nutrients_Lakes</span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span></span>
+<span class="r-in"><span>, DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, WATER_NAME, PROJECT_NAME, STATION,</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> STATION_NAME, SAMPLING_EVENT_TYPE, DATE, TIME, SAMPLE_TYPE, CHR_UID,</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> MEASUREMENT_num)`</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID)`</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID)`</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, DU, Waterbody)`</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID)`</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID)`</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">df_Nutrients_Lakes</span> <span class="op">&lt;-</span> <span class="va">Nutrients_Lakes_list</span><span class="op">$</span><span class="va">Nutrients_Lakes</span></span></span>
+<span class="r-in"><span><span class="va">df_Nutrients_Lakes_Indiv_Res</span> <span class="op">&lt;-</span> <span class="va">Nutrients_Lakes_list</span><span class="op">$</span><span class="va">Nutrients_Lakes_Indiv_Res</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

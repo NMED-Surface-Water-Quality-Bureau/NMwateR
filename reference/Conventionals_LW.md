@@ -34,8 +34,92 @@ quality criteria.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_DU_processed <- NMwateR::example_DU_processed
+df_Criteria <- NMwateR::example_criteria_processed
+
 df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
 , DU_table = df_DU_processed
-, Criteria_table = df_Criteria)} # }
+, Criteria_table = df_Criteria)
+#> [1] "W_NM-212-02"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "NM-2114_00"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-209-05"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-210-05"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-202-06"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-208-02"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-211-03"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "NM-2117_10"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "NM-2112.B_00"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-202-04.B"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-208-01"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-210-04"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-206-01"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-208-04.A"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-206-08"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-206-03"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-207-04"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-207-01"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-215-02"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-208-04.B"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-208-03"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-204-01"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-213-05"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-214-04"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-214-02"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-216-02.B"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
+#> [1] "W_NM-216-02.A"
+#> [1] 1418
+#> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`
 ```

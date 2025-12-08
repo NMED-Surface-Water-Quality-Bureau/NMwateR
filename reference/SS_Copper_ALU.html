@@ -13,7 +13,7 @@ Listing Methodology (CALM) guidance manual and New Mexico SQWS."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">NMwateR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9066</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9067</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,9 +77,61 @@ for copper calculations.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="va">SS_Copper_ALU_list</span> <span class="op">&lt;-</span> <span class="fu">SS_Copper_ALU</span><span class="op">(</span>DU_LANL_Stations_table <span class="op">=</span> <span class="va">example_DU_LANL_Sites</span></span></span>
-<span class="r-in"><span>, LANL_WQ_data <span class="op">=</span> <span class="va">example_LANL_WQ_data</span><span class="op">)</span><span class="op">}</span> <span class="co"># }</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">example_LANL_DU_table</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_LANL_DU_table.html">example_LANL_DU_table</a></span></span></span>
+<span class="r-in"><span><span class="va">example_LANL_WQ_table</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_LANL_WQ_table.html">example_LANL_WQ_table</a></span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">SS_Copper_ALU_list</span> <span class="op">&lt;-</span> <span class="fu">SS_Copper_ALU</span><span class="op">(</span>DU_LANL_Stations_table <span class="op">=</span> <span class="va">example_LANL_DU_table</span></span></span>
+<span class="r-in"><span>, LANL_WQ_data <span class="op">=</span> <span class="va">example_LANL_WQ_table</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_054"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_055"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_046"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_005"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2118.A_70"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_002"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_007"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_14"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_005"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_003"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_063"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-127.A_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_006"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_049"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_043"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-99.A_001"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_006"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_045"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_029"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_004"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_16"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_08"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_040"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_06"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_048"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_07"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_091"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_15"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_053"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_042"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_047"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_11"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_051"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_04"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_09"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_044"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_052"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_12"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_13"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

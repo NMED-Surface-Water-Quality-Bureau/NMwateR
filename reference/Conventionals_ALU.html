@@ -11,7 +11,7 @@ Consolidated Assessment and Listing Methodology (CALM) guidance manual."></head>
 
     <a class="navbar-brand me-2" href="../index.html">NMwateR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9066</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9067</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,9 +72,316 @@ water quality criteria.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">df_Chem_combined</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_chemistry_processed.html">example_chemistry_processed</a></span></span></span>
+<span class="r-in"><span><span class="va">df_DU_processed</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_DU_processed.html">example_DU_processed</a></span></span></span>
 <span class="r-in"><span><span class="va">df_Conv_ALU</span> <span class="op">&lt;-</span> <span class="fu">Conventionals_ALU</span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span></span>
-<span class="r-in"><span>, DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-in"><span>, DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-212-02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-209-05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-210-05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-202-06"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-208-02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-211-03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-202-04.B"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-208-01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-210-04"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-206-01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-208-04.A"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-206-08"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-206-03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-207-04"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-207-01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-215-02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-208-04.B"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-208-03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-204-01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-213-05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-214-04"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-214-02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-216-02.B"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W_NM-216-02.A"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1815</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2114_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2117_10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2112.B_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_50"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_030"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_100"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_010"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2112.A_20"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_40"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2112.A_02"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2112.A_03"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_023"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_011"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_080"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_070"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1815"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648b"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1648a"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_041"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_001"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2115_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_003"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_002"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_110"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_040"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2115_10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_060"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2115_20"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_020"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2113_30"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2112.A_00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "985"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_072"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2116.A_112"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2849"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(WATER_ID, CHR_UID, CHR_UID_Unique)`</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
