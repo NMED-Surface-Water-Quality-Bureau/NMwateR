@@ -23,10 +23,13 @@ standards for aquatic life use (ALU). For more information, see the NMED
 Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 }
 \examples{
-\dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_DU_processed <- NMwateR::example_DU_processed
+
 Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
 , DU_table = df_DU_processed)
+
 df_Nutrients_Lakes <- Nutrients_Lakes_list$Nutrients_Lakes
-df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res)}
+df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res
 
 }

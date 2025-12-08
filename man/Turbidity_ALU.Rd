@@ -25,10 +25,14 @@ standards for aquatic life use (ALU). For more information, see the NMED
 Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 }
 \examples{
-\dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_Criteria <- NMwateR::example_criteria_processed
+df_DU_processed <- NMwateR::example_DU_processed
+
 Turbidity_ALU_list <- Turbidity_ALU(Chem_table = df_Chem_combined
 , DU_table = df_DU_processed
 , Criteria_table = df_Criteria)
+
 df_Turbidity_ALU <- Turbidity_ALU_list$Turbidity_ALU
-df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res}
+df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res
 }

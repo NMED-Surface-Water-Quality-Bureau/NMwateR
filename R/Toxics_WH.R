@@ -12,9 +12,11 @@
 #' water quality criteria.
 #'
 #' @examples
-#' \dontrun{
+#' df_Chem_combined <- NMwateR::example_chemistry_processed
+#' df_Criteria <- NMwateR::example_criteria_processed
+#'
 #' df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
-#' , Criteria_table = df_Criteria)}
+#' , Criteria_table = df_Criteria)
 #' @export
 Toxics_WH <- function(Chem_table
                        , Criteria_table){

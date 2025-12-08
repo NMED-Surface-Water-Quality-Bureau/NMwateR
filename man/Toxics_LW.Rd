@@ -22,7 +22,9 @@ standards for livestock watering (LW) use. For more information, see the NMED
 Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 }
 \examples{
-\dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_Criteria <- NMwateR::example_criteria_processed
+
 df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
-, Criteria_table = df_Criteria)}
+, Criteria_table = df_Criteria)
 }

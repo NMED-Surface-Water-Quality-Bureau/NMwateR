@@ -22,8 +22,10 @@ standards for irrigation (IRR) use. For more information, see the NMED
 Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 }
 \examples{
-\dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_DU_processed <- NMwateR::example_DU_processed
+
 df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
-, DU_table = df_DU_processed)}
+, DU_table = df_DU_processed)
 
 }

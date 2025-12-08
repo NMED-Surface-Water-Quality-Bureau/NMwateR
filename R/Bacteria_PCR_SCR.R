@@ -13,9 +13,11 @@
 #' water quality criteria.
 #'
 #' @examples
-#' \dontrun{
+#' df_Chem_combined <- NMwateR::example_chemistry_processed
+#' df_DU_processed <- NMwateR::example_DU_processed
+#'
 #' df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
-#' , DU_table = df_DU_processed)}
+#' , DU_table = df_DU_processed)
 #'
 #' @export
 Bacteria_PCR_SCR <- function(Chem_table

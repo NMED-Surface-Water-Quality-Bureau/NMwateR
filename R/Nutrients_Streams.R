@@ -13,11 +13,14 @@
 #' is an intermediate file used for QA/QC purposes.
 #'
 #' @examples
-#' \dontrun{
+#' df_Chem_combined <- NMwateR::example_chemistry_processed
+#' df_DU_processed <- NMwateR::example_DU_processed
+#'
 #' Nutrients_Streams_list <- Nutrients_Streams(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed)
+#'
 #' df_Nutrients_Streams <- Nutrients_Streams_list$Nutrients_Streams
-#' df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv_Res}
+#' df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv_Res
 #'
 #' @export
 Nutrients_Streams <- function(Chem_table

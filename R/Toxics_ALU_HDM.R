@@ -14,12 +14,16 @@
 #' labeled "Indiv_Res" is an intermediate file used for QA/QC purposes.
 #'
 #' @examples
-#' \dontrun{
+#' df_Chem_combined <- NMwateR::example_chemistry_processed
+#' df_DU_processed <- NMwateR::example_DU_processed
+#' df_Criteria <- NMwateR::example_criteria_processed
+#'
 #' Toxics_ALU_HDM_list <- Toxics_ALU_HDM(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed
 #' , Criteria_table = df_Criteria)
+#'
 #' df_Toxics_ALU_HDM <- Toxics_ALU_HDM_list$Toxics_ALU_HDM
-#' df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res}
+#' df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res
 #' @export
 #'
 Toxics_ALU_HDM <- function(Chem_table

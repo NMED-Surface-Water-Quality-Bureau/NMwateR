@@ -22,8 +22,9 @@ standards for aquatic life use (ALU). For more information, see the NMED
 Consolidated Assessment and Listing Methodology (CALM) guidance manual.
 }
 \examples{
-\dontrun{
+df_Chem_combined <- NMwateR::example_chemistry_processed
+df_DU_processed <- NMwateR::example_DU_processed
 df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
-, DU_table = df_DU_processed)}
+, DU_table = df_DU_processed)
 
 }

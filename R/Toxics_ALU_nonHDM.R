@@ -13,10 +13,13 @@
 #' compared to ALU water quality criteria.
 #'
 #' @examples
-#' \dontrun{
+#' df_Chem_combined <- NMwateR::example_chemistry_processed
+#' df_DU_processed <- NMwateR::example_DU_processed
+#' df_Criteria <- NMwateR::example_criteria_processed
+#'
 #' df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
 #' , DU_table = df_DU_processed
-#' , Criteria_table = df_Criteria)}
+#' , Criteria_table = df_Criteria)
 #' @export
 Toxics_ALU_nonHDM <- function(Chem_table
                        , DU_table

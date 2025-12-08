@@ -25,7 +25,9 @@ against site-specific water quality standards for certain aquatic life uses
 Listing Methodology (CALM) guidance manual and New Mexico SQWS.
 }
 \examples{
-\dontrun{
-SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_DU_LANL_Sites
-, LANL_WQ_data = example_LANL_WQ_data)}
+example_LANL_DU_table <- NMwateR::example_LANL_DU_table
+example_LANL_WQ_table <- NMwateR::example_LANL_WQ_table
+
+SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
+, LANL_WQ_data = example_LANL_WQ_table)
 }

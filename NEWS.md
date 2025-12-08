@@ -1,11 +1,23 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2025-12-03 09:25:37.525116
+2025-12-08 14:16:17.298499
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-12-03 09:25:37.544374
+    #> Last Update: 2025-12-08 14:16:17.316029
+
+# NMwateR 0.0.0.9067 (2025-12-08)
+
+- Fixed examples to run using loaded example files
+- To do:
+  - Have NMED review functionality
+
+# NMwateR 0.0.0.9066 (2025-12-08)
+
+- Used testthat to make internal tests for every function
+- To do:
+  - Have NMED review functionality
 
 # NMwateR 0.0.0.9062 (2025-12-03)
 
