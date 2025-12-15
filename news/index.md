@@ -1,5 +1,13 @@
 # Changelog
 
+## NMwateR 1.0.0 (2025-12-15)
+
+- Small updates per Erik Leppo’s review
+- Prep for first GitHub release
+- To do:
+  - Have NMED review functionality
+  - Add verbose arguments
+
 ## NMwateR 0.0.0.9067 (2025-12-08)
 
 - Fixed examples to run using loaded example files
