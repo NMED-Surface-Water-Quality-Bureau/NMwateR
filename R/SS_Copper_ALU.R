@@ -85,7 +85,7 @@ SS_Copper_ALU <- function(DU_LANL_Stations_table
                                                1648,
                                              CHARACTERISTIC_NAME == 'Total Organic Carbonl' ~
                                                NA,
-                                             T ~ NA),
+                                             TRUE ~ NA),
                   CHARACTERISTIC_NAME = ifelse(CHARACTERISTIC_NAME == 'Acidity or Alkalinity of a solution',
                                                'pH', CHARACTERISTIC_NAME),
                   ACTIVITY_TYPE = NA,

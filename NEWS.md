@@ -1,11 +1,19 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2025-12-08 14:16:17.298499
+2025-12-15 09:40:48.607964
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-12-08 14:16:17.316029
+    #> Last Update: 2025-12-15 09:40:48.657506
+
+# NMwateR 1.0.0 (2025-12-15)
+
+- Small updates per Erik Leppo’s review
+- Prep for first GitHub release
+- To do:
+  - Have NMED review functionality
+  - Add verbose arguments
 
 # NMwateR 0.0.0.9067 (2025-12-08)
 
