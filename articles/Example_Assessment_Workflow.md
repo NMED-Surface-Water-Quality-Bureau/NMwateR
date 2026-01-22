@@ -87,25 +87,6 @@ field name.
 
 - *Dig deeper*: `??example_SQUID_LakeProfile_table`
 
-**LANL Stations DU Export**
-
-- *Optional*
-
-- *Description*: Specific to LANL stations only. Stations DU (designated
-  use) export from SQUID that contains DUs and AU-specific water quality
-  criteria.
-
-- *Dig deeper*: `??example_LANL_DU_table`
-
-**LANL Water Quality Data Export**
-
-- *Optional*
-
-- *Description*: Specific to LANL stations only. Contains grab water
-  chemistry provided by LANL.
-
-- *Dig deeper*: `??example_LANL_WQ_table`
-
 ### Run the following to load example files:
 
 ``` r
@@ -116,8 +97,6 @@ data(example_SQUID_RStudio_table)
 data(example_SQUID_DU_table)
 data(example_SQUID_LTD_table)
 data(example_SQUID_LakeProfile_table)
-data(example_LANL_DU_table)
-data(example_LANL_WQ_table)
 ```
 
 ## Data Preparation
@@ -349,21 +328,6 @@ df_Turbidity_ALU <- Turbidity_ALU_list$Turbidity_ALU # primary file
 df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res # intermediate file
 ```
 
-### Site-specific copper (ALU)
-
-This function compares copper data from Los Alamos National Laboratory
-(LANL) against site-specific water quality standards for certain aquatic
-life uses (ALU).
-
-``` r
-SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
-                                  , LANL_WQ_data = example_LANL_WQ_table)
-
-df_SS_Copper_ALU <- SS_Copper_ALU_list$df_SS_Copper_ALU # primary file
-df_SS_Copper_ALU_Indiv_Res <- SS_Copper_ALU_list$df_SS_Copper_ALU_Indiv_Res # intermediate file
-df_SS_Copper_ALU_Insuff_Res <- SS_Copper_ALU_list$df_SS_Copper_ALU_Insuff_Res # insufficient data file
-```
-
 ## Assessment
 
 The assessment is the culmination of all the water quality analyses and
@@ -386,7 +350,6 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
                        , Nutrients_Streams_table = df_Nutrients_Streams
                        , pH_PCR_table = df_pH_PCR
                        , Salinity_IRR_table = df_Salinity_IRR
-                       , SS_Copper_ALU_table = df_SS_Copper_ALU
                        , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
                        , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
                        , Toxics_DWS_table = df_Toxics_DWS

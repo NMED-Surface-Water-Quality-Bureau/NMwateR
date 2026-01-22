@@ -17,7 +17,6 @@ assessment(
   Nutrients_Streams_table = NULL,
   pH_PCR_table = NULL,
   Salinity_IRR_table = NULL,
-  SS_Copper_ALU_table = NULL,
   Toxics_ALU_nonHDM_table = NULL,
   Toxics_ALU_HDM_table = NULL,
   Toxics_DWS_table = NULL,
@@ -62,10 +61,6 @@ assessment(
 - Salinity_IRR_table:
 
   WQ analysis export from Salinity_IRR() function.
-
-- SS_Copper_ALU_table:
-
-  WQ analysis export from SS_Copper_ALU() function.
 
 - Toxics_ALU_nonHDM_table:
 
@@ -113,8 +108,6 @@ into SQUID to be transferred to ATTAINS.
 df_Chem_combined <- NMwateR::example_chemistry_processed
 df_Criteria <- NMwateR::example_criteria_processed
 df_DU_processed <- NMwateR::example_DU_processed
-example_LANL_DU_table <- NMwateR::example_LANL_DU_table
-example_LANL_WQ_table <- NMwateR::example_LANL_WQ_table
 
 # Water quality analyses
 ## Conventionals ALU
@@ -1320,65 +1313,6 @@ df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 #> [1] 2005
 #> [1] 570
 #> [1] 591
-
-## Site-specific copper
-#Only used for LANL data
-SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
-                                    , LANL_WQ_data = example_LANL_WQ_table)
-#> [1] "NM-9000.A_054"
-#> [1] "NM-9000.A_055"
-#> [1] "NM-9000.A_046"
-#> [1] "NM-128.A_03"
-#> [1] "NM-9000.A_005"
-#> [1] "NM-2118.A_70"
-#> [1] "NM-126.A_03"
-#> [1] "NM-97.A_002"
-#> [1] "NM-97.A_007"
-#> [1] "NM-128.A_14"
-#> [1] "NM-128.A_10"
-#> [1] "NM-97.A_005"
-#> [1] "NM-97.A_003"
-#> [1] "NM-9000.A_063"
-#> [1] "NM-127.A_00"
-#> [1] "NM-9000.A_006"
-#> [1] "NM-9000.A_000"
-#> [1] "NM-9000.A_049"
-#> [1] "NM-9000.A_043"
-#> [1] "NM-99.A_001"
-#> [1] "NM-97.A_006"
-#> [1] "NM-9000.A_045"
-#> [1] "NM-97.A_029"
-#> [1] "NM-97.A_004"
-#> [1] "NM-128.A_00"
-#> [1] "NM-128.A_17"
-#> [1] "NM-128.A_16"
-#> [1] "NM-126.A_01"
-#> [1] "NM-128.A_08"
-#> [1] "NM-9000.A_040"
-#> [1] "NM-128.A_06"
-#> [1] "NM-9000.A_048"
-#> [1] "NM-128.A_07"
-#> [1] "NM-9000.A_091"
-#> [1] "NM-128.A_15"
-#> [1] "NM-9000.A_053"
-#> [1] "NM-9000.A_042"
-#> [1] "NM-9000.A_047"
-#> [1] "NM-128.A_11"
-#> [1] "NM-128.A_01"
-#> [1] "NM-126.A_00"
-#> [1] "NM-9000.A_051"
-#> [1] "NM-128.A_02"
-#> [1] "NM-128.A_04"
-#> [1] "NM-128.A_05"
-#> [1] "NM-128.A_09"
-#> [1] "NM-9000.A_044"
-#> [1] "NM-9000.A_052"
-#> [1] "NM-128.A_12"
-#> [1] "NM-128.A_13"
-
-df_SS_Copper_ALU <- SS_Copper_ALU_list$df_SS_Copper_ALU
-
-rm(SS_Copper_ALU_list, example_LANL_DU_table, example_LANL_WQ_table)
 
 ## Toxics DWS
 df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -3183,7 +3117,6 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
                               , Nutrients_Streams_table = df_Nutrients_Streams
                               , pH_PCR_table = df_pH_PCR
                               , Salinity_IRR_table = df_Salinity_IRR
-                              , SS_Copper_ALU_table = df_SS_Copper_ALU
                               , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
                               , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
                               , Toxics_DWS_table = df_Toxics_DWS
@@ -3192,7 +3125,7 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
                               , Toxics_LW_table = df_Toxics_LW
                               , Toxics_WH_table = df_Toxics_WH
                               , Turbidity_ALU_table = df_Turbidity_ALU)
-#> Tables provided:  Conventionals_ALU_table, Bacteria_PCR_SCR_table, Conventionals_LW_table, LTD_ALU_table, Nutrients_Lakes_table, Nutrients_Streams_table, pH_PCR_table, SS_Copper_ALU_table, Toxics_ALU_nonHDM_table, Toxics_ALU_HDM_table, Toxics_DWS_table, Toxics_HH_table, Toxics_IRR_table, Toxics_LW_table, Toxics_WH_table 
+#> Tables provided:  Conventionals_ALU_table, Bacteria_PCR_SCR_table, Conventionals_LW_table, LTD_ALU_table, Nutrients_Lakes_table, Nutrients_Streams_table, pH_PCR_table, Toxics_ALU_nonHDM_table, Toxics_ALU_HDM_table, Toxics_DWS_table, Toxics_HH_table, Toxics_IRR_table, Toxics_LW_table, Toxics_WH_table 
 #> Tables missing:  None 
 #> Tables removed (zero observations):  Salinity_IRR_table, Turbidity_ALU_table 
 #>  [1] "WATER_ID"               "WATER_NAME"             "PROJECT_NAME"          
@@ -3201,8 +3134,8 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
 #> [10] "UNITS"                  "R_Script_Name"          "DU"                    
 #> [13] "n_Samples"              "Criteria_Value"         "Method"                
 #> [16] "Rationale"              "Exceed"                 "n_Exceed"              
-#> [19] "pct_Exceed"             "n_Samples_assessable"   "n_Exceed_Acute"        
-#> [22] "n_Exceed_Chronic"       "Criteria_Value_Acute"   "Criteria_Value_Chronic"
+#> [19] "pct_Exceed"             "Criteria_Value_Acute"   "Criteria_Value_Chronic"
+#> [22] "n_Samples_assessable"   "n_Exceed_Acute"         "n_Exceed_Chronic"      
 #> [25] "Criteria_Type"          "Criteria_value"        
 #> 
 #> ── Column specification ────────────────────────────────────────────────────────
@@ -3213,11 +3146,11 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
 #>   Criteria_Value = col_double(),
 #>   n_Exceed = col_double(),
 #>   pct_Exceed = col_logical(),
+#>   Criteria_Value_Acute = col_double(),
+#>   Criteria_Value_Chronic = col_double(),
 #>   n_Samples_assessable = col_double(),
 #>   n_Exceed_Acute = col_double(),
 #>   n_Exceed_Chronic = col_double(),
-#>   Criteria_Value_Acute = col_double(),
-#>   Criteria_Value_Chronic = col_double(),
 #>   Criteria_value = col_double()
 #> )
 #> ℹ Use `spec()` for the full column specifications.

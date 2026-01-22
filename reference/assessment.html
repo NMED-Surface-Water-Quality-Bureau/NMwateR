@@ -39,7 +39,7 @@ Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Assessment of water quality data using NMED SWQS and CALM logic</h1>
-      <small class="dont-index">Source: <a href="https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/blob/v1.0.0/R/assessment.R" class="external-link"><code>R/assessment.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/NMED-Surface-Water-Quality-Bureau/NMwateR/blob/main/R/assessment.R" class="external-link"><code>R/assessment.R</code></a></small>
       <div class="d-none name"><code>assessment.Rd</code></div>
     </div>
 
@@ -61,7 +61,6 @@ Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
 <span>  Nutrients_Streams_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  pH_PCR_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Salinity_IRR_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  SS_Copper_ALU_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Toxics_ALU_nonHDM_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Toxics_ALU_HDM_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Toxics_DWS_table <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -109,10 +108,6 @@ Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
 <dd><p>WQ analysis export from Salinity_IRR() function.</p></dd>
 
 
-<dt id="arg-ss-copper-alu-table">SS_Copper_ALU_table<a class="anchor" aria-label="anchor" href="#arg-ss-copper-alu-table"></a></dt>
-<dd><p>WQ analysis export from SS_Copper_ALU() function.</p></dd>
-
-
 <dt id="arg-toxics-alu-nonhdm-table">Toxics_ALU_nonHDM_table<a class="anchor" aria-label="anchor" href="#arg-toxics-alu-nonhdm-table"></a></dt>
 <dd><p>WQ analysis export from Toxics_ALU_nonHDM() function.</p></dd>
 
@@ -158,8 +153,6 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">df_Chem_combined</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_chemistry_processed.html">example_chemistry_processed</a></span></span></span>
 <span class="r-in"><span><span class="va">df_Criteria</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_criteria_processed.html">example_criteria_processed</a></span></span></span>
 <span class="r-in"><span><span class="va">df_DU_processed</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_DU_processed.html">example_DU_processed</a></span></span></span>
-<span class="r-in"><span><span class="va">example_LANL_DU_table</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_LANL_DU_table.html">example_LANL_DU_table</a></span></span></span>
-<span class="r-in"><span><span class="va">example_LANL_WQ_table</span> <span class="op">&lt;-</span> <span class="fu">NMwateR</span><span class="fu">::</span><span class="va"><a href="example_LANL_WQ_table.html">example_LANL_WQ_table</a></span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Water quality analyses</span></span></span>
 <span class="r-in"><span><span class="co">## Conventionals ALU</span></span></span>
@@ -1365,65 +1358,6 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2005</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 570</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 591</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Site-specific copper</span></span></span>
-<span class="r-in"><span><span class="co">#Only used for LANL data</span></span></span>
-<span class="r-in"><span><span class="va">SS_Copper_ALU_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="SS_Copper_ALU.html">SS_Copper_ALU</a></span><span class="op">(</span>DU_LANL_Stations_table <span class="op">=</span> <span class="va">example_LANL_DU_table</span></span></span>
-<span class="r-in"><span>                                    , LANL_WQ_data <span class="op">=</span> <span class="va">example_LANL_WQ_table</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_054"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_055"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_046"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_03"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_005"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-2118.A_70"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_03"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_002"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_007"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_14"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_10"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_005"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_003"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_063"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-127.A_00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_006"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_000"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_049"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_043"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-99.A_001"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_006"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_045"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_029"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-97.A_004"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_17"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_16"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_01"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_08"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_040"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_06"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_048"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_07"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_091"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_15"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_053"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_042"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_047"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_11"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_01"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-126.A_00"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_051"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_02"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_04"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_05"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_09"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_044"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-9000.A_052"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_12"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NM-128.A_13"</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">df_SS_Copper_ALU</span> <span class="op">&lt;-</span> <span class="va">SS_Copper_ALU_list</span><span class="op">$</span><span class="va">df_SS_Copper_ALU</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">SS_Copper_ALU_list</span>, <span class="va">example_LANL_DU_table</span>, <span class="va">example_LANL_WQ_table</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Toxics DWS</span></span></span>
 <span class="r-in"><span><span class="va">df_Toxics_DWS</span> <span class="op">&lt;-</span> <span class="fu"><a href="Toxics_DWS.html">Toxics_DWS</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span></span>
@@ -3228,7 +3162,6 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 <span class="r-in"><span>                              , Nutrients_Streams_table <span class="op">=</span> <span class="va">df_Nutrients_Streams</span></span></span>
 <span class="r-in"><span>                              , pH_PCR_table <span class="op">=</span> <span class="va">df_pH_PCR</span></span></span>
 <span class="r-in"><span>                              , Salinity_IRR_table <span class="op">=</span> <span class="va">df_Salinity_IRR</span></span></span>
-<span class="r-in"><span>                              , SS_Copper_ALU_table <span class="op">=</span> <span class="va">df_SS_Copper_ALU</span></span></span>
 <span class="r-in"><span>                              , Toxics_ALU_nonHDM_table <span class="op">=</span> <span class="va">df_Tox_ALU_nHDM</span></span></span>
 <span class="r-in"><span>                              , Toxics_ALU_HDM_table <span class="op">=</span> <span class="va">df_Toxics_ALU_HDM</span></span></span>
 <span class="r-in"><span>                              , Toxics_DWS_table <span class="op">=</span> <span class="va">df_Toxics_DWS</span></span></span>
@@ -3237,7 +3170,7 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 <span class="r-in"><span>                              , Toxics_LW_table <span class="op">=</span> <span class="va">df_Toxics_LW</span></span></span>
 <span class="r-in"><span>                              , Toxics_WH_table <span class="op">=</span> <span class="va">df_Toxics_WH</span></span></span>
 <span class="r-in"><span>                              , Turbidity_ALU_table <span class="op">=</span> <span class="va">df_Turbidity_ALU</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Tables provided:  Conventionals_ALU_table, Bacteria_PCR_SCR_table, Conventionals_LW_table, LTD_ALU_table, Nutrients_Lakes_table, Nutrients_Streams_table, pH_PCR_table, SS_Copper_ALU_table, Toxics_ALU_nonHDM_table, Toxics_ALU_HDM_table, Toxics_DWS_table, Toxics_HH_table, Toxics_IRR_table, Toxics_LW_table, Toxics_WH_table </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Tables provided:  Conventionals_ALU_table, Bacteria_PCR_SCR_table, Conventionals_LW_table, LTD_ALU_table, Nutrients_Lakes_table, Nutrients_Streams_table, pH_PCR_table, Toxics_ALU_nonHDM_table, Toxics_ALU_HDM_table, Toxics_DWS_table, Toxics_HH_table, Toxics_IRR_table, Toxics_LW_table, Toxics_WH_table </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Tables missing:  None </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Tables removed (zero observations):  Salinity_IRR_table, Turbidity_ALU_table </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "WATER_ID"               "WATER_NAME"             "PROJECT_NAME"          </span>
@@ -3246,8 +3179,8 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 <span class="r-out co"><span class="r-pr">#&gt;</span> [10] "UNITS"                  "R_Script_Name"          "DU"                    </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [13] "n_Samples"              "Criteria_Value"         "Method"                </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [16] "Rationale"              "Exceed"                 "n_Exceed"              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "pct_Exceed"             "n_Samples_assessable"   "n_Exceed_Acute"        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [22] "n_Exceed_Chronic"       "Criteria_Value_Acute"   "Criteria_Value_Chronic"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "pct_Exceed"             "Criteria_Value_Acute"   "Criteria_Value_Chronic"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [22] "n_Samples_assessable"   "n_Exceed_Acute"         "n_Exceed_Chronic"      </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [25] "Criteria_Type"          "Criteria_value"        </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
@@ -3258,11 +3191,11 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_Value = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   n_Exceed = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   pct_Exceed = <span style="color: #BBBB00;">col_logical()</span>,</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_Value_Acute = <span style="color: #00BB00;">col_double()</span>,</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_Value_Chronic = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   n_Samples_assessable = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   n_Exceed_Acute = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   n_Exceed_Chronic = <span style="color: #00BB00;">col_double()</span>,</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_Value_Acute = <span style="color: #00BB00;">col_double()</span>,</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_Value_Chronic = <span style="color: #00BB00;">col_double()</span>,</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   Criteria_value = <span style="color: #00BB00;">col_double()</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> )</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` for the full column specifications.</span>

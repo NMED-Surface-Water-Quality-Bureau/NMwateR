@@ -73,9 +73,6 @@ In development.
   : Analysis of lake nutrient data against ALU standards
 - [`Nutrients_Streams()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Nutrients_Streams.md)
   : Analysis of stream nutrient data against ALU standards
-- [`SS_Copper_ALU()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/SS_Copper_ALU.md)
-  : Analysis of copper data from LANL against site-specific ALU
-  standards
 - [`Salinity_IRR()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Salinity_IRR.md)
   : Analysis of salinity data against IRR standards
 - [`Toxics_ALU_HDM()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/Toxics_ALU_HDM.md)
@@ -98,10 +95,6 @@ In development.
   : Assessment of water quality data using NMED SWQS and CALM logic
 - [`example_DU_processed`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_DU_processed.md)
   : Example Designated Use (DU) Processed Table
-- [`example_LANL_DU_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_DU_table.md)
-  : Example LANL DU Table
-- [`example_LANL_WQ_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_LANL_WQ_table.md)
-  : Example LANL WQ Table
 - [`example_SQUID_DU_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_DU_table.md)
   : Example SQUID DU Table
 - [`example_SQUID_LTD_table`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/example_SQUID_LTD_table.md)
