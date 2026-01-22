@@ -1,11 +1,37 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2025-12-15 09:40:48.607964
+2026-01-22 14:21:09.89966
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-12-15 09:40:48.657506
+    #> Last Update: 2026-01-22 14:21:09.934605
+
+# NMwateR 1.0.0.9005 (2026-01-22)
+
+- Addressed NMED review of package:
+  - Updated usage of “standards” to “standards and/or thresholds”
+
+# NMwateR 1.0.0.9004 (2026-01-22)
+
+- Addressed NMED review of package:
+  - Updated toxics logic to use 36 months rather than 3 years.
+
+# NMwateR 1.0.0.9003 (2026-01-22)
+
+- Addressed NMED review of package:
+  - Updated vignette with some additional information.
+
+# NMwateR 1.0.0.9002 (2026-01-22)
+
+- Addressed NMED review of package:
+  - Updated links to CALM and removed “guidance manual” from
+    descriptions.
+
+# NMwateR 1.0.0.9001 (2026-01-22)
+
+- Addressed NMED review of package:
+  - Removed functions for LANL site-specific copper calculations
 
 # NMwateR 1.0.0 (2025-12-15)
 

@@ -1,6 +1,6 @@
-#' Analysis of toxics data against DWS standards
+#' Analysis of toxics data against DWS standards and/or thresholds
 #'
-#' This function compares toxics data against water quality standards for
+#' This function compares toxics data against water quality standards and/or thresholds for
 #' drinking water supply (DWS) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually

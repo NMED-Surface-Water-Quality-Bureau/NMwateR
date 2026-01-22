@@ -2,7 +2,7 @@
 % Please edit documentation in R/Salinity_IRR.R
 \name{Salinity_IRR}
 \alias{Salinity_IRR}
-\title{Analysis of salinity data against IRR standards}
+\title{Analysis of salinity data against IRR standards and/or thresholds}
 \usage{
 Salinity_IRR(Chem_table, DU_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares salinity data against water quality
-standards for irrigation (IRR) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+standards and/or thresholds for irrigation (IRR) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

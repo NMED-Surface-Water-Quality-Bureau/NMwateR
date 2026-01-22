@@ -2,7 +2,7 @@
 % Please edit documentation in R/Conventionals_LW.R
 \name{Conventionals_LW}
 \alias{Conventionals_LW}
-\title{Analysis of conventionals data against LW standards}
+\title{Analysis of conventionals data against LW standards and/or thresholds}
 \usage{
 Conventionals_LW(Chem_table, DU_table, Criteria_table)
 }
@@ -20,7 +20,8 @@ water quality criteria.
 }
 \description{
 This function compares conventional water chemistry data against water quality
-standards for livestock watering (LW) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+standards and/or thresholds for livestock watering (LW) use. For more
+information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

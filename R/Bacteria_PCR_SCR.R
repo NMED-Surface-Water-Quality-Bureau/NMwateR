@@ -1,7 +1,7 @@
-#' Analysis of bacteria data against PCR and SCR standards
+#' Analysis of bacteria data against PCR and SCR standards and/or thresholds
 #'
 #' This function compares bacteria data against water quality
-#' standards for primary contact recreation (PCR) and secondary contact recreation
+#' standards and/or thresholds for primary contact recreation (PCR) and secondary contact recreation
 #' (SCR) uses. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually

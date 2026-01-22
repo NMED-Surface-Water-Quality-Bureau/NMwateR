@@ -2,7 +2,7 @@
 % Please edit documentation in R/pH_PCR.R
 \name{pH_PCR}
 \alias{pH_PCR}
-\title{Analysis of pH data against PCR standards}
+\title{Analysis of pH data against PCR standards and/or thresholds}
 \usage{
 pH_PCR(Chem_table, DU_table)
 }
@@ -17,7 +17,7 @@ A dataframe containing analyzed pH data compared to PCR
 water quality criteria.
 }
 \description{
-This function compares pH data against water quality standards for
+This function compares pH data against water quality standards and/or thresholds for
 primary contact recreation (PCR) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

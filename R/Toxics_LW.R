@@ -1,7 +1,7 @@
-#' Analysis of toxics data against LW standards
+#' Analysis of toxics data against LW standards and/or thresholds
 #'
 #' This function compares toxics data against water quality
-#' standards for livestock watering (LW) use. For more information, see the
+#' standards and/or thresholds for livestock watering (LW) use. For more information, see the
 #' \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually

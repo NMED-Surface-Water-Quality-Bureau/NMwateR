@@ -2,7 +2,7 @@
 % Please edit documentation in R/Conventionals_ALU.R
 \name{Conventionals_ALU}
 \alias{Conventionals_ALU}
-\title{Analysis of conventionals data against ALU standards}
+\title{Analysis of conventionals data against ALU standards and/or thresholds}
 \usage{
 Conventionals_ALU(Chem_table, DU_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares conventional water chemistry data against water quality
-standards for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+standards and/or thresholds for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

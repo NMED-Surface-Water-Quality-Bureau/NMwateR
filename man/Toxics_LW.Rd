@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_LW.R
 \name{Toxics_LW}
 \alias{Toxics_LW}
-\title{Analysis of toxics data against LW standards}
+\title{Analysis of toxics data against LW standards and/or thresholds}
 \usage{
 Toxics_LW(Chem_table, Criteria_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares toxics data against water quality
-standards for livestock watering (LW) use. For more information, see the
+standards and/or thresholds for livestock watering (LW) use. For more information, see the
 \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

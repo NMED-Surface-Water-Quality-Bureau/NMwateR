@@ -2,7 +2,7 @@
 % Please edit documentation in R/Nutrients_Lakes.R
 \name{Nutrients_Lakes}
 \alias{Nutrients_Lakes}
-\title{Analysis of lake nutrient data against ALU standards}
+\title{Analysis of lake nutrient data against ALU standards and/or thresholds}
 \usage{
 Nutrients_Lakes(Chem_table, DU_table)
 }
@@ -19,7 +19,7 @@ is an intermediate file used for QA/QC purposes.
 }
 \description{
 This function compares lake nutrient data against water quality
-standards for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+standards and/or thresholds for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

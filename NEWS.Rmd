@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# NMwateR 1.0.0.9005 (2026-01-22)
+-   Addressed NMED review of package:
+    -   Updated usage of "standards" to "standards and/or thresholds"
+    
 # NMwateR 1.0.0.9004 (2026-01-22)
 -   Addressed NMED review of package:
     -   Updated toxics logic to use 36 months rather than 3 years.

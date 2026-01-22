@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_IRR.R
 \name{Toxics_IRR}
 \alias{Toxics_IRR}
-\title{Analysis of toxics data against IRR standards}
+\title{Analysis of toxics data against IRR standards and/or thresholds}
 \usage{
 Toxics_IRR(Chem_table, Criteria_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares toxics data against water quality
-standards for irrigation (IRR) use. For more information, see the
+standards and/or thresholds for irrigation (IRR) use. For more information, see the
 \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

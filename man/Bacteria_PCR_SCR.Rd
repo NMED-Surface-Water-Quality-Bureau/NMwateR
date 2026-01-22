@@ -2,7 +2,7 @@
 % Please edit documentation in R/Bacteria_PCR_SCR.R
 \name{Bacteria_PCR_SCR}
 \alias{Bacteria_PCR_SCR}
-\title{Analysis of bacteria data against PCR and SCR standards}
+\title{Analysis of bacteria data against PCR and SCR standards and/or thresholds}
 \usage{
 Bacteria_PCR_SCR(Chem_table, DU_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares bacteria data against water quality
-standards for primary contact recreation (PCR) and secondary contact recreation
+standards and/or thresholds for primary contact recreation (PCR) and secondary contact recreation
 (SCR) uses. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

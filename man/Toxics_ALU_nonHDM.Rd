@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_ALU_nonHDM.R
 \name{Toxics_ALU_nonHDM}
 \alias{Toxics_ALU_nonHDM}
-\title{Analysis of non hardness dependent toxics data against ALU standards}
+\title{Analysis of non hardness dependent toxics data against ALU standards and/or thresholds}
 \usage{
 Toxics_ALU_nonHDM(Chem_table, DU_table, Criteria_table)
 }
@@ -20,7 +20,7 @@ compared to ALU water quality criteria.
 }
 \description{
 This function compares non hardness dependent toxics data against water quality
-standards for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+standards and/or thresholds for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

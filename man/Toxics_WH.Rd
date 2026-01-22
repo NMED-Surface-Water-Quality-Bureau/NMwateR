@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_WH.R
 \name{Toxics_WH}
 \alias{Toxics_WH}
-\title{Analysis of toxics data against WH standards}
+\title{Analysis of toxics data against WH standards and/or thresholds}
 \usage{
 Toxics_WH(Chem_table, Criteria_table)
 }
@@ -18,7 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares toxics data against water quality
-standards for wildlife habitat (WH) use. For more information, see the
+standards and/or thresholds for wildlife habitat (WH) use. For more information, see the
 \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

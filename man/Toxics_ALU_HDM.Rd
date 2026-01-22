@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_ALU_HDM.R
 \name{Toxics_ALU_HDM}
 \alias{Toxics_ALU_HDM}
-\title{Analysis of hardness dependent toxics data against ALU standards}
+\title{Analysis of hardness dependent toxics data against ALU standards and/or thresholds}
 \usage{
 Toxics_ALU_HDM(Chem_table, DU_table, Criteria_table)
 }
@@ -21,7 +21,7 @@ labeled "Indiv_Res" is an intermediate file used for QA/QC purposes.
 }
 \description{
 This function compares hardness dependent toxics data against water quality
-standards for aquatic life use (ALU). For more information, see the
+standards and/or thresholds for aquatic life use (ALU). For more information, see the
 \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

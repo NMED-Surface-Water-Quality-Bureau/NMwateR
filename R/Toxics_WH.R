@@ -1,7 +1,7 @@
-#' Analysis of toxics data against WH standards
+#' Analysis of toxics data against WH standards and/or thresholds
 #'
 #' This function compares toxics data against water quality
-#' standards for wildlife habitat (WH) use. For more information, see the
+#' standards and/or thresholds for wildlife habitat (WH) use. For more information, see the
 #' \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually

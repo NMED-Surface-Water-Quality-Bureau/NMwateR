@@ -1,7 +1,7 @@
-#' Analysis of long-term deployment data against ALU standards
+#' Analysis of long-term deployment data against ALU standards and/or thresholds
 #'
 #' This function compares conventional long-term deployment water chemistry data
-#' against water quality standards for aquatic life use (ALU). For more
+#' against water quality standards and/or thresholds for aquatic life use (ALU). For more
 #' information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually

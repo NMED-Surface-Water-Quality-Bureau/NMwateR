@@ -2,7 +2,7 @@
 % Please edit documentation in R/Toxics_DWS.R
 \name{Toxics_DWS}
 \alias{Toxics_DWS}
-\title{Analysis of toxics data against DWS standards}
+\title{Analysis of toxics data against DWS standards and/or thresholds}
 \usage{
 Toxics_DWS(Chem_table, Criteria_table)
 }
@@ -17,7 +17,7 @@ A dataframe containing analyzed toxics data compared to DWS
 water quality criteria.
 }
 \description{
-This function compares toxics data against water quality standards for
+This function compares toxics data against water quality standards and/or thresholds for
 drinking water supply (DWS) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{

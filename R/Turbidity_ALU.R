@@ -1,7 +1,7 @@
-#' Analysis of turbidity data against ALU standards
+#' Analysis of turbidity data against ALU standards and/or thresholds
 #'
 #' This function compares turbidity data against water quality
-#' standards for aquatic life use (ALU). For more information, see the
+#' standards and/or thresholds for aquatic life use (ALU). For more information, see the
 #' \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
