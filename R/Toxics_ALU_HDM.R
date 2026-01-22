@@ -134,13 +134,13 @@ Toxics_ALU_HDM <- function(Chem_table
       df_subset_v2 <- df_subset %>%
         dplyr::filter(CHR_UID %in% filter_by)
 
-      # subset chem data by last three years
-      maxYear <- max(lubridate::year(df_subset_v2$DATE))
-      YearMinus2 <- maxYear-2
+      # subset chem data by last 36 months
+      latest_date <- max(df_subset_v2$DATE, na.rm = TRUE)
+      cutoff_date <- lubridate::add_with_rollback(latest_date, months(-36))
 
       df_subset_v3 <- df_subset_v2 %>%
-        dplyr::mutate(Year = lubridate::year(DATE)) %>%
-        dplyr::filter(Year >= YearMinus2)
+        dplyr::filter(!is.na(DATE)) %>%
+        dplyr::filter(DATE >= cutoff_date)
 
       # join hardness data
       df_subset_v4 <- dplyr::left_join(df_subset_v3, df_predictors
