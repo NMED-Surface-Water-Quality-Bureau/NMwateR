@@ -1,8 +1,8 @@
-# Analysis of toxics data against IRR standards
+# Analysis of toxics data against IRR standards and/or thresholds
 
-This function compares toxics data against water quality standards for
-irrigation (IRR) use. For more information, see the [NMED Consolidated
-Assessment and Listing Methodology
+This function compares toxics data against water quality standards
+and/or thresholds for irrigation (IRR) use. For more information, see
+the [NMED Consolidated Assessment and Listing Methodology
 (CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage

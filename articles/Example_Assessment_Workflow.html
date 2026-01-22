@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">NMwateR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9005</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -220,7 +220,8 @@ document.</p>
 <h3 id="conventionals-alu">Conventionals (ALU)<a class="anchor" aria-label="anchor" href="#conventionals-alu"></a>
 </h3>
 <p>This function compares conventional water chemistry data against
-water quality standards for aquatic life use (ALU).</p>
+water quality standards and/or thresholds for aquatic life use
+(ALU).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Conv_ALU</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Conventionals_ALU.html">Conventionals_ALU</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                 , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></code></pre></div>
@@ -229,8 +230,8 @@ water quality standards for aquatic life use (ALU).</p>
 <h3 id="bacteria-pcrscr">Bacteria (PCR/SCR)<a class="anchor" aria-label="anchor" href="#bacteria-pcrscr"></a>
 </h3>
 <p>This function compares bacteria data against water quality standards
-for primary contact recreation (PCR) and secondary contact recreation
-(SCR) uses.</p>
+and/or thresholds for primary contact recreation (PCR) and secondary
+contact recreation (SCR) uses.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Bacteria_PCR_SCR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Bacteria_PCR_SCR.html">Bacteria_PCR_SCR</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                        , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></code></pre></div>
@@ -239,7 +240,8 @@ for primary contact recreation (PCR) and secondary contact recreation
 <h3 id="conventionals-lw">Conventionals (LW)<a class="anchor" aria-label="anchor" href="#conventionals-lw"></a>
 </h3>
 <p>This function compares conventional water chemistry data against
-water quality standards for livestock watering (LW) use.</p>
+water quality standards and/or thresholds for livestock watering (LW)
+use.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Conventionals_LW</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Conventionals_LW.html">Conventionals_LW</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                        , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span></span>
@@ -249,8 +251,8 @@ water quality standards for livestock watering (LW) use.</p>
 <h3 id="long-term-deployment-alu">Long-term deployment (ALU)<a class="anchor" aria-label="anchor" href="#long-term-deployment-alu"></a>
 </h3>
 <p>This function compares conventional long-term deployment water
-chemistry data against water quality standards for aquatic life use
-(ALU).</p>
+chemistry data against water quality standards and/or thresholds for
+aquatic life use (ALU).</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_LTD_ALU</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/LTD_ALU.html">LTD_ALU</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                      , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></code></pre></div>
@@ -259,7 +261,7 @@ chemistry data against water quality standards for aquatic life use
 <h3 id="nutrients-lakes">Nutrients (Lakes)<a class="anchor" aria-label="anchor" href="#nutrients-lakes"></a>
 </h3>
 <p>This function compares lake nutrient data against water quality
-standards for aquatic life use (ALU).</p>
+standards and/or thresholds for aquatic life use (ALU).</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">Nutrients_Lakes_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Nutrients_Lakes.html">Nutrients_Lakes</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                        , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span>
@@ -271,7 +273,7 @@ standards for aquatic life use (ALU).</p>
 <h3 id="nutrients-streams">Nutrients (Streams)<a class="anchor" aria-label="anchor" href="#nutrients-streams"></a>
 </h3>
 <p>This function compares stream nutrient data against water quality
-standards for aquatic life use (ALU).</p>
+standards and/or thresholds for aquatic life use (ALU).</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">Nutrients_Streams_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Nutrients_Streams.html">Nutrients_Streams</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                        , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span>
@@ -282,8 +284,8 @@ standards for aquatic life use (ALU).</p>
 <div class="section level3">
 <h3 id="ph-pcr">pH (PCR)<a class="anchor" aria-label="anchor" href="#ph-pcr"></a>
 </h3>
-<p>This function compares pH data against water quality standards for
-primary contact recreation (PCR) use.</p>
+<p>This function compares pH data against water quality standards and/or
+thresholds for primary contact recreation (PCR) use.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_pH_PCR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pH_PCR.html">pH_PCR</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                    , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></code></pre></div>
@@ -291,8 +293,8 @@ primary contact recreation (PCR) use.</p>
 <div class="section level3">
 <h3 id="salinity-irr">Salinity (IRR)<a class="anchor" aria-label="anchor" href="#salinity-irr"></a>
 </h3>
-<p>This function compares salinity data against water quality #’
-standards for irrigation (IRR) use.</p>
+<p>This function compares salinity data against water quality standards
+and/or thresholds for irrigation (IRR) use.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Salinity_IRR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Salinity_IRR.html">Salinity_IRR</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span><span class="op">)</span></span></code></pre></div>
@@ -301,7 +303,8 @@ standards for irrigation (IRR) use.</p>
 <h3 id="toxics-nonhdm-alu">Toxics nonHDM (ALU)<a class="anchor" aria-label="anchor" href="#toxics-nonhdm-alu"></a>
 </h3>
 <p>This function compares non hardness-dependent toxics data against
-water quality standards for aquatic life use (ALU).</p>
+water quality standards and/or thresholds for aquatic life use
+(ALU).</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Tox_ALU_nHDM</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_ALU_nonHDM.html">Toxics_ALU_nonHDM</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                     , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span></span>
@@ -311,7 +314,7 @@ water quality standards for aquatic life use (ALU).</p>
 <h3 id="toxics-hdm-alu">Toxics HDM (ALU)<a class="anchor" aria-label="anchor" href="#toxics-hdm-alu"></a>
 </h3>
 <p>This function compares hardness dependent toxics data against water
-quality standards for aquatic life use (ALU).</p>
+quality standards and/or thresholds for aquatic life use (ALU).</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">Toxics_ALU_HDM_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_ALU_HDM.html">Toxics_ALU_HDM</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                    , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span></span>
@@ -325,7 +328,7 @@ quality standards for aquatic life use (ALU).</p>
 <h3 id="toxics-dws">Toxics (DWS)<a class="anchor" aria-label="anchor" href="#toxics-dws"></a>
 </h3>
 <p>This function compares toxics data against water quality standards
-for drinking water supply (DWS) use.</p>
+and/or thresholds for drinking water supply (DWS) use.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Toxics_DWS</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_DWS.html">Toxics_DWS</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                            , Criteria_table <span class="op">=</span> <span class="va">df_Criteria</span><span class="op">)</span></span></code></pre></div>
@@ -334,7 +337,8 @@ for drinking water supply (DWS) use.</p>
 <h3 id="toxics-hh">Toxics (HH)<a class="anchor" aria-label="anchor" href="#toxics-hh"></a>
 </h3>
 <p>This function compares toxics data against water quality standards
-for human health (HH) under the aquatic life use (ALU).</p>
+and/or thresholds for human health (HH) under the aquatic life use
+(ALU).</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Toxics_HH</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_HH.html">Toxics_HH</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                          , Criteria_table <span class="op">=</span> <span class="va">df_Criteria</span><span class="op">)</span></span></code></pre></div>
@@ -343,7 +347,7 @@ for human health (HH) under the aquatic life use (ALU).</p>
 <h3 id="toxics-irr">Toxics (IRR)<a class="anchor" aria-label="anchor" href="#toxics-irr"></a>
 </h3>
 <p>This function compares toxics data against water quality standards
-for irrigation (IRR) use.</p>
+and/or thresholds for irrigation (IRR) use.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Toxics_IRR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_IRR.html">Toxics_IRR</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                            , Criteria_table <span class="op">=</span> <span class="va">df_Criteria</span><span class="op">)</span></span></code></pre></div>
@@ -352,7 +356,7 @@ for irrigation (IRR) use.</p>
 <h3 id="toxics-lw">Toxics (LW)<a class="anchor" aria-label="anchor" href="#toxics-lw"></a>
 </h3>
 <p>This function compares toxics data against water quality standards
-for livestock watering (LW) use.</p>
+and/or thresholds for livestock watering (LW) use.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Toxics_LW</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_LW.html">Toxics_LW</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                          , Criteria_table <span class="op">=</span> <span class="va">df_Criteria</span><span class="op">)</span></span></code></pre></div>
@@ -361,7 +365,7 @@ for livestock watering (LW) use.</p>
 <h3 id="toxics-wh">Toxics (WH)<a class="anchor" aria-label="anchor" href="#toxics-wh"></a>
 </h3>
 <p>This function compares toxics data against water quality standards
-for wildlife habitat (WH) use.</p>
+and/or thresholds for wildlife habitat (WH) use.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df_Toxics_WH</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Toxics_WH.html">Toxics_WH</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                          , Criteria_table <span class="op">=</span> <span class="va">df_Criteria</span><span class="op">)</span></span></code></pre></div>
@@ -370,7 +374,7 @@ for wildlife habitat (WH) use.</p>
 <h3 id="turbidity-alu">Turbidity (ALU)<a class="anchor" aria-label="anchor" href="#turbidity-alu"></a>
 </h3>
 <p>This function compares turbidity data against water quality standards
-for aquatic life use (ALU).</p>
+and/or thresholds for aquatic life use (ALU).</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">Turbidity_ALU_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Turbidity_ALU.html">Turbidity_ALU</a></span><span class="op">(</span>Chem_table <span class="op">=</span> <span class="va">df_Chem_combined</span></span>
 <span>                                    , DU_table <span class="op">=</span> <span class="va">df_DU_processed</span></span>

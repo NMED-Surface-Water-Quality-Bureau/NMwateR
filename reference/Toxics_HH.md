@@ -1,10 +1,10 @@
-# Analysis of toxics data against HH standards for ALU
+# Analysis of toxics data against HH standards and/or thresholds for ALU
 
-This function compares toxics data against water quality standards for
-human health (HH) under the aquatic life use (ALU). For more
-information, see the [NMED Consolidated Assessment and Listing
-Methodology (CALM)](https://www.env.nm.gov/surface-water-quality/calm/)
-document.
+This function compares toxics data against water quality standards
+and/or thresholds for human health (HH) under the aquatic life use
+(ALU). For more information, see the [NMED Consolidated Assessment and
+Listing Methodology
+(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage
 

@@ -1,9 +1,10 @@
-# Analysis of conventionals data against LW standards
+# Analysis of conventionals data against LW standards and/or thresholds
 
 This function compares conventional water chemistry data against water
-quality standards for livestock watering (LW) use. For more information,
-see the [NMED Consolidated Assessment and Listing Methodology
-(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
+quality standards and/or thresholds for livestock watering (LW) use. For
+more information, see the [NMED Consolidated Assessment and Listing
+Methodology (CALM)](https://www.env.nm.gov/surface-water-quality/calm/)
+document.
 
 ## Usage
 

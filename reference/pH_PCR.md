@@ -1,9 +1,10 @@
-# Analysis of pH data against PCR standards
+# Analysis of pH data against PCR standards and/or thresholds
 
-This function compares pH data against water quality standards for
-primary contact recreation (PCR) use. For more information, see the
-[NMED Consolidated Assessment and Listing Methodology
-(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
+This function compares pH data against water quality standards and/or
+thresholds for primary contact recreation (PCR) use. For more
+information, see the [NMED Consolidated Assessment and Listing
+Methodology (CALM)](https://www.env.nm.gov/surface-water-quality/calm/)
+document.
 
 ## Usage
 

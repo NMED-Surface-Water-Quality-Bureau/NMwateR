@@ -166,7 +166,7 @@ document.
 ### Conventionals (ALU)
 
 This function compares conventional water chemistry data against water
-quality standards for aquatic life use (ALU).
+quality standards and/or thresholds for aquatic life use (ALU).
 
 ``` r
 df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
@@ -175,9 +175,9 @@ df_Conv_ALU <- Conventionals_ALU(Chem_table = df_Chem_combined
 
 ### Bacteria (PCR/SCR)
 
-This function compares bacteria data against water quality standards for
-primary contact recreation (PCR) and secondary contact recreation (SCR)
-uses.
+This function compares bacteria data against water quality standards
+and/or thresholds for primary contact recreation (PCR) and secondary
+contact recreation (SCR) uses.
 
 ``` r
 df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
@@ -187,7 +187,7 @@ df_Bacteria_PCR_SCR <- Bacteria_PCR_SCR(Chem_table = df_Chem_combined
 ### Conventionals (LW)
 
 This function compares conventional water chemistry data against water
-quality standards for livestock watering (LW) use.
+quality standards and/or thresholds for livestock watering (LW) use.
 
 ``` r
 df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
@@ -198,7 +198,8 @@ df_Conventionals_LW <- Conventionals_LW(Chem_table = df_Chem_combined
 ### Long-term deployment (ALU)
 
 This function compares conventional long-term deployment water chemistry
-data against water quality standards for aquatic life use (ALU).
+data against water quality standards and/or thresholds for aquatic life
+use (ALU).
 
 ``` r
 df_LTD_ALU <- LTD_ALU(Chem_table = df_Chem_combined
@@ -208,7 +209,7 @@ df_LTD_ALU <- LTD_ALU(Chem_table = df_Chem_combined
 ### Nutrients (Lakes)
 
 This function compares lake nutrient data against water quality
-standards for aquatic life use (ALU).
+standards and/or thresholds for aquatic life use (ALU).
 
 ``` r
 Nutrients_Lakes_list <- Nutrients_Lakes(Chem_table = df_Chem_combined
@@ -221,7 +222,7 @@ df_Nutrients_Lakes_Indiv_Res <- Nutrients_Lakes_list$Nutrients_Lakes_Indiv_Res #
 ### Nutrients (Streams)
 
 This function compares stream nutrient data against water quality
-standards for aquatic life use (ALU).
+standards and/or thresholds for aquatic life use (ALU).
 
 ``` r
 Nutrients_Streams_list <- Nutrients_Streams(Chem_table = df_Chem_combined
@@ -233,8 +234,8 @@ df_Nutrients_Streams_Indiv_Res <- Nutrients_Streams_list$Nutrients_Streams_Indiv
 
 ### pH (PCR)
 
-This function compares pH data against water quality standards for
-primary contact recreation (PCR) use.
+This function compares pH data against water quality standards and/or
+thresholds for primary contact recreation (PCR) use.
 
 ``` r
 df_pH_PCR <- pH_PCR(Chem_table = df_Chem_combined
@@ -243,8 +244,8 @@ df_pH_PCR <- pH_PCR(Chem_table = df_Chem_combined
 
 ### Salinity (IRR)
 
-This function compares salinity data against water quality \#’ standards
-for irrigation (IRR) use.
+This function compares salinity data against water quality standards
+and/or thresholds for irrigation (IRR) use.
 
 ``` r
 df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
@@ -254,7 +255,7 @@ df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
 ### Toxics nonHDM (ALU)
 
 This function compares non hardness-dependent toxics data against water
-quality standards for aquatic life use (ALU).
+quality standards and/or thresholds for aquatic life use (ALU).
 
 ``` r
 df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
@@ -265,7 +266,7 @@ df_Tox_ALU_nHDM <- Toxics_ALU_nonHDM(Chem_table = df_Chem_combined
 ### Toxics HDM (ALU)
 
 This function compares hardness dependent toxics data against water
-quality standards for aquatic life use (ALU).
+quality standards and/or thresholds for aquatic life use (ALU).
 
 ``` r
 Toxics_ALU_HDM_list <- Toxics_ALU_HDM(Chem_table = df_Chem_combined
@@ -279,8 +280,8 @@ df_Toxics_ALU_HDM_Indiv_Res <- Toxics_ALU_HDM_list$Toxics_ALU_HDM_Indiv_Res # in
 
 ### Toxics (DWS)
 
-This function compares toxics data against water quality standards for
-drinking water supply (DWS) use.
+This function compares toxics data against water quality standards
+and/or thresholds for drinking water supply (DWS) use.
 
 ``` r
 df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -289,8 +290,9 @@ df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
 
 ### Toxics (HH)
 
-This function compares toxics data against water quality standards for
-human health (HH) under the aquatic life use (ALU).
+This function compares toxics data against water quality standards
+and/or thresholds for human health (HH) under the aquatic life use
+(ALU).
 
 ``` r
 df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
@@ -299,8 +301,8 @@ df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 
 ### Toxics (IRR)
 
-This function compares toxics data against water quality standards for
-irrigation (IRR) use.
+This function compares toxics data against water quality standards
+and/or thresholds for irrigation (IRR) use.
 
 ``` r
 df_Toxics_IRR <- Toxics_IRR(Chem_table = df_Chem_combined
@@ -309,8 +311,8 @@ df_Toxics_IRR <- Toxics_IRR(Chem_table = df_Chem_combined
 
 ### Toxics (LW)
 
-This function compares toxics data against water quality standards for
-livestock watering (LW) use.
+This function compares toxics data against water quality standards
+and/or thresholds for livestock watering (LW) use.
 
 ``` r
 df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
@@ -319,8 +321,8 @@ df_Toxics_LW <- Toxics_LW(Chem_table = df_Chem_combined
 
 ### Toxics (WH)
 
-This function compares toxics data against water quality standards for
-wildlife habitat (WH) use.
+This function compares toxics data against water quality standards
+and/or thresholds for wildlife habitat (WH) use.
 
 ``` r
 df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
@@ -330,7 +332,7 @@ df_Toxics_WH <- Toxics_WH(Chem_table = df_Chem_combined
 ### Turbidity (ALU)
 
 This function compares turbidity data against water quality standards
-for aquatic life use (ALU).
+and/or thresholds for aquatic life use (ALU).
 
 ``` r
 Turbidity_ALU_list <- Turbidity_ALU(Chem_table = df_Chem_combined

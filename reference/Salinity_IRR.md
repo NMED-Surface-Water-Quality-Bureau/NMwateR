@@ -1,8 +1,8 @@
-# Analysis of salinity data against IRR standards
+# Analysis of salinity data against IRR standards and/or thresholds
 
-This function compares salinity data against water quality standards for
-irrigation (IRR) use. For more information, see the [NMED Consolidated
-Assessment and Listing Methodology
+This function compares salinity data against water quality standards
+and/or thresholds for irrigation (IRR) use. For more information, see
+the [NMED Consolidated Assessment and Listing Methodology
 (CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage

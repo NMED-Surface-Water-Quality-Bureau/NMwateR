@@ -1,9 +1,10 @@
-# Analysis of hardness dependent toxics data against ALU standards
+# Analysis of hardness dependent toxics data against ALU standards and/or thresholds
 
 This function compares hardness dependent toxics data against water
-quality standards for aquatic life use (ALU). For more information, see
-the [NMED Consolidated Assessment and Listing Methodology
-(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
+quality standards and/or thresholds for aquatic life use (ALU). For more
+information, see the [NMED Consolidated Assessment and Listing
+Methodology (CALM)](https://www.env.nm.gov/surface-water-quality/calm/)
+document.
 
 ## Usage
 
