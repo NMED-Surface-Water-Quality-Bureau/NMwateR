@@ -1,8 +1,9 @@
 # Analysis of toxics data against LW standards
 
 This function compares toxics data against water quality standards for
-livestock watering (LW) use. For more information, see the NMED
-Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+livestock watering (LW) use. For more information, see the [NMED
+Consolidated Assessment and Listing Methodology
+(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage
 

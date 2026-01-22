@@ -2,8 +2,9 @@
 
 This function uses the exports from the various water quality analyses
 and assesses the results using logic from the New Mexico Surface Water
-Quality Standards (SWQS) and the NMED Consolidated Assessment and
-Listing Methodology (CALM) guidance manual.
+Quality Standards (SWQS) and the [NMED Consolidated Assessment and
+Listing Methodology
+(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage
 

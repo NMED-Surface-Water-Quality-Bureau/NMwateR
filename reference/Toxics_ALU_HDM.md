@@ -2,8 +2,8 @@
 
 This function compares hardness dependent toxics data against water
 quality standards for aquatic life use (ALU). For more information, see
-the NMED Consolidated Assessment and Listing Methodology (CALM) guidance
-manual.
+the [NMED Consolidated Assessment and Listing Methodology
+(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage
 

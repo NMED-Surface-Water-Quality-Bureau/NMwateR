@@ -2,8 +2,9 @@
 
 This function compares bacteria data against water quality standards for
 primary contact recreation (PCR) and secondary contact recreation (SCR)
-uses. For more information, see the NMED Consolidated Assessment and
-Listing Methodology (CALM) guidance manual.
+uses. For more information, see the [NMED Consolidated Assessment and
+Listing Methodology
+(CALM)](https://www.env.nm.gov/surface-water-quality/calm/) document.
 
 ## Usage
 

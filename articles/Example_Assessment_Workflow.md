@@ -144,11 +144,12 @@ works (all others are optional depending on data availability).
 
 **Note**: In some cases, the results from these analyses are empty
 (i.e., dataframes with zero observations) due to all of the input data
-not meeting CALM guidance requirements. These dataframes should not be
-included in the assessment step.
+not meeting CALM requirements. These dataframes should not be included
+in the assessment step.
 
 For more information, see the NMED Consolidated Assessment and Listing
-Methodology (CALM) guidance manual.
+Methodology ([CALM](https://www.env.nm.gov/surface-water-quality/calm/))
+document.
 
 ### Conventionals (ALU)
 
@@ -331,7 +332,10 @@ df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res # inter
 ## Assessment
 
 The assessment is the culmination of all the water quality analyses and
-utilizes the logic from the SWQS and CALM documents. The
+utilizes the logic from the
+[SWQS](https://www.env.nm.gov/surface-water-quality/wqs/) and
+[CALM](https://www.env.nm.gov/surface-water-quality/calm/) documents.
+The
 [`NMwateR::assessment()`](https://nmed-surface-water-quality-bureau.github.io/NMwateR/reference/assessment.md)
 function produces a list of four dataframes. First, the indiviual
 results dataframe contains IR categories assigned to each
