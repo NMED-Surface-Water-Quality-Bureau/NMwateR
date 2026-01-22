@@ -18,8 +18,7 @@ water quality criteria.
 }
 \description{
 This function compares salinity data against water quality
-standards for irrigation (IRR) use. For more information, see the NMED
-Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+standards for irrigation (IRR) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

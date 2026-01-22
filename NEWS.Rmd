@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# NMwateR 1.0.0.9002 (2026-01-22)
+-   Addressed NMED review of package:
+    -   Updated links to CALM and removed "guidance manual" from descriptions.
+    
 # NMwateR 1.0.0.9001 (2026-01-22)
 -   Addressed NMED review of package:
     -   Removed functions for LANL site-specific copper calculations

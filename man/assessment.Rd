@@ -65,8 +65,7 @@ the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 \description{
 This function uses the exports from the various water quality analyses and
 assesses the results using logic from the New Mexico Surface Water Quality
-Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
-(CALM) guidance manual.
+Standards (SWQS) and the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

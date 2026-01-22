@@ -19,8 +19,7 @@ water quality criteria.
 \description{
 This function compares bacteria data against water quality
 standards for primary contact recreation (PCR) and secondary contact recreation
-(SCR) uses. For more information, see the NMED Consolidated Assessment and
-Listing Methodology (CALM) guidance manual.
+(SCR) uses. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed

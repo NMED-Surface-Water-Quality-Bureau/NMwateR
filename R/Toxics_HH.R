@@ -2,8 +2,7 @@
 #'
 #' This function compares toxics data against water quality standards for
 #' human health (HH) under the aquatic life use (ALU). For more information,
-#' see the NMED Consolidated Assessment and Listing Methodology (CALM)
-#' guidance manual.
+#' see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
 #' contains a combination of grab, LTD, and lake profile data.

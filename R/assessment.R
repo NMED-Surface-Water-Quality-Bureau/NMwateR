@@ -2,8 +2,7 @@
 #'
 #' This function uses the exports from the various water quality analyses and
 #' assesses the results using logic from the New Mexico Surface Water Quality
-#' Standards (SWQS) and the NMED Consolidated Assessment and Listing Methodology
-#' (CALM) guidance manual.
+#' Standards (SWQS) and the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Conventionals_ALU_table WQ analysis export from Conventionals_ALU() function.
 #' @param Bacteria_PCR_SCR_table WQ analysis export from Bacteria_PCR_SCR() function.

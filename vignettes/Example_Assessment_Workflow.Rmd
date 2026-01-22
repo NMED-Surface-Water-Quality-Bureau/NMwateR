@@ -125,9 +125,9 @@ df_Criteria <- my_data_list$Criteria_Formatted
 
 The following are a series of water quality analyses that can be used depending on the type of data available from the SQUID files used in `NMwateR::Data_Prep()`. A simple solution is to run all water quality analyses (although see note below). Alternatively, the user can determine which functions to run by identify all unique characteristics and designated uses in the data by reviewing the `CHARACTERISTIC_NAME` , `CHR_UID` , and `DU` fields. Lastly, the `NMwateR::Conventionals_ALU()` function must be run to ensure that the assessment function (`NMwateR::assessment()`) works (all others are optional depending on data availability).
 
-**Note**: In some cases, the results from these analyses are empty (i.e., dataframes with zero observations) due to all of the input data not meeting CALM guidance requirements. These dataframes should not be included in the assessment step.
+**Note**: In some cases, the results from these analyses are empty (i.e., dataframes with zero observations) due to all of the input data not meeting CALM requirements. These dataframes should not be included in the assessment step.
 
-For more information, see the NMED Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+For more information, see the NMED Consolidated Assessment and Listing Methodology ([CALM](https://www.env.nm.gov/surface-water-quality/calm/)) document.
 
 ## Conventionals (ALU)
 
@@ -295,7 +295,7 @@ df_Turbidity_ALU_Indiv_Res <- Turbidity_ALU_list$Turbidity_ALU_Indiv_Res # inter
 
 # Assessment
 
-The assessment is the culmination of all the water quality analyses and utilizes the logic from the SWQS and CALM documents. The `NMwateR::assessment()` function produces a list of four dataframes. First, the indiviual results dataframe contains IR categories assigned to each AU/DU/parameter combination. The DU results dataframe assigns IR categories to each AU/DU combination based on the individual results. The AU results dataframe assigns IR categories to each AU based on the DUs that were assessed. Lastly, the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
+The assessment is the culmination of all the water quality analyses and utilizes the logic from the [SWQS](https://www.env.nm.gov/surface-water-quality/wqs/) and [CALM](https://www.env.nm.gov/surface-water-quality/calm/) documents. The `NMwateR::assessment()` function produces a list of four dataframes. First, the indiviual results dataframe contains IR categories assigned to each AU/DU/parameter combination. The DU results dataframe assigns IR categories to each AU/DU combination based on the individual results. The AU results dataframe assigns IR categories to each AU based on the DUs that were assessed. Lastly, the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
 
 ```{r assessment}
 assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU

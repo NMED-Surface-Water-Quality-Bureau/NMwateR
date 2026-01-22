@@ -1,8 +1,7 @@
 #' Analysis of conventionals data against LW standards
 #'
 #' This function compares conventional water chemistry data against water quality
-#' standards for livestock watering (LW) use. For more information, see the NMED
-#' Consolidated Assessment and Listing Methodology (CALM) guidance manual.
+#' standards for livestock watering (LW) use. For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 #'
 #' @param Chem_table Compiled water chemistry data from Data_Prep function. Usually
 #' contains a combination of grab, LTD, and lake profile data.
