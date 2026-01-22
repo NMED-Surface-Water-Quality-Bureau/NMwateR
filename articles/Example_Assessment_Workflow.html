@@ -75,14 +75,21 @@ Bureau’s sampling schema. All assessments within a project are conducted
 on an assessment unit (AU) basis.</p>
 <p>The workflow follow four steps:</p>
 <ol style="list-style-type: decimal">
-<li>Specify project-specific and generic SQUID input files</li>
+<li>Specify project-specific and generic SQUID* input files</li>
 <li>Prepare and QA/QC the data</li>
 <li>Conduct water quality analyses</li>
 <li>Make assessments</li>
 </ol>
-<p>Interim and final products can be exported from RStudio at any point
-using a variety of functions such as <code><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">readr::write_csv()</a></code> or
-<code><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">utils::write.table()</a></code>.</p>
+<p>*Surface Water Quality Information Database</p>
+<p><strong>Note on importing and exporting data</strong>: Data are
+normally imported into R using the <code><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">utils::read.table()</a></code>,
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">readr::read_csv()</a></code>, or <code>readxl::read_excel()</code>
+functions depending on the file type. Interim and final products can be
+exported from RStudio at any point using a variety of functions such as
+<code><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">readr::write_csv()</a></code> or <code><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">utils::write.table()</a></code>.
+Guidance on how to use these functions can be found by searching the
+Help menu using the help operator. For example,
+<code>??readr::read_csv()</code>.</p>
 <div class="section level3">
 <h3 id="contact-information">Contact information<a class="anchor" aria-label="anchor" href="#contact-information"></a>
 </h3>
@@ -95,10 +102,12 @@ Meredith Zeigler (Meredith.Zeigler@env.nm.gov) or Benjamin Block
 <h2 id="specify-input-files">Specify Input Files<a class="anchor" aria-label="anchor" href="#specify-input-files"></a>
 </h2>
 <p>Project-specific and generic SQUID input files are required for the
-subsequent analyses. Use <code><a href="https://rdrr.io/r/utils/head.html" class="external-link">head()</a></code> or <code><a href="https://rdrr.io/r/utils/View.html" class="external-link">View()</a></code> on
-the dataframe to explore the contents. Search the package for the
+subsequent analyses. Note that the most up-to-date files should be used
+and formatted accordingly (e.g., latest water quality criteria or
+designated use tables). Use <code><a href="https://rdrr.io/r/utils/head.html" class="external-link">head()</a></code> or <code><a href="https://rdrr.io/r/utils/View.html" class="external-link">View()</a></code>
+on the dataframe to explore the contents. Search the package for the
 example table using <code>??[fill_in_example_dataframe_name_here]</code>
-to get an explanation of each field name.</p>
+to get an explanation of each required field name.</p>
 <p><strong>Criteria Table</strong></p>
 <ul>
 <li><p><em>Required</em></p></li>

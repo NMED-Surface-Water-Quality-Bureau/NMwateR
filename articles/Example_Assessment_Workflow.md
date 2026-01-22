@@ -10,15 +10,24 @@ on an assessment unit (AU) basis.
 
 The workflow follow four steps:
 
-1.  Specify project-specific and generic SQUID input files
+1.  Specify project-specific and generic SQUID\* input files
 2.  Prepare and QA/QC the data
 3.  Conduct water quality analyses
 4.  Make assessments
 
-Interim and final products can be exported from RStudio at any point
-using a variety of functions such as
+\*Surface Water Quality Information Database
+
+**Note on importing and exporting data**: Data are normally imported
+into R using the
+[`utils::read.table()`](https://rdrr.io/r/utils/read.table.html),
+[`readr::read_csv()`](https://readr.tidyverse.org/reference/read_delim.html),
+or `readxl::read_excel()` functions depending on the file type. Interim
+and final products can be exported from RStudio at any point using a
+variety of functions such as
 [`readr::write_csv()`](https://readr.tidyverse.org/reference/write_delim.html)
 or [`utils::write.table()`](https://rdrr.io/r/utils/write.table.html).
+Guidance on how to use these functions can be found by searching the
+Help menu using the help operator. For example, `??readr::read_csv()`.
 
 ### Contact information
 
@@ -30,11 +39,14 @@ Meredith Zeigler (Meredith.Zeigler@env.nm.gov) or Benjamin Block
 ## Specify Input Files
 
 Project-specific and generic SQUID input files are required for the
-subsequent analyses. Use [`head()`](https://rdrr.io/r/utils/head.html)
-or [`View()`](https://rdrr.io/r/utils/View.html) on the dataframe to
+subsequent analyses. Note that the most up-to-date files should be used
+and formatted accordingly (e.g., latest water quality criteria or
+designated use tables). Use
+[`head()`](https://rdrr.io/r/utils/head.html) or
+[`View()`](https://rdrr.io/r/utils/View.html) on the dataframe to
 explore the contents. Search the package for the example table using
 `??[fill_in_example_dataframe_name_here]` to get an explanation of each
-field name.
+required field name.
 
 **Criteria Table**
 
