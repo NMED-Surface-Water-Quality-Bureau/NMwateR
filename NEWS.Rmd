@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# NMwateR 1.0.0.9001 (2026-01-22)
+-   Addressed NMED review of package:
+    -   Removed functions for LANL site-specific copper calculations
+
 # NMwateR 1.0.0 (2025-12-15)
 -   Small updates per Erik Leppo's review
 -   Prep for first GitHub release

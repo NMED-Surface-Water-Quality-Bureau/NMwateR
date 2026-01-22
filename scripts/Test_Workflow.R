@@ -3,16 +3,11 @@
 ## Hannah Ferriby, Tetra Tech; Hannah.Ferriby@tetratech.com
 ### and Kateri Salk, Tetra Tech; Kateri.SalkGundersen@tetratech.com
 # Date created: 11/07/2025
-# Date last updated: 11/14/2025
+# Date last updated: 01/22/2026
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # R version 4.5.2 (2025-10-31 ucrt) -- "[Not] Part in a Rumble"
 
 # Libraries needed
-# library(dplyr)
-# library(tidyr)
-# library(stringr)
-# library(lubridate)
-# library(rLakeAnalyzer)
 library(devtools)
 
 # specify input files ####
@@ -22,8 +17,6 @@ data(example_SQUID_RStudio_table)
 data(example_SQUID_DU_table)
 data(example_SQUID_LTD_table)
 data(example_SQUID_LakeProfile_table)
-data(example_LANL_DU_table)
-data(example_LANL_WQ_table)
 
 # load all
 devtools::load_all()
@@ -82,18 +75,6 @@ df_Salinity_IRR <- Salinity_IRR(Chem_table = df_Chem_combined
 ## Toxics HH ####
 df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
                           , Criteria_table = df_Criteria)
-
-## Site-specific copper ####
-#Only used for LANL data
-SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
-                                  , LANL_WQ_data = example_LANL_WQ_table)
-
-df_SS_Copper_ALU <- SS_Copper_ALU_list$df_SS_Copper_ALU
-df_SS_Copper_ALU_Indiv_Res <- SS_Copper_ALU_list$df_SS_Copper_ALU_Indiv_Res
-df_SS_Copper_ALU_Insuff_Res <- SS_Copper_ALU_list$df_SS_Copper_ALU_Insuff_Res
-
-# cleanup
-rm(example_LANL_DU_table, example_LANL_WQ_table)
 
 ## Toxics DWS ####
 df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -154,7 +135,6 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
                        , Nutrients_Streams_table = df_Nutrients_Streams
                        , pH_PCR_table = df_pH_PCR
                        , Salinity_IRR_table = df_Salinity_IRR
-                       , SS_Copper_ALU_table = df_SS_Copper_ALU
                        , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
                        , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
                        , Toxics_DWS_table = df_Toxics_DWS

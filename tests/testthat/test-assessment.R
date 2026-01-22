@@ -2,8 +2,6 @@ test_that("Workflow works", {
   df_Chem_combined <- NMwateR::example_chemistry_processed
   df_Criteria <- NMwateR::example_criteria_processed
   df_DU_processed <- NMwateR::example_DU_processed
-  example_LANL_DU_table <- NMwateR::example_LANL_DU_table
-  example_LANL_WQ_table <- NMwateR::example_LANL_WQ_table
 
   # Water quality analyses ####
   ## Conventionals ALU ####
@@ -40,15 +38,6 @@ test_that("Workflow works", {
   ## Toxics HH ####
   df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
                             , Criteria_table = df_Criteria)
-
-  ## Site-specific copper ####
-  #Only used for LANL data
-  SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
-                                      , LANL_WQ_data = example_LANL_WQ_table)
-
-  df_SS_Copper_ALU <- SS_Copper_ALU_list$df_SS_Copper_ALU
-
-  rm(SS_Copper_ALU_list, example_LANL_DU_table, example_LANL_WQ_table)
 
   ## Toxics DWS ####
   df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -112,7 +101,6 @@ test_that("Workflow works", {
                                 , Nutrients_Streams_table = df_Nutrients_Streams
                                 , pH_PCR_table = df_pH_PCR
                                 , Salinity_IRR_table = df_Salinity_IRR
-                                , SS_Copper_ALU_table = df_SS_Copper_ALU
                                 , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
                                 , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
                                 , Toxics_DWS_table = df_Toxics_DWS
@@ -132,9 +120,9 @@ test_that("Workflow works", {
 
   # dev values taken from run of R code that was developed by Tetra Tech
   # dev code ran on 12/05/2025 using Chama project
-  sum_n_Samps_dev <- 6699
+  sum_n_Samps_dev <- 6689
   sum_n_Exceed_dev <- 78
-  Count_Cat2_dev <- 943
+  Count_Cat2_dev <- 941
   Count_Cat3_dev <- 147
   Count_Cat5_dev <- 701
 

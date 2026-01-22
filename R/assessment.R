@@ -13,7 +13,6 @@
 #' @param Nutrients_Streams_table WQ analysis export from Nutrients_Streams() function.
 #' @param pH_PCR_table WQ analysis export from pH_PCR() function.
 #' @param Salinity_IRR_table WQ analysis export from Salinity_IRR() function.
-#' @param SS_Copper_ALU_table WQ analysis export from SS_Copper_ALU() function.
 #' @param Toxics_ALU_nonHDM_table WQ analysis export from Toxics_ALU_nonHDM() function.
 #' @param Toxics_ALU_HDM_table WQ analysis export from Toxics_ALU_HDM() function.
 #' @param Toxics_DWS_table WQ analysis export from Toxics_DWS() function.
@@ -31,8 +30,6 @@
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
 #' df_DU_processed <- NMwateR::example_DU_processed
-#' example_LANL_DU_table <- NMwateR::example_LANL_DU_table
-#' example_LANL_WQ_table <- NMwateR::example_LANL_WQ_table
 #'
 #' # Water quality analyses
 #' ## Conventionals ALU
@@ -69,15 +66,6 @@
 #' ## Toxics HH ####
 #' df_Toxics_HH <- Toxics_HH(Chem_table = df_Chem_combined
 #'                           , Criteria_table = df_Criteria)
-#'
-#' ## Site-specific copper
-#' #Only used for LANL data
-#' SS_Copper_ALU_list <- SS_Copper_ALU(DU_LANL_Stations_table = example_LANL_DU_table
-#'                                     , LANL_WQ_data = example_LANL_WQ_table)
-#'
-#' df_SS_Copper_ALU <- SS_Copper_ALU_list$df_SS_Copper_ALU
-#'
-#' rm(SS_Copper_ALU_list, example_LANL_DU_table, example_LANL_WQ_table)
 #'
 #' ## Toxics DWS
 #' df_Toxics_DWS <- Toxics_DWS(Chem_table = df_Chem_combined
@@ -141,7 +129,6 @@
 #'                               , Nutrients_Streams_table = df_Nutrients_Streams
 #'                               , pH_PCR_table = df_pH_PCR
 #'                               , Salinity_IRR_table = df_Salinity_IRR
-#'                               , SS_Copper_ALU_table = df_SS_Copper_ALU
 #'                               , Toxics_ALU_nonHDM_table = df_Tox_ALU_nHDM
 #'                               , Toxics_ALU_HDM_table = df_Toxics_ALU_HDM
 #'                               , Toxics_DWS_table = df_Toxics_DWS
@@ -165,7 +152,6 @@ assessment <- function(Conventionals_ALU_table
                        , Nutrients_Streams_table = NULL
                        , pH_PCR_table = NULL
                        , Salinity_IRR_table = NULL
-                       , SS_Copper_ALU_table = NULL
                        , Toxics_ALU_nonHDM_table = NULL
                        , Toxics_ALU_HDM_table = NULL
                        , Toxics_DWS_table = NULL
@@ -186,7 +172,6 @@ assessment <- function(Conventionals_ALU_table
     Nutrients_Streams_table = Nutrients_Streams_table,
     pH_PCR_table = pH_PCR_table,
     Salinity_IRR_table = Salinity_IRR_table,
-    SS_Copper_ALU_table = SS_Copper_ALU_table,
     Toxics_ALU_nonHDM_table = Toxics_ALU_nonHDM_table,
     Toxics_ALU_HDM_table = Toxics_ALU_HDM_table,
     Toxics_DWS_table = Toxics_DWS_table,
