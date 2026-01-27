@@ -206,21 +206,22 @@ Nutrients_Streams <- function(Chem_table
                     UNITS, Criteria_Name, Criteria_Value, ASSESSABILITY_QUALIFIER_CODE) %>%
     dplyr::reframe(n_Samples = dplyr::n(),
                      n_Exceed = dplyr::case_when(Criteria_Name %in% c("DODELTA_WQC") ~ sum(Exceed == "Yes"),
+                                                 # Note: number of exceedances for TN and TP is either 1 or 0 (based on median)
                                                  Criteria_Name %in% c("TN_WQC", "TP_WQC") ~ sum(Exceed == "Yes")/n_Samples),
 
                      outlier_flag = ifelse(any(MEASUREMENT_outlier == "Yes", na.rm = TRUE), "Yes", "")) %>%
     # Note: TN and TP are assessed by median, so any number of excursions leads to non-support.
     dplyr::mutate(Exceed = dplyr::case_when(Criteria_Name %in% c("TN_WQC", "TP_WQC")
-                                            & n_Exceed >= 1 & n_Samples > 3
+                                            & n_Exceed == 1 & n_Samples > 3
                                             ~ "Yes",
                                             Criteria_Name %in% c("TN_WQC", "TP_WQC")
-                                            & n_Exceed < 1 & n_Samples > 3
+                                            & n_Exceed == 0 & n_Samples > 3
                                             ~ "No",
                                             Criteria_Name %in% c("TN_WQC", "TP_WQC")
-                                            & n_Exceed >= 1 & n_Samples <= 3
+                                            & n_Exceed == 1 & n_Samples <= 3
                                             ~ "Limited Data, Exceedance",
                                             Criteria_Name %in% c("TN_WQC", "TP_WQC")
-                                            & n_Exceed < 1 & n_Samples <= 3
+                                            & n_Exceed == 0 & n_Samples <= 3
                                             ~ "Limited Data, No Exceedance",
                                             Criteria_Name %in% c("DODELTA_WQC")
                                             & n_Exceed >= 1
@@ -230,13 +231,13 @@ Nutrients_Streams <- function(Chem_table
                                             ~ "No"),
                   Delist_eligible = dplyr::case_when(Criteria_Name %in% c("TN_WQC", "TP_WQC")
                                                      & n_Samples > 3
-                                                     & n_Exceed < 1
+                                                     & n_Exceed == 0
                                                      ~ "Yes",
                                                      Criteria_Name %in% c("TN_WQC", "TP_WQC")
                                                      & n_Samples <= 3
                                                      ~ "No",
                                                      Criteria_Name %in% c("TN_WQC", "TP_WQC")
-                                                     & n_Exceed >= 1
+                                                     & n_Exceed == 1
                                                      ~ "No",
                                                      Criteria_Name %in% c("DODELTA_WQC")
                                                      & n_Samples >= 1

@@ -1,11 +1,17 @@
 NMwateR-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-01-22 14:21:09.89966
+2026-01-27 15:52:17.785955
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-01-22 14:21:09.934605
+    #> Last Update: 2026-01-27 15:52:17.80559
+
+# NMwateR 1.0.0.9006 (2026-01-27)
+
+- Addressed NMED review of package:
+  - In Nutrients_Streams, Re-counted exceedances of TN and TP so that 0
+    or 1 are the only options
 
 # NMwateR 1.0.0.9005 (2026-01-22)
 
