@@ -143,6 +143,7 @@
 #' df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
 #' df_Assess_Upload_Report_FS <- assessment_list$Assess_Upload_Report_FS
 #' df_Assess_Upload_Report_NS <- assessment_list$Assess_Upload_Report_NS
+#' df_Assess_Upload_Report_NA <- assessment_list$Assess_Upload_Report_NA
 #'
 #' @export
 #'
@@ -389,41 +390,40 @@ assessment <- function(Conventionals_ALU_table
      , missing_cols, df_indiv_results)
 
   # DU Determinations ####
+  # Keep one result per AU/DU/parameter. Prioritize Not Supporting,
+  # then Fully Supporting, then Not Assessed. Preserve the selected
+  # original category (including 5c and 4 or 5) for SQUID reporting.
   df_DU_results <- df_indiv_results_v2 %>%
     dplyr::ungroup() %>%
-    dplyr::group_by(WATER_ID, WATER_NAME,  DU, CHR_UID, CHARACTERISTIC_NAME) %>%
-    dplyr::mutate(n = dplyr::n()
-                  # This seciton could be updated to be more refined
-                  # See NMED CALM pg. 45 (NMED IR Categories)
-                  , is_2 = sum(ifelse(Individual_Category == "2"
-                                      | Individual_Category == "1 or 2", 1, 0))
-                  , is_3 = sum(ifelse(Individual_Category == "3a"
-                                      | Individual_Category == "3b"
-                                      | Individual_Category == "3c", 1, 0))
-                  , is_5 = sum(ifelse(Individual_Category == "4 or 5"
-                                      | Individual_Category == "5"
-                                      | Individual_Category == "5c", 1, 0))
-                  #If n > 1, choose worse category
-                  , new_Individual_Category = dplyr::case_when((n > 1 & is_5 == 1) ~"5"
-                                                               , (n > 1 & is_5 == 0
-                                                                  & is_2 > 0) ~ "2"
-                                                               , TRUE ~ Individual_Category)) %>%
-    dplyr::filter(Individual_Category == new_Individual_Category) %>%
-    dplyr::select(!c(Individual_Category, n, is_2, is_3, is_5)) %>%
-    dplyr::rename(Individual_Category = new_Individual_Category) %>%
+    dplyr::mutate(category_priority = dplyr::case_when(Individual_Category %in% c("5", "5c", "4 or 5") ~
+                                                         1L
+                                                       , Individual_Category %in% c("2", "1 or 2") ~
+                                                         2L
+                                                       , Individual_Category %in% c("3c", "3b", "3a") ~
+                                                         3L
+                                                       , TRUE ~ 4L),
+      # Within a priority group, prefer the more specific category.
+      category_detail = dplyr::case_when(Individual_Category == "5c" ~ 1L
+                                         , Individual_Category == "5" ~ 2L
+                                         , Individual_Category == "4 or 5" ~ 3L
+                                         , Individual_Category == "2" ~ 1L
+                                         , Individual_Category == "1 or 2" ~ 2L
+                                         , Individual_Category == "3c" ~ 1L
+                                         , Individual_Category == "3b" ~ 2L
+                                         , Individual_Category == "3a" ~ 3L
+                                         , TRUE ~ 4L)) %>%
+    dplyr::group_by(WATER_ID, WATER_NAME, DU, CHR_UID, CHARACTERISTIC_NAME) %>%
+    dplyr::arrange(category_priority, category_detail, .by_group = TRUE) %>%
+    dplyr::slice_head(n = 1) %>%
     dplyr::ungroup() %>%
+    dplyr::select(-category_priority, -category_detail) %>%
     dplyr::group_by(WATER_ID, DU) %>%
-    dplyr::mutate(cat_5_present = length(Individual_Category[Individual_Category=="5"
-                                                             | Individual_Category=="5c"
-                                                             | Individual_Category=="4 or 5"])
-                  , cat_2_present = length(Individual_Category[Individual_Category=="2"])
-                  , Use_Category = dplyr::case_when((cat_5_present > 0) ~ "5"
-                                                    , (cat_5_present == 0
-                                                       & cat_2_present > 0) ~ "2"
-                                                    , (cat_5_present == 0
-                                                       & cat_2_present == 0) ~ "3"
-                                                    , TRUE ~ NA)) %>%
-    dplyr::select(!c(cat_5_present, cat_2_present)) %>%
+    dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5")) ~
+                                                    "5"
+                                                  , any(Individual_Category %in% c("2", "1 or 2")) ~
+                                                    "2"
+                                                  , TRUE ~ "3")) %>%
+    dplyr::ungroup() %>%
     dplyr::arrange(WATER_ID, DU)
 
   # AU Determinations ####
@@ -431,15 +431,14 @@ assessment <- function(Conventionals_ALU_table
   df_AU_results <- df_DU_results %>%
     dplyr::ungroup() %>%
     dplyr::group_by(WATER_ID) %>%
-    dplyr::summarise(
-      WATER_NAME = dplyr::first(stats::na.omit(WATER_NAME), default = NA_character_),
-      Overall_Category = dplyr::case_when(
-        any(Use_Category == "5", na.rm = TRUE) ~ "5",
-        any(Use_Category == "2", na.rm = TRUE) ~ "2",
-        TRUE ~ "3"
-      ),
-      .groups = "drop"
-    ) %>%
+    dplyr::summarise(WATER_NAME = dplyr::first(stats::na.omit(WATER_NAME)
+                                               , default = NA_character_)
+                     , Overall_Category = dplyr::case_when(any(Use_Category == "5", na.rm = TRUE) ~
+                                                             "5"
+                                                           , any(Use_Category == "2", na.rm = TRUE) ~
+                                                             "2"
+                                                           , TRUE ~ "3")
+                     , .groups = "drop") %>%
     dplyr::arrange(WATER_ID)
 
   # Upload Report ####
@@ -448,10 +447,9 @@ assessment <- function(Conventionals_ALU_table
   df_upload <- df_DU_results %>%
     dplyr::ungroup() %>%
     dplyr::select(-dplyr::any_of("Overall_Category")) %>%
-    dplyr::left_join(
-      df_AU_results %>% dplyr::select(WATER_ID, Overall_Category),
-      by = "WATER_ID"
-    ) %>%
+    dplyr::left_join(df_AU_results %>%
+                       dplyr::select(WATER_ID, Overall_Category)
+                     , by = "WATER_ID") %>%
     dplyr::rename(ASSESSMENT_UNIT_ID = WATER_ID
                   , AU_NAME_REF_ONLY = WATER_NAME
                   , PARAM_NAME = CHARACTERISTIC_NAME
@@ -526,5 +524,7 @@ assessment <- function(Conventionals_ALU_table
     Assess_AU_Res = df_AU_results,
     Assess_Upload_Report = df_upload_v2,
     Assess_Upload_Report_FS = format_upload(df_upload_FS),
-    Assess_Upload_Report_NS = format_upload(df_upload_NS)))
+    Assess_Upload_Report_NS = format_upload(df_upload_NS),
+    Assess_Upload_Report_NA = format_upload(df_upload_NA)))
+
 } # END ~ Function
