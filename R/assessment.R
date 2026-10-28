@@ -201,7 +201,7 @@ assessment <- function(Conventionals_ALU_table
   cat("Tables missing: ", ifelse(length(missing) > 0
                                  , paste(missing, collapse = ", "), "None"), "\n")
   cat("Tables removed (zero observations): ", ifelse(length(zero_obs) > 0
-                                , paste(zero_obs, collapse = ", "), "None"), "\n")
+                                                     , paste(zero_obs, collapse = ", "), "None"), "\n")
 
   # Final product: filtered data list
   data_list <- args_list[present]
@@ -282,9 +282,9 @@ assessment <- function(Conventionals_ALU_table
     dplyr::select(dplyr::all_of(expected_cols)) %>%
     dplyr::distinct() %>%
     dplyr::mutate(n_Samples_assessable = dplyr::case_when((!is.na(n_Samples_assessable))
-                                            ~ n_Samples_assessable
-                                            , (is.na(n_Samples_assessable))
-                                            ~ n_Samples))
+                                                          ~ n_Samples_assessable
+                                                          , (is.na(n_Samples_assessable))
+                                                          ~ n_Samples))
 
   ### Human Health ####
   # Relabel Human Health results to correct ALU based on AU.
@@ -314,23 +314,23 @@ assessment <- function(Conventionals_ALU_table
   # Fully Supporting, Not Supporting, and Not Assessed.
   df_indiv_results <- df_AnalysisResults_v3 %>%
     dplyr::mutate(Determination = dplyr::case_when((Rationale == "Data Insufficient")
-                                     ~ "Not Assessed"
-                                     , (Rationale == "Data Sufficient; Low N Samples")
-                                     ~ "Not Assessed"
-                                     , (Exceed == "Yes") ~ "Not Supporting"
-                                     , (Exceed == "No") ~ "Fully Supporting"
-                                     , TRUE ~ "Error - New logic necessary")
-           , Individual_Category = dplyr::case_when((Determination == "Not Assessed"
-                                              & Exceed == "No") ~ "3b"
-                                             , (Determination == "Not Assessed"
-                                                & Exceed == "Yes") ~ "3c"
-                                             , (Determination == "Not Supporting"
-                                                & CHR_UID == 1977) ~ "5c"
-                                             , (Determination == "Not Supporting")
-                                             ~ "5" # could be updated to be "4 or 5"
-                                             , (Determination == "Fully Supporting")
-                                             ~ "2" # could be updated to "1 or 2"
-                                             , TRUE ~ NA))
+                                                   ~ "Not Assessed"
+                                                   , (Rationale == "Data Sufficient; Low N Samples")
+                                                   ~ "Not Assessed"
+                                                   , (Exceed == "Yes") ~ "Not Supporting"
+                                                   , (Exceed == "No") ~ "Fully Supporting"
+                                                   , TRUE ~ "Error - New logic necessary")
+                  , Individual_Category = dplyr::case_when((Determination == "Not Assessed"
+                                                            & Exceed == "No") ~ "3b"
+                                                           , (Determination == "Not Assessed"
+                                                              & Exceed == "Yes") ~ "3c"
+                                                           , (Determination == "Not Supporting"
+                                                              & CHR_UID == 1977) ~ "5c"
+                                                           , (Determination == "Not Supporting")
+                                                           ~ "5" # could be updated to be "4 or 5"
+                                                           , (Determination == "Fully Supporting")
+                                                           ~ "2" # could be updated to "1 or 2"
+                                                           , TRUE ~ NA))
 
   # Integrate nutrient results ####
   # Fallback empty nutrient frames if missing
@@ -349,29 +349,29 @@ assessment <- function(Conventionals_ALU_table
   df_Nutr_Lakes_v2 <- df_Nutr_Lakes %>%
     dplyr::select(WATER_ID, WATER_NAME, DU, Category) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
-           , Method = "Lake Nutrients Assessment"
-           , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
-                                       , (Category == "3a"
-                                          | Category == "3b"
-                                          | Category == "3c") ~ "Not Assessed"
-                                       , (Category == "4 or 5") ~ "Not Supporting")) %>%
+                  , Method = "Lake Nutrients Assessment"
+                  , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
+                                                     , (Category == "3a"
+                                                        | Category == "3b"
+                                                        | Category == "3c") ~ "Not Assessed"
+                                                     , (Category == "4 or 5") ~ "Not Supporting")) %>%
     dplyr::rename(Individual_Category = Category)
 
   df_Nutr_Streams_v2 <- df_Nutr_Streams %>%
     dplyr::select(WATER_ID, WATER_NAME, DU, Category) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
-           , Method = "Stream Nutrients Assessment"
-           # If the stream was not an assessable waterbody type, assign the category as NA at this stage.
-           , Category = dplyr::case_when((Category == "Not Assessable: Waterbody Type Mismatch")
-                                  ~ NA_character_
-                                  , (grepl("1 or 2", Category)) ~ "1 or 2"
-                                  , TRUE ~ Category)
-           , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
-                                       , (Category == "3a"
-                                          | Category == "3b"
-                                          | Category == "3c") ~ "Not Assessed"
-                                       , (Category == "4 or 5"
-                                          | Category == "5c") ~ "Not Supporting")) %>%
+                  , Method = "Stream Nutrients Assessment"
+                  # If the stream was not an assessable waterbody type, assign the category as NA at this stage.
+                  , Category = dplyr::case_when((Category == "Not Assessable: Waterbody Type Mismatch")
+                                                ~ NA_character_
+                                                , (grepl("1 or 2", Category)) ~ "1 or 2"
+                                                , TRUE ~ Category)
+                  , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
+                                                     , (Category == "3a"
+                                                        | Category == "3b"
+                                                        | Category == "3c") ~ "Not Assessed"
+                                                     , (Category == "4 or 5"
+                                                        | Category == "5c") ~ "Not Supporting")) %>%
     dplyr::rename(Individual_Category = Category)
 
   missing_cols <- setdiff(names(df_indiv_results), names(df_Nutr_Lakes_v2))
@@ -390,21 +390,21 @@ assessment <- function(Conventionals_ALU_table
     dplyr::ungroup() %>%
     dplyr::group_by(WATER_ID, WATER_NAME,  DU, CHR_UID, CHARACTERISTIC_NAME) %>%
     dplyr::mutate(n = dplyr::n()
-           # This seciton could be updated to be more refined
-           # See NMED CALM pg. 45 (NMED IR Categories)
-           , is_2 = sum(ifelse(Individual_Category == "2"
-                               | Individual_Category == "1 or 2", 1, 0))
-           , is_3 = sum(ifelse(Individual_Category == "3a"
-                               | Individual_Category == "3b"
-                               | Individual_Category == "3c", 1, 0))
-           , is_5 = sum(ifelse(Individual_Category == "4 or 5"
-                               | Individual_Category == "5"
-                               | Individual_Category == "5c", 1, 0))
-           #If n > 1, choose worse category
-           , new_Individual_Category = dplyr::case_when((n > 1 & is_5 == 1) ~"5"
-                                                 , (n > 1 & is_5 == 0
-                                                    & is_2 > 0) ~ "2"
-                                                 , TRUE ~ Individual_Category)) %>%
+                  # This seciton could be updated to be more refined
+                  # See NMED CALM pg. 45 (NMED IR Categories)
+                  , is_2 = sum(ifelse(Individual_Category == "2"
+                                      | Individual_Category == "1 or 2", 1, 0))
+                  , is_3 = sum(ifelse(Individual_Category == "3a"
+                                      | Individual_Category == "3b"
+                                      | Individual_Category == "3c", 1, 0))
+                  , is_5 = sum(ifelse(Individual_Category == "4 or 5"
+                                      | Individual_Category == "5"
+                                      | Individual_Category == "5c", 1, 0))
+                  #If n > 1, choose worse category
+                  , new_Individual_Category = dplyr::case_when((n > 1 & is_5 == 1) ~"5"
+                                                               , (n > 1 & is_5 == 0
+                                                                  & is_2 > 0) ~ "2"
+                                                               , TRUE ~ Individual_Category)) %>%
     dplyr::filter(Individual_Category == new_Individual_Category) %>%
     dplyr::select(!c(Individual_Category, n, is_2, is_3, is_5)) %>%
     dplyr::rename(Individual_Category = new_Individual_Category) %>%
@@ -415,56 +415,66 @@ assessment <- function(Conventionals_ALU_table
                                                              | Individual_Category=="4 or 5"])
                   , cat_2_present = length(Individual_Category[Individual_Category=="2"])
                   , Use_Category = dplyr::case_when((cat_5_present > 0) ~ "5"
-                                             , (cat_5_present == 0
-                                                & cat_2_present > 0) ~ "2"
-                                             , (cat_5_present == 0
-                                                & cat_2_present == 0) ~ "3"
-                                             , TRUE ~ NA)) %>%
+                                                    , (cat_5_present == 0
+                                                       & cat_2_present > 0) ~ "2"
+                                                    , (cat_5_present == 0
+                                                       & cat_2_present == 0) ~ "3"
+                                                    , TRUE ~ NA)) %>%
     dplyr::select(!c(cat_5_present, cat_2_present)) %>%
     dplyr::arrange(WATER_ID, DU)
 
   # AU Determinations ####
+  # Calculate one overall conclusion per AU, across all designated uses.
   df_AU_results <- df_DU_results %>%
-    dplyr::group_by(WATER_ID, WATER_NAME) %>%
-    dplyr::mutate(cat_5_present = length(Use_Category[Use_Category=="5"]),
-                  cat_2_present = length(Use_Category[Use_Category=="2"]),
-                  Overall_Category = dplyr::case_when((cat_5_present > 0) ~ "5"
-                                               , (cat_5_present == 0
-                                                  & cat_2_present > 0) ~ "2"
-                                               , (cat_5_present == 0
-                                                  & cat_2_present == 0) ~ "3"
-                                               , TRUE ~ NA)) %>%
-    dplyr::select(!c(cat_5_present, cat_2_present)) %>%
+    dplyr::ungroup() %>%
+    dplyr::group_by(WATER_ID) %>%
+    dplyr::summarise(
+      WATER_NAME = dplyr::first(stats::na.omit(WATER_NAME), default = NA_character_),
+      Overall_Category = dplyr::case_when(
+        any(Use_Category == "5", na.rm = TRUE) ~ "5",
+        any(Use_Category == "2", na.rm = TRUE) ~ "2",
+        TRUE ~ "3"
+      ),
+      .groups = "drop"
+    ) %>%
     dplyr::arrange(WATER_ID)
 
   # Upload Report ####
-  df_upload <- df_AU_results %>%
+  # Preserve use/parameter-level upload records, but join the AU conclusion
+  # once per WATER_ID instead of repeating or multiplying AU-level records.
+  df_upload <- df_DU_results %>%
+    dplyr::ungroup() %>%
+    dplyr::select(-dplyr::any_of("Overall_Category")) %>%
+    dplyr::left_join(
+      df_AU_results %>% dplyr::select(WATER_ID, Overall_Category),
+      by = "WATER_ID"
+    ) %>%
     dplyr::rename(ASSESSMENT_UNIT_ID = WATER_ID
-           , AU_NAME_REF_ONLY = WATER_NAME
-           , PARAM_NAME = CHARACTERISTIC_NAME
-           , PARAM_STATE_IR_CAT = Individual_Category
-           , STATE_IR_CAT_CODE = Overall_Category) %>%
+                  , AU_NAME_REF_ONLY = WATER_NAME
+                  , PARAM_NAME = CHARACTERISTIC_NAME
+                  , PARAM_STATE_IR_CAT = Individual_Category
+                  , STATE_IR_CAT_CODE = Overall_Category) %>%
     dplyr::mutate(USE_NAME = dplyr::case_when(DU == "ColdWAL"   ~ "Coldwater Aquatic Life"
-                                , DU == "CoolWAL"   ~ "Coolwater Aquatic Life"
-                                , DU == "DWS"       ~ "Domestic Water Supply"
-                                , DU == "HQColdWAL" ~ "High Quality Coldwater Aquatic Life"
-                                , DU == "IRR"       ~ "Irrigation"
-                                , DU == "LAL"       ~ "Limited Aquatic Life"
-                                , DU == "LW"        ~ "Livestock Watering"
-                                , DU == "MCWAL"     ~ "Marginal Coldwater Aquatic Life"
-                                , DU == "MWWAL"     ~ "Marginal Warmwater Aquatic Life"
-                                , DU == "PC"        ~ "Primary Contact"
-                                , DU == "PWS"       ~ "Public Water Supply"
-                                , DU == "SC"        ~ "Secondary Contact"
-                                , DU == "WWAL"      ~ "Warmwater Aquatic Life"
-                                , DU == "WH"        ~ "Wildlife Habitat"
-                                , TRUE              ~ NA)) %>%
+                                              , DU == "CoolWAL"   ~ "Coolwater Aquatic Life"
+                                              , DU == "DWS"       ~ "Domestic Water Supply"
+                                              , DU == "HQColdWAL" ~ "High Quality Coldwater Aquatic Life"
+                                              , DU == "IRR"       ~ "Irrigation"
+                                              , DU == "LAL"       ~ "Limited Aquatic Life"
+                                              , DU == "LW"        ~ "Livestock Watering"
+                                              , DU == "MCWAL"     ~ "Marginal Coldwater Aquatic Life"
+                                              , DU == "MWWAL"     ~ "Marginal Warmwater Aquatic Life"
+                                              , DU == "PC"        ~ "Primary Contact"
+                                              , DU == "PWS"       ~ "Public Water Supply"
+                                              , DU == "SC"        ~ "Secondary Contact"
+                                              , DU == "WWAL"      ~ "Warmwater Aquatic Life"
+                                              , DU == "WH"        ~ "Wildlife Habitat"
+                                              , TRUE              ~ NA)) %>%
     dplyr::mutate(PARAM_ATTAINMENT_CODE = dplyr::case_when((Determination == "Fully Supporting")
-                                             ~ "meeting criteria"
-                                             , (Determination == "Not Supporting")
-                                             ~ "not meeting criteria"
-                                             , (Determination == "Not Assessed")
-                                             ~ "not enough information"))
+                                                           ~ "meeting criteria"
+                                                           , (Determination == "Not Supporting")
+                                                           ~ "not meeting criteria"
+                                                           , (Determination == "Not Assessed")
+                                                           ~ "not enough information"))
 
 
   req_cols <- c("ASSESSMENT_UNIT_ID", "AU_NAME_REF_ONLY", "CYCLE", "CYCLE_LAST_ASSESSED"
