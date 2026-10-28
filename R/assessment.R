@@ -21,10 +21,11 @@
 #' @param Toxics_WH_table WQ analysis export from Toxics_WH() function.
 #' @param Turbidity_ALU_table WQ analysis export from Turbidity_ALU() function.
 #'
-#' @returns A list of four dataframes. Indiviual results are IR categories assigned
+#' @returns A list of seven dataframes. Indiviual results are IR categories assigned
 #' to each AU/DU/parameter combination. DU results are IR categories assigned to
 #' each AU/DU combination. AU results are IR categories assigned to each AU. Lastly,
-#' the upload report is for NMED to upload into SQUID to be transferred to ATTAINS.
+#' the combined upload report and separate FS, NS, and Not Assessed reports are
+#' provided for NMED to upload into SQUID and transfer to ATTAINS.
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
@@ -140,6 +141,8 @@
 #' df_Assess_DU_Res <- assessment_list$Assess_DU_Res
 #' df_Assess_AU_Res <- assessment_list$Assess_AU_Res
 #' df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
+#' df_Assess_Upload_Report_FS <- assessment_list$Assess_Upload_Report_FS
+#' df_Assess_Upload_Report_NS <- assessment_list$Assess_Upload_Report_NS
 #'
 #' @export
 #'
@@ -498,11 +501,30 @@ assessment <- function(Conventionals_ALU_table
   df_upload_v2[missing_cols] <- NA
   df_upload_v2 <- df_upload_v2[req_cols]
 
+  # Separate upload reports by determination ####
+  # Filter before export so Fully Supporting and Not Supporting records
+  # can be uploaded independently without overwriting each other.
+  df_upload_FS <- df_upload %>%
+    dplyr::filter(Determination == "Fully Supporting")
+
+  df_upload_NS <- df_upload %>%
+    dplyr::filter(Determination == "Not Supporting")
+
+  df_upload_NA <- df_upload %>%
+    dplyr::filter(Determination == "Not Assessed" | is.na(Determination))
+
+  format_upload <- function(df) {
+    missing_cols <- setdiff(req_cols, names(df))
+    df[missing_cols] <- NA
+    df[req_cols]
+  }
+
   # Export data ####
   return(list(
     Assess_Indiv_Res = df_indiv_results_v2,
     Assess_DU_Res = df_DU_results,
     Assess_AU_Res = df_AU_results,
-    Assess_Upload_Report = df_upload_v2))
-
+    Assess_Upload_Report = df_upload_v2,
+    Assess_Upload_Report_FS = format_upload(df_upload_FS),
+    Assess_Upload_Report_NS = format_upload(df_upload_NS)))
 } # END ~ Function
