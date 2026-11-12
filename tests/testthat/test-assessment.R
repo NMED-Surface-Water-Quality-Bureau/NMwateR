@@ -134,6 +134,56 @@ test_that("Workflow works", {
 
 })
 
+test_that("verified results rebuild upload decisions and preserve reviewer notes", {
+  input <- tibble::tibble(
+    WATER_ID = c("AU1", "AU1", "AU2"), WATER_NAME = "Test river",
+    DU = c("ColdWAL", "LW", "PC"), CHR_UID = c(1, 1, 2),
+    CHARACTERISTIC_NAME = c("Metal", "Metal", "Bacteria"),
+    n_Samples = 4, Method = "Count", Rationale = "Data Sufficient",
+    Exceed = c("Yes", "No", "No"), n_Exceed = c(2, 0, 0)
+  )
+  original <- assessment(input)
+  verified <- original$Assess_DU_Res
+  unchanged <- assessment(Verified_results_table = verified)
+  expect_equal(unchanged, original)
+
+  verified$Individual_Category <- c("2", "3c", "5")
+  verified$AV_Notes <- c("Excluded duplicate sample after review.", NA, "Verified lab result.")
+  verified$PARAM_COMMENT <- c(NA, "Reviewer parameter comment.", "")
+  verified$ASSESSMENT_RATIONALE <- c("Reviewer rationale.", NA, "")
+  result <- assessment(Verified_results_table = verified)
+  report <- result$Assess_Upload_Report
+  expect_equal(result$Assess_DU_Res$Use_Category, c("2", "3", "5"))
+  expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "5"))
+  expect_equal(report$PARAM_ATTAINMENT_CODE,
+               c("meeting criteria", "not enough information", "not meeting criteria"))
+  expect_equal(report$STATE_IR_CAT_CODE, c("2", "2", "5"))
+  expect_equal(report$ASSESSMENT_RATIONALE[1],
+               "Reviewer rationale. Assessment verification notes: Excluded duplicate sample after review.")
+  expect_equal(report$PARAM_COMMENT[2], "Reviewer parameter comment.")
+  expect_match(report$PARAM_COMMENT[1], "Determination: Fully Supporting", fixed = TRUE)
+  expect_match(report$PARAM_COMMENT[1], "Excluded duplicate sample after review.", fixed = TRUE)
+  expect_match(report$ASSESSMENT_RATIONALE[3], "Verified lab result.", fixed = TRUE)
+  expect_equal(nrow(result$Assess_Upload_Report_FS), 1L)
+  expect_equal(nrow(result$Assess_Upload_Report_NS), 1L)
+  expect_equal(nrow(result$Assess_Upload_Report_NA), 1L)
+  expect_identical(result$Assess_Upload_Report_NS$PARAM_COMMENT, report$PARAM_COMMENT[3])
+
+  minimal <- verified[c("WATER_ID", "WATER_NAME", "DU", "CHR_UID",
+                         "CHARACTERISTIC_NAME", "Individual_Category")]
+  minimal$Individual_Category[1] <- NA_character_
+  expect_equal(nrow(assessment(Verified_results_table = minimal)$Assess_Upload_Report_NA), 2L)
+  expect_equal(nrow(assessment(Verified_results_table = minimal[0, ])$Assess_Upload_Report), 0L)
+  expect_error(assessment(input, Verified_results_table = verified), "alone")
+  expect_error(assessment(Verified_results_table = original$Assess_AU_Res), "missing")
+  expect_error(assessment(Verified_results_table = rbind(verified, verified[1, ])), "duplicate")
+  verified$Individual_Category[1] <- "typo"
+  expect_error(assessment(Verified_results_table = verified), "unsupported")
+  verified$Individual_Category[1] <- "2"
+  verified$DU[1] <- ""
+  expect_error(assessment(Verified_results_table = verified), "nonblank DU")
+})
+
 test_that("upload rationales use the selected result for each AU/use/parameter", {
   input <- tibble::tibble(
     WATER_ID = "AU1", WATER_NAME = "Test river",

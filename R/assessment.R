@@ -20,6 +20,14 @@
 #' @param Toxics_LW_table WQ analysis export from Toxics_LW() function.
 #' @param Toxics_WH_table WQ analysis export from Toxics_WH() function.
 #' @param Turbidity_ALU_table WQ analysis export from Turbidity_ALU() function.
+#' @param Verified_results_table Optional complete, verified copy of
+#'   `Assess_DU_Res` from a previous run. Supply this table alone for the final
+#'   post-verification run. Edit `Individual_Category` to correct a decision;
+#'   `Determination`, `Use_Category`, and `Overall_Category` are recalculated.
+#'   Add `AV_Notes` for verification notes. Nonblank `ASSESSMENT_RATIONALE` and
+#'   `PARAM_COMMENT` values override generated text in their respective fields.
+#'   An AU summary alone is insufficient because uploads require use/parameter
+#'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME must occur once.
 #'
 #' @returns A list of seven dataframes. Indiviual results are IR categories assigned
 #' to each AU/DU/parameter combination. DU results are IR categories assigned to
@@ -30,6 +38,14 @@
 #' ASSESSMENT_RATIONALE and PARAM_COMMENT, using the selected AU/DU/parameter
 #' result, method, data sufficiency, and available exceedance statistics.
 #' Unavailable statistics are reported as unavailable rather than zero.
+#' @details For assessment verification, save and edit `Assess_DU_Res`, retaining
+#'   all rows intended for the final upload and the supporting statistics. Run
+#'   `assessment(Verified_results_table = verified_results)` to rebuild the seven
+#'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
+#'   `3b`, `3c`, `5`, `5c`, and `4 or 5`; missing categories remain Not Assessed.
+#'   Verification notes are appended to both upload rationale fields. Correct
+#'   statistics as needed: they are retained as evidence, not used to reverse
+#'   verified category decisions.
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
@@ -149,9 +165,14 @@
 #' df_Assess_Upload_Report_NS <- assessment_list$Assess_Upload_Report_NS
 #' df_Assess_Upload_Report_NA <- assessment_list$Assess_Upload_Report_NA
 #'
+#' # After assessment verification, rebuild uploads from the edited use/parameter results.
+#' verified_results <- assessment_list$Assess_DU_Res
+#' verified_results$AV_Notes <- NA_character_ # Replace with reviewer notes as needed.
+#' final_assessment_list <- assessment(Verified_results_table = verified_results)
+#'
 #' @export
 #'
-assessment <- function(Conventionals_ALU_table
+assessment <- function(Conventionals_ALU_table = NULL
                        , Bacteria_PCR_SCR_table = NULL
                        , Conventionals_LW_table = NULL
                        , LTD_ALU_table = NULL
@@ -166,7 +187,8 @@ assessment <- function(Conventionals_ALU_table
                        , Toxics_IRR_table = NULL
                        , Toxics_LW_table = NULL
                        , Toxics_WH_table = NULL
-                       , Turbidity_ALU_table = NULL){
+                       , Turbidity_ALU_table = NULL
+                       , Verified_results_table = NULL){
 
   # QC ####
   # Collect arguments into a named list
@@ -188,6 +210,53 @@ assessment <- function(Conventionals_ALU_table
     Toxics_WH_table = Toxics_WH_table,
     Turbidity_ALU_table = Turbidity_ALU_table)
 
+  if (!is.null(Verified_results_table)) {
+    if (any(!vapply(args_list, is.null, logical(1)))) {
+      stop("Supply Verified_results_table alone, without analysis tables.", call. = FALSE)
+    }
+    if (!is.data.frame(Verified_results_table)) {
+      stop("Verified_results_table must be a data frame.", call. = FALSE)
+    }
+    required <- c("WATER_ID", "WATER_NAME", "DU", "CHR_UID",
+                  "CHARACTERISTIC_NAME", "Individual_Category")
+    missing_fields <- setdiff(required, names(Verified_results_table))
+    if (length(missing_fields) > 0) {
+      stop("Verified_results_table is missing: ",
+           paste(missing_fields, collapse = ", "),
+           ". Use a verified copy of Assess_DU_Res, not the AU summary.", call. = FALSE)
+    }
+    df_indiv_results_v2 <- tibble::as_tibble(Verified_results_table) %>%
+      dplyr::ungroup() %>%
+      dplyr::select(-dplyr::any_of(c("Use_Category", "Overall_Category"))) %>%
+      dplyr::mutate(dplyr::across(dplyr::all_of(setdiff(required, "CHR_UID")), as.character))
+    keys <- c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME")
+    for (field in setdiff(keys, "CHR_UID")) {
+      if (any(is.na(df_indiv_results_v2[[field]]) |
+              !nzchar(trimws(df_indiv_results_v2[[field]])))) {
+        stop("Verified_results_table requires nonblank ", field, ".", call. = FALSE)
+      }
+    }
+    if (anyDuplicated(df_indiv_results_v2[keys])) {
+      stop("Verified_results_table contains duplicate AU/use/parameter records.", call. = FALSE)
+    }
+    category <- df_indiv_results_v2$Individual_Category
+    if (any(!is.na(category) & !category %in%
+            c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5"))) {
+      stop("Verified_results_table contains unsupported Individual_Category values.", call. = FALSE)
+    }
+    # Preserve verified decisions even when the original Exceed/Rationale differs.
+    df_indiv_results_v2 <- df_indiv_results_v2 %>%
+      dplyr::mutate(Determination = dplyr::case_when(
+        Individual_Category %in% c("2", "1 or 2") ~ "Fully Supporting",
+        Individual_Category %in% c("5", "5c", "4 or 5") ~ "Not Supporting",
+        TRUE ~ "Not Assessed"))
+    evidence_cols <- c("SAMPLE_FRACTION", "Method", "Rationale", "Exceed",
+                       "n_Samples", "n_Samples_assessable", "n_Exceed",
+                       "n_Exceed_Acute", "n_Exceed_Chronic", "pct_Exceed")
+    for (field in setdiff(evidence_cols, names(df_indiv_results_v2))) {
+      df_indiv_results_v2[[field]] <- NA
+    }
+  } else {
   # Identify present and missing tables
   present <- names(args_list)[!sapply(args_list, is.null)]
   missing <- names(args_list)[sapply(args_list, is.null)]
@@ -390,6 +459,7 @@ assessment <- function(Conventionals_ALU_table
   # cleanup
   rm(df_Nutr_Lakes, df_Nutr_Lakes_v2, df_Nutr_Streams, df_Nutr_Streams_v2
      , missing_cols, df_indiv_results)
+  } # END ~ initial analyses or verified results
 
   # DU Determinations ####
   # Keep one result per AU/DU/parameter. Prioritize Not Supporting,
@@ -488,7 +558,7 @@ assessment <- function(Conventionals_ALU_table
     if (is.na(x) || !nzchar(trimws(as.character(x)))) return("not available")
     gsub("[[:space:]]+", " ", trimws(as.character(x)))
   }
-  df_upload$PARAM_COMMENT <- vapply(seq_len(nrow(df_upload)), function(i) {
+  generated_rationale <- vapply(seq_len(nrow(df_upload)), function(i) {
     row <- df_upload[i, ]
     value <- function(name) rationale_value(row[[name]])
     paste0("Assessment unit: ", value("ASSESSMENT_UNIT_ID"),
@@ -507,7 +577,21 @@ assessment <- function(Conventionals_ALU_table
            "; chronic exceedance count: ", value("n_Exceed_Chronic"), ". ",
            "Percent exceedance: ", value("pct_Exceed"), ".")
   }, character(1))
-  df_upload$ASSESSMENT_RATIONALE <- df_upload$PARAM_COMMENT
+  # Keep explicit reviewer text, and append AV notes to each final text field.
+  for (field in c("PARAM_COMMENT", "ASSESSMENT_RATIONALE")) {
+    final_text <- generated_rationale
+    if (field %in% names(df_upload)) {
+      supplied <- as.character(df_upload[[field]])
+      keep <- !is.na(supplied) & nzchar(trimws(supplied))
+      final_text[keep] <- supplied[keep]
+    }
+    if ("AV_Notes" %in% names(df_upload)) {
+      notes <- as.character(df_upload$AV_Notes)
+      keep <- !is.na(notes) & nzchar(trimws(notes))
+      final_text[keep] <- paste0(final_text[keep], " Assessment verification notes: ", notes[keep])
+    }
+    df_upload[[field]] <- final_text
+  }
 
   req_cols <- c("ASSESSMENT_UNIT_ID", "AU_NAME_REF_ONLY", "CYCLE", "CYCLE_LAST_ASSESSED"
                 , "ASSESSMENT_COMMENT", "ASSESSMENT_RATIONALE", "USE_NAME", "USE_ATTAINMENT_CODE"
