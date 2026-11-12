@@ -26,6 +26,10 @@
 #' each AU/DU combination. AU results are IR categories assigned to each AU. Lastly,
 #' the combined upload report and separate FS, NS, and Not Assessed reports are
 #' provided for NMED to upload into SQUID and transfer to ATTAINS.
+#' Upload reports include standard-language records of decision in
+#' ASSESSMENT_RATIONALE and PARAM_COMMENT, using the selected AU/DU/parameter
+#' result, method, data sufficiency, and available exceedance statistics.
+#' Unavailable statistics are reported as unavailable rather than zero.
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
@@ -233,7 +237,7 @@ assessment <- function(Conventionals_ALU_table
   # If no non-nutrient files remain, create an empty results DF with expected columns
   if (length(data_list) == 0) {
     df_AnalysisResults <- tibble::tibble(
-      WATER_ID = character(), DU = character(), CHR_UID = numeric(),
+      WATER_ID = character(), WATER_NAME = character(), DU = character(), CHR_UID = numeric(),
       CHARACTERISTIC_NAME = character(), SAMPLE_FRACTION = character(),
       n_Samples = numeric(), n_Samples_assessable = numeric(), Method = character(),
       Rationale = character(), Exceed = character(), n_Exceed = numeric(),
@@ -262,9 +266,6 @@ assessment <- function(Conventionals_ALU_table
       tibble::as_tibble() %>%
       readr::type_convert()  # re-parse numerics, dates, etc.
   }
-
-  # confirm all results
-  sort(unique(df_AnalysisResults$R_Script_Name))
 
   ## Format ####
   rownames(df_AnalysisResults) <- NULL
@@ -351,7 +352,7 @@ assessment <- function(Conventionals_ALU_table
   rm(empty_nutr)
 
   df_Nutr_Lakes_v2 <- df_Nutr_Lakes %>%
-    dplyr::select(WATER_ID, WATER_NAME, DU, Category) %>%
+    dplyr::select(dplyr::any_of(c(expected_cols, "Category"))) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
                   , Method = "Lake Nutrients Assessment"
                   , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
@@ -362,7 +363,7 @@ assessment <- function(Conventionals_ALU_table
     dplyr::rename(Individual_Category = Category)
 
   df_Nutr_Streams_v2 <- df_Nutr_Streams %>%
-    dplyr::select(WATER_ID, WATER_NAME, DU, Category) %>%
+    dplyr::select(dplyr::any_of(c(expected_cols, "Category"))) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
                   , Method = "Stream Nutrients Assessment"
                   # If the stream was not an assessable waterbody type, assign the category as NA at this stage.
@@ -380,6 +381,7 @@ assessment <- function(Conventionals_ALU_table
 
   missing_cols <- setdiff(names(df_indiv_results), names(df_Nutr_Lakes_v2))
   df_Nutr_Lakes_v2[missing_cols] <- NA
+  missing_cols <- setdiff(names(df_indiv_results), names(df_Nutr_Streams_v2))
   df_Nutr_Streams_v2[missing_cols] <- NA
 
   df_indiv_results_v2 <- rbind(df_indiv_results, df_Nutr_Lakes_v2
@@ -477,6 +479,35 @@ assessment <- function(Conventionals_ALU_table
                                                            , (Determination == "Not Assessed")
                                                            ~ "not enough information"))
 
+
+  # Build the record of decision from the selected parameter result, after HH
+  # has been linked to its aquatic life use and duplicate results resolved.
+  # Exceed is the analysis decision, not necessarily whether any sample exceeded.
+  # Keep acute/chronic counts separate: a sample can exceed both criteria.
+  rationale_value <- function(x) {
+    if (is.na(x) || !nzchar(trimws(as.character(x)))) return("not available")
+    gsub("[[:space:]]+", " ", trimws(as.character(x)))
+  }
+  df_upload$PARAM_COMMENT <- vapply(seq_len(nrow(df_upload)), function(i) {
+    row <- df_upload[i, ]
+    value <- function(name) rationale_value(row[[name]])
+    paste0("Assessment unit: ", value("ASSESSMENT_UNIT_ID"),
+           "; designated use: ", value("USE_NAME"), " (", value("DU"), "). ",
+           "Parameter: ", value("PARAM_NAME"),
+           "; sample fraction: ", value("SAMPLE_FRACTION"), ". ",
+           "Determination: ", value("Determination"),
+           "; parameter IR category: ", value("PARAM_STATE_IR_CAT"), ". ",
+           "Method: ", value("Method"), ". ",
+           "Data sufficiency: ", value("Rationale"), ". ",
+           "Samples: ", value("n_Samples"),
+           "; assessable samples: ", value("n_Samples_assessable"), ". ",
+           "Analysis exceedance decision (Exceed): ", value("Exceed"), ". ",
+           "Exceedance count: ", value("n_Exceed"),
+           "; acute exceedance count: ", value("n_Exceed_Acute"),
+           "; chronic exceedance count: ", value("n_Exceed_Chronic"), ". ",
+           "Percent exceedance: ", value("pct_Exceed"), ".")
+  }, character(1))
+  df_upload$ASSESSMENT_RATIONALE <- df_upload$PARAM_COMMENT
 
   req_cols <- c("ASSESSMENT_UNIT_ID", "AU_NAME_REF_ONLY", "CYCLE", "CYCLE_LAST_ASSESSED"
                 , "ASSESSMENT_COMMENT", "ASSESSMENT_RATIONALE", "USE_NAME", "USE_ATTAINMENT_CODE"

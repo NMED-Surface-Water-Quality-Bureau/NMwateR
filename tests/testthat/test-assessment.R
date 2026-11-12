@@ -133,3 +133,65 @@ test_that("Workflow works", {
   testthat::expect_equal(Count_Cat5_code, Count_Cat5_dev)
 
 })
+
+test_that("upload rationales use the selected result for each AU/use/parameter", {
+  input <- tibble::tibble(
+    WATER_ID = "AU1", WATER_NAME = "Test river",
+    DU = c("ColdWAL", "ColdWAL", "LW", "PC", "ColdWAL"),
+    CHR_UID = c(1, 1, 1, 2, 3),
+    CHARACTERISTIC_NAME = c("Metal", "Metal", "Metal", "Bacteria", "Chloride"),
+    SAMPLE_FRACTION = "Total", n_Samples = c(4, 8, 5, 1, 20),
+    n_Samples_assessable = c(4, 6, 5, 1, 20),
+    Method = c("First method", "Acute and chronic", "Count", "Count", "Percent"),
+    Rationale = c("Data Sufficient", "Data Sufficient", "Data Sufficient",
+                  "Data Insufficient", "Data Sufficient"),
+    Exceed = c("No", "Yes", "No", "Yes", "No"),
+    n_Exceed = c(0, NA, 0, 1, NA),
+    n_Exceed_Acute = c(NA, 2, NA, NA, NA),
+    n_Exceed_Chronic = c(NA, 3, NA, NA, NA),
+    pct_Exceed = c(NA, NA, NA, NA, 5)
+  )
+  result <- assessment(input)
+  report <- result$Assess_Upload_Report
+  expect_equal(nrow(report), 4L)
+  expect_identical(report$ASSESSMENT_RATIONALE, report$PARAM_COMMENT)
+  expect_false(anyNA(report$PARAM_COMMENT))
+  metal <- subset(report, PARAM_NAME == "Metal" & USE_NAME == "Coldwater Aquatic Life")
+  expect_match(metal$PARAM_COMMENT, "acute exceedance count: 2; chronic exceedance count: 3", fixed = TRUE)
+  expect_match(metal$PARAM_COMMENT, "assessable samples: 6", fixed = TRUE)
+  expect_match(metal$PARAM_COMMENT, "Exceedance count: not available", fixed = TRUE)
+  expect_false(grepl("First method", metal$PARAM_COMMENT, fixed = TRUE))
+  livestock <- subset(report, USE_NAME == "Livestock Watering")
+  expect_match(livestock$PARAM_COMMENT, "Exceedance count: 0", fixed = TRUE)
+  expect_match(livestock$PARAM_COMMENT, "Determination: Fully Supporting", fixed = TRUE)
+  expect_match(result$Assess_Upload_Report_NA$PARAM_COMMENT,
+               "Data sufficiency: Data Insufficient", fixed = TRUE)
+  expect_match(subset(report, PARAM_NAME == "Chloride")$PARAM_COMMENT,
+               "Percent exceedance: 5", fixed = TRUE)
+  for (suffix in c("FS", "NS", "NA")) {
+    split <- result[[paste0("Assess_Upload_Report_", suffix)]]
+    expect_identical(names(split), names(report))
+    expect_true(all(split$PARAM_COMMENT %in% report$PARAM_COMMENT))
+  }
+})
+
+test_that("HH rationales use the linked DU and nutrient counts remain unavailable", {
+  input <- tibble::tibble(
+    WATER_ID = "AU1", WATER_NAME = "Test river", DU = c("ColdWAL", "HH"),
+    CHR_UID = c(1, 2), CHARACTERISTIC_NAME = c("Temperature", "Metal"),
+    n_Samples = 4, Method = "Count", Rationale = "Data Sufficient",
+    Exceed = "No", n_Exceed = 0
+  )
+  nutrients <- tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test river",
+                             DU = "ColdWAL", Category = "3c")
+  result <- assessment(input, Nutrients_Streams_table = nutrients)
+  report <- result$Assess_Upload_Report
+  expect_match(subset(report, PARAM_NAME == "Metal")$PARAM_COMMENT,
+               "designated use: Coldwater Aquatic Life (ColdWAL)", fixed = TRUE)
+  nutrient <- subset(report, PARAM_NAME == "Plant Nutrients")$PARAM_COMMENT
+  expect_match(nutrient, "Method: Stream Nutrients Assessment", fixed = TRUE)
+  expect_match(nutrient, "Exceedance count: not available", fixed = TRUE)
+  expect_match(nutrient, "Determination: Not Assessed", fixed = TRUE)
+  empty <- assessment(input[0, ])
+  expect_length(empty$Assess_Upload_Report$PARAM_COMMENT, 0L)
+})
