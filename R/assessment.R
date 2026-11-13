@@ -490,6 +490,8 @@ assessment <- function(Conventionals_ALU_table = NULL
     dplyr::ungroup() %>%
     dplyr::select(-category_priority, -category_detail) %>%
     dplyr::group_by(WATER_ID, DU) %>%
+    # Nutrient category "1 or 2" is fully supporting, like "2" (issue #6).
+    # Any impaired parameter still takes precedence for the use.
     dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5")) ~
                                                     "5"
                                                   , any(Individual_Category %in% c("2", "1 or 2")) ~

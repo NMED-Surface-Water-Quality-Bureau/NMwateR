@@ -1,3 +1,56 @@
+test_that("nutrient-only assessments count 1 or 2 as a fully supporting use (issue #6)", {
+  nutrients <- tibble::tibble(
+    WATER_ID = c("AU1", "AU2", "AU3"), WATER_NAME = "Test waterbody",
+    DU = "ColdWAL", Category = c("1 or 2", "3b", "4 or 5")
+  )
+
+  for (table in c("Nutrients_Lakes_table", "Nutrients_Streams_table")) {
+    result <- do.call(assessment, setNames(list(nutrients), table))
+    expect_equal(result$Assess_DU_Res$Individual_Category, nutrients$Category,
+                 info = table)
+    expect_equal(result$Assess_DU_Res$Use_Category, c("2", "3", "5"), info = table)
+    expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "3", "5"), info = table)
+
+    report <- result$Assess_Upload_Report
+    expect_equal(report$PARAM_STATE_IR_CAT, nutrients$Category, info = table)
+    expect_equal(report$STATE_IR_CAT_CODE, c("2", "3", "5"), info = table)
+    expect_equal(report$PARAM_ATTAINMENT_CODE,
+                 c("meeting criteria", "not enough information", "not meeting criteria"),
+                 info = table)
+    expect_equal(result$Assess_Upload_Report_FS$ASSESSMENT_UNIT_ID, "AU1", info = table)
+    expect_equal(result$Assess_Upload_Report_NA$ASSESSMENT_UNIT_ID, "AU2", info = table)
+    expect_equal(result$Assess_Upload_Report_NS$ASSESSMENT_UNIT_ID, "AU3", info = table)
+  }
+})
+
+test_that("fully supporting nutrients respect use category precedence (issue #6)", {
+  input <- tibble::tibble(
+    WATER_ID = c("AU1", "AU2", "AU3"), WATER_NAME = "Test waterbody",
+    DU = "ColdWAL", CHR_UID = 1, CHARACTERISTIC_NAME = "Metal",
+    n_Samples = c(1, 4, 4), Method = "Count",
+    Rationale = c("Data Insufficient", "Data Sufficient", "Data Sufficient"),
+    Exceed = c("No", "Yes", "No"), n_Exceed = c(0, 2, 0)
+  )
+  nutrients <- tibble::tibble(
+    WATER_ID = input$WATER_ID, WATER_NAME = input$WATER_NAME,
+    DU = "ColdWAL", Category = "1 or 2"
+  )
+
+  for (table in c("Nutrients_Lakes_table", "Nutrients_Streams_table")) {
+    result <- do.call(assessment, c(list(Conventionals_ALU_table = input),
+                                   setNames(list(nutrients), table)))
+    uses <- unique(result$Assess_DU_Res[c("WATER_ID", "DU", "Use_Category")])
+    expect_equal(uses$Use_Category, c("2", "5", "2"), info = table)
+    expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "5", "2"), info = table)
+    expect_equal(nrow(result$Assess_DU_Res), 6L, info = table)
+
+    # The final verification run must apply the same category precedence.
+    verified <- assessment(Verified_results_table = result$Assess_DU_Res)
+    expect_equal(verified$Assess_DU_Res, result$Assess_DU_Res, info = table)
+    expect_equal(verified$Assess_Upload_Report, result$Assess_Upload_Report, info = table)
+  }
+})
+
 test_that("Workflow works", {
   df_Chem_combined <- NMwateR::example_chemistry_processed
   df_Criteria <- NMwateR::example_criteria_processed
