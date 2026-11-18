@@ -1,3 +1,50 @@
+# Select evidence consistently for both analytical and SQUID parameter groups.
+.assessment_select_result <- function(rows, keys, category_field) {
+  numeric_field <- function(field) {
+    if (!field %in% names(rows)) return(rep(NA_real_, nrow(rows)))
+    suppressWarnings(as.numeric(as.character(rows[[field]])))
+  }
+  category <- tolower(trimws(as.character(rows[[category_field]])))
+  rationale <- if ("Rationale" %in% names(rows)) {
+    tolower(trimws(as.character(rows$Rationale)))
+  } else rep(NA_character_, nrow(rows))
+  rows <- dplyr::ungroup(rows)
+  rows$.category_priority <- dplyr::case_when(
+    category %in% c("5", "5a", "5c", "4 or 5") ~ 1L,
+    category == "3c" ~ 2L,
+    category %in% c("2", "1 or 2") ~ 3L,
+    category == "3b" ~ 4L,
+    category == "3a" ~ 5L,
+    TRUE ~ 6L)
+  rows$.sufficiency_priority <- dplyr::case_when(
+    grepl("low[[:space:]]+n", rationale) ~ 2L,
+    rationale == "data sufficient" ~ 1L,
+    rationale == "data insufficient" ~ 3L,
+    TRUE ~ 4L)
+  # Acute and chronic excursions can overlap. Use the larger known count
+  # as a fallback, rather than adding them and double-counting samples.
+  rows$.exceedance_count <- dplyr::coalesce(
+    numeric_field("n_Exceed"),
+    pmax(numeric_field("n_Exceed_Acute"), numeric_field("n_Exceed_Chronic"), na.rm = TRUE))
+  rows$.sample_count <- numeric_field("n_Samples")
+  # Preserve the former category preference only after the requested evidence
+  # tie-breaks. Sorting all remaining fields resolves otherwise exact ties
+  # without relying on input row order (including differing rationale text).
+  rows$.category_detail <- match(category, c("5c", "5", "5a", "4 or 5", "3c",
+                                             "2", "1 or 2", "3b", "3a"))
+  original_fields <- setdiff(names(rows), c(".category_priority", ".sufficiency_priority",
+                                           ".exceedance_count", ".sample_count", ".category_detail"))
+  rows %>%
+    dplyr::arrange(dplyr::across(dplyr::all_of(sort(original_fields)))) %>%
+    dplyr::group_by(dplyr::across(dplyr::all_of(keys))) %>%
+    dplyr::arrange(.category_priority, .sufficiency_priority,
+                   dplyr::desc(.exceedance_count), dplyr::desc(.sample_count),
+                   .category_detail, .by_group = TRUE) %>%
+    dplyr::slice_head(n = 1) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(dplyr::all_of(original_fields))
+}
+
 # SQUID aliases apply only to exports; analytical characteristics stay intact
 .assessment_squid_parameter <- function(name, fraction, chr_uid) {
   base <- tolower(trimws(sub("^(Maximum|Minimum) - ", "", name,
@@ -40,21 +87,14 @@
         any(PARAM_STATE_IR_CAT %in% c("2", "1 or 2", "3c")) ~ "F",
         TRUE ~ "X"), .groups = "drop")
 
-  # Use the existing determination/category precedence, now across SQUID aliases
-  # Keep 5c and 4-or-5 results instead of testing for literal category 5 only
+  # Apply the same category/evidence selection used for DU results to aliases.
   parameters <- rows %>%
     dplyr::select(-dplyr::any_of("USE_ATTAINMENT_CODE")) %>%
     dplyr::mutate(
       PARAM_NAME = .assessment_squid_parameter(PARAM_NAME, SAMPLE_FRACTION, CHR_UID),
-      upload_priority = match(PARAM_STATE_IR_CAT,
-                              c("5c", "5", "4 or 5", "2", "1 or 2", "3c", "3b", "3a")),
       has_delisting = !is.na(DELISTING_REASON) & nzchar(trimws(DELISTING_REASON))) %>%
-    dplyr::group_by(ASSESSMENT_UNIT_ID, USE_NAME, PARAM_NAME) %>%
-    dplyr::arrange(upload_priority, dplyr::desc(has_delisting), .by_group = TRUE) %>%
-    dplyr::mutate(PARAM_COMMENT = combine_text(PARAM_COMMENT),
-                  ASSESSMENT_RATIONALE = combine_text(ASSESSMENT_RATIONALE)) %>%
-    dplyr::slice_head(n = 1) %>%
-    dplyr::ungroup() %>%
+    .assessment_select_result(c("ASSESSMENT_UNIT_ID", "USE_NAME", "PARAM_NAME"),
+                               "PARAM_STATE_IR_CAT") %>%
     dplyr::left_join(uses %>% dplyr::select(-AU_NAME_REF_ONLY),
                      by = c("ASSESSMENT_UNIT_ID", "USE_NAME")) %>%
     dplyr::mutate(

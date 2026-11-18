@@ -27,8 +27,8 @@
 #'   Add `AV_Notes` for verification notes. Nonblank `ASSESSMENT_RATIONALE` and
 #'   `PARAM_COMMENT` values override generated text in their respective fields.
 #'   An AU summary alone is insufficient because uploads require use/parameter
-#'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME/SAMPLE_FRACTION
-#'   combination must occur once (fraction is optional).
+#'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME combination must
+#'   occur once; WATER_NAME and SAMPLE_FRACTION are supporting attributes.
 #' @param Cycle Even-numbered assessment cycle for SQUID exports; defaults to 2028.
 #' @param Assessment_date Assessment run date, as a Date or ISO date string.
 #' @param Target_TMDL_year Target TMDL year for 5A/5C causes; defaults to 2027.
@@ -54,6 +54,13 @@
 #'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
 #'   `3b`, `3c`, `5` (also `5A`), `5c`, and `4 or 5`; category letters are
 #'   case-insensitive. Missing categories remain Not Assessed.
+#'   Parameter selection uses impaired (5A/5C/4 or 5) > 3C > Fully Supporting
+#'   (2/1 or 2) > 3B > 3A. Ties prefer Data Sufficient over Low N, then the
+#'   greatest exceedance count, then the greatest sample count. Where a total
+#'   exceedance count is missing, the larger known acute/chronic count is used
+#'   without adding potentially overlapping excursions. Remaining ties use
+#'   category detail and a fixed ordering of row values, independent of input
+#'   order. Water names are filled from the AU's nonblank names after selection.
 #'   Verification notes are appended to parameter-specific upload rationale
 #'   fields; use-only evidence remains in the intermediate results. Correct
 #'   statistics as needed: they are retained as evidence, not used to reverse
@@ -272,8 +279,7 @@ assessment <- function(Conventionals_ALU_table = NULL
         stop("Verified_results_table requires nonblank ", field, ".", call. = FALSE)
       }
     }
-    if (anyDuplicated(df_indiv_results_v2[c(keys, intersect("SAMPLE_FRACTION",
-                                                          names(df_indiv_results_v2)))])) {
+    if (anyDuplicated(df_indiv_results_v2[keys])) {
       stop("Verified_results_table contains duplicate AU/use/parameter records.", call. = FALSE)
     }
     category <- tolower(trimws(df_indiv_results_v2$Individual_Category))
@@ -502,38 +508,31 @@ assessment <- function(Conventionals_ALU_table = NULL
   } # END ~ initial analyses or verified results
 
   # DU Determinations ####
-  # Keep one result per AU/DU/parameter. Prioritize Not Supporting,
-  # then Fully Supporting, then Not Assessed. Preserve the selected
-  # original category (including 5c and 4 or 5) for SQUID reporting.
+  # Water names describe the AU, not individual grab/profile records. Choose a
+  # stable nonblank name from all evidence before selecting parameter results.
+  au_names <- df_indiv_results_v2 %>%
+    dplyr::ungroup() %>%
+    dplyr::group_by(WATER_ID) %>%
+    dplyr::summarise(WATER_NAME = {
+      candidates <- trimws(as.character(WATER_NAME))
+      candidates <- sort(unique(candidates[!is.na(candidates) & nzchar(candidates)]))
+      dplyr::first(candidates, default = NA_character_)
+    }, .groups = "drop")
+
+  # Impaired > 3C > Fully Supporting > 3B > 3A. Within a category group,
+  # prefer sufficient data, then more exceedances, then more samples.
   df_DU_results <- df_indiv_results_v2 %>%
-    dplyr::ungroup() %>%
-    dplyr::mutate(category_priority = dplyr::case_when(Individual_Category %in% c("5", "5c", "4 or 5") ~
-                                                         1L
-                                                       , Individual_Category %in% c("2", "1 or 2") ~
-                                                         2L
-                                                       , Individual_Category %in% c("3c", "3b", "3a") ~
-                                                         3L
-                                                       , TRUE ~ 4L),
-      # Within a priority group, prefer the more specific category.
-      category_detail = dplyr::case_when(Individual_Category == "5c" ~ 1L
-                                         , Individual_Category == "5" ~ 2L
-                                         , Individual_Category == "4 or 5" ~ 3L
-                                         , Individual_Category == "2" ~ 1L
-                                         , Individual_Category == "1 or 2" ~ 2L
-                                         , Individual_Category == "3c" ~ 1L
-                                         , Individual_Category == "3b" ~ 2L
-                                         , Individual_Category == "3a" ~ 3L
-                                         , TRUE ~ 4L)) %>%
-    dplyr::group_by(WATER_ID, DU, CHR_UID, CHARACTERISTIC_NAME, SAMPLE_FRACTION) %>%
-    dplyr::arrange(category_priority, category_detail, .by_group = TRUE) %>%
-    dplyr::slice_head(n = 1) %>%
-    dplyr::ungroup() %>%
-    dplyr::select(-category_priority, -category_detail) %>%
+    .assessment_select_result(c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME"),
+                               "Individual_Category") %>%
+    dplyr::select(-WATER_NAME) %>%
+    dplyr::left_join(au_names, by = "WATER_ID") %>%
+    dplyr::select(dplyr::all_of(names(df_indiv_results_v2))) %>%
     dplyr::group_by(WATER_ID, DU) %>%
     # Nutrient category "1 or 2" is fully supporting, like "2" (issue #6).
     # Any impaired parameter still takes precedence for the use.
     dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5")) ~
                                                     "5"
+                                                  , any(Individual_Category == "3c", na.rm = TRUE) ~ "3"
                                                   , any(Individual_Category %in% c("2", "1 or 2")) ~
                                                     "2"
                                                   , TRUE ~ "3")) %>%

@@ -51,7 +51,7 @@ test_that("SQUID aliases consolidate with the selected category precedence", {
 test_that("fractions and segment-specific phosphorus remain distinct", {
   input <- upload_fixture(rep("5", 5),
                            c("Aluminum", "Aluminum", "Plant Nutrients", "Total Phosphorus", "Copper"))
-  input$CHR_UID[1:2] <- 549
+  input$CHR_UID[1:2] <- c(549001, 549002)
   input$SAMPLE_FRACTION <- c("Dissolved", "Total", NA, NA, "Dissolved")
   result <- assessment(Verified_results_table = input)
   expect_setequal(result$Assess_Upload_Report_NS$PARAM_NAME,
