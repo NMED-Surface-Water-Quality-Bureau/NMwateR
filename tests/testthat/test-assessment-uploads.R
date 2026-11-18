@@ -129,3 +129,55 @@ test_that("exports share the full schema and support explicit cycle and run date
                            Assessment_date = "2028-11-18", Target_TMDL_year = 2029)$Assess_Upload_Report,
                report)
 })
+
+test_that("staged uploads retain final use attainment regardless of monitoring row order", {
+  input <- upload_fixture(
+    c("2", "5", "3c", "3b", "2", "3b", "3c"),
+    c("Temperature, water", "pH", "Dissolved oxygen (DO)", "Copper",
+      "Escherichia coli", "Copper", "Plant Nutrients"),
+    water_ids = c(rep("NM-2116.A_002", 4), "NM-2116.A_000", "AU_X", "AU_3C"))
+  input$DELISTING_REASON <- c("Verified temperature delisting.", rep(NA, 3),
+                              "Verified E. coli delisting.", NA, NA)
+  result <- assessment(Verified_results_table = input)
+  fs <- result$Assess_Upload_Report_FS
+  ns <- result$Assess_Upload_Report_NS
+  monitoring <- result$Assess_Upload_Report_3C3B
+  use_keys <- c("ASSESSMENT_UNIT_ID", "USE_NAME")
+  parameter_keys <- c(use_keys, "PARAM_NAME")
+
+  baseline <- subset(fs, is.na(PARAM_NAME))
+  expect_equal(nrow(baseline), 4L)
+  expect_equal(subset(baseline, ASSESSMENT_UNIT_ID == "AU_X")$USE_ATTAINMENT_CODE, "X")
+  expect_true(all(baseline$USE_ATTAINMENT_CODE[baseline$ASSESSMENT_UNIT_ID != "AU_X"] == "F"))
+  expect_setequal(stats::na.omit(fs$PARAM_NAME), c("Temperature", "E. coli"))
+  expect_equal(ns$PARAM_NAME, "pH")
+  expect_equal(ns$USE_ATTAINMENT_CODE, "N")
+  expect_setequal(monitoring$PARAM_STATE_IR_CAT, c("3C", "3B"))
+  expect_equal(nrow(dplyr::inner_join(subset(fs, !is.na(PARAM_NAME)), ns,
+                                      by = parameter_keys)), 0L)
+
+  # Model SQUID's last-use-code-wins behavior in the intended upload sequence.
+  # Reverse monitoring rows as well: no impaired use may revert from N to F.
+  for (order in list(seq_len(nrow(monitoring)), rev(seq_len(nrow(monitoring))))) {
+    uploaded <- dplyr::bind_rows(fs, ns, monitoring[order, ]) %>%
+      dplyr::group_by(dplyr::across(dplyr::all_of(use_keys))) %>%
+      dplyr::slice_tail(n = 1) %>%
+      dplyr::ungroup()
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "NM-2116.A_002")$USE_ATTAINMENT_CODE, "N")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "NM-2116.A_000")$USE_ATTAINMENT_CODE, "F")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "AU_X")$USE_ATTAINMENT_CODE, "X")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "AU_3C")$USE_ATTAINMENT_CODE, "F")
+  }
+  expect_equal(result$Assess_Upload_Report, dplyr::bind_rows(fs, ns, monitoring))
+})
+
+test_that("an impaired SQUID alias suppresses a conflicting FS delisting", {
+  input <- upload_fixture(c("2", "5"),
+                           c("Temperature, water", "Maximum - Temperature, water"))
+  input$DELISTING_REASON <- c("Proposed delisting before consolidation.", NA)
+  result <- assessment(Verified_results_table = input)
+  expect_true(all(is.na(result$Assess_Upload_Report_FS$PARAM_NAME)))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_NAME, "Temperature")
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_ATTAINMENT_CODE, "not meeting criteria")
+  expect_true(all(is.na(result$Assess_Upload_Report_NS$DELISTING_REASON)))
+})
