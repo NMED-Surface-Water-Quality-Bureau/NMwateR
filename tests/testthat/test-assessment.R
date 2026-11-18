@@ -12,13 +12,13 @@ test_that("nutrient-only assessments count 1 or 2 as a fully supporting use (iss
     expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "3", "5"), info = table)
 
     report <- result$Assess_Upload_Report
-    expect_equal(report$PARAM_STATE_IR_CAT, nutrients$Category, info = table)
-    expect_equal(report$STATE_IR_CAT_CODE, c("2", "3", "5"), info = table)
-    expect_equal(report$PARAM_ATTAINMENT_CODE,
-                 c("meeting criteria", "not enough information", "not meeting criteria"),
-                 info = table)
-    expect_equal(result$Assess_Upload_Report_FS$ASSESSMENT_UNIT_ID, "AU1", info = table)
-    expect_equal(result$Assess_Upload_Report_NA$ASSESSMENT_UNIT_ID, "AU2", info = table)
+    expect_true(all(is.na(report$STATE_IR_CAT_CODE)), info = table)
+    expect_equal(result$Assess_Upload_Report_FS$ASSESSMENT_UNIT_ID,
+                 c("AU1", "AU2", "AU3"), info = table)
+    expect_equal(result$Assess_Upload_Report_FS$USE_ATTAINMENT_CODE,
+                 c("F", "X", "F"), info = table)
+    expect_equal(result$Assess_Upload_Report_3C3B$PARAM_STATE_IR_CAT, "3B", info = table)
+    expect_equal(result$Assess_Upload_Report_NS$PARAM_STATE_IR_CAT, "5A", info = table)
     expect_equal(result$Assess_Upload_Report_NS$ASSESSMENT_UNIT_ID, "AU3", info = table)
   }
 })
@@ -165,29 +165,21 @@ test_that("Workflow works", {
 
   df_Assess_AU_Res <- assessment_list$Assess_AU_Res
 
-  sum_n_Samps_code <- sum(df_Assess_AU_Res$n_Samples, na.rm = TRUE)
-  sum_n_Exceed_code <- sum(df_Assess_AU_Res$n_Exceed, na.rm = TRUE)
   Count_Cat2_code <- sum(df_Assess_AU_Res$Overall_Category == "2")
   Count_Cat3_code <- sum(df_Assess_AU_Res$Overall_Category == "3")
   Count_Cat5_code <- sum(df_Assess_AU_Res$Overall_Category == "5")
 
-  # dev values taken from run of R code that was developed by Tetra Tech
-  # dev code ran on 12/05/2025 using Chama project
-  sum_n_Samps_dev <- 6689
-  sum_n_Exceed_dev <- 78
-  Count_Cat2_dev <- 941
-  Count_Cat3_dev <- 147
-  Count_Cat5_dev <- 701
-
-  testthat::expect_equal(sum_n_Samps_code, sum_n_Samps_dev)
-  testthat::expect_equal(sum_n_Exceed_code, sum_n_Exceed_dev)
-  testthat::expect_equal(Count_Cat2_code, Count_Cat2_dev)
-  testthat::expect_equal(Count_Cat3_code, Count_Cat3_dev)
-  testthat::expect_equal(Count_Cat5_code, Count_Cat5_dev)
+  # The AU summary now has one conclusion per AU. The former expectations
+  # counted repeated parameter rows and sample statistics in that summary.
+  testthat::expect_equal(nrow(df_Assess_AU_Res), 58L)
+  testthat::expect_equal(anyDuplicated(df_Assess_AU_Res$WATER_ID), 0L)
+  testthat::expect_equal(Count_Cat2_code, 27L)
+  testthat::expect_equal(Count_Cat3_code, 6L)
+  testthat::expect_equal(Count_Cat5_code, 25L)
 
 })
 
-test_that("verified results rebuild upload decisions and preserve reviewer notes", {
+test_that("verified results rebuild decisions and retain reviewer evidence", {
   input <- tibble::tibble(
     WATER_ID = c("AU1", "AU1", "AU2"), WATER_NAME = "Test river",
     DU = c("ColdWAL", "LW", "PC"), CHR_UID = c(1, 1, 2),
@@ -197,36 +189,33 @@ test_that("verified results rebuild upload decisions and preserve reviewer notes
   )
   original <- assessment(input)
   verified <- original$Assess_DU_Res
-  unchanged <- assessment(Verified_results_table = verified)
-  expect_equal(unchanged, original)
+  expect_equal(assessment(Verified_results_table = verified), original)
 
   verified$Individual_Category <- c("2", "3c", "5")
   verified$AV_Notes <- c("Excluded duplicate sample after review.", NA, "Verified lab result.")
   verified$PARAM_COMMENT <- c(NA, "Reviewer parameter comment.", "")
   verified$ASSESSMENT_RATIONALE <- c("Reviewer rationale.", NA, "")
   result <- assessment(Verified_results_table = verified)
-  report <- result$Assess_Upload_Report
   expect_equal(result$Assess_DU_Res$Use_Category, c("2", "3", "5"))
   expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "5"))
-  expect_equal(report$PARAM_ATTAINMENT_CODE,
-               c("meeting criteria", "not enough information", "not meeting criteria"))
-  expect_equal(report$STATE_IR_CAT_CODE, c("2", "2", "5"))
-  expect_equal(report$ASSESSMENT_RATIONALE[1],
-               "Reviewer rationale. Assessment verification notes: Excluded duplicate sample after review.")
-  expect_equal(report$PARAM_COMMENT[2], "Reviewer parameter comment.")
-  expect_match(report$PARAM_COMMENT[1], "Determination: Fully Supporting", fixed = TRUE)
-  expect_match(report$PARAM_COMMENT[1], "Excluded duplicate sample after review.", fixed = TRUE)
-  expect_match(report$ASSESSMENT_RATIONALE[3], "Verified lab result.", fixed = TRUE)
-  expect_equal(nrow(result$Assess_Upload_Report_FS), 1L)
+  expect_equal(result$Assess_DU_Res$AV_Notes, verified$AV_Notes)
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT, "Reviewer parameter comment.")
+  expect_match(result$Assess_Upload_Report_NS$ASSESSMENT_RATIONALE,
+               "Verified lab result.", fixed = TRUE)
+  expect_true(all(is.na(result$Assess_Upload_Report_FS$PARAM_NAME)))
+  expect_equal(nrow(result$Assess_Upload_Report_FS), 3L)
   expect_equal(nrow(result$Assess_Upload_Report_NS), 1L)
-  expect_equal(nrow(result$Assess_Upload_Report_NA), 1L)
-  expect_identical(result$Assess_Upload_Report_NS$PARAM_COMMENT, report$PARAM_COMMENT[3])
+  expect_equal(nrow(result$Assess_Upload_Report_3C3B), 1L)
+  expect_false("Assess_Upload_Report_NA" %in% names(result))
 
   minimal <- verified[c("WATER_ID", "WATER_NAME", "DU", "CHR_UID",
                          "CHARACTERISTIC_NAME", "Individual_Category")]
   minimal$Individual_Category[1] <- NA_character_
-  expect_equal(nrow(assessment(Verified_results_table = minimal)$Assess_Upload_Report_NA), 2L)
-  expect_equal(nrow(assessment(Verified_results_table = minimal[0, ])$Assess_Upload_Report), 0L)
+  expect_equal(assessment(Verified_results_table = minimal)$Assess_Upload_Report_FS$USE_ATTAINMENT_CODE,
+               c("X", "F", "F"))
+  empty <- assessment(Verified_results_table = minimal[0, ])
+  expect_equal(nrow(empty$Assess_Upload_Report), 0L)
+  expect_equal(ncol(empty$Assess_Upload_Report), 46L)
   expect_error(assessment(input, Verified_results_table = verified), "alone")
   expect_error(assessment(Verified_results_table = original$Assess_AU_Res), "missing")
   expect_error(assessment(Verified_results_table = rbind(verified, verified[1, ])), "duplicate")
@@ -237,7 +226,7 @@ test_that("verified results rebuild upload decisions and preserve reviewer notes
   expect_error(assessment(Verified_results_table = verified), "nonblank DU")
 })
 
-test_that("upload rationales use the selected result for each AU/use/parameter", {
+test_that("parameter evidence follows selection and rationale is shared by AU", {
   input <- tibble::tibble(
     WATER_ID = "AU1", WATER_NAME = "Test river",
     DU = c("ColdWAL", "ColdWAL", "LW", "PC", "ColdWAL"),
@@ -255,46 +244,42 @@ test_that("upload rationales use the selected result for each AU/use/parameter",
     pct_Exceed = c(NA, NA, NA, NA, 5)
   )
   result <- assessment(input)
-  report <- result$Assess_Upload_Report
-  expect_equal(nrow(report), 4L)
-  expect_identical(report$ASSESSMENT_RATIONALE, report$PARAM_COMMENT)
-  expect_false(anyNA(report$PARAM_COMMENT))
-  metal <- subset(report, PARAM_NAME == "Metal" & USE_NAME == "Coldwater Aquatic Life")
+  metal <- result$Assess_Upload_Report_NS
   expect_match(metal$PARAM_COMMENT, "acute exceedance count: 2; chronic exceedance count: 3", fixed = TRUE)
   expect_match(metal$PARAM_COMMENT, "assessable samples: 6", fixed = TRUE)
   expect_match(metal$PARAM_COMMENT, "Exceedance count: not available", fixed = TRUE)
   expect_false(grepl("First method", metal$PARAM_COMMENT, fixed = TRUE))
-  livestock <- subset(report, USE_NAME == "Livestock Watering")
-  expect_match(livestock$PARAM_COMMENT, "Exceedance count: 0", fixed = TRUE)
-  expect_match(livestock$PARAM_COMMENT, "Determination: Fully Supporting", fixed = TRUE)
-  expect_match(result$Assess_Upload_Report_NA$PARAM_COMMENT,
-               "Data sufficiency: Data Insufficient", fixed = TRUE)
-  expect_match(subset(report, PARAM_NAME == "Chloride")$PARAM_COMMENT,
-               "Percent exceedance: 5", fixed = TRUE)
-  for (suffix in c("FS", "NS", "NA")) {
+  monitoring <- result$Assess_Upload_Report_3C3B
+  expect_match(monitoring$PARAM_COMMENT, "Data sufficiency: Data Insufficient", fixed = TRUE)
+  expect_identical(metal$ASSESSMENT_RATIONALE, monitoring$ASSESSMENT_RATIONALE)
+  expect_true(all(is.na(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE)))
+  # Fully supporting detail stays in intermediate results, not parameter uploads.
+  expect_equal(subset(result$Assess_DU_Res, CHARACTERISTIC_NAME == "Chloride")$pct_Exceed, 5)
+  for (suffix in c("FS", "NS", "3C3B")) {
     split <- result[[paste0("Assess_Upload_Report_", suffix)]]
-    expect_identical(names(split), names(report))
-    expect_true(all(split$PARAM_COMMENT %in% report$PARAM_COMMENT))
+    expect_identical(names(split), names(result$Assess_Upload_Report))
+    expect_true(all(split$PARAM_COMMENT %in% result$Assess_Upload_Report$PARAM_COMMENT))
   }
 })
 
-test_that("HH rationales use the linked DU and nutrient counts remain unavailable", {
+test_that("HH is linked to its DU and nutrient evidence remains available", {
   input <- tibble::tibble(
     WATER_ID = "AU1", WATER_NAME = "Test river", DU = c("ColdWAL", "HH"),
     CHR_UID = c(1, 2), CHARACTERISTIC_NAME = c("Temperature", "Metal"),
     n_Samples = 4, Method = "Count", Rationale = "Data Sufficient",
-    Exceed = "No", n_Exceed = 0
+    Exceed = c("No", "Yes"), n_Exceed = c(0, 2)
   )
   nutrients <- tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test river",
                              DU = "ColdWAL", Category = "3c")
   result <- assessment(input, Nutrients_Streams_table = nutrients)
-  report <- result$Assess_Upload_Report
-  expect_match(subset(report, PARAM_NAME == "Metal")$PARAM_COMMENT,
+  expect_match(result$Assess_Upload_Report_NS$PARAM_COMMENT,
                "designated use: Coldwater Aquatic Life (ColdWAL)", fixed = TRUE)
-  nutrient <- subset(report, PARAM_NAME == "Plant Nutrients")$PARAM_COMMENT
-  expect_match(nutrient, "Method: Stream Nutrients Assessment", fixed = TRUE)
-  expect_match(nutrient, "Exceedance count: not available", fixed = TRUE)
-  expect_match(nutrient, "Determination: Not Assessed", fixed = TRUE)
+  nutrient <- result$Assess_Upload_Report_3C3B
+  expect_equal(nutrient$PARAM_NAME, "Nutrients")
+  expect_equal(nutrient$USE_ATTAINMENT_CODE, "N")
+  expect_match(nutrient$PARAM_COMMENT, "Method: Stream Nutrients Assessment", fixed = TRUE)
+  expect_match(nutrient$PARAM_COMMENT, "Exceedance count: not available", fixed = TRUE)
+  expect_match(nutrient$PARAM_COMMENT, "Determination: Not Assessed", fixed = TRUE)
   empty <- assessment(input[0, ])
   expect_length(empty$Assess_Upload_Report$PARAM_COMMENT, 0L)
 })

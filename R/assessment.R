@@ -27,25 +27,42 @@
 #'   Add `AV_Notes` for verification notes. Nonblank `ASSESSMENT_RATIONALE` and
 #'   `PARAM_COMMENT` values override generated text in their respective fields.
 #'   An AU summary alone is insufficient because uploads require use/parameter
-#'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME must occur once.
+#'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME/SAMPLE_FRACTION
+#'   combination must occur once (fraction is optional).
+#' @param Cycle Even-numbered assessment cycle for SQUID exports; defaults to 2028.
+#' @param Assessment_date Assessment run date, as a Date or ISO date string.
+#' @param Target_TMDL_year Target TMDL year for 5A/5C causes; defaults to 2027.
 #'
-#' @returns A list of seven dataframes. Indiviual results are IR categories assigned
+#' @returns A list of seven dataframes. Individual results are IR categories assigned
 #' to each AU/DU/parameter combination. DU results are IR categories assigned to
 #' each AU/DU combination. AU results are IR categories assigned to each AU. Lastly,
-#' the combined upload report and separate FS, NS, and Not Assessed reports are
+#' the combined upload report and separate FS, NS, and 3C/3B reports are
 #' provided for NMED to upload into SQUID and transfer to ATTAINS.
-#' Upload reports include standard-language records of decision in
-#' ASSESSMENT_RATIONALE and PARAM_COMMENT, using the selected AU/DU/parameter
-#' result, method, data sufficiency, and available exceedance statistics.
-#' Unavailable statistics are reported as unavailable rather than zero.
+#' Ordinary FS upload records contain one row per AU/use, without a
+#' parameter name. Parameter-specific causes, explicit delistings, and 3C
+#' monitoring records are consolidated by SQUID parameter name. Their rationale
+#' combines the AU's assessment evidence; missing statistics are not treated as
+#' zero. FS provides initial F/X use records, including uses subsequently changed
+#' to N by NS cause records. X means nothing is assessable; there is no separate
+#' NA report.
+#' 3C/3B parameter records are in Assess_Upload_Report_3C3B, with 3B suppressed
+#' for uses having any assessable parameter. All uploads retain
+#' the 46 template columns. STATE_IR_CAT_CODE is left blank for manual entry.
 #' @details For assessment verification, save and edit `Assess_DU_Res`, retaining
 #'   all rows intended for the final upload and the supporting statistics. Run
 #'   `assessment(Verified_results_table = verified_results)` to rebuild the seven
 #'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
-#'   `3b`, `3c`, `5`, `5c`, and `4 or 5`; missing categories remain Not Assessed.
-#'   Verification notes are appended to both upload rationale fields. Correct
+#'   `3b`, `3c`, `5` (also `5A`), `5c`, and `4 or 5`; category letters are
+#'   case-insensitive. Missing categories remain Not Assessed.
+#'   Verification notes are appended to parameter-specific upload rationale
+#'   fields; use-only evidence remains in the intermediate results. Correct
 #'   statistics as needed: they are retained as evidence, not used to reverse
 #'   verified category decisions.
+#'   Supply a nonblank DELISTING_REASON on a verified fully supporting parameter
+#'   to request a parameter-specific delisting record; eligibility alone does
+#'   not establish a delisting. Delisting records initialize F in FS; NS causes
+#'   subsequently set impaired uses to N. Characteristics without an explicit SQUID alias retain their
+#'   names, so additional substance names should be checked against SQUID.
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
@@ -163,7 +180,7 @@
 #' df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
 #' df_Assess_Upload_Report_FS <- assessment_list$Assess_Upload_Report_FS
 #' df_Assess_Upload_Report_NS <- assessment_list$Assess_Upload_Report_NS
-#' df_Assess_Upload_Report_NA <- assessment_list$Assess_Upload_Report_NA
+#' df_Assess_Upload_Report_3C3B <- assessment_list$Assess_Upload_Report_3C3B
 #'
 #' # After assessment verification, rebuild uploads from the edited use/parameter results.
 #' verified_results <- assessment_list$Assess_DU_Res
@@ -188,7 +205,26 @@ assessment <- function(Conventionals_ALU_table = NULL
                        , Toxics_LW_table = NULL
                        , Toxics_WH_table = NULL
                        , Turbidity_ALU_table = NULL
-                       , Verified_results_table = NULL){
+                       , Verified_results_table = NULL
+                       , Cycle = 2028L
+                       , Assessment_date = Sys.Date()
+                       , Target_TMDL_year = 2027L){
+
+  if (!is.numeric(Cycle) || length(Cycle) != 1L || is.na(Cycle) ||
+      !is.finite(Cycle) || Cycle < 2000 || Cycle > 9998 ||
+      Cycle != as.integer(Cycle) || Cycle %% 2 != 0) {
+    stop("Cycle must be a single even-numbered assessment year.", call. = FALSE)
+  }
+  if (!is.numeric(Target_TMDL_year) || length(Target_TMDL_year) != 1L ||
+      is.na(Target_TMDL_year) || !is.finite(Target_TMDL_year) ||
+      Target_TMDL_year < 1900 || Target_TMDL_year > 9999 ||
+      Target_TMDL_year != as.integer(Target_TMDL_year)) {
+    stop("Target_TMDL_year must be a single year.", call. = FALSE)
+  }
+  Assessment_date <- tryCatch(as.Date(Assessment_date), error = function(e) NA)
+  if (length(Assessment_date) != 1L || is.na(Assessment_date)) {
+    stop("Assessment_date must be a single valid date.", call. = FALSE)
+  }
 
   # QC ####
   # Collect arguments into a named list
@@ -236,10 +272,13 @@ assessment <- function(Conventionals_ALU_table = NULL
         stop("Verified_results_table requires nonblank ", field, ".", call. = FALSE)
       }
     }
-    if (anyDuplicated(df_indiv_results_v2[keys])) {
+    if (anyDuplicated(df_indiv_results_v2[c(keys, intersect("SAMPLE_FRACTION",
+                                                          names(df_indiv_results_v2)))])) {
       stop("Verified_results_table contains duplicate AU/use/parameter records.", call. = FALSE)
     }
-    category <- df_indiv_results_v2$Individual_Category
+    category <- tolower(trimws(df_indiv_results_v2$Individual_Category))
+    category[!is.na(category) & category == "5a"] <- "5"
+    df_indiv_results_v2$Individual_Category <- category
     if (any(!is.na(category) & !category %in%
             c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5"))) {
       stop("Verified_results_table contains unsupported Individual_Category values.", call. = FALSE)
@@ -343,7 +382,8 @@ assessment <- function(Conventionals_ALU_table = NULL
   expected_cols <- c("WATER_ID", "WATER_NAME", "DU", "CHR_UID", "CHARACTERISTIC_NAME"
                      , "SAMPLE_FRACTION", "n_Samples", "n_Samples_assessable"
                      , "Method", "Rationale", "Exceed", "n_Exceed"
-                     , "n_Exceed_Acute", "n_Exceed_Chronic", "pct_Exceed")
+                     , "n_Exceed_Acute", "n_Exceed_Chronic", "pct_Exceed"
+                     , "DELISTING_REASON")
 
   # Add missing columns with NA
   missing_cols <- setdiff(expected_cols, names(df_AnalysisResults))
@@ -484,7 +524,7 @@ assessment <- function(Conventionals_ALU_table = NULL
                                          , Individual_Category == "3b" ~ 2L
                                          , Individual_Category == "3a" ~ 3L
                                          , TRUE ~ 4L)) %>%
-    dplyr::group_by(WATER_ID, WATER_NAME, DU, CHR_UID, CHARACTERISTIC_NAME) %>%
+    dplyr::group_by(WATER_ID, DU, CHR_UID, CHARACTERISTIC_NAME, SAMPLE_FRACTION) %>%
     dplyr::arrange(category_priority, category_detail, .by_group = TRUE) %>%
     dplyr::slice_head(n = 1) %>%
     dplyr::ungroup() %>%
@@ -609,39 +649,17 @@ assessment <- function(Conventionals_ALU_table = NULL
                 , "PARAM_CONSENT_DECREE_CYCLE", "PARAM_ALT_LISTING_ID", "SOURCE_PARAM_NAME"
                 , "SOURCE_NAME", "SOURCE_CONFIRMED", "SOURCE_COMMENT")
 
-  # missing fields to add as NA
-  setdiff(req_cols, names(df_upload))
-  missing_cols <- setdiff(req_cols, names(df_upload))
-  df_upload_v2 <- df_upload
-  df_upload_v2[missing_cols] <- NA
-  df_upload_v2 <- df_upload_v2[req_cols]
-
-  # Separate upload reports by determination ####
-  # Filter before export so Fully Supporting and Not Supporting records
-  # can be uploaded independently without overwriting each other.
-  df_upload_FS <- df_upload %>%
-    dplyr::filter(Determination == "Fully Supporting")
-
-  df_upload_NS <- df_upload %>%
-    dplyr::filter(Determination == "Not Supporting")
-
-  df_upload_NA <- df_upload %>%
-    dplyr::filter(Determination == "Not Assessed" | is.na(Determination))
-
-  format_upload <- function(df) {
-    missing_cols <- setdiff(req_cols, names(df))
-    df[missing_cols] <- NA
-    df[req_cols]
-  }
+  uploads <- .assessment_uploads(df_upload, req_cols, Cycle, Assessment_date,
+                                 Target_TMDL_year)
 
   # Export data ####
   return(list(
     Assess_Indiv_Res = df_indiv_results_v2,
     Assess_DU_Res = df_DU_results,
     Assess_AU_Res = df_AU_results,
-    Assess_Upload_Report = df_upload_v2,
-    Assess_Upload_Report_FS = format_upload(df_upload_FS),
-    Assess_Upload_Report_NS = format_upload(df_upload_NS),
-    Assess_Upload_Report_NA = format_upload(df_upload_NA)))
+    Assess_Upload_Report = uploads$all,
+    Assess_Upload_Report_FS = uploads$FS,
+    Assess_Upload_Report_NS = uploads$NS,
+    Assess_Upload_Report_3C3B = uploads$monitoring))
 
 } # END ~ Function
