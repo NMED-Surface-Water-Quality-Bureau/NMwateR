@@ -24,8 +24,9 @@
 #'   `Assess_DU_Res` from a previous run. Supply this table alone for the final
 #'   post-verification run. Edit `Individual_Category` to correct a decision;
 #'   `Determination`, `Use_Category`, and `Overall_Category` are recalculated.
-#'   Add `AV_Notes` for verification notes. Nonblank `ASSESSMENT_RATIONALE` and
-#'   `PARAM_COMMENT` values override generated text in their respective fields.
+#'   Add `AV_Notes` for AU narratives or verification notes. Nonblank
+#'   `ASSESSMENT_RATIONALE` overrides the AU's generated rationale;
+#'   `PARAM_COMMENT` overrides its parameter statement.
 #'   An AU summary alone is insufficient because uploads require use/parameter
 #'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME combination must
 #'   occur once; WATER_NAME and SAMPLE_FRACTION are supporting attributes.
@@ -52,7 +53,7 @@
 #'   all rows intended for the final upload and the supporting statistics. Run
 #'   `assessment(Verified_results_table = verified_results)` to rebuild the seven
 #'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
-#'   `3b`, `3c`, `5` (also `5A`), `5c`, and `4 or 5`; category letters are
+#'   `3b`, `3c`, `5` (also `5A`), `5c`, `4A`, and `4 or 5`; category letters are
 #'   case-insensitive. Missing categories remain Not Assessed.
 #'   Parameter selection uses impaired (5A/5C/4 or 5) > 3C > Fully Supporting
 #'   (2/1 or 2) > 3B > 3A. Ties prefer Data Sufficient over Low N, then the
@@ -61,8 +62,8 @@
 #'   without adding potentially overlapping excursions. Remaining ties use
 #'   category detail and a fixed ordering of row values, independent of input
 #'   order. Water names are filled from the AU's nonblank names after selection.
-#'   Verification notes are appended to parameter-specific upload rationale
-#'   fields; use-only evidence remains in the intermediate results. Correct
+#'   Verification notes are appended once to the AU rationale, including notes
+#'   supplied on fully supporting rows. Correct
 #'   statistics as needed: they are retained as evidence, not used to reverse
 #'   verified category decisions.
 #'   Supply a nonblank DELISTING_REASON on a verified fully supporting parameter
@@ -70,6 +71,23 @@
 #'   not establish a delisting. Delisting records initialize F in FS; NS causes
 #'   subsequently set impaired uses to N. Characteristics without an explicit SQUID alias retain their
 #'   names, so additional substance names should be checked against SQUID.
+#'
+#'   ROD text uses short parameter statements with SQUID categories, counts,
+#'   criterion type, fraction, available LTD years/indicators, and nutrient
+#'   enrichment indicators. ASSESSMENT_RATIONALE is identical on every upload
+#'   row for an AU, ordered as impairments, 3C, then delistings/full-support
+#'   exceptions. PARAM_COMMENT contains only the corresponding parameter
+#'   statement. Ordinary full support is omitted from the rationale; set
+#'   ROD_Include to TRUE on a verified row to describe new or outside data.
+#'   No previous-cycle listing history is inferred. Explicit verified 4A
+#'   categories are supported; ambiguous internal `4 or 5` still exports as 5A.
+#'
+#'   Available analysis columns are retained in the intermediate results.
+#'   ROD_Context retains supplemental evidence from other analysis sources
+#'   when one characteristic has both grab and LTD results. This editable
+#'   text must also be reviewed if that supporting evidence changes during
+#'   verification. Missing years, duration, or nutrient constituents are never
+#'   inferred from the assessment category alone.
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
 #' df_Criteria <- NMwateR::example_criteria_processed
@@ -286,14 +304,14 @@ assessment <- function(Conventionals_ALU_table = NULL
     category[!is.na(category) & category == "5a"] <- "5"
     df_indiv_results_v2$Individual_Category <- category
     if (any(!is.na(category) & !category %in%
-            c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5"))) {
+            c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5", "4a"))) {
       stop("Verified_results_table contains unsupported Individual_Category values.", call. = FALSE)
     }
     # Preserve verified decisions even when the original Exceed/Rationale differs.
     df_indiv_results_v2 <- df_indiv_results_v2 %>%
       dplyr::mutate(Determination = dplyr::case_when(
         Individual_Category %in% c("2", "1 or 2") ~ "Fully Supporting",
-        Individual_Category %in% c("5", "5c", "4 or 5") ~ "Not Supporting",
+        Individual_Category %in% c("5", "5c", "4 or 5", "4a") ~ "Not Supporting",
         TRUE ~ "Not Assessed"))
     evidence_cols <- c("SAMPLE_FRACTION", "Method", "Rationale", "Exceed",
                        "n_Samples", "n_Samples_assessable", "n_Exceed",
@@ -327,6 +345,11 @@ assessment <- function(Conventionals_ALU_table = NULL
 
   # Final product: filtered data list
   data_list <- args_list[present]
+  data_list <- stats::setNames(lapply(names(data_list), function(nm) {
+    df <- args_list[[nm]]
+    df$Analysis_Source <- sub("_table$", "", nm)
+    df
+  }), present)
 
   # Format data ####
   ## Pull out nutrient files ####
@@ -399,7 +422,7 @@ assessment <- function(Conventionals_ALU_table = NULL
 
   # Select and reorder columns
   df_AnalysisResults_v2 <- df_AnalysisResults %>%
-    dplyr::select(dplyr::all_of(expected_cols)) %>%
+    dplyr::select(dplyr::all_of(expected_cols), dplyr::everything()) %>%
     dplyr::distinct() %>%
     dplyr::mutate(n_Samples_assessable = dplyr::case_when((!is.na(n_Samples_assessable))
                                                           ~ n_Samples_assessable
@@ -467,7 +490,6 @@ assessment <- function(Conventionals_ALU_table = NULL
   rm(empty_nutr)
 
   df_Nutr_Lakes_v2 <- df_Nutr_Lakes %>%
-    dplyr::select(dplyr::any_of(c(expected_cols, "Category"))) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
                   , Method = "Lake Nutrients Assessment"
                   , Determination = dplyr::case_when((Category == "1 or 2") ~ "Fully Supporting"
@@ -478,8 +500,8 @@ assessment <- function(Conventionals_ALU_table = NULL
     dplyr::rename(Individual_Category = Category)
 
   df_Nutr_Streams_v2 <- df_Nutr_Streams %>%
-    dplyr::select(dplyr::any_of(c(expected_cols, "Category"))) %>%
     dplyr::mutate(CHARACTERISTIC_NAME = "Plant Nutrients"
+                  , Assessment_Qualifier = Category
                   , Method = "Stream Nutrients Assessment"
                   # If the stream was not an assessable waterbody type, assign the category as NA at this stage.
                   , Category = dplyr::case_when((Category == "Not Assessable: Waterbody Type Mismatch")
@@ -499,8 +521,11 @@ assessment <- function(Conventionals_ALU_table = NULL
   missing_cols <- setdiff(names(df_indiv_results), names(df_Nutr_Streams_v2))
   df_Nutr_Streams_v2[missing_cols] <- NA
 
-  df_indiv_results_v2 <- rbind(df_indiv_results, df_Nutr_Lakes_v2
-                               , df_Nutr_Streams_v2)
+  # Align heterogeneous analysis columns without losing nutrient-only fields.
+  df_indiv_results_v2 <- lapply(list(df_indiv_results, df_Nutr_Lakes_v2, df_Nutr_Streams_v2),
+                               function(df) dplyr::mutate(df, dplyr::across(dplyr::everything(), as.character))) %>%
+    dplyr::bind_rows() %>% readr::type_convert() %>%
+    dplyr::mutate(Individual_Category = as.character(Individual_Category))
 
   # cleanup
   rm(df_Nutr_Lakes, df_Nutr_Lakes_v2, df_Nutr_Streams, df_Nutr_Streams_v2
@@ -521,16 +546,16 @@ assessment <- function(Conventionals_ALU_table = NULL
 
   # Impaired > 3C > Fully Supporting > 3B > 3A. Within a category group,
   # prefer sufficient data, then more exceedances, then more samples.
-  df_DU_results <- df_indiv_results_v2 %>%
+  df_DU_results <- .assessment_du_context(df_indiv_results_v2) %>%
     .assessment_select_result(c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME"),
                                "Individual_Category") %>%
     dplyr::select(-WATER_NAME) %>%
     dplyr::left_join(au_names, by = "WATER_ID") %>%
-    dplyr::select(dplyr::all_of(names(df_indiv_results_v2))) %>%
+    dplyr::select(dplyr::all_of(names(df_indiv_results_v2)), dplyr::everything()) %>%
     dplyr::group_by(WATER_ID, DU) %>%
     # Nutrient category "1 or 2" is fully supporting, like "2" (issue #6).
     # Any impaired parameter still takes precedence for the use.
-    dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5")) ~
+    dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5", "4a")) ~
                                                     "5"
                                                   , any(Individual_Category == "3c", na.rm = TRUE) ~ "3"
                                                   , any(Individual_Category %in% c("2", "1 or 2")) ~
@@ -538,6 +563,12 @@ assessment <- function(Conventionals_ALU_table = NULL
                                                   , TRUE ~ "3")) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(WATER_ID, DU)
+
+  if (!"ROD_Context" %in% names(df_indiv_results_v2)) {
+    df_indiv_results_v2 <- dplyr::left_join(df_indiv_results_v2,
+      df_DU_results %>% dplyr::select(WATER_ID, DU, CHR_UID, CHARACTERISTIC_NAME, ROD_Context),
+      by = c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME"))
+  }
 
   # AU Determinations ####
   # Calculate one overall conclusion per AU, across all designated uses.
@@ -590,49 +621,6 @@ assessment <- function(Conventionals_ALU_table = NULL
                                                            , (Determination == "Not Assessed")
                                                            ~ "not enough information"))
 
-
-  # Build the record of decision from the selected parameter result, after HH
-  # has been linked to its aquatic life use and duplicate results resolved.
-  # Exceed is the analysis decision, not necessarily whether any sample exceeded.
-  # Keep acute/chronic counts separate: a sample can exceed both criteria.
-  rationale_value <- function(x) {
-    if (is.na(x) || !nzchar(trimws(as.character(x)))) return("not available")
-    gsub("[[:space:]]+", " ", trimws(as.character(x)))
-  }
-  generated_rationale <- vapply(seq_len(nrow(df_upload)), function(i) {
-    row <- df_upload[i, ]
-    value <- function(name) rationale_value(row[[name]])
-    paste0("Assessment unit: ", value("ASSESSMENT_UNIT_ID"),
-           "; designated use: ", value("USE_NAME"), " (", value("DU"), "). ",
-           "Parameter: ", value("PARAM_NAME"),
-           "; sample fraction: ", value("SAMPLE_FRACTION"), ". ",
-           "Determination: ", value("Determination"),
-           "; parameter IR category: ", value("PARAM_STATE_IR_CAT"), ". ",
-           "Method: ", value("Method"), ". ",
-           "Data sufficiency: ", value("Rationale"), ". ",
-           "Samples: ", value("n_Samples"),
-           "; assessable samples: ", value("n_Samples_assessable"), ". ",
-           "Analysis exceedance decision (Exceed): ", value("Exceed"), ". ",
-           "Exceedance count: ", value("n_Exceed"),
-           "; acute exceedance count: ", value("n_Exceed_Acute"),
-           "; chronic exceedance count: ", value("n_Exceed_Chronic"), ". ",
-           "Percent exceedance: ", value("pct_Exceed"), ".")
-  }, character(1))
-  # Keep explicit reviewer text, and append AV notes to each final text field.
-  for (field in c("PARAM_COMMENT", "ASSESSMENT_RATIONALE")) {
-    final_text <- generated_rationale
-    if (field %in% names(df_upload)) {
-      supplied <- as.character(df_upload[[field]])
-      keep <- !is.na(supplied) & nzchar(trimws(supplied))
-      final_text[keep] <- supplied[keep]
-    }
-    if ("AV_Notes" %in% names(df_upload)) {
-      notes <- as.character(df_upload$AV_Notes)
-      keep <- !is.na(notes) & nzchar(trimws(notes))
-      final_text[keep] <- paste0(final_text[keep], " Assessment verification notes: ", notes[keep])
-    }
-    df_upload[[field]] <- final_text
-  }
 
   req_cols <- c("ASSESSMENT_UNIT_ID", "AU_NAME_REF_ONLY", "CYCLE", "CYCLE_LAST_ASSESSED"
                 , "ASSESSMENT_COMMENT", "ASSESSMENT_RATIONALE", "USE_NAME", "USE_ATTAINMENT_CODE"

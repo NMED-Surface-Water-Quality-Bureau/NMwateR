@@ -161,6 +161,12 @@ LTD_ALU <- function(Chem_table
                                        , "Data Sufficient")
         df_results$Exceed <- ifelse(bad_tot >=1, 'Yes', 'No')
         df_results$n_Exceed <- bad_tot
+        # Carry actual monitoring years into assessment/ROD exports. A year is
+        # included as an excursion year only when relevant evidence exceeded.
+        result_years <- format(as.Date(results$DATE), "%Y")
+        df_results$LTD_Years <- paste(sort(unique(stats::na.omit(result_years))), collapse = ", ")
+        df_results$LTD_Exceedance_Years <- paste(sort(unique(stats::na.omit(
+          result_years[results$bad_samp == 1 & results$relevant == 1]))), collapse = ", ")
 
         result_list[[counter]] <- df_results
       }
