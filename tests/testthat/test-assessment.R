@@ -245,14 +245,12 @@ test_that("parameter evidence follows selection and rationale is shared by AU", 
   )
   result <- assessment(input)
   metal <- result$Assess_Upload_Report_NS
-  expect_match(metal$PARAM_COMMENT, "acute exceedance count: 2; chronic exceedance count: 3", fixed = TRUE)
-  expect_match(metal$PARAM_COMMENT, "assessable samples: 6", fixed = TRUE)
-  expect_match(metal$PARAM_COMMENT, "Exceedance count: not available", fixed = TRUE)
+  expect_equal(metal$PARAM_COMMENT, "5A for Metal - 2/6 acute and 3/6 chronic excs.")
   expect_false(grepl("First method", metal$PARAM_COMMENT, fixed = TRUE))
   monitoring <- result$Assess_Upload_Report_3C3B
-  expect_match(monitoring$PARAM_COMMENT, "Data sufficiency: Data Insufficient", fixed = TRUE)
+  expect_equal(monitoring$PARAM_COMMENT, "3C for primary contact Bacteria - 1/1 excs.")
   expect_identical(metal$ASSESSMENT_RATIONALE, monitoring$ASSESSMENT_RATIONALE)
-  expect_true(all(is.na(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE)))
+  expect_true(all(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE == metal$ASSESSMENT_RATIONALE))
   # Fully supporting detail stays in intermediate results, not parameter uploads.
   expect_equal(subset(result$Assess_DU_Res, CHARACTERISTIC_NAME == "Chloride")$pct_Exceed, 5)
   for (suffix in c("FS", "NS", "3C3B")) {
@@ -272,14 +270,439 @@ test_that("HH is linked to its DU and nutrient evidence remains available", {
   nutrients <- tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test river",
                              DU = "ColdWAL", Category = "3c")
   result <- assessment(input, Nutrients_Streams_table = nutrients)
-  expect_match(result$Assess_Upload_Report_NS$PARAM_COMMENT,
-               "designated use: Coldwater Aquatic Life (ColdWAL)", fixed = TRUE)
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for Metal - 2/4 excs.")
   nutrient <- result$Assess_Upload_Report_3C3B
   expect_equal(nutrient$PARAM_NAME, "Nutrients")
   expect_equal(nutrient$USE_ATTAINMENT_CODE, "N")
-  expect_match(nutrient$PARAM_COMMENT, "Method: Stream Nutrients Assessment", fixed = TRUE)
-  expect_match(nutrient$PARAM_COMMENT, "Exceedance count: not available", fixed = TRUE)
-  expect_match(nutrient$PARAM_COMMENT, "Determination: Not Assessed", fixed = TRUE)
+  expect_equal(nutrient$PARAM_COMMENT, "3C for Plant Nutrients - delta DO data unavailable.")
   empty <- assessment(input[0, ])
   expect_length(empty$Assess_Upload_Report$PARAM_COMMENT, 0L)
+})
+
+selection_input <- function(categories) {
+  tibble::tibble(
+    WATER_ID = "AU1", WATER_NAME = "Test lake", DU = "ColdWAL",
+    CHR_UID = 2849, CHARACTERISTIC_NAME = "Temperature, water",
+    Individual_Category = categories, Rationale = "Data Sufficient",
+    n_Exceed = 1, n_Samples = 4, Method = "Count")
+}
+
+test_that("DU and SQUID selection follow impaired > 3C > FS > 3B > 3A", {
+  # Feed categories through the analysis path as well, since verified input
+  # deliberately requires unique AU/use/characteristic records.
+  pairs <- list(c("5", "3c"), c("5c", "3c"), c("4 or 5", "3c"),
+                c("3c", "2"), c("3c", "1 or 2"),
+                c("2", "3b"), c("1 or 2", "3b"), c("3b", "3a"))
+  for (pair in pairs) {
+    input <- selection_input(pair)
+    selected <- NMwateR:::.assessment_select_result(
+      input, c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME"), "Individual_Category")
+    expect_equal(selected$Individual_Category, pair[1], info = paste(pair, collapse = " > "))
+    expect_equal(NMwateR:::.assessment_select_result(
+      input[2:1, ], c("WATER_ID", "DU", "CHR_UID", "CHARACTERISTIC_NAME"),
+      "Individual_Category"), selected)
+  }
+
+  input <- selection_input(c("2", "3c"))
+  input$CHR_UID <- c(2849, 999920)
+  input$CHARACTERISTIC_NAME <- c("Temperature, water", "4T3")
+  result <- assessment(Verified_results_table = input)
+  expect_true(all(result$Assess_DU_Res$Use_Category == "3"))
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_NAME, "Temperature")
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_STATE_IR_CAT, "3C")
+  expect_equal(result$Assess_Upload_Report_3C3B$USE_ATTAINMENT_CODE, "F")
+})
+
+test_that("blank names and profile fractions do not duplicate DU results", {
+  input <- tibble::tibble(
+    WATER_ID = "NM-2114_00", WATER_NAME = rep(c("Abiquiu Reservoir", "  "), 4),
+    DU = c(rep("ColdWAL", 6), "PC", "PC"),
+    CHR_UID = c(985, 985, 1648, 1648, 2849, 2849, 1648, 1648),
+    CHARACTERISTIC_NAME = c(rep("Dissolved oxygen (DO)", 2), rep("pH", 2),
+                            rep("Temperature, water", 2), rep("pH", 2)),
+    SAMPLE_FRACTION = rep(c(NA, "Thermocline Average"), 4),
+    n_Samples = rep(c(4, 20), 4), Rationale = "Data Sufficient", Exceed = "No")
+  input$WATER_NAME[4] <- NA_character_
+  result <- assessment(Conventionals_ALU_table = input)
+  expect_equal(nrow(result$Assess_Indiv_Res), 8L)
+  expect_equal(nrow(result$Assess_DU_Res), 4L)
+  expect_true(all(result$Assess_DU_Res$WATER_NAME == "Abiquiu Reservoir"))
+  expect_true(all(result$Assess_DU_Res$n_Samples == 20))
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res)$Assess_Upload_Report,
+               result$Assess_Upload_Report)
+  reversed <- assessment(Conventionals_ALU_table = input[8:1, ])
+  expect_equal(reversed$Assess_DU_Res, result$Assess_DU_Res)
+  expect_equal(reversed$Assess_Upload_Report, result$Assess_Upload_Report)
+})
+
+test_that("category ties select sufficient data then most exceedances then most samples", {
+  input <- selection_input(rep("5", 5))
+  input$CHR_UID <- seq_len(nrow(input))
+  input$CHARACTERISTIC_NAME <- c("Temperature, water", "Maximum - Temperature, water",
+                                 "4T3", "Temperature", "Temperature")
+  input$Rationale <- c("Data Sufficient; Low N Samples", rep("Data Sufficient", 4))
+  input$n_Exceed <- c(99, 2, 3, 3, 3)
+  input$n_Samples <- c(100, 100, 10, 20, 20)
+  input$Method <- c("Low N", "Fewer exceedances", "Fewer samples", "A strongest", "Z strongest")
+  result <- assessment(Verified_results_table = input)
+  ns <- result$Assess_Upload_Report_NS
+  expect_equal(nrow(ns), 1L)
+  expect_match(ns$PARAM_COMMENT, "3/20 excs", fixed = TRUE)
+  expect_false(grepl("99/100|2/100|3/10", ns$PARAM_COMMENT))
+  # Also exercise the analytical grouping path, including a final lexical tie.
+  analysis <- input
+  analysis$CHR_UID <- 2849
+  analysis$CHARACTERISTIC_NAME <- "Temperature, water"
+  analysis$Individual_Category <- NULL
+  analysis$Exceed <- "Yes"
+  first <- assessment(Conventionals_ALU_table = analysis)
+  expect_equal(first$Assess_DU_Res$Method, "A strongest")
+  for (order in list(5:1, c(3, 5, 1, 4, 2))) {
+    reordered <- assessment(Verified_results_table = input[order, ])
+    expect_equal(reordered$Assess_Upload_Report, result$Assess_Upload_Report)
+    reordered_analysis <- assessment(Conventionals_ALU_table = analysis[order, ])
+    expect_equal(reordered_analysis$Assess_DU_Res, first$Assess_DU_Res)
+    expect_equal(reordered_analysis$Assess_Upload_Report, first$Assess_Upload_Report)
+  }
+})
+
+test_that("acute and chronic counts break ties without double counting", {
+  input <- selection_input(rep("5", 3))
+  input$n_Exceed <- NA_real_
+  input$n_Exceed_Acute <- c(2, 4, NA)
+  input$n_Exceed_Chronic <- c(3, 0, NA)
+  input$n_Samples <- c(10, 8, 100)
+  input$Method <- c("Overlapping acute/chronic", "Most known exceedances", "No count available")
+  input$Individual_Category <- NULL
+  input$Exceed <- "Yes"
+  result <- assessment(Conventionals_ALU_table = input)
+  expect_equal(result$Assess_DU_Res$Method, "Most known exceedances")
+  expect_equal(result$Assess_DU_Res$n_Exceed_Acute, 4)
+  expect_equal(assessment(Conventionals_ALU_table = input[3:1, ])$Assess_DU_Res,
+               result$Assess_DU_Res)
+})
+
+upload_fixture <- function(categories, names = rep("Temperature, water", length(categories)),
+                           water_ids = rep("AU1", length(categories)),
+                           uses = rep("ColdWAL", length(categories))) {
+  tibble::tibble(WATER_ID = water_ids, WATER_NAME = "Test waterbody", DU = uses,
+                 CHR_UID = seq_along(categories), CHARACTERISTIC_NAME = names,
+                 Individual_Category = categories)
+}
+
+test_that("FS initializes every AU/use exactly once as F or X", {
+  input <- upload_fixture(c("2", "3b", "5", "3b", "3c"),
+                           water_ids = c("AU1", "AU1", "AU2", "AU3", "AU4"))
+  result <- assessment(Verified_results_table = input)
+  fs <- result$Assess_Upload_Report_FS
+  expect_equal(fs$ASSESSMENT_UNIT_ID, paste0("AU", 1:4))
+  expect_equal(fs$USE_ATTAINMENT_CODE, c("F", "F", "X", "F"))
+  expect_equal(fs$PARAM_ATTAINMENT_CODE,
+               c("meeting criteria", "meeting criteria", "not enough information", "meeting criteria"))
+  for (field in c("PARAM_NAME", "PARAM_STATUS_NAME", "PARAM_POLLUTANT_INDICATOR",
+                  "PARAM_STATE_IR_CAT")) {
+    expect_true(all(is.na(fs[[field]])), info = field)
+  }
+  expect_equal(result$Assess_Upload_Report_NS$USE_ATTAINMENT_CODE, "N")
+  monitoring <- result$Assess_Upload_Report_3C3B
+  expect_equal(monitoring$ASSESSMENT_UNIT_ID, c("AU3", "AU4"))
+  expect_equal(monitoring$PARAM_STATE_IR_CAT, c("3B", "3C"))
+  expect_equal(monitoring$USE_ATTAINMENT_CODE, c("X", "F"))
+})
+
+test_that("SQUID aliases consolidate with the selected category precedence", {
+  input <- upload_fixture(
+    c("2", "5", "5c", "3c", "5", "5", "5", "5", "5", "5", "4 or 5"),
+    c("Temperature, water", "Maximum - Temperature, water", "4T3",
+      "Dissolved oxygen (DO)", "Minimum - Dissolved oxygen (DO)",
+      "pH", "Maximum - pH", "Specific conductance", "Maximum - Specific conductance",
+      "Escherichia coli", "Plant Nutrients"))
+  result <- assessment(Verified_results_table = input)
+  ns <- result$Assess_Upload_Report_NS
+  expect_setequal(ns$PARAM_NAME,
+                  c("Temperature", "Dissolved oxygen", "pH", "Specific Conductance", "E. coli", "Nutrients"))
+  expect_equal(nrow(ns), 6L)
+  expect_equal(subset(ns, PARAM_NAME == "Temperature")$PARAM_STATE_IR_CAT, "5C")
+  expect_equal(subset(ns, PARAM_NAME == "Temperature")$PARAM_PRIORITY_RANKING, "Medium")
+  expect_true(all(ns$PARAM_PRIORITY_RANKING[ns$PARAM_STATE_IR_CAT == "5A"] == "High"))
+  expect_true(all(ns$PARAM_TARGET_TMDL_DATE == "2027"))
+  expect_true(all(ns$PARAM_STATUS_NAME == "Cause"))
+  expect_true(all(ns$PARAM_POLLUTANT_INDICATOR == "Y"))
+  expect_equal(nrow(result$Assess_Upload_Report_3C3B), 0L)
+  expect_equal(result$Assess_DU_Res$CHARACTERISTIC_NAME, input$CHARACTERISTIC_NAME)
+})
+
+test_that("fractions and segment-specific phosphorus remain distinct", {
+  input <- upload_fixture(rep("5", 5),
+                           c("Aluminum", "Aluminum", "Plant Nutrients", "Total Phosphorus", "Copper"))
+  input$CHR_UID[1:2] <- c(549001, 549002)
+  input$SAMPLE_FRACTION <- c("Dissolved", "Total", NA, NA, "Dissolved")
+  result <- assessment(Verified_results_table = input)
+  expect_setequal(result$Assess_Upload_Report_NS$PARAM_NAME,
+                  c("Aluminum, Dissolved", "Aluminum, Total Recoverable", "Nutrients",
+                    "Phosphorus, Total", "Copper"))
+  expect_equal(nrow(result$Assess_DU_Res), 5L)
+})
+
+test_that("all 3C rows for an impaired use carry N and 3B is suppressed", {
+  input <- upload_fixture(c("3c", "5", "3b", "3c", "3b"),
+                           c("Dissolved oxygen (DO)", "Temperature, water", "Copper",
+                             "Plant Nutrients", "Copper"),
+                           water_ids = c("AU1", "AU1", "AU1", "AU2", "AU2"))
+  result <- assessment(Verified_results_table = input)
+  monitoring <- result$Assess_Upload_Report_3C3B
+  expect_equal(monitoring$USE_ATTAINMENT_CODE, c("N", "F"))
+  expect_true(all(monitoring$PARAM_STATE_IR_CAT == "3C"))
+  expect_true(all(monitoring$PARAM_STATUS_NAME == "Monitored"))
+  expect_true(all(monitoring$PARAM_ATTAINMENT_CODE == "meeting criteria"))
+  expect_true(all(is.na(monitoring$PARAM_PRIORITY_RANKING)))
+  expect_true(all(is.na(monitoring$PARAM_TARGET_TMDL_DATE)))
+  expect_false(any(result$Assess_Upload_Report_NS$PARAM_STATE_IR_CAT %in% c("3C", "3B")))
+})
+
+test_that("multiple stations cannot create conflicting use records", {
+  input <- tibble::tibble(
+    WATER_ID = rep(c("W_NM-208-04.B", "W_NM-208-01"), each = 2),
+    WATER_NAME = c("Station A", "Station B", "Station C", "Station D"),
+    DU = "PC", CHR_UID = 2287, CHARACTERISTIC_NAME = "Escherichia coli",
+    n_Samples = c(1, 4, 4, 4), Rationale = c("Data Insufficient", rep("Data Sufficient", 3)),
+    Exceed = "No")
+  result <- assessment(Bacteria_PCR_SCR_table = input)
+  expect_equal(nrow(result$Assess_Upload_Report_FS), 2L)
+  expect_true(all(result$Assess_Upload_Report_FS$USE_ATTAINMENT_CODE == "F"))
+  expect_equal(nrow(result$Assess_Upload_Report_3C3B), 0L)
+})
+
+test_that("delistings require explicit reasons and stay out of NS", {
+  input <- upload_fixture(c("2", "2", "5"),
+                           c("Temperature, water", "Escherichia coli", "pH"))
+  input$DELISTING_REASON <- c("Original basis for listing was incorrect.", NA, NA)
+  input$Delist_eligible <- "Yes"
+  result <- assessment(Verified_results_table = input)
+  fs <- result$Assess_Upload_Report_FS
+  expect_equal(nrow(fs), 2L)
+  delist <- subset(fs, !is.na(PARAM_NAME))
+  expect_equal(delist$PARAM_NAME, "Temperature")
+  expect_equal(delist$PARAM_STATUS_NAME, "Cause")
+  expect_equal(delist$PARAM_ATTAINMENT_CODE, "meeting criteria")
+  expect_equal(delist$USE_ATTAINMENT_CODE, "F")
+  expect_equal(delist$DELISTING_REASON, input$DELISTING_REASON[1])
+  expect_true(is.na(delist$PARAM_STATE_IR_CAT))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_NAME, "pH")
+  expect_true(all(is.na(result$Assess_Upload_Report_NS$DELISTING_REASON)))
+})
+
+test_that("exports share the full schema and support explicit cycle and run dates", {
+  input <- upload_fixture(c("5A", "3C"), c("Temperature, water", "Plant Nutrients"))
+  result <- assessment(Verified_results_table = input, Cycle = 2030,
+                        Assessment_date = "2028-11-18", Target_TMDL_year = 2029)
+  report <- result$Assess_Upload_Report
+  expect_equal(ncol(report), 46L)
+  expect_true(all(report$CYCLE == "2030" & report$CYCLE_LAST_ASSESSED == "2030"))
+  expect_true(all(report$USE_ASMT_DATE == "11/18/2028"))
+  expect_true(all(is.na(report$STATE_IR_CAT_CODE)))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_TARGET_TMDL_DATE, "2029")
+  parts <- result[c("Assess_Upload_Report_FS", "Assess_Upload_Report_NS", "Assess_Upload_Report_3C3B")]
+  expect_equal(sum(vapply(parts, nrow, integer(1))), nrow(report))
+  expect_equal(report, dplyr::bind_rows(parts))
+  for (part in parts) expect_identical(names(part), names(report))
+  expect_error(assessment(Verified_results_table = input, Cycle = 2029), "even-numbered")
+  expect_error(assessment(Verified_results_table = input, Assessment_date = "bad date"), "valid date")
+  expect_error(assessment(Verified_results_table = input, Target_TMDL_year = NA), "single year")
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res, Cycle = 2030,
+                           Assessment_date = "2028-11-18", Target_TMDL_year = 2029)$Assess_Upload_Report,
+               report)
+})
+
+test_that("staged uploads retain final use attainment regardless of monitoring row order", {
+  input <- upload_fixture(
+    c("2", "5", "3c", "3b", "2", "3b", "3c"),
+    c("Temperature, water", "pH", "Dissolved oxygen (DO)", "Copper",
+      "Escherichia coli", "Copper", "Plant Nutrients"),
+    water_ids = c(rep("NM-2116.A_002", 4), "NM-2116.A_000", "AU_X", "AU_3C"))
+  input$DELISTING_REASON <- c("Verified temperature delisting.", rep(NA, 3),
+                              "Verified E. coli delisting.", NA, NA)
+  result <- assessment(Verified_results_table = input)
+  fs <- result$Assess_Upload_Report_FS
+  ns <- result$Assess_Upload_Report_NS
+  monitoring <- result$Assess_Upload_Report_3C3B
+  use_keys <- c("ASSESSMENT_UNIT_ID", "USE_NAME")
+  parameter_keys <- c(use_keys, "PARAM_NAME")
+
+  baseline <- subset(fs, is.na(PARAM_NAME))
+  expect_equal(nrow(baseline), 4L)
+  expect_equal(subset(baseline, ASSESSMENT_UNIT_ID == "AU_X")$USE_ATTAINMENT_CODE, "X")
+  expect_true(all(baseline$USE_ATTAINMENT_CODE[baseline$ASSESSMENT_UNIT_ID != "AU_X"] == "F"))
+  expect_setequal(stats::na.omit(fs$PARAM_NAME), c("Temperature", "E. coli"))
+  expect_equal(ns$PARAM_NAME, "pH")
+  expect_equal(ns$USE_ATTAINMENT_CODE, "N")
+  expect_setequal(monitoring$PARAM_STATE_IR_CAT, c("3C", "3B"))
+  expect_equal(nrow(dplyr::inner_join(subset(fs, !is.na(PARAM_NAME)), ns,
+                                      by = parameter_keys)), 0L)
+
+  # Model SQUID's last-use-code-wins behavior in the intended upload sequence.
+  # Reverse monitoring rows as well: no impaired use may revert from N to F.
+  for (order in list(seq_len(nrow(monitoring)), rev(seq_len(nrow(monitoring))))) {
+    uploaded <- dplyr::bind_rows(fs, ns, monitoring[order, ]) %>%
+      dplyr::group_by(dplyr::across(dplyr::all_of(use_keys))) %>%
+      dplyr::slice_tail(n = 1) %>%
+      dplyr::ungroup()
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "NM-2116.A_002")$USE_ATTAINMENT_CODE, "N")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "NM-2116.A_000")$USE_ATTAINMENT_CODE, "F")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "AU_X")$USE_ATTAINMENT_CODE, "X")
+    expect_equal(subset(uploaded, ASSESSMENT_UNIT_ID == "AU_3C")$USE_ATTAINMENT_CODE, "F")
+  }
+  expect_equal(result$Assess_Upload_Report, dplyr::bind_rows(fs, ns, monitoring))
+})
+
+test_that("an impaired SQUID alias suppresses a conflicting FS delisting", {
+  input <- upload_fixture(c("2", "5"),
+                           c("Temperature, water", "Maximum - Temperature, water"))
+  input$DELISTING_REASON <- c("Proposed delisting before consolidation.", NA)
+  result <- assessment(Verified_results_table = input)
+  expect_true(all(is.na(result$Assess_Upload_Report_FS$PARAM_NAME)))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_NAME, "Temperature")
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_ATTAINMENT_CODE, "not meeting criteria")
+  expect_true(all(is.na(result$Assess_Upload_Report_NS$DELISTING_REASON)))
+})
+
+rod_input <- function(category = "5", parameter = "Escherichia coli", use = "PC") {
+  tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test waterbody", DU = use,
+                 CHR_UID = 1, CHARACTERISTIC_NAME = parameter,
+                 Individual_Category = category, n_Samples = 4,
+                 n_Samples_assessable = 4, n_Exceed = 3,
+                 Rationale = "Data Sufficient", Method = "No more than one exceedance")
+}
+
+test_that("grab and toxic statements use compact counts and SQUID categories", {
+  input <- rod_input()
+  result <- assessment(Verified_results_table = input)
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for primary contact E. coli - 3/4 excs.")
+  expect_true(all(result$Assess_Upload_Report$ASSESSMENT_RATIONALE == "5A for primary contact E. coli - 3/4 excs."))
+
+  input <- rod_input("5", "Total Phosphorus", "ColdWAL")
+  input$n_Exceed <- 7
+  input$n_Samples <- input$n_Samples_assessable <- 12
+  input$pct_Exceed <- 58
+  input$Criteria_Type <- "SSC"
+  expect_equal(assessment(Verified_results_table = input)$Assess_Upload_Report_NS$PARAM_COMMENT,
+               "5A for total phosphorus - 7/12 excs (58%) of SSC total phosphorus criterion.")
+
+  input <- rod_input("5c", "Aluminum", "ColdWAL")
+  input$SAMPLE_FRACTION <- "Total"
+  input$n_Samples <- input$n_Samples_assessable <- 2
+  input$n_Exceed <- NA_real_
+  input$n_Exceed_Acute <- 1
+  input$n_Exceed_Chronic <- 2
+  expect_equal(assessment(Verified_results_table = input)$Assess_Upload_Report_NS$PARAM_COMMENT,
+               "5C for TR Al - 1/2 acute and 2/2 chronic excs, further data collection needed.")
+
+  input$Individual_Category <- "4A"
+  cause <- assessment(Verified_results_table = input)$Assess_Upload_Report_NS
+  expect_equal(cause$PARAM_STATE_IR_CAT, "4A")
+  expect_match(cause$PARAM_COMMENT, "4A for TR Al", fixed = TRUE)
+  expect_true(is.na(cause$PARAM_TARGET_TMDL_DATE))
+})
+
+test_that("AU rationale orders parameter statements and carries narratives once", {
+  input <- dplyr::bind_rows(rod_input("2", "Copper", "ColdWAL"),
+                            rod_input("3c", "Dissolved oxygen (DO)", "ColdWAL"),
+                            rod_input("5", "Escherichia coli", "PC"),
+                            rod_input("2", "Temperature, water", "ColdWAL"))
+  input$CHR_UID <- 1:4
+  input$DELISTING_REASON <- c(NA, NA, NA, "Verified reason.")
+  input$AV_Notes <- c("Subwatershed narrative.", "Subwatershed narrative.", NA, NA)
+  result <- assessment(Verified_results_table = input)
+  rationale <- unique(result$Assess_Upload_Report$ASSESSMENT_RATIONALE)
+  expect_length(rationale, 1L)
+  expect_equal(rationale,
+    paste("5A for primary contact E. coli - 3/4 excs.",
+          "3C for DO - 3/4 excs.", "2 for temperature - 3/4 excs.", "Subwatershed narrative."))
+  expect_false(grepl("Copper|retained|added|delisted|Assessment unit:", rationale, ignore.case = TRUE))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for primary contact E. coli - 3/4 excs.")
+  expect_false(grepl("Subwatershed", result$Assess_Upload_Report_NS$PARAM_COMMENT))
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res)$Assess_Upload_Report,
+               result$Assess_Upload_Report)
+})
+
+test_that("new outside fully supporting data require an explicit ROD flag", {
+  input <- rod_input("2", "Copper", "ColdWAL")
+  expect_true(all(is.na(assessment(Verified_results_table = input)$Assess_Upload_Report$ASSESSMENT_RATIONALE)))
+  input$ROD_Include <- TRUE
+  result <- assessment(Verified_results_table = input)
+  expect_equal(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE, "2 for Copper - 3/4 excs.")
+  expect_true(all(is.na(result$Assess_Upload_Report_FS$PARAM_NAME)))
+  input$ASSESSMENT_RATIONALE <- "Reviewed AU rationale."
+  input$AV_Notes <- "HAB narrative."
+  expect_equal(assessment(Verified_results_table = input)$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE,
+               "Reviewed AU rationale. HAB narrative.")
+})
+
+test_that("LTD aliases and grab evidence form one temperature statement", {
+  grab <- rod_input("5", "Maximum - Temperature, water", "ColdWAL")
+  grab$Exceed <- "Yes"
+  ltd <- grab
+  ltd$LTD_Exceedance_Years <- "2023"
+  ltd$n_Exceed <- 1
+  fourt3 <- ltd
+  fourt3$CHR_UID <- 999920
+  fourt3$CHARACTERISTIC_NAME <- "4T3"
+  six <- fourt3
+  six$CHR_UID <- 999921
+  six$CHARACTERISTIC_NAME <- "6T3"
+  result <- assessment(Conventionals_ALU_table = grab, LTD_ALU_table = dplyr::bind_rows(ltd, fourt3, six))
+  statement <- result$Assess_Upload_Report_NS$PARAM_COMMENT
+  expect_length(statement, 1L)
+  expect_match(statement, "4T3 exceeded in 2023", fixed = TRUE)
+  expect_match(statement, "6T3 exceeded in 2023", fixed = TRUE)
+  expect_match(statement, "LTD tmax WQC excs in 2023", fixed = TRUE)
+  expect_match(statement, "3/4 excs", fixed = TRUE)
+  expect_true("LTD_Exceedance_Years" %in% names(result$Assess_DU_Res))
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res)$Assess_Upload_Report,
+               result$Assess_Upload_Report)
+})
+
+test_that("nutrient indicators survive assessment and inform ROD statements", {
+  stream <- tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test river", DU = "ColdWAL",
+                           Category = "3c", Enrichment_causal = "Yes", Enrichment_DODELTA = "No",
+                           Char_Exceeding = "Total Nitrogen,Total Phosphorus")
+  result <- assessment(Nutrients_Streams_table = stream)
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT,
+               "3C for Plant Nutrients - TN and TP median threshold excs, no delta DO exc.")
+  expect_equal(result$Assess_DU_Res$Char_Exceeding, stream$Char_Exceeding)
+  lake <- stream
+  lake$Category <- "4 or 5"
+  lake$Enrichment_response <- "Yes"
+  lake$Char_Exceeding <- "Total Nitrogen,Total Phosphorus,Dissolved oxygen (DO)"
+  lake$DOsat_flag <- "Flag"
+  expect_equal(assessment(Nutrients_Lakes_table = lake)$Assess_Upload_Report_NS$PARAM_COMMENT,
+    "5A for Plant Nutrients - causal (TN and TP) enrichment indicator excs, response (DO) enrichment indicator excs, DO saturation >120% flagged.")
+  stream$Category <- "Not Assessable: Waterbody Type Mismatch"
+  result <- assessment(Nutrients_Streams_table = stream)
+  expect_match(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE,
+    "Nutrients AP not applicable due to waterbody type mismatch, however note TN and TP median threshold excs", fixed = TRUE)
+  expect_equal(nrow(result$Assess_Upload_Report_NS), 0L)
+})
+
+test_that("missing evidence never invents years durations or nutrient constituents", {
+  input <- rod_input("3c", "Minimum - Dissolved oxygen (DO)", "ColdWAL")
+  input$Analysis_Source <- "LTD_ALU"
+  statement <- assessment(Verified_results_table = input)$Assess_Upload_Report_3C3B$PARAM_COMMENT
+  expect_equal(statement, "3C for DO - LTD min DO <WQC.")
+  expect_false(grepl("2023|hours|days|4T3", statement))
+  input <- rod_input("3c", "Plant Nutrients", "ColdWAL")
+  statement <- assessment(Verified_results_table = input)$Assess_Upload_Report_3C3B$PARAM_COMMENT
+  expect_false(grepl("TN|TP|chl-a", statement))
+  expect_match(statement, "delta DO data unavailable", fixed = TRUE)
+})
+
+test_that("aquatic life uses share one AU statement while keeping use-specific comments", {
+  input <- dplyr::bind_rows(rod_input("5", "Dissolved oxygen (DO)", "ColdWAL"),
+                            rod_input("3c", "Dissolved oxygen (DO)", "WWAL"))
+  input$n_Exceed <- c(3, 1)
+  result <- assessment(Verified_results_table = input)
+  expect_equal(unique(result$Assess_Upload_Report$ASSESSMENT_RATIONALE), "5A for DO - 3/4 excs.")
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for DO - 3/4 excs.")
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT, "3C for DO - 1/4 excs.")
+  expect_equal(result$Assess_Upload_Report_3C3B$USE_ATTAINMENT_CODE, "F")
 })

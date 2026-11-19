@@ -19,5 +19,8 @@ test_that("LTD ALU calc works", {
   testthat::expect_equal(n_row_code, n_row_dev)
   testthat::expect_equal(sum_n_Samps_code, sum_n_Samps_dev)
   testthat::expect_equal(sum_n_Exceed_code, sum_n_Exceed_dev)
+  testthat::expect_true(all(nzchar(df_LTD_ALU$LTD_Years)))
+  testthat::expect_true(all(nzchar(df_LTD_ALU$LTD_Exceedance_Years[df_LTD_ALU$n_Exceed > 0])))
+  testthat::expect_true(all(df_LTD_ALU$LTD_Exceedance_Years[df_LTD_ALU$n_Exceed == 0] == ""))
 
 })
