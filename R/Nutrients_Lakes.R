@@ -8,8 +8,16 @@
 #' @param DU_table Quality controlled Stations DU table from Data_Prep function.
 #'
 #' @returns A list of two dataframes. The first contains analyzed lake nutrient
-#' data compared to ALU water quality criteria. The second, labeled "Indiv_Res"
-#' is an intermediate file used for QA/QC purposes.
+#' data compared to ALU water quality criteria, with one result per AU/designated
+#' use. The second, labeled "Indiv_Res", retains station-level evidence for QA/QC.
+#' @details Concurrence uses characteristic IDs for total phosphorus (1674),
+#' chlorophyll a (791), pH (1648), dissolved oxygen (985), and calculated total
+#' nitrogen (1415), independent of display names. At least two complete sampling
+#' groups are needed, using seven-day gaps to separate groups.
+#' Station conclusions are selected by category precedence: `4 or 5`, `3c`,
+#' `1 or 2`, `3b`, `3a`, then missing categories. Distinct designated uses are
+#' retained. Supporting counts and station records remain in the individual
+#' results rather than being added across stations.
 #'
 #' @examples
 #' df_Chem_combined <- NMwateR::example_chemistry_processed
@@ -169,25 +177,20 @@ Nutrients_Lakes <- function(Chem_table
                     & CHR_UID %in% c(1648, 985, 986)))
 
   # Determine whether samples on a given date were sampled concurrently
-  # Required parameters
-  required_chars <- c(
-    "Phosphorus as P",
-    "Chlorophyll a",
-    "pH",
-    "Dissolved oxygen (DO)",
-    "Nitrogen as N"
-  )
+  # Required indicators: TP, chlorophyll a, pH, DO, and calculated TN.
+  # IDs remain stable when TP/TN are renamed for the analysis output.
+  required_chr_uids <- c(1674, 791, 1648, 985, 1415)
 
 
   df_concurrence <- df_results %>%
     # keep only required parameters to determine whether they were sampled concurrently
-    dplyr::filter(CHARACTERISTIC_NAME %in% required_chars) %>%
-    dplyr::distinct(WATER_ID, DATE, CHARACTERISTIC_NAME) %>%
+    dplyr::filter(CHR_UID %in% required_chr_uids) %>%
+    dplyr::distinct(WATER_ID, DATE, CHR_UID) %>%
     dplyr::arrange(WATER_ID, DATE) %>%
     # build clusters PER WATER_ID based on <= 7-day gaps
     dplyr::group_by(WATER_ID) %>%
     dplyr::mutate(
-      gap = as.integer(DATE - lag(DATE)),
+      gap = as.integer(DATE - dplyr::lag(DATE)),
       new_group = dplyr::if_else(is.na(gap) | gap > 7, 1L, 0L),
       cluster_id = cumsum(tidyr::replace_na(new_group, 1L))
     ) %>%
@@ -198,9 +201,9 @@ Nutrients_Lakes <- function(Chem_table
       cluster_start = min(DATE),
       cluster_end   = max(DATE),
       n_days_span   = as.integer(cluster_end - cluster_start),
-      n_params = length(unique(CHARACTERISTIC_NAME)),
-      has_all_required = length(setdiff(required_chars
-                                        , unique(CHARACTERISTIC_NAME))) == 0)
+      n_params = length(unique(CHR_UID)),
+      has_all_required = length(setdiff(required_chr_uids
+                                        , unique(CHR_UID))) == 0)
 
   df_concurrence_summ <- df_concurrence %>%
     dplyr::group_by(WATER_ID) %>%
@@ -343,7 +346,7 @@ Nutrients_Lakes <- function(Chem_table
 
   df_results_v3 <- df_results_v2 %>%
     dplyr::group_by(WATER_ID, WATER_NAME) %>%
-    dplyr::mutate(Char_Exceeding = paste(unique(CHARACTERISTIC_NAME[Exceed == "Yes"])
+    dplyr::mutate(Char_Exceeding = paste(sort(unique(CHARACTERISTIC_NAME[Exceed %in% "Yes"]))
                                          , collapse = ",")) %>%
     dplyr::ungroup() %>%
     dplyr::select(WATER_ID, WATER_NAME, PROJECT_NAME, DU,
@@ -360,7 +363,7 @@ Nutrients_Lakes <- function(Chem_table
         Enrichment_chlorophyll == "Yes"  ~ "4 or 5",
       # Fully supporting
       Enrichment_causal == "Yes" & Enrichment_response == "No" &
-        Enrichment_chlorophyll == "No" & concurrence_met == "Yes" ~ "1/2",
+        Enrichment_chlorophyll == "No" & concurrence_met == "Yes" ~ "1 or 2",
       Enrichment_causal == "No" & Enrichment_response == "No"
       & concurrence_met == "Yes" ~ "1 or 2",
       Enrichment_causal == "No" & Enrichment_chlorophyll == "No"
@@ -389,7 +392,10 @@ Nutrients_Lakes <- function(Chem_table
     # category 3s are NA for delist eligibility
     dplyr::mutate(Delist_eligible = dplyr::case_when(Category
                                                      %in% c("3a", "3b", "3c") ~ NA,
-                                              TRUE ~ Delist_eligible))
+                                              TRUE ~ Delist_eligible)) %>%
+    # Keep one conclusion per AU/use, using the same category precedence as
+    # assessment(). Station-level evidence remains in the individual results.
+    .assessment_select_result(c("WATER_ID", "DU"), "Category")
 
 
   # Export data ####

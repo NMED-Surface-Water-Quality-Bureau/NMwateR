@@ -14,12 +14,22 @@ contains a combination of grab, LTD, and lake profile data.}
 }
 \value{
 A list of two dataframes. The first contains analyzed lake nutrient
-data compared to ALU water quality criteria. The second, labeled "Indiv_Res"
-is an intermediate file used for QA/QC purposes.
+data compared to ALU water quality criteria, with one result per AU/designated
+use. The second, labeled "Indiv_Res", retains station-level evidence for QA/QC.
 }
 \description{
 This function compares lake nutrient data against water quality
 standards and/or thresholds for aquatic life use (ALU). For more information, see the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
+}
+\details{
+Concurrence uses characteristic IDs for total phosphorus (1674),
+chlorophyll a (791), pH (1648), dissolved oxygen (985), and calculated total
+nitrogen (1415), independent of display names. At least two complete sampling
+groups are needed, using seven-day gaps to separate groups.
+Station conclusions are selected by category precedence: \verb{4 or 5}, \verb{3c},
+\verb{1 or 2}, \verb{3b}, \verb{3a}, then missing categories. Distinct designated uses are
+retained. Supporting counts and station records remain in the individual
+results rather than being added across stations.
 }
 \examples{
 df_Chem_combined <- NMwateR::example_chemistry_processed
