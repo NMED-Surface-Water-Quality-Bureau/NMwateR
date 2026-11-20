@@ -21,18 +21,29 @@
 #' @param Toxics_WH_table WQ analysis export from Toxics_WH() function.
 #' @param Turbidity_ALU_table WQ analysis export from Turbidity_ALU() function.
 #' @param Verified_results_table Optional complete, verified copy of
-#'   `Assess_DU_Res` from a previous run. Supply this table alone for the final
-#'   post-verification run. Edit `Individual_Category` to correct a decision;
+#'   `Assess_DU_Res` from a previous run. Supply it without analysis tables for
+#'   the final post-verification run; `Criteria_table` may accompany it.
+#'   Edit `Individual_Category` to correct a decision;
 #'   `Determination`, `Use_Category`, and `Overall_Category` are recalculated.
 #'   Add `AV_Notes` for AU narratives or verification notes. Nonblank
 #'   `ASSESSMENT_RATIONALE` overrides the AU's generated rationale;
 #'   `PARAM_COMMENT` overrides its parameter statement.
+#'   Nonblank `SQUID_PARAM_OVERRIDE` replaces the SQUID parameter name in
+#'   exports. Keep `Original_R_Category` to enable automatic AV change text.
+#'   For `delist`, enter `DELISTING_REASON`; `Delisting_Category` optionally
+#'   overrides the suggested category and is required when no default exists.
 #'   An AU summary alone is insufficient because uploads require use/parameter
 #'   records. Each WATER_ID/DU/CHR_UID/CHARACTERISTIC_NAME combination must
 #'   occur once; WATER_NAME and SAMPLE_FRACTION are supporting attributes.
 #' @param Cycle Even-numbered assessment cycle for SQUID exports; defaults to 2028.
 #' @param Assessment_date Assessment run date, as a Date or ISO date string.
-#' @param Target_TMDL_year Target TMDL year for 5A/5C causes; defaults to 2027.
+#' @param Target_TMDL_year Target TMDL year for 5A/5C causes; defaults to
+#'   `Cycle + 2` (2030 for cycle 2028).
+#' @param Criteria_table Optional existing processed criteria table (the same
+#'   table supplied to the analysis functions), containing `CHR_UID`, `DU`,
+#'   and `FRACTION`. Joins the assessment fraction by characteristic ID and
+#'   designated use. Repeated acute/chronic criteria with the same fraction
+#'   are collapsed; conflicting fractions for an assessed key cause an error.
 #'
 #' @returns A list of seven dataframes. Individual results are IR categories assigned
 #' to each AU/DU/parameter combination. DU results are IR categories assigned to
@@ -46,14 +57,16 @@
 #' zero. FS provides initial F/X use records, including uses subsequently changed
 #' to N by NS cause records. X means nothing is assessable; there is no separate
 #' NA report.
-#' 3C/3B parameter records are in Assess_Upload_Report_3C3B, with 3B suppressed
+#' 3A/3B/3C parameter records are in Assess_Upload_Report_3C3B (the existing
+#' output name is retained), with 3A/3B suppressed
 #' for uses having any assessable parameter. All uploads retain
 #' the 46 template columns. STATE_IR_CAT_CODE is left blank for manual entry.
 #' @details For assessment verification, save and edit `Assess_DU_Res`, retaining
 #'   all rows intended for the final upload and the supporting statistics. Run
 #'   `assessment(Verified_results_table = verified_results)` to rebuild the seven
 #'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
-#'   `3b`, `3c`, `5` (also `5A`), `5c`, `4A`, and `4 or 5`; category letters are
+#'   `3b`, `3c`, `5` (also `5A`), `5c`, `4A`, `4B`, `4C`, `delist`, and
+#'   `4 or 5`; category letters are
 #'   case-insensitive. Missing categories remain Not Assessed.
 #'   Parameter selection uses impaired (5A/5C/4 or 5) > 3C > Fully Supporting
 #'   (2/1 or 2) > 3B > 3A. Ties prefer Data Sufficient over Low N, then the
@@ -68,9 +81,61 @@
 #'   verified category decisions.
 #'   Supply a nonblank DELISTING_REASON on a verified fully supporting parameter
 #'   to request a parameter-specific delisting record; eligibility alone does
-#'   not establish a delisting. Delisting records initialize F in FS; NS causes
+#'   not establish a delisting. Supporting delistings initialize F in FS; NS causes
 #'   subsequently set impaired uses to N. Characteristics without an explicit SQUID alias retain their
 #'   names, so additional substance names should be checked against SQUID.
+#'   Alternatively, use `Individual_Category = "delist"` with a nonblank
+#'   `DELISTING_REASON`. `assessment_delisting_reasons()` returns the eight
+#'   reason choices and their suggested final categories. The three WQS-attained
+#'   reasons suggest 2; TMDL approval suggests 4A; other pollution controls
+#'   suggest 4B; not caused by a pollutant suggests 4C. Original-basis and
+#'   WQS-no-longer-applicable reasons have no default: the reviewer must choose
+#'   `Delisting_Category` from 2, 3A, 3B, 3C, 4A, 4B, or 4C (also 1 or 2).
+#'   This column overrides any suggestion. Custom reasons are allowed with an
+#'   explicit category. `Suggested_Delisting_Category` is recomputed on every
+#'   run; it is never copied into the override column, so changing a reason
+#'   updates the default without overwriting a reviewer decision.
+#'   Delisting records export in FS, including final 3A/3B/3C categories;
+#'   final 4A/4B/4C records also export in NS to set use attainment to N.
+#'   Use/AU summaries retain the existing broad 2/3/5 groups, including group 5
+#'   for 4A/4B/4C. Detailed categories are retained on parameter records.
+#'
+#'   Initial analytical runs capture `Original_R_Category` and `Original_Rationale`.
+#'   `AV_Change` is regenerated from the original and current categories, appended
+#'   to `Rationale`, parameter comments and AU rationale, including alongside
+#'   custom text overrides. The note reads "changed during AV from X to Y";
+#'   reruns replace the generated annotation instead of accumulating copies.
+#'   Original counts and Exceed values remain evidence and do not reverse AV
+#'   decisions. An older verified table without `Original_R_Category` leaves
+#'   that value missing; recover it from the original assessment for automatic
+#'   change notes. All verified rows replace analytical inputs, rather than
+#'   merging with an earlier assessment.
+#'
+#'   CYCLE, CYCLE_LAST_ASSESSED and PARAM_TARGET_TMDL_DATE are integer years.
+#'   USE_ASMT_DATE is an integer Excel date serial (origin 1899-12-30), suitable
+#'   for numeric spreadsheet cells; apply a date display format when exporting
+#'   if desired. These types are consistent across all upload reports, including
+#'   empty reports. Fraction assignment is separate from SQUID name formatting:
+#'   `ASSESSMENT_FRACTION` is retained when supplied (including AV corrections),
+#'   otherwise joined from `Criteria_table` by `CHR_UID` and `DU`, then filled
+#'   from `SAMPLE_FRACTION` where criteria do not match. The original sample
+#'   fraction is never overwritten. To re-resolve an AV row against criteria,
+#'   clear its `ASSESSMENT_FRACTION` and supply `Criteria_table` again.
+#'   No new fraction lookup table is needed. Neither names, hardcoded IDs nor
+#'   hardcoded use rules assign fractions when data are missing. For example,
+#'   selenium's resolved fraction produces Selenium, Dissolved or Selenium,
+#'   Total Recoverable in SQUID exports. Already qualified names remain intact.
+#'   `SQUID_PARAM_OVERRIDE` takes precedence over export aliases.
+#'   Additional export aliases follow parameter names observed in the client's
+#'   2026-2028 EPA-approved integrated-list workbook: dissolved metals with
+#'   supporting assessment fractions, Mercury, Total, Cyanide, Total
+#'   Recoverable, Total Dissolved Solids (TDS), and Polychlorinated Biphenyls (PCBs).
+#'   The historical workbook is an AU summary, not an exhaustive SQUID catalog;
+#'   unrecognized parameters retain their analytical names. Historical listings
+#'   do not supply current categories, delisting decisions, adjusted gross-alpha
+#'   status, or fish-consumption advisories. Numeric upload fields and delisting
+#'   defaults follow the client's explicit requirements rather than that workbook,
+#'   which contains neither the upload fields nor a delisting-reason column.
 #'
 #'   ROD text uses short parameter statements with SQUID categories, counts,
 #'   criterion type, fraction, available LTD years/indicators, and nutrient
@@ -198,7 +263,8 @@
 #'                               , Toxics_IRR_table = df_Toxics_IRR
 #'                               , Toxics_LW_table = df_Toxics_LW
 #'                               , Toxics_WH_table = df_Toxics_WH
-#'                               , Turbidity_ALU_table = df_Turbidity_ALU)
+#'                               , Turbidity_ALU_table = df_Turbidity_ALU
+#'                               , Criteria_table = df_Criteria)
 #' df_Assess_Indiv_Res <- assessment_list$Assess_Indiv_Res
 #' df_Assess_DU_Res <- assessment_list$Assess_DU_Res
 #' df_Assess_AU_Res <- assessment_list$Assess_AU_Res
@@ -210,6 +276,11 @@
 #' # After assessment verification, rebuild uploads from the edited use/parameter results.
 #' verified_results <- assessment_list$Assess_DU_Res
 #' verified_results$AV_Notes <- NA_character_ # Replace with reviewer notes as needed.
+#' # Optional export-name override; analytical characteristics are retained.
+#' verified_results$SQUID_PARAM_OVERRIDE <- NA_character_
+#' # For a delisting, set Individual_Category to "delist" and enter a reason.
+#' # Leave Delisting_Category blank to use its default, or enter the AV decision.
+#' assessment_delisting_reasons()
 #' final_assessment_list <- assessment(Verified_results_table = verified_results)
 #'
 #' @export
@@ -233,7 +304,8 @@ assessment <- function(Conventionals_ALU_table = NULL
                        , Verified_results_table = NULL
                        , Cycle = 2028L
                        , Assessment_date = Sys.Date()
-                       , Target_TMDL_year = 2027L){
+                       , Target_TMDL_year = Cycle + 2L
+                       , Criteria_table = NULL){
 
   if (!is.numeric(Cycle) || length(Cycle) != 1L || is.na(Cycle) ||
       !is.finite(Cycle) || Cycle < 2000 || Cycle > 9998 ||
@@ -304,14 +376,15 @@ assessment <- function(Conventionals_ALU_table = NULL
     category[!is.na(category) & category == "5a"] <- "5"
     df_indiv_results_v2$Individual_Category <- category
     if (any(!is.na(category) & !category %in%
-            c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5", "4a"))) {
+            c("2", "1 or 2", "3a", "3b", "3c", "5", "5c", "4 or 5", "4a", "4b", "4c", "delist"))) {
       stop("Verified_results_table contains unsupported Individual_Category values.", call. = FALSE)
     }
     # Preserve verified decisions even when the original Exceed/Rationale differs.
+    final_category <- .assessment_effective_category(df_indiv_results_v2)
     df_indiv_results_v2 <- df_indiv_results_v2 %>%
       dplyr::mutate(Determination = dplyr::case_when(
-        Individual_Category %in% c("2", "1 or 2") ~ "Fully Supporting",
-        Individual_Category %in% c("5", "5c", "4 or 5", "4a") ~ "Not Supporting",
+        final_category %in% c("2", "1 or 2") ~ "Fully Supporting",
+        final_category %in% c("5", "5c", "4 or 5", "4a", "4b", "4c") ~ "Not Supporting",
         TRUE ~ "Not Assessed"))
     evidence_cols <- c("SAMPLE_FRACTION", "Method", "Rationale", "Exceed",
                        "n_Samples", "n_Samples_assessable", "n_Exceed",
@@ -532,6 +605,10 @@ assessment <- function(Conventionals_ALU_table = NULL
      , missing_cols, df_indiv_results)
   } # END ~ initial analyses or verified results
 
+  df_indiv_results_v2 <- .assessment_join_fraction(df_indiv_results_v2, Criteria_table)
+  df_indiv_results_v2 <- .assessment_av_changes(df_indiv_results_v2,
+                                               verified = !is.null(Verified_results_table))
+
   # DU Determinations ####
   # Water names describe the AU, not individual grab/profile records. Choose a
   # stable nonblank name from all evidence before selecting parameter results.
@@ -552,16 +629,18 @@ assessment <- function(Conventionals_ALU_table = NULL
     dplyr::select(-WATER_NAME) %>%
     dplyr::left_join(au_names, by = "WATER_ID") %>%
     dplyr::select(dplyr::all_of(names(df_indiv_results_v2)), dplyr::everything()) %>%
+    dplyr::mutate(.final_category = .assessment_effective_category(.)) %>%
     dplyr::group_by(WATER_ID, DU) %>%
     # Nutrient category "1 or 2" is fully supporting, like "2" (issue #6).
     # Any impaired parameter still takes precedence for the use.
-    dplyr::mutate(Use_Category = dplyr::case_when(any(Individual_Category %in% c("5", "5c", "4 or 5", "4a")) ~
+    dplyr::mutate(Use_Category = dplyr::case_when(any(.final_category %in% c("5", "5c", "4 or 5", "4a", "4b", "4c")) ~
                                                     "5"
-                                                  , any(Individual_Category == "3c", na.rm = TRUE) ~ "3"
-                                                  , any(Individual_Category %in% c("2", "1 or 2")) ~
+                                                  , any(.final_category == "3c", na.rm = TRUE) ~ "3"
+                                                  , any(.final_category %in% c("2", "1 or 2")) ~
                                                     "2"
                                                   , TRUE ~ "3")) %>%
     dplyr::ungroup() %>%
+    dplyr::select(-.final_category) %>%
     dplyr::arrange(WATER_ID, DU)
 
   if (!"ROD_Context" %in% names(df_indiv_results_v2)) {

@@ -199,7 +199,8 @@ test_that("verified results rebuild decisions and retain reviewer evidence", {
   expect_equal(result$Assess_DU_Res$Use_Category, c("2", "3", "5"))
   expect_equal(result$Assess_AU_Res$Overall_Category, c("2", "5"))
   expect_equal(result$Assess_DU_Res$AV_Notes, verified$AV_Notes)
-  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT, "Reviewer parameter comment.")
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT,
+               "Reviewer parameter comment. changed during AV from 2 to 3C.")
   expect_match(result$Assess_Upload_Report_NS$ASSESSMENT_RATIONALE,
                "Verified lab result.", fixed = TRUE)
   expect_true(all(is.na(result$Assess_Upload_Report_FS$PARAM_NAME)))
@@ -425,7 +426,7 @@ test_that("SQUID aliases consolidate with the selected category precedence", {
   expect_equal(subset(ns, PARAM_NAME == "Temperature")$PARAM_STATE_IR_CAT, "5C")
   expect_equal(subset(ns, PARAM_NAME == "Temperature")$PARAM_PRIORITY_RANKING, "Medium")
   expect_true(all(ns$PARAM_PRIORITY_RANKING[ns$PARAM_STATE_IR_CAT == "5A"] == "High"))
-  expect_true(all(ns$PARAM_TARGET_TMDL_DATE == "2027"))
+  expect_true(all(ns$PARAM_TARGET_TMDL_DATE == 2030L))
   expect_true(all(ns$PARAM_STATUS_NAME == "Cause"))
   expect_true(all(ns$PARAM_POLLUTANT_INDICATOR == "Y"))
   expect_equal(nrow(result$Assess_Upload_Report_3C3B), 0L)
@@ -440,7 +441,7 @@ test_that("fractions and segment-specific phosphorus remain distinct", {
   result <- assessment(Verified_results_table = input)
   expect_setequal(result$Assess_Upload_Report_NS$PARAM_NAME,
                   c("Aluminum, Dissolved", "Aluminum, Total Recoverable", "Nutrients",
-                    "Phosphorus, Total", "Copper"))
+                    "Phosphorus, Total", "Copper, Dissolved"))
   expect_equal(nrow(result$Assess_DU_Res), 5L)
 })
 
@@ -498,10 +499,10 @@ test_that("exports share the full schema and support explicit cycle and run date
                         Assessment_date = "2028-11-18", Target_TMDL_year = 2029)
   report <- result$Assess_Upload_Report
   expect_equal(ncol(report), 46L)
-  expect_true(all(report$CYCLE == "2030" & report$CYCLE_LAST_ASSESSED == "2030"))
-  expect_true(all(report$USE_ASMT_DATE == "11/18/2028"))
+  expect_true(all(report$CYCLE == 2030L & report$CYCLE_LAST_ASSESSED == 2030L))
+  expect_true(all(report$USE_ASMT_DATE == as.integer(as.Date("2028-11-18") - as.Date("1899-12-30"))))
   expect_true(all(is.na(report$STATE_IR_CAT_CODE)))
-  expect_equal(result$Assess_Upload_Report_NS$PARAM_TARGET_TMDL_DATE, "2029")
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_TARGET_TMDL_DATE, 2029L)
   parts <- result[c("Assess_Upload_Report_FS", "Assess_Upload_Report_NS", "Assess_Upload_Report_3C3B")]
   expect_equal(sum(vapply(parts, nrow, integer(1))), nrow(report))
   expect_equal(report, dplyr::bind_rows(parts))
@@ -705,4 +706,235 @@ test_that("aquatic life uses share one AU statement while keeping use-specific c
   expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for DO - 3/4 excs.")
   expect_equal(result$Assess_Upload_Report_3C3B$PARAM_COMMENT, "3C for DO - 1/4 excs.")
   expect_equal(result$Assess_Upload_Report_3C3B$USE_ATTAINMENT_CODE, "F")
+})
+
+av_fixture <- function(category = "2", parameter = "Temperature, water", use = "ColdWAL") {
+  tibble::tibble(WATER_ID = "AU1", WATER_NAME = "Test river", DU = use,
+    CHR_UID = 1, CHARACTERISTIC_NAME = parameter, Individual_Category = category,
+    Rationale = "Data Sufficient", Exceed = "No", n_Samples = 4, n_Exceed = 0)
+}
+
+test_that("client delisting defaults are suggested and can be overridden", {
+  choices <- assessment_delisting_reasons()
+  expect_equal(nrow(choices), 8L)
+  expect_equal(choices$Suggested_Delisting_Category,
+    c("2", "2", "2", NA, NA, "4A", "4B", "4C"))
+  for (i in seq_len(nrow(choices))) {
+    input <- av_fixture("delist")
+    input$DELISTING_REASON <- choices$DELISTING_REASON[i]
+    suggestion <- choices$Suggested_Delisting_Category[i]
+    if (is.na(suggestion)) {
+      expect_error(assessment(Verified_results_table = input), "Delisting_Category")
+      input$Delisting_Category <- "3A"
+    }
+    result <- assessment(Verified_results_table = input)
+    expect_equal(result$Assess_DU_Res$Suggested_Delisting_Category, suggestion)
+    fs <- subset(result$Assess_Upload_Report_FS, !is.na(PARAM_NAME))
+    expect_equal(fs$DELISTING_REASON, choices$DELISTING_REASON[i])
+    if (is.na(suggestion)) {
+      expect_equal(fs$PARAM_STATE_IR_CAT, "3A")
+      expect_equal(fs$PARAM_ATTAINMENT_CODE, "not enough information")
+      expect_equal(fs$USE_ATTAINMENT_CODE, "X")
+    } else if (suggestion == "2") {
+      expect_equal(fs$PARAM_ATTAINMENT_CODE, "meeting criteria")
+      expect_equal(nrow(result$Assess_Upload_Report_NS), 0L)
+    } else {
+      expect_equal(result$Assess_Upload_Report_NS$PARAM_STATE_IR_CAT, suggestion)
+      expect_equal(result$Assess_Upload_Report_NS$USE_ATTAINMENT_CODE, "N")
+      expect_true(is.na(result$Assess_Upload_Report_NS$DELISTING_REASON))
+    }
+    expect_equal(assessment(Verified_results_table = result$Assess_DU_Res), result)
+
+    input$Delisting_Category <- "3B"
+    overridden <- assessment(Verified_results_table = input)
+    expect_equal(overridden$Assess_DU_Res$Determination, "Not Assessed")
+    expect_equal(overridden$Assess_DU_Res$Suggested_Delisting_Category, suggestion)
+    expect_equal(subset(overridden$Assess_Upload_Report_FS, !is.na(PARAM_NAME))$PARAM_STATE_IR_CAT, "3B")
+  }
+  input <- av_fixture("delist")
+  expect_error(assessment(Verified_results_table = input), "DELISTING_REASON")
+  input$DELISTING_REASON <- "Custom verified reason"
+  expect_error(assessment(Verified_results_table = input), "Delisting_Category")
+  input$Delisting_Category <- "typo"
+  expect_error(assessment(Verified_results_table = input), "Delisting_Category")
+})
+
+test_that("reason changes recompute defaults without overwriting explicit AV choices", {
+  input <- av_fixture("delist")
+  input$DELISTING_REASON <- assessment_delisting_reasons()$DELISTING_REASON[1]
+  result <- assessment(Verified_results_table = input)
+  edited <- result$Assess_DU_Res
+  edited$DELISTING_REASON <- assessment_delisting_reasons()$DELISTING_REASON[6]
+  rerun <- assessment(Verified_results_table = edited)
+  expect_equal(rerun$Assess_Upload_Report_NS$PARAM_STATE_IR_CAT, "4A")
+  expect_equal(rerun$Assess_DU_Res$Suggested_Delisting_Category, "4A")
+  expect_true(is.na(rerun$Assess_DU_Res$Delisting_Category))
+  edited$Delisting_Category <- "2"
+  expect_equal(assessment(Verified_results_table = edited)$Assess_DU_Res$Determination, "Fully Supporting")
+})
+
+test_that("AV changes preserve the original decision and explain contradictory evidence", {
+  input <- av_fixture()
+  input$Individual_Category <- NULL
+  original <- assessment(Conventionals_ALU_table = input)
+  verified <- original$Assess_DU_Res
+  expect_equal(verified$Original_R_Category, "2")
+  verified$Individual_Category <- "5A"
+  verified$PARAM_COMMENT <- "Reviewer parameter statement."
+  verified$ASSESSMENT_RATIONALE <- "Reviewer AU statement."
+  result <- assessment(Verified_results_table = verified)
+  expect_equal(result$Assess_DU_Res$Original_R_Category, "2")
+  expect_equal(result$Assess_DU_Res$Exceed, "No")
+  expect_equal(result$Assess_DU_Res$n_Exceed, 0)
+  for (text in list(result$Assess_DU_Res$Rationale,
+                   result$Assess_Upload_Report_NS$PARAM_COMMENT,
+                   result$Assess_Upload_Report_NS$ASSESSMENT_RATIONALE)) {
+    expect_match(text, "changed during AV from 2 to 5A.", fixed = TRUE)
+  }
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res), result)
+  verified <- result$Assess_DU_Res
+  verified$Individual_Category <- "2"
+  reverted <- assessment(Verified_results_table = verified)
+  expect_true(is.na(reverted$Assess_DU_Res$AV_Change))
+  expect_equal(reverted$Assess_DU_Res$Rationale, "Data Sufficient")
+  for (category in c("2", "3A", "3B", NA_character_)) {
+    input <- av_fixture(category)
+    input$Original_R_Category <- "5"
+    result <- assessment(Verified_results_table = input)
+    expect_match(result$Assess_Upload_Report_FS$ASSESSMENT_RATIONALE, "changed during AV from 5 to", fixed = TRUE)
+  }
+  input <- av_fixture("5A")
+  input$Original_R_Category <- "5"
+  expect_true(is.na(assessment(Verified_results_table = input)$Assess_DU_Res$AV_Change))
+  expect_true(is.na(assessment(Verified_results_table = av_fixture())$Assess_DU_Res$Original_R_Category))
+})
+
+test_that("SQUID overrides are honored before parameter consolidation", {
+  input <- dplyr::bind_rows(av_fixture("5A"), av_fixture("2", "Copper"))
+  input$CHR_UID <- 1:2
+  input$SQUID_PARAM_OVERRIDE <- c(" Custom SQUID name ", "Custom SQUID name")
+  result <- assessment(Verified_results_table = input)
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_NAME, "Custom SQUID name")
+  expect_equal(result$Assess_DU_Res$CHARACTERISTIC_NAME, input$CHARACTERISTIC_NAME)
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res), result)
+  for (blank in c(NA_character_, "", "  ")) {
+    input <- av_fixture("5A")
+    input$SQUID_PARAM_OVERRIDE <- blank
+    expect_equal(assessment(Verified_results_table = input)$Assess_Upload_Report_NS$PARAM_NAME, "Temperature")
+  }
+})
+
+test_that("3A remains available in the monitoring upload without asserting support", {
+  input <- av_fixture("3A")
+  result <- assessment(Verified_results_table = input)
+  expect_equal(result$Assess_DU_Res$Individual_Category, "3a")
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_STATE_IR_CAT, "3A")
+  expect_equal(result$Assess_Upload_Report_3C3B$USE_ATTAINMENT_CODE, "X")
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_ATTAINMENT_CODE, "not enough information")
+})
+
+test_that("SQUID years and dates are numeric in every report including empty reports", {
+  for (cycle in c(2028L, 2030L)) {
+    result <- assessment(Verified_results_table = av_fixture("5A"), Cycle = cycle,
+                         Assessment_date = "2028-11-18")
+    expect_equal(result$Assess_Upload_Report_NS$PARAM_TARGET_TMDL_DATE, cycle + 2L)
+    for (report in result[c("Assess_Upload_Report", "Assess_Upload_Report_FS",
+                            "Assess_Upload_Report_NS", "Assess_Upload_Report_3C3B")]) {
+      for (field in c("CYCLE", "CYCLE_LAST_ASSESSED", "USE_ASMT_DATE", "PARAM_TARGET_TMDL_DATE")) {
+        expect_type(report[[field]], "integer")
+      }
+      expect_true(all(report$USE_ASMT_DATE == as.integer(as.Date("2028-11-18") - as.Date("1899-12-30"))))
+    }
+  }
+})
+
+test_that("selenium dissolved and total recoverable aliases remain separate", {
+  uses <- c("DWS", "IRR", "LW", "WH", "ColdWAL", "CoolWAL", "HQColdWAL", "LAL", "MCWAL", "MWWAL", "WWAL")
+  input <- dplyr::bind_rows(lapply(uses, function(use) av_fixture("5A", "Selenium", use)))
+  input$SAMPLE_FRACTION <- c(rep("Dissolved", 3), rep("Total Recoverable", length(uses) - 3))
+  result <- assessment(Verified_results_table = input)
+  ns <- result$Assess_Upload_Report_NS
+  expect_equal(sum(ns$PARAM_NAME == "Selenium, Dissolved"), 3L)
+  expect_equal(sum(ns$PARAM_NAME == "Selenium, Total Recoverable"), length(uses) - 3L)
+  input <- dplyr::bind_rows(av_fixture("5A", "Selenium"), av_fixture("5A", "Selenium"))
+  input$CHR_UID <- c(1783001, 1783002)
+  input$SAMPLE_FRACTION <- c("Dissolved", "Total Recoverable")
+  result <- assessment(Verified_results_table = input)
+  expect_setequal(result$Assess_Upload_Report_NS$PARAM_NAME, c("Selenium, Dissolved", "Selenium, Total Recoverable"))
+  expect_equal(nrow(result$Assess_Upload_Report_NS), 2L)
+})
+
+test_that("existing criteria supply fractions without parameter-name rules", {
+  input <- dplyr::bind_rows(av_fixture("5A", "Selenium", "DWS"),
+    av_fixture("5A", "Selenium", "WH"), av_fixture("5A", "Selenium", "ColdWAL"),
+    av_fixture("5A", "Selenium", "ColdWAL"))
+  input$CHR_UID <- c(1783001, 1783002, 1783001, 1783002)
+  criteria <- NMwateR::example_criteria_processed
+  result <- assessment(Verified_results_table = input, Criteria_table = criteria)
+  expected <- c("Dissolved", "Total Recoverable", "Dissolved", "Total Recoverable")
+  # Result ordering is by AU/use, so compare using keys rather than row order.
+  for (i in seq_len(nrow(input))) {
+    row <- subset(result$Assess_DU_Res, DU == input$DU[i] & CHR_UID == input$CHR_UID[i])
+    expect_equal(row$ASSESSMENT_FRACTION, expected[i])
+  }
+  expect_equal(sum(result$Assess_Upload_Report_NS$PARAM_NAME == "Selenium, Dissolved"), 2L)
+  expect_equal(sum(result$Assess_Upload_Report_NS$PARAM_NAME == "Selenium, Total Recoverable"), 2L)
+  expect_true(all(is.na(result$Assess_DU_Res$SAMPLE_FRACTION)))
+  rerun <- assessment(Verified_results_table = result$Assess_DU_Res)
+  rejoined <- assessment(Verified_results_table = result$Assess_DU_Res, Criteria_table = criteria)
+  for (field in setdiff(names(result), "Assess_Indiv_Res")) {
+    expect_equal(rerun[[field]], result[[field]])
+    expect_equal(rejoined[[field]], result[[field]])
+  }
+  # The same processed criteria input also works on the initial analysis path.
+  initial <- input[1, ]
+  initial$Individual_Category <- NULL
+  expect_equal(assessment(Toxics_DWS_table = initial, Criteria_table = criteria)$Assess_DU_Res$ASSESSMENT_FRACTION,
+    "Dissolved")
+})
+
+test_that("fraction joins support arbitrary parameter names without multiplying rows", {
+  input <- dplyr::bind_rows(av_fixture("5A", "A new parameter", "DWS"),
+    av_fixture("5A", "A new parameter", "WH"))
+  input$CHR_UID <- "new-id"
+  input$SAMPLE_FRACTION <- "Total"
+  criteria <- tibble::tibble(CHR_UID = "new-id", DU = c("DWS", "DWS", "WH"),
+    FRACTION = c(" dissolved ", "Dissolved", "Total Recoverable"), Criteria_Type = c("Acute", "Chronic", "WH"))
+  result <- assessment(Verified_results_table = input, Criteria_table = criteria)
+  expect_equal(nrow(result$Assess_Indiv_Res), 2L)
+  expect_equal(result$Assess_DU_Res$ASSESSMENT_FRACTION, c("Dissolved", "Total Recoverable"))
+  expect_equal(result$Assess_DU_Res$SAMPLE_FRACTION, c("Total", "Total"))
+  input$CHARACTERISTIC_NAME <- "Renamed parameter"
+  expect_equal(assessment(Verified_results_table = input, Criteria_table = criteria)$Assess_DU_Res$ASSESSMENT_FRACTION,
+    result$Assess_DU_Res$ASSESSMENT_FRACTION)
+  edited <- result$Assess_DU_Res
+  edited$ASSESSMENT_FRACTION[1] <- "Total Recoverable"
+  expect_equal(assessment(Verified_results_table = edited, Criteria_table = criteria)$Assess_DU_Res$ASSESSMENT_FRACTION,
+    c("Total Recoverable", "Total Recoverable"))
+})
+
+test_that("ambiguous fraction criteria fail instead of silently selecting a fraction", {
+  input <- av_fixture("5A", "Copper")
+  input$CHR_UID <- 832
+  criteria <- tibble::tibble(CHR_UID = 832, DU = "ColdWAL", FRACTION = c("Dissolved", "Total Recoverable"))
+  expect_error(assessment(Verified_results_table = input, Criteria_table = criteria), "conflicting FRACTION")
+  expect_error(assessment(Verified_results_table = input, Criteria_table = list()), "data frame")
+  expect_error(assessment(Verified_results_table = input, Criteria_table = criteria["CHR_UID"]), "missing: DU, FRACTION")
+})
+
+test_that("missing fraction metadata is not inferred from IDs or designated uses", {
+  input <- av_fixture("5A", "Selenium", "WH")
+  input$CHR_UID <- 1783002
+  result <- assessment(Verified_results_table = input)
+  expect_true(is.na(result$Assess_DU_Res$ASSESSMENT_FRACTION))
+  expect_equal(result$Assess_Upload_Report_NS$PARAM_NAME, "Selenium")
+  criteria <- tibble::tibble(CHR_UID = 1783002, DU = "DWS", FRACTION = "Dissolved")
+  expect_equal(assessment(Verified_results_table = input, Criteria_table = criteria)$Assess_Upload_Report_NS$PARAM_NAME,
+    "Selenium")
+  # Existing fully qualified SQUID labels remain intact without assigning a
+  # fraction to the analytical record by reading that label.
+  input$CHARACTERISTIC_NAME <- "Selenium, Total Recoverable"
+  qualified <- assessment(Verified_results_table = input)
+  expect_true(is.na(qualified$Assess_DU_Res$ASSESSMENT_FRACTION))
+  expect_equal(qualified$Assess_Upload_Report_NS$PARAM_NAME, "Selenium, Total Recoverable")
 })
