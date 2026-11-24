@@ -21,6 +21,23 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# Development version
+
+-   Addressed NMED review of package:
+    -   Updated assessment() to consolidate AU results across designated uses and remove duplicate use/parameter records
+    -   Corrected category priority and selection of supporting evidence, including fully supporting nutrient results and low-n exceedances
+    -   Added post-AV processing to rebuild assessment results and upload reports from reviewer decisions
+    -   Added reviewer notes, text and parameter name overrides, and automatic explanations of AV category changes
+    -   Added delisting reason choices, suggested categories, and reviewer overrides
+    -   Updated SQUID exports to include separate FS, NS, and 3A/3B/3C reports and removed the separate NA report
+    -   Corrected SQUID parameter names, fraction assignments, attainment codes, and category formatting
+    -   Added options for assessment cycle, assessment date, and target TMDL year, with numeric upload dates and years
+    -   Added ROD-style assessment rationales and parameter comments, including "Delist for" wording
+    -   Retained supporting grab, LTD, and nutrient evidence, including LTD monitoring and exceedance years
+    -   Fixed lake nutrient concurrence checks, standardized the fully supporting category, and consolidated results by AU/designated use
+    -   Reduced routine console output while retaining warnings and errors
+    -   Updated the workflow script, vignette, function documentation, and tests for assessment and post-AV processing
+
 # NMwateR 1.0.0.9006 (2026-01-27)
 -   Addressed NMED review of package:
     -   In Nutrients_Streams, Re-counted exceedances of TN and TP so that 0 or 1 are the only options
