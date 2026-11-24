@@ -3,12 +3,15 @@
 ## Hannah Ferriby, Tetra Tech; Hannah.Ferriby@tetratech.com
 ### and Kateri Salk, Tetra Tech; Kateri.SalkGundersen@tetratech.com
 # Date created: 11/07/2025
-# Date last updated: 01/22/2026
+# Date last updated: 11/24/2026
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # R version 4.5.2 (2025-10-31 ucrt) -- "[Not] Part in a Rumble"
 
 # Libraries needed
 library(devtools)
+
+# Load package before accessing its example data.
+devtools::load_all()
 
 # specify input files ####
 data(example_criteria_table)
@@ -17,9 +20,6 @@ data(example_SQUID_RStudio_table)
 data(example_SQUID_DU_table)
 data(example_SQUID_LTD_table)
 data(example_SQUID_LakeProfile_table)
-
-# load all
-devtools::load_all()
 
 # Data Prep ####
 my_data_list <- Data_Prep(criteria_table = example_criteria_table
@@ -142,12 +142,42 @@ assessment_list <- assessment(Conventionals_ALU_table = df_Conv_ALU
                        , Toxics_IRR_table = df_Toxics_IRR
                        , Toxics_LW_table = df_Toxics_LW
                        , Toxics_WH_table = df_Toxics_WH
-                       , Turbidity_ALU_table = df_Turbidity_ALU)
+                       , Turbidity_ALU_table = df_Turbidity_ALU
+                       , Criteria_table = df_Criteria
+                       , Cycle = 2028)
 
 df_Assess_Indiv_Res <- assessment_list$Assess_Indiv_Res
 df_Assess_DU_Res <- assessment_list$Assess_DU_Res
 df_Assess_AU_Res <- assessment_list$Assess_AU_Res
 df_Assess_Upload_Report <- assessment_list$Assess_Upload_Report
 
+df_Assess_Upload_Report_FS <- assessment_list$Assess_Upload_Report_FS
+df_Assess_Upload_Report_NS <- assessment_list$Assess_Upload_Report_NS
+df_Assess_Upload_Report_3C3B <- assessment_list$Assess_Upload_Report_3C3B
 
+# Export every current output by name, including empty reports with headers.
+# FS includes F/X use records; there is no separate _NA report.
+export_assessment <- function(results, output_dir) {
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+  for (nm in names(results)) {
+    readr::write_csv(results[[nm]], file.path(output_dir, paste0(nm, ".csv")))
+  }
+}
+export_assessment(assessment_list, file.path("outputs", "assessment_initial"))
+
+# Post-AV workflow (run after reviewing the exported Assess_DU_Res.csv) ####
+# Keep the complete table and supporting statistics. Edit Individual_Category,
+# add AV_Notes, and enter DELISTING_REASON for explicit delistings. Use
+# assessment_delisting_reasons() to view reason choices and suggested categories.
+# Keep Original_R_Category for automatic AV change notes. Clear
+# ASSESSMENT_FRACTION only when it should be resolved again from criteria.
+# Resolve any missing DU values against the project's designated-use data
+# before the final run; verified rows require a nonblank DU.
+#
+# verified_results <- readr::read_csv(
+#   file.path("outputs", "assessment_initial", "Assess_DU_Res.csv"),
+#   col_types = readr::cols(.default = readr::col_character()))
+# final_assessment <- assessment(Verified_results_table = verified_results,
+#                                Criteria_table = df_Criteria, Cycle = 2028)
+# export_assessment(final_assessment, file.path("outputs", "assessment_post_AV"))
 
