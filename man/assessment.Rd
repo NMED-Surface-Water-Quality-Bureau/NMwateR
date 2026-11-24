@@ -114,6 +114,13 @@ assesses the results using logic from the New Mexico Surface Water Quality
 Standards (SWQS) and the \href{https://www.env.nm.gov/surface-water-quality/calm/}{NMED Consolidated Assessment and Listing Methodology (CALM)} document.
 }
 \details{
+Routine progress and join messages are omitted; warnings and errors
+remain visible. In analytical runs, insufficient-data results with any
+recorded total, acute, or chronic excursion are 3C, even if \code{Exceed} is No.
+Verified category decisions remain authoritative regardless of counts.
+Explicit fully supporting delistings use "Delist for" in generated ROD
+statements; ordinary fully supporting exceptions retain "2 for".
+
 For assessment verification, save and edit \code{Assess_DU_Res}, retaining
 all rows intended for the final upload and the supporting statistics. Run
 \code{assessment(Verified_results_table = verified_results)} to rebuild the seven

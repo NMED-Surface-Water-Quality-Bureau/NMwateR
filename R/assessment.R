@@ -61,7 +61,14 @@
 #' output name is retained), with 3A/3B suppressed
 #' for uses having any assessable parameter. All uploads retain
 #' the 46 template columns. STATE_IR_CAT_CODE is left blank for manual entry.
-#' @details For assessment verification, save and edit `Assess_DU_Res`, retaining
+#' @details Routine progress and join messages are omitted; warnings and errors
+#'   remain visible. In analytical runs, insufficient-data results with any
+#'   recorded total, acute, or chronic excursion are 3C, even if `Exceed` is No.
+#'   Verified category decisions remain authoritative regardless of counts.
+#'   Explicit fully supporting delistings use "Delist for" in generated ROD
+#'   statements; ordinary fully supporting exceptions retain "2 for".
+#'
+#'   For assessment verification, save and edit `Assess_DU_Res`, retaining
 #'   all rows intended for the final upload and the supporting statistics. Run
 #'   `assessment(Verified_results_table = verified_results)` to rebuild the seven
 #'   outputs. Supported verified parameter categories are `2`, `1 or 2`, `3a`,
@@ -393,9 +400,8 @@ assessment <- function(Conventionals_ALU_table = NULL
       df_indiv_results_v2[[field]] <- NA
     }
   } else {
-  # Identify present and missing tables
+  # Identify supplied tables
   present <- names(args_list)[!sapply(args_list, is.null)]
-  missing <- names(args_list)[sapply(args_list, is.null)]
 
   # QC: Remove zero-row tables
   zero_obs <- c()
@@ -406,15 +412,6 @@ assessment <- function(Conventionals_ALU_table = NULL
   }
 
   present <- setdiff(present, zero_obs)
-
-  # Messages for user
-  cat("Tables provided: ", ifelse(length(present) > 0
-                                  , paste(present, collapse = ", ")
-                                  , "None"), "\n")
-  cat("Tables missing: ", ifelse(length(missing) > 0
-                                 , paste(missing, collapse = ", "), "None"), "\n")
-  cat("Tables removed (zero observations): ", ifelse(length(zero_obs) > 0
-                                                     , paste(zero_obs, collapse = ", "), "None"), "\n")
 
   # Final product: filtered data list
   data_list <- args_list[present]
@@ -457,7 +454,6 @@ assessment <- function(Conventionals_ALU_table = NULL
     # Extract column names from each data frame
     all_field_names <- lapply(data_list, names)
     unique_field_names <- unique(unlist(all_field_names))
-    print(unique_field_names)
 
     # Loop through each data frame and add missing columns
     data_list_aligned <- lapply(data_list, function(df) {
@@ -474,7 +470,7 @@ assessment <- function(Conventionals_ALU_table = NULL
     # Combine all data frames into one
     df_AnalysisResults <- dplyr::bind_rows(data_list_aligned_chr) %>%
       tibble::as_tibble() %>%
-      readr::type_convert()  # re-parse numerics, dates, etc.
+      readr::type_convert(col_types = readr::cols())  # re-parse numerics, dates, etc.
   }
 
   ## Format ####
@@ -528,6 +524,8 @@ assessment <- function(Conventionals_ALU_table = NULL
 
   # Individual Parameter Determinations ####
   # Fully Supporting, Not Supporting, and Not Assessed.
+  # Exceed reflects the method's decision threshold; low-n rows can still
+  # contain excursions when that flag is No. Use those counts for 3C.
   df_indiv_results <- df_AnalysisResults_v3 %>%
     dplyr::mutate(Determination = dplyr::case_when((Rationale == "Data Insufficient")
                                                    ~ "Not Assessed"
@@ -537,9 +535,12 @@ assessment <- function(Conventionals_ALU_table = NULL
                                                    , (Exceed == "No") ~ "Fully Supporting"
                                                    , TRUE ~ "Error - New logic necessary")
                   , Individual_Category = dplyr::case_when((Determination == "Not Assessed"
-                                                            & Exceed == "No") ~ "3b"
+                                                            & (Exceed == "Yes" |
+                                                                 n_Exceed > 0 |
+                                                                 n_Exceed_Acute > 0 |
+                                                                 n_Exceed_Chronic > 0)) ~ "3c"
                                                            , (Determination == "Not Assessed"
-                                                              & Exceed == "Yes") ~ "3c"
+                                                              & Exceed == "No") ~ "3b"
                                                            , (Determination == "Not Supporting"
                                                               & CHR_UID == 1977) ~ "5c"
                                                            , (Determination == "Not Supporting")
@@ -597,7 +598,7 @@ assessment <- function(Conventionals_ALU_table = NULL
   # Align heterogeneous analysis columns without losing nutrient-only fields.
   df_indiv_results_v2 <- lapply(list(df_indiv_results, df_Nutr_Lakes_v2, df_Nutr_Streams_v2),
                                function(df) dplyr::mutate(df, dplyr::across(dplyr::everything(), as.character))) %>%
-    dplyr::bind_rows() %>% readr::type_convert() %>%
+    dplyr::bind_rows() %>% readr::type_convert(col_types = readr::cols()) %>%
     dplyr::mutate(Individual_Category = as.character(Individual_Category))
 
   # cleanup
