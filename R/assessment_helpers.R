@@ -438,10 +438,6 @@ assessment_delisting_reasons <- function() {
   }
   supplied <- text("PARAM_COMMENT")
   if (nzchar(supplied)) return(supplied)
-  if (text(".delist_action") == "TRUE") {
-    return(paste0("Delist ", text("PARAM_NAME"), ": ", text("DELISTING_REASON"),
-                  "; final category ", toupper(text("PARAM_STATE_IR_CAT")), "."))
-  }
   category <- toupper(text("PARAM_STATE_IR_CAT"))
   if (category %in% c("5", "4 OR 5")) category <- "5A"
   if (category %in% c("2", "1 OR 2")) category <- "2"
@@ -476,6 +472,11 @@ assessment_delisting_reasons <- function() {
     return(paste0("Nutrients AP not applicable due to waterbody type mismatch, however note ", evidence, "."))
   }
   if (category == "5C") evidence <- paste0(evidence, ", further data collection needed")
+  if (text(".delist_action") == "TRUE" ||
+      (category == "2" && nzchar(text("DELISTING_REASON")))) {
+    if (category != "2") evidence <- paste0(evidence, "; final category ", category)
+    category <- "Delist"
+  }
   paste0(category, " for ", use, parameter, " - ", evidence, ".")
 }
 
