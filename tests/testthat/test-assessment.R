@@ -1,3 +1,23 @@
+test_that("low-n excursions use counts as well as the analysis decision flag", {
+  input <- tibble::tibble(
+    WATER_ID = paste0("AU", 1:7), WATER_NAME = "Test waterbody", DU = "ColdWAL",
+    CHR_UID = 1, CHARACTERISTIC_NAME = "Copper", n_Samples = 3,
+    Rationale = c(rep("Data Insufficient", 6), "Data Sufficient"),
+    Exceed = c(rep("No", 5), "Yes", "No"),
+    n_Exceed = c(1, NA, NA, 0, NA, NA, 1),
+    n_Exceed_Acute = c(NA, 1, NA, 0, NA, NA, NA),
+    n_Exceed_Chronic = c(NA, NA, 1, 0, NA, NA, NA))
+  expect_silent(result <- assessment(Conventionals_ALU_table = input))
+  expect_equal(result$Assess_DU_Res$Individual_Category,
+               c("3c", "3c", "3c", "3b", "3b", "3c", "2"))
+  expect_equal(result$Assess_Upload_Report_3C3B$PARAM_STATE_IR_CAT,
+               c("3C", "3C", "3C", "3B", "3B", "3C"))
+  verified <- result$Assess_DU_Res
+  verified$Individual_Category[1] <- "3b"
+  expect_silent(rerun <- assessment(Verified_results_table = verified))
+  expect_equal(rerun$Assess_DU_Res$Individual_Category[1], "3b")
+})
+
 test_that("nutrient-only assessments count 1 or 2 as a fully supporting use (issue #6)", {
   nutrients <- tibble::tibble(
     WATER_ID = c("AU1", "AU2", "AU3"), WATER_NAME = "Test waterbody",
@@ -52,6 +72,7 @@ test_that("fully supporting nutrients respect use category precedence (issue #6)
 })
 
 test_that("Workflow works", {
+  expect_silent({
   df_Chem_combined <- NMwateR::example_chemistry_processed
   df_Criteria <- NMwateR::example_criteria_processed
   df_DU_processed <- NMwateR::example_DU_processed
@@ -176,7 +197,15 @@ test_that("Workflow works", {
   testthat::expect_equal(Count_Cat2_code, 27L)
   testthat::expect_equal(Count_Cat3_code, 6L)
   testthat::expect_equal(Count_Cat5_code, 25L)
-
+  # Exercise the workflow's CSV import with complete processed example data.
+  av_file <- tempfile(fileext = ".csv")
+  on.exit(unlink(av_file), add = TRUE)
+  readr::write_csv(assessment_list$Assess_DU_Res, av_file)
+  verified_results <- readr::read_csv(av_file,
+    col_types = readr::cols(.default = readr::col_character()))
+  final <- assessment(Verified_results_table = verified_results)
+  expect_equal(final$Assess_Upload_Report, assessment_list$Assess_Upload_Report)
+  })
 })
 
 test_that("verified results rebuild decisions and retain reviewer evidence", {
@@ -575,6 +604,34 @@ rod_input <- function(category = "5", parameter = "Escherichia coli", use = "PC"
                  Rationale = "Data Sufficient", Method = "No more than one exceedance")
 }
 
+test_that("copper delisting rationale uses the client's ROD wording", {
+  input <- rod_input("2", "Copper", "ColdWAL")
+  input$SAMPLE_FRACTION <- "Dissolved"
+  input$n_Exceed <- 0
+  input$n_Exceed_Acute <- 0
+  input$n_Exceed_Chronic <- 0
+  input$DELISTING_REASON <- assessment_delisting_reasons()$DELISTING_REASON[1]
+  expect_silent(result <- assessment(Verified_results_table = input))
+  delist <- subset(result$Assess_Upload_Report_FS, !is.na(PARAM_NAME))
+  expected <- "Delist for Copper, Dissolved - 0/4 acute and 0/4 chronic excs."
+  expect_equal(delist$PARAM_COMMENT, expected)
+  expect_true(all(result$Assess_Upload_Report$ASSESSMENT_RATIONALE == expected))
+  expect_equal(assessment(Verified_results_table = result$Assess_DU_Res)$Assess_Upload_Report,
+               result$Assess_Upload_Report)
+  input$Individual_Category <- "delist"
+  explicit <- assessment(Verified_results_table = input)$Assess_Upload_Report_FS
+  expect_equal(explicit$PARAM_COMMENT[!is.na(explicit$PARAM_NAME)], expected)
+  input$Individual_Category <- "2"
+  input$DELISTING_REASON <- NA_character_
+  input$ROD_Include <- TRUE
+  ordinary <- assessment(Verified_results_table = input)$Assess_Upload_Report
+  expect_match(ordinary$ASSESSMENT_RATIONALE[1], "^2 for Copper")
+  input$DELISTING_REASON <- "Verified reason."
+  input$PARAM_COMMENT <- "Reviewer statement."
+  custom <- assessment(Verified_results_table = input)$Assess_Upload_Report
+  expect_equal(custom$PARAM_COMMENT[!is.na(custom$PARAM_NAME)], "Reviewer statement.")
+})
+
 test_that("grab and toxic statements use compact counts and SQUID categories", {
   input <- rod_input()
   result <- assessment(Verified_results_table = input)
@@ -618,7 +675,7 @@ test_that("AU rationale orders parameter statements and carries narratives once"
   expect_length(rationale, 1L)
   expect_equal(rationale,
     paste("5A for primary contact E. coli - 3/4 excs.",
-          "3C for DO - 3/4 excs.", "2 for temperature - 3/4 excs.", "Subwatershed narrative."))
+          "3C for DO - 3/4 excs.", "Delist for temperature - 3/4 excs.", "Subwatershed narrative."))
   expect_false(grepl("Copper|retained|added|delisted|Assessment unit:", rationale, ignore.case = TRUE))
   expect_equal(result$Assess_Upload_Report_NS$PARAM_COMMENT, "5A for primary contact E. coli - 3/4 excs.")
   expect_false(grepl("Subwatershed", result$Assess_Upload_Report_NS$PARAM_COMMENT))
