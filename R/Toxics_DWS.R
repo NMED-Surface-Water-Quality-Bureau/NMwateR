@@ -53,7 +53,6 @@ Toxics_DWS <- function(Chem_table
   counter <- 0
 
   for(i in Unique_AUIDs){
-    print(i) # print name of current WATER_ID
 
     # subset chem data by WATER_ID
     df_subset <- df_Chem_v2 %>%
@@ -69,7 +68,6 @@ Toxics_DWS <- function(Chem_table
 
     #Cycle through each parameter to apply logic
     for(j in my_constituents){
-      print(j)
       counter <- counter + 1
 
       # Specify CHR_UID

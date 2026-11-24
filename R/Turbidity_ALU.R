@@ -80,7 +80,6 @@ Turbidity_ALU <- function(Chem_table
   counter <- 0
 
   for(i in Unique_AUIDs){
-    print(i) # print name of current WATER_ID
 
     # subset chem data by WATER_ID
     df_subset <- df_Chem_v3 %>%
@@ -121,7 +120,6 @@ Turbidity_ALU <- function(Chem_table
           selected <- dplyr::bind_rows(selected, current_row)
         } else {
           excluded <- dplyr::bind_rows(excluded, current_row)
-          cat(paste0("Excluded: ", current_row$STATION, "_", current_row$DATE, "\n"))
         }
       }
       return(selected)

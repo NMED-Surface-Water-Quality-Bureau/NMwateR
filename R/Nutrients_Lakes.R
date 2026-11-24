@@ -105,7 +105,7 @@ Nutrients_Lakes <- function(Chem_table
                         names_to = "CHR_UID", values_to = "MEASUREMENT_num") %>%
     tidyr::drop_na(MEASUREMENT_num) %>%
     dplyr::mutate(CHR_UID = as.numeric(CHR_UID)) %>%
-    dplyr::full_join(df_Chem_v2a, .) %>%
+    dplyr::full_join(df_Chem_v2a, ., by = intersect(names(df_Chem_v2a), names(.))) %>%
     # fill in TN details
     dplyr::mutate(SAMPLE_FRACTION = dplyr::case_when(CHR_UID == 1415 ~ "Total",
                                                      TRUE ~ SAMPLE_FRACTION),
@@ -130,7 +130,7 @@ Nutrients_Lakes <- function(Chem_table
   # replace missing WATER_NAME from Lake Depth Profile Summary
   df_Chem_v2 <- df_Chem_v2 %>%
     dplyr::select(-WATER_NAME) %>%
-    dplyr::left_join(., df_meta)
+    dplyr::left_join(., df_meta, by = "WATER_ID")
 
   rm(df_meta)
 
@@ -138,9 +138,9 @@ Nutrients_Lakes <- function(Chem_table
   # "Concurrenty" = within 7 days
   # Minimum requirement for all parameters sampled concurrently is 2x
   df_results <- df_Chem_v2 %>%
-    dplyr::full_join(., df_DU_only, relationship = "many-to-many") %>%
-    dplyr::full_join(., df_DU_v2, relationship = "many-to-many") %>%
-    dplyr::left_join(., df_Ecoregion) %>%
+    dplyr::full_join(., df_DU_only, by = intersect(names(.), names(df_DU_only)), relationship = "many-to-many") %>%
+    dplyr::full_join(., df_DU_v2, by = intersect(names(.), names(df_DU_v2)), relationship = "many-to-many") %>%
+    dplyr::left_join(., df_Ecoregion, by = "WATER_ID") %>%
     dplyr::mutate(Criteria_Value = as.numeric(Criteria_Value)) %>%
     dplyr::mutate(Criteria_Value = dplyr::case_when(# Chlorophyll data are in mg/L, convert from ug/L)
       CHR_UID == 791 ~ 10/1000,
@@ -213,7 +213,7 @@ Nutrients_Lakes <- function(Chem_table
 
 
   df_results_v2 <- df_results %>%
-    dplyr::left_join(., df_concurrence_summ) %>%
+    dplyr::left_join(., df_concurrence_summ, by = "WATER_ID") %>%
     dplyr::group_by(WATER_ID, WATER_NAME, PROJECT_NAME, STATION, STATION_NAME,
                     concurrence_met, n_concurrentdates, DU, CHR_UID
                     , CHARACTERISTIC_NAME, UNITS, Criteria_Name, Criteria_Value) %>%

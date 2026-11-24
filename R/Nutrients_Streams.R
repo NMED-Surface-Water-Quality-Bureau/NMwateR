@@ -95,7 +95,7 @@ Nutrients_Streams <- function(Chem_table
                         names_to = "CHR_UID", values_to = "MEASUREMENT_num") %>%
     tidyr::drop_na(MEASUREMENT_num) %>%
     dplyr::mutate(CHR_UID = as.numeric(CHR_UID)) %>%
-    dplyr::full_join(df_Chem_v2a, .) %>%
+    dplyr::full_join(df_Chem_v2a, ., by = intersect(names(df_Chem_v2a), names(.))) %>%
     # fill in TN details
     dplyr::mutate(SAMPLE_FRACTION = dplyr::case_when(CHR_UID == 1415 ~ "Total",
                                                      TRUE ~ SAMPLE_FRACTION),
@@ -111,8 +111,8 @@ Nutrients_Streams <- function(Chem_table
   rm(df_Chem_v2a)
 
   df_results <- df_Chem_v2 %>%
-    dplyr::full_join(., df_DU_v2_subset, relationship = "many-to-many") %>%
-    dplyr::left_join(., df_Ecoregion) %>%
+    dplyr::full_join(., df_DU_v2_subset, by = intersect(names(.), names(df_DU_v2_subset)), relationship = "many-to-many") %>%
+    dplyr::left_join(., df_Ecoregion, by = "WATER_ID") %>%
     dplyr::mutate(Criteria_Value = dplyr::case_when(
       # TN
       CHR_UID == 1415 & TN_SITE_CLASS == "Flat" ~ 0.69,

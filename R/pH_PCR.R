@@ -56,7 +56,6 @@ pH_PCR <- function(Chem_table
   counter <- 0
 
   for(i in Unique_AUIDs){
-    print(i) # print name of current WATER_ID
 
     # subset chem data by WATER_ID
     df_subset <- df_Chem_v2 %>%
@@ -86,7 +85,6 @@ pH_PCR <- function(Chem_table
 
     #Cycle through each parameter to apply logic
     for(j in my_constituents) {
-      print(j)
       counter <- counter + 1
 
       # Specify CHR_UID
@@ -126,7 +124,7 @@ pH_PCR <- function(Chem_table
       # Apply method based on n_Samples
       if(n_Samples == 1){
         results <- df_subset_v3 %>%
-          dplyr::left_join(., df_DU_v4) %>%
+          dplyr::left_join(., df_DU_v4, by = intersect(names(.), names(df_DU_v4))) %>%
           #If DO or pH low, analyze as minimum, if not analyze as maximum
           dplyr::mutate(bad_samp = ifelse(CHR_UID_Unique == "1648b"
                                           , ifelse(MEASUREMENT_num
@@ -144,7 +142,7 @@ pH_PCR <- function(Chem_table
 
       } else if (n_Samples == 2 | n_Samples == 3){
         results <- df_subset_v3 %>%
-          dplyr::left_join(., df_DU_v4) %>%
+          dplyr::left_join(., df_DU_v4, by = intersect(names(.), names(df_DU_v4))) %>%
           #If DO or pH low, analyze as minimum, if not analyze as maximum
           dplyr::mutate(bad_samp = ifelse(CHR_UID_Unique == "1648b"
                                           , ifelse(MEASUREMENT_num
@@ -164,7 +162,7 @@ pH_PCR <- function(Chem_table
       } else if (n_Samples >= 4 & n_Samples < 10) {
         # no more than one exceedance (≤1) of the criterion
         results <- df_subset_v3 %>%
-          dplyr::left_join(., df_DU_v4) %>%
+          dplyr::left_join(., df_DU_v4, by = intersect(names(.), names(df_DU_v4))) %>%
           #If DO or pH low, analyze as minimum, if not analyze as maximum
           dplyr::mutate(bad_samp = ifelse(CHR_UID_Unique == "1648b"
                                           , ifelse(MEASUREMENT_num

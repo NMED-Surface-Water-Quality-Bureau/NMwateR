@@ -554,7 +554,7 @@ Data_Prep <- function(criteria_table
     ### Calculate grab values ####
     # relevant for temp, pH, DO, and DO saturation
     df_Profile_summ <- df_Profile_wide %>%
-      dplyr::left_join(df_thermoclines)
+      dplyr::left_join(df_thermoclines, by = intersect(names(.), names(df_thermoclines)))
 
     # if thermocline is present, summarize for the average epilimnion value
     df_Profile_epi <- df_Profile_summ %>%

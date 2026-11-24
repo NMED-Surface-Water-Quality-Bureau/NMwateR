@@ -64,7 +64,6 @@ LTD_ALU <- function(Chem_table
   counter <- 0
 
   for(i in Unique_AUIDs){
-    print(i) # print name of current WATER_ID
 
     # subset chem data by WATER_ID
     df_subset <- df_Chem_v2 %>%
@@ -89,7 +88,6 @@ LTD_ALU <- function(Chem_table
 
     #Cycle through each parameter to apply logic
     for(j in my_constituents) {
-      print(j)
 
       # Specify CHR_UID
       filter_by <- j
@@ -135,7 +133,7 @@ LTD_ALU <- function(Chem_table
         unique_AQC <- unique(df_subset_v2$ASSESSABILITY_QUALIFIER_CODE)
 
         results <- df_subset_v2 %>%
-          dplyr::left_join(., df_DU_v5) %>%
+          dplyr::left_join(., df_DU_v5, by = intersect(names(.), names(df_DU_v5))) %>%
           dplyr::mutate(
             #Does the sample exceed the criteria? Y/N
             bad_samp = ifelse(CHR_UID_Unique %in% c('1648b', '985')
